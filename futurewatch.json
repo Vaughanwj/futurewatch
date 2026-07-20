@@ -1,0 +1,421 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-20T22:04:29.985Z",
+  "composite": {
+    "value": 46.5,
+    "coverage": 1
+  },
+  "pillars": {
+    "capability": {
+      "name": "capability",
+      "weight": 0.45,
+      "score": 34.6,
+      "coverage": 1,
+      "indicators": [
+        {
+          "slug": "hendrycksAgiScore",
+          "weight": 0.2,
+          "score": 58
+        },
+        {
+          "slug": "epochBenchmarks",
+          "weight": 0.2,
+          "score": 60
+        },
+        {
+          "slug": "arcGap",
+          "weight": 0.2,
+          "score": 12.75
+        },
+        {
+          "slug": "selfLearning",
+          "weight": 0.2,
+          "score": 12
+        },
+        {
+          "slug": "realTimeEngagement",
+          "weight": 0.2,
+          "score": 30
+        }
+      ]
+    },
+    "autonomy": {
+      "name": "autonomy",
+      "weight": 0.35,
+      "score": 68.3,
+      "coverage": 1,
+      "indicators": [
+        {
+          "slug": "metrTimeHorizon",
+          "weight": 0.7,
+          "score": 71.806256728669
+        },
+        {
+          "slug": "agenticAutonomyLevel",
+          "weight": 0.3,
+          "score": 60
+        }
+      ]
+    },
+    "deployment": {
+      "name": "deployment",
+      "weight": 0.2,
+      "score": 35.3,
+      "coverage": 1,
+      "indicators": [
+        {
+          "slug": "anthropicEconIndex",
+          "weight": 0.5,
+          "score": 28.142494558940577
+        },
+        {
+          "slug": "aiIndexEconomy",
+          "weight": 0.5,
+          "score": 42.50000000000001
+        }
+      ]
+    }
+  },
+  "expectation": {
+    "weakAgi": null,
+    "fullAgi": null,
+    "label": "Community forecast (Metaculus) — a forecast, not a measurement"
+  },
+  "safety": {
+    "score": 42.5,
+    "existentialGrade": "C-",
+    "overallBestGpa": 2.66,
+    "bestLab": "Anthropic",
+    "source": "FLI AI Safety Index, Summer 2026 (futureoflife.org/ai-safety-index-summer-2026)"
+  },
+  "trajectory": {
+    "frontierSeries": [
+      {
+        "date": "2023-03-14",
+        "value": 3.987227600429893,
+        "alias": "GPT-4 0314"
+      },
+      {
+        "date": "2023-11-06",
+        "value": 4.044903243695019,
+        "alias": "GPT-4 1106"
+      },
+      {
+        "date": "2024-05-13",
+        "value": 6.990738069989227,
+        "alias": "GPT-4o"
+      },
+      {
+        "date": "2024-06-20",
+        "value": 11.394299643906457,
+        "alias": "Claude 3.5 Sonnet (Old)"
+      },
+      {
+        "date": "2024-09-12",
+        "value": 20.329515581622992,
+        "alias": "o1-preview"
+      },
+      {
+        "date": "2024-10-22",
+        "value": 20.523230555175605,
+        "alias": "Claude 3.5 Sonnet (New)"
+      },
+      {
+        "date": "2024-12-05",
+        "value": 38.83091858287572,
+        "alias": "o1"
+      },
+      {
+        "date": "2025-02-24",
+        "value": 60.38778032401745,
+        "alias": "Claude 3.7 Sonnet"
+      },
+      {
+        "date": "2025-04-16",
+        "value": 119.73250130874918,
+        "alias": "o3"
+      },
+      {
+        "date": "2025-08-07",
+        "value": 202.99468215849848,
+        "alias": "GPT-5"
+      },
+      {
+        "date": "2025-11-18",
+        "value": 224.34382043857565,
+        "alias": "Gemini 3 Pro"
+      },
+      {
+        "date": "2025-11-24",
+        "value": 292.9994786748955,
+        "alias": "Claude Opus 4.5"
+      },
+      {
+        "date": "2025-12-11",
+        "value": 352.24235849272736,
+        "alias": "GPT-5.2"
+      }
+    ],
+    "metrDoublingDaysSince2023": 134,
+    "metrDoublingDaysAll": 134
+  },
+  "stories": [
+    {
+      "title": "GraphDx: A Cost-Aware Knowledge-Enhanced Multi-Agent Framework for Sequential Diagnosis",
+      "link": "https://arxiv.org/abs/2607.15280",
+      "published": "Mon, 20 Jul 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Causal-Audit: Explicit and Auditable Graph-based Reasoning via Target-Aware Causal Chain Construction",
+      "link": "https://arxiv.org/abs/2607.15281",
+      "published": "Mon, 20 Jul 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Cura 1T: Specialized Model for Agentic Healthcare",
+      "link": "https://arxiv.org/abs/2607.15314",
+      "published": "Mon, 20 Jul 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "July 12, 2026",
+      "link": "https://www.youtube.com/shorts/63kM8vEABjI",
+      "published": "2026-07-12T23:06:30+00:00",
+      "feed": "FutureWatch"
+    },
+    {
+      "title": "People may actually LIKE you! How the Internet Rewired Our Self-Perception",
+      "link": "https://www.youtube.com/watch?v=9fCCXNpW9AI",
+      "published": "2026-05-13T01:59:21+00:00",
+      "feed": "FutureWatch"
+    },
+    {
+      "title": "March 29, 2026",
+      "link": "https://www.youtube.com/shorts/6cn3tE6egQU",
+      "published": "2026-03-29T21:11:19+00:00",
+      "feed": "FutureWatch"
+    }
+  ],
+  "sourceHealth": [
+    {
+      "source": "metr",
+      "ok": true,
+      "fetchMs": 2080,
+      "indicatorCount": 1
+    },
+    {
+      "source": "metaculus",
+      "ok": false,
+      "fetchMs": 517,
+      "indicatorCount": 0
+    },
+    {
+      "source": "manual",
+      "ok": true,
+      "fetchMs": 0,
+      "indicatorCount": 9
+    },
+    {
+      "source": "rss",
+      "ok": false,
+      "fetchMs": 759,
+      "indicatorCount": 0
+    }
+  ],
+  "indicators": {
+    "metrTimeHorizon": {
+      "value": 71.806256728669,
+      "raw": {
+        "p50Minutes": 352.24235849272736,
+        "frontierModel": "GPT-5.2",
+        "suite": "TH1.1",
+        "modelCount": 21,
+        "frontierSeries": [
+          {
+            "date": "2023-03-14",
+            "value": 3.987227600429893,
+            "alias": "GPT-4 0314"
+          },
+          {
+            "date": "2023-11-06",
+            "value": 4.044903243695019,
+            "alias": "GPT-4 1106"
+          },
+          {
+            "date": "2024-05-13",
+            "value": 6.990738069989227,
+            "alias": "GPT-4o"
+          },
+          {
+            "date": "2024-06-20",
+            "value": 11.394299643906457,
+            "alias": "Claude 3.5 Sonnet (Old)"
+          },
+          {
+            "date": "2024-09-12",
+            "value": 20.329515581622992,
+            "alias": "o1-preview"
+          },
+          {
+            "date": "2024-10-22",
+            "value": 20.523230555175605,
+            "alias": "Claude 3.5 Sonnet (New)"
+          },
+          {
+            "date": "2024-12-05",
+            "value": 38.83091858287572,
+            "alias": "o1"
+          },
+          {
+            "date": "2025-02-24",
+            "value": 60.38778032401745,
+            "alias": "Claude 3.7 Sonnet"
+          },
+          {
+            "date": "2025-04-16",
+            "value": 119.73250130874918,
+            "alias": "o3"
+          },
+          {
+            "date": "2025-08-07",
+            "value": 202.99468215849848,
+            "alias": "GPT-5"
+          },
+          {
+            "date": "2025-11-18",
+            "value": 224.34382043857565,
+            "alias": "Gemini 3 Pro"
+          },
+          {
+            "date": "2025-11-24",
+            "value": 292.9994786748955,
+            "alias": "Claude Opus 4.5"
+          },
+          {
+            "date": "2025-12-11",
+            "value": 352.24235849272736,
+            "alias": "GPT-5.2"
+          }
+        ]
+      },
+      "asOf": "2025-12-11",
+      "source": "METR eval-analysis-public (github.com/METR/eval-analysis-public)",
+      "confidence": "verified"
+    },
+    "hendrycksAgiScore": {
+      "value": 58,
+      "raw": {
+        "publishedPct": 58,
+        "model": "GPT-5"
+      },
+      "asOf": "2025-10-21",
+      "source": "Hendrycks et al., A Definition of AGI (arXiv:2510.18212, agidefinition.ai)",
+      "confidence": "provisional"
+    },
+    "epochBenchmarks": {
+      "value": 60,
+      "raw": {
+        "fractions": [
+          0.6
+        ],
+        "basket": "PROVISIONAL-SINGLE-VALUE"
+      },
+      "asOf": "2026-07-20",
+      "source": "Placeholder pending Epoch adapter (epoch.ai/benchmarks, CC-BY)",
+      "confidence": "judgment"
+    },
+    "arcGap": {
+      "value": 12.75,
+      "raw": {
+        "generations": [
+          {
+            "name": "ARC-AGI-2",
+            "frontierOverHuman": 0.25
+          },
+          {
+            "name": "ARC-AGI-3",
+            "frontierOverHuman": 0.005
+          }
+        ]
+      },
+      "asOf": "2026-03-31",
+      "source": "ARC Prize technical reports (arXiv:2601.10904, arXiv:2603.24621); verify current at arcprize.org",
+      "confidence": "provisional"
+    },
+    "selfLearning": {
+      "value": 12,
+      "raw": {
+        "gainRatio": 0.06
+      },
+      "asOf": "2026-06-05",
+      "source": "CL-Bench (arXiv:2606.05661) — Gain barely positive across domains",
+      "confidence": "judgment"
+    },
+    "realTimeEngagement": {
+      "value": 30,
+      "raw": {
+        "milestones": {
+          "m1": 20,
+          "m2": 10,
+          "m3": 0,
+          "m4": 0,
+          "m5": 0
+        }
+      },
+      "asOf": "2026-07-20",
+      "source": "FutureWatch rubric D2 (research/anchor-tables.md); evidence: public voice-mode deployments (M1), group-chat demos (M2 partial)",
+      "confidence": "judgment"
+    },
+    "agenticAutonomyLevel": {
+      "value": 60,
+      "raw": {
+        "routineLevel": "collaborator",
+        "nextDemonstrated": true
+      },
+      "asOf": "2026-07-20",
+      "source": "Morris et al. autonomy rubric (arXiv:2311.02462), scored on routine deployment",
+      "confidence": "judgment"
+    },
+    "anthropicEconIndex": {
+      "value": 28.142494558940577,
+      "raw": {
+        "breadth": 0.36,
+        "depth": 0.22
+      },
+      "asOf": "2026-06-26",
+      "source": "Anthropic Economic Index (anthropic.com/economic-index), June 2026 report",
+      "confidence": "provisional"
+    },
+    "aiIndexEconomy": {
+      "value": 42.50000000000001,
+      "raw": {
+        "adoption01": 0.55,
+        "postings01": 0.3
+      },
+      "asOf": "2026-04-15",
+      "source": "Stanford HAI AI Index 2026, Economy chapter (hai.stanford.edu/ai-index)",
+      "confidence": "judgment"
+    },
+    "fliSafetyIndex": {
+      "value": null,
+      "raw": {
+        "existentialGrade": "C-",
+        "overallBestGpa": 2.66,
+        "bestLab": "Anthropic"
+      },
+      "asOf": "2026-07-15",
+      "source": "FLI AI Safety Index, Summer 2026 (futureoflife.org/ai-safety-index-summer-2026)",
+      "confidence": "provisional"
+    }
+  },
+  "errors": [
+    "metaculus 3479: Request failed with status code 403",
+    "metaculus 5121: Request failed with status code 403",
+    "rss metr.org: Request failed with status code 403",
+    "rss Epoch AI: Request failed with status code 403"
+  ],
+  "escalation": {
+    "flagged": false
+  }
+}

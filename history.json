@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "points": [
+    {
+      "date": "2026-07-20",
+      "composite": 46.5,
+      "pillars": {
+        "capability": 34.6,
+        "autonomy": 68.3,
+        "deployment": 35.3
+      }
+    }
+  ]
+}
