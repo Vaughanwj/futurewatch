@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T22:04:29.985Z",
+  "generatedAt": "2026-07-20T22:24:35.970Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -179,7 +179,7 @@
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "July 12, 2026",
+      "title": "The Rise of Cognitive Debt.",
       "link": "https://www.youtube.com/shorts/63kM8vEABjI",
       "published": "2026-07-12T23:06:30+00:00",
       "feed": "FutureWatch"
@@ -191,7 +191,7 @@
       "feed": "FutureWatch"
     },
     {
-      "title": "March 29, 2026",
+      "title": "Love in the Time of Silicon",
       "link": "https://www.youtube.com/shorts/6cn3tE6egQU",
       "published": "2026-03-29T21:11:19+00:00",
       "feed": "FutureWatch"
@@ -201,25 +201,25 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 2080,
+      "fetchMs": 2331,
       "indicatorCount": 1
     },
     {
       "source": "metaculus",
       "ok": false,
-      "fetchMs": 517,
+      "fetchMs": 158,
       "indicatorCount": 0
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 0,
+      "fetchMs": 1,
       "indicatorCount": 9
     },
     {
       "source": "rss",
       "ok": false,
-      "fetchMs": 759,
+      "fetchMs": 226,
       "indicatorCount": 0
     }
   ],
