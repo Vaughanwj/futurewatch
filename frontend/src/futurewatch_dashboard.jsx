@@ -275,39 +275,101 @@ function Forecasters({ snapshot }) {
   );
 }
 
-// ── Road from 2019 (frontier series, log scale) ──────────────────────────────
+// ── The road so far (frontier series, log scale) ─────────────────────────────
+
+// Round time-horizon values (in minutes) to use as log-scale gridlines —
+// only the ones that fall inside the actual data range get drawn.
+const GRID_ANCHORS = [
+  { min: 1, label: '1 min' },
+  { min: 5, label: '5 min' },
+  { min: 15, label: '15 min' },
+  { min: 60, label: '1 hr' },
+  { min: 240, label: '4 hr' },
+  { min: 480, label: '8 hr' },
+  { min: 1440, label: '1 day' },
+  { min: 10080, label: '1 wk' },
+  { min: 43200, label: '1 mo' },
+  { min: 129600, label: '3 mo' },
+  { min: 259200, label: '6 mo' },
+];
 
 function RoadChart({ snapshot }) {
   const series = snapshot.trajectory?.frontierSeries ?? [];
-  const path = useMemo(() => {
+  const chart = useMemo(() => {
     if (series.length < 2) return null;
-    const t0 = Date.parse('2019-01-01');
+    // Start the axis at the first point we actually have data for — METR's
+    // public eval suite only covers frontier models from ~GPT-4 onward, so
+    // anchoring to a fixed earlier date would draw a misleading flat run-up.
+    const t0 = Date.parse(series[0].date);
     const t1 = Date.now();
     const ys = series.map((p) => Math.log2(p.value));
     const yMin = Math.min(...ys);
     const yMax = Math.max(...ys);
     const W = 560;
-    const H = 120;
-    const pts = series.map((p, i) => {
-      const x = 10 + ((Date.parse(p.date) - t0) / (t1 - t0)) * (W - 20);
-      const y = H - 14 - ((ys[i] - yMin) / (yMax - yMin || 1)) * (H - 28);
-      return `${x.toFixed(1)},${y.toFixed(1)}`;
-    });
-    return { line: pts.join(' '), last: pts[pts.length - 1].split(',') };
+    const H = 130;
+    const padTop = 16;
+    const padBottom = 24;
+    const toX = (date) => 10 + ((Date.parse(date) - t0) / (t1 - t0 || 1)) * (W - 20);
+    const toY = (y) => H - padBottom - ((y - yMin) / (yMax - yMin || 1)) * (H - padBottom - padTop);
+
+    const points = series.map((p, i) => ({ x: toX(p.date), y: toY(ys[i]), alias: p.alias }));
+    const line = points.map((p) => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ');
+
+    const gridlines = GRID_ANCHORS
+      .map((g) => ({ ...g, y: toY(Math.log2(g.min)) }))
+      .filter((g) => g.y >= padTop - 2 && g.y <= H - padBottom + 2);
+
+    // Callout the single biggest jump between consecutive releases, plus the
+    // current frontier — everything else stays an unlabeled vertex.
+    let jumpIdx = 1;
+    let jumpSize = -Infinity;
+    for (let i = 1; i < ys.length; i++) {
+      if (ys[i] - ys[i - 1] > jumpSize) { jumpSize = ys[i] - ys[i - 1]; jumpIdx = i; }
+    }
+    const lastIdx = points.length - 1;
+    const callouts = jumpIdx === lastIdx ? [lastIdx] : [jumpIdx, lastIdx];
+
+    return {
+      W, H, line, points, gridlines, callouts,
+      firstYear: new Date(series[0].date).getFullYear(),
+    };
   }, [series]);
 
-  if (!path) return null;
+  if (!chart) return null;
+  const { W, H, line, points, gridlines, callouts, firstYear } = chart;
+  const last = points[points.length - 1];
   return (
     <Panel>
-      <PanelTitle>The road from 2019 — autonomous task horizon (log scale)</PanelTitle>
-      <svg viewBox="0 0 560 120" style={{ width: '100%', height: 'auto', display: 'block' }}>
-        <polyline points={path.line} fill="none" stroke={C.blue} strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round" />
-        <circle cx={path.last[0]} cy={path.last[1]} r="4" fill={C.orange} />
-        <text x="10" y="117" fill={C.textLow} fontSize="9" fontFamily={mono}>2019</text>
-        <text x="530" y="117" fill={C.textLow} fontSize="9" fontFamily={mono}>now</text>
+      <PanelTitle>The road so far — autonomous task horizon (log scale)</PanelTitle>
+      <svg viewBox={`0 0 ${W} ${H}`} style={{ width: '100%', height: 'auto', display: 'block' }}>
+        {gridlines.map((g) => (
+          <g key={g.label}>
+            <line x1="0" y1={g.y} x2={W} y2={g.y} stroke={C.panelEdge} strokeWidth="1" />
+            <text x={W - 4} y={g.y - 3} fill={C.textLow} fontSize="8" fontFamily={mono} textAnchor="end">{g.label}</text>
+          </g>
+        ))}
+        <polyline points={line} fill="none" stroke={C.blue} strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round" />
+        {points.map((p, i) => (
+          <circle key={i} cx={p.x} cy={p.y} r={i === points.length - 1 ? 4 : 2} fill={i === points.length - 1 ? C.orange : C.blue} />
+        ))}
+        {callouts.map((i) => (
+          <text
+            key={i}
+            x={Math.min(Math.max(points[i].x, 40), W - 4)}
+            y={Math.max(points[i].y - 9, 10)}
+            fill={C.text}
+            fontSize="9"
+            fontFamily={mono}
+            textAnchor="middle"
+          >
+            {points[i].alias}
+          </text>
+        ))}
+        <text x="10" y={H - 4} fill={C.textLow} fontSize="9" fontFamily={mono}>{firstYear}</text>
+        <text x={W - 10} y={H - 4} fill={C.textLow} fontSize="9" fontFamily={mono} textAnchor="end">now</text>
       </svg>
       <div style={{ fontFamily: sans, fontSize: '0.75rem', color: C.textLow, marginTop: 6 }}>
-        Each point is a frontier model's 50% time horizon at release. Source: METR (public data).
+        Each point is a frontier model's 50% time horizon at release, since METR's earliest covered model ({points[0].alias}, {firstYear}). Source: METR (public data).
       </div>
     </Panel>
   );
