@@ -1,0 +1,9 @@
+node_modules/
+backend/probe-output/
+*.pem
+.env*
+backend/data/futurewatch.json
+backend/data/history.json
+.env
+*.log
+frontend/dist/

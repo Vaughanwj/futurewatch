@@ -1,0 +1,90 @@
+{
+  "_readme": "Manually-maintained indicators. Each entry: raw (source values consumed by domain/anchors.js), asOf, source, confidence (verified|provisional|judgment), _instructions, nextUpdate. Anchor definitions live in research/anchor-tables.md.",
+
+  "hendrycksAgiScore": {
+    "raw": { "publishedPct": 58, "model": "GPT-5" },
+    "asOf": "2025-10-21",
+    "source": "Hendrycks et al., A Definition of AGI (arXiv:2510.18212, agidefinition.ai)",
+    "confidence": "provisional",
+    "_instructions": "Update when the consortium publishes a score for a new frontier model. Use their number verbatim; do not interpolate between models.",
+    "nextUpdate": "on new frontier model scoring"
+  },
+
+  "epochBenchmarks": {
+    "raw": { "fractions": [0.6], "basket": "PROVISIONAL-SINGLE-VALUE" },
+    "asOf": "2026-07-20",
+    "source": "Placeholder pending Epoch adapter (epoch.ai/benchmarks, CC-BY)",
+    "confidence": "judgment",
+    "_instructions": "TEMPORARY. Replace with automated Epoch adapter once basket B-2026.1 members are confirmed against what Epoch serves (open challenge 2, anchor-tables.md). Until then this is a judgment placeholder — mean fraction-of-expert-human across {GPQA Diamond, SWE-bench Verified, FrontierMath, HLE}.",
+    "nextUpdate": "at Epoch adapter build"
+  },
+
+  "arcGap": {
+    "raw": { "generations": [
+      { "name": "ARC-AGI-2", "frontierOverHuman": 0.25 },
+      { "name": "ARC-AGI-3", "frontierOverHuman": 0.005 }
+    ] },
+    "asOf": "2026-03-31",
+    "source": "ARC Prize technical reports (arXiv:2601.10904, arXiv:2603.24621); verify current at arcprize.org",
+    "confidence": "provisional",
+    "_instructions": "Update from arcprize.org leaderboards quarterly. frontierOverHuman = frontier score / human score per active generation. Generations retire at ratio > 0.85 (ratchet rule) — log retirement in decision log. NOTE: an unverified secondary claim puts ARC-AGI-2 much higher (97.9% by a meta-system, Apr 2026) — verify before next publish.",
+    "nextUpdate": "2026-10"
+  },
+
+  "selfLearning": {
+    "raw": { "gainRatio": 0.06 },
+    "asOf": "2026-06-05",
+    "source": "CL-Bench (arXiv:2606.05661) — Gain barely positive across domains",
+    "confidence": "judgment",
+    "_instructions": "gainRatio = observed Gain as fraction of human learning-curve improvement. Human baselines not yet published by CL-Bench, so this is judgment-tagged. Re-estimate when CL-Bench or successors publish comparable human curves.",
+    "nextUpdate": "2026-12"
+  },
+
+  "realTimeEngagement": {
+    "raw": { "milestones": { "m1": 20, "m2": 10, "m3": 0, "m4": 0, "m5": 0 } },
+    "asOf": "2026-07-20",
+    "source": "FutureWatch rubric D2 (research/anchor-tables.md); evidence: public voice-mode deployments (M1), group-chat demos (M2 partial)",
+    "confidence": "judgment",
+    "_instructions": "Quarterly scoring session. Each milestone 0/10/20 with written justification appended to scoringLog. Evidence standard: public demonstrations or peer-reviewed evals, not vendor marketing. Vaughan signs off.",
+    "nextUpdate": "2026-10",
+    "scoringLog": [
+      { "date": "2026-07-20", "scores": { "m1": 20, "m2": 10, "m3": 0, "m4": 0, "m5": 0 }, "note": "Initial scoring at rubric approval. M1: real-time voice with interruption handling is deployed at consumer scale. M2: multi-party tracking shown in demos, not robust in the wild. M3-M5: no credible public evidence." }
+    ]
+  },
+
+  "agenticAutonomyLevel": {
+    "raw": { "routineLevel": "collaborator", "nextDemonstrated": true },
+    "asOf": "2026-07-20",
+    "source": "Morris et al. autonomy rubric (arXiv:2311.02462), scored on routine deployment",
+    "confidence": "judgment",
+    "_instructions": "Quarterly. routineLevel ∈ tool|consultant|collaborator|expert|agent = highest level ROUTINE in deployed general-purpose systems. nextDemonstrated = next level credibly shown in limited settings (+10).",
+    "nextUpdate": "2026-10"
+  },
+
+  "anthropicEconIndex": {
+    "raw": { "breadth": 0.36, "depth": 0.22 },
+    "asOf": "2026-06-26",
+    "source": "Anthropic Economic Index (anthropic.com/economic-index), June 2026 report",
+    "confidence": "provisional",
+    "_instructions": "Update per AEI report (~quarterly). breadth = fraction of occupational categories with material AI task usage; depth = AI share of TOTAL work performed (NOT automation share of AI traffic — see anchor-tables.md challenge note). Both require reading the report's underlying data, not the headline stats. Flag: proxy for the economy via Claude usage; cross-check against aiIndexEconomy.",
+    "nextUpdate": "2026-10"
+  },
+
+  "aiIndexEconomy": {
+    "raw": { "adoption01": 0.55, "postings01": 0.3 },
+    "asOf": "2026-04-15",
+    "source": "Stanford HAI AI Index 2026, Economy chapter (hai.stanford.edu/ai-index)",
+    "confidence": "judgment",
+    "_instructions": "Annual (~April). adoption01 = firm genAI adoption rebased 2019=0, near-universal=1. postings01 = AI share of job postings rebased likewise. Weakest anchor set in the system — candidate for replacement if a better public series appears.",
+    "nextUpdate": "2027-04"
+  },
+
+  "fliSafetyIndex": {
+    "raw": { "existentialGrade": "C-", "overallBestGpa": 2.66, "bestLab": "Anthropic" },
+    "asOf": "2026-07-15",
+    "source": "FLI AI Safety Index, Summer 2026 (futureoflife.org/ai-safety-index-summer-2026)",
+    "confidence": "provisional",
+    "_instructions": "Semiannual (summer/winter). existentialGrade = best lab's existential-safety domain grade — this drives the divergence bar (harsher-grade decision, anchor-tables.md). overallBestGpa recorded for context display only.",
+    "nextUpdate": "2027-01"
+  }
+}

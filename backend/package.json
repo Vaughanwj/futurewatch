@@ -1,0 +1,16 @@
+{
+  "name": "futurewatch-backend",
+  "version": "0.1.0",
+  "description": "FutureWatch Meter pipeline — AGI progress reading from public data",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.js",
+    "probe": "node scripts/probe.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "axios": "^1.7.0"
+  }
+}

@@ -1,0 +1,69 @@
+name: Weekly Fetch
+
+on:
+  schedule:
+    - cron: '0 17 * * 1'   # Mondays 17:00 UTC — mirrors Frokkle's weekly cadence
+  workflow_dispatch:        # manual trigger for testing
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: backend
+
+      - name: Run tests (fixtures only, no network)
+        run: npm test
+        working-directory: backend
+
+      - name: Run pipeline
+        run: node src/index.js
+        working-directory: backend
+        # Exit code 2 = escalation (composite moved >5 pts). The job fails so
+        # the run is reviewed rather than silently published (methodology §7).
+
+      - name: Build frontend
+        run: npm ci && npm run build
+        working-directory: frontend
+
+      - name: Commit snapshot to data branch
+        run: |
+          set -e
+          cp backend/data/futurewatch.json "$RUNNER_TEMP/futurewatch.json"
+          cp backend/data/history.json "$RUNNER_TEMP/history.json" 2>/dev/null || true
+          cp -r frontend/dist "$RUNNER_TEMP/dist"
+
+          git config user.name "fetcher-bot"
+          git config user.email "actions@github.com"
+          git restore .
+
+          if git ls-remote --exit-code --heads origin data >/dev/null 2>&1; then
+            git fetch origin data
+            git switch data
+          else
+            git switch --orphan data
+            git rm -rf . >/dev/null 2>&1 || true
+          fi
+
+          cp "$RUNNER_TEMP/futurewatch.json" futurewatch.json
+          if [ -f "$RUNNER_TEMP/history.json" ]; then
+            cp "$RUNNER_TEMP/history.json" history.json
+          fi
+          rsync -a --delete "$RUNNER_TEMP/dist/" dist/
+
+          git add futurewatch.json dist/
+          git add history.json 2>/dev/null || true
+
+          if git diff --cached --quiet; then
+            echo "No snapshot changes to commit"
+          else
+            git commit -m "data: futurewatch snapshot $(date -u +%FT%TZ)"
+            git push origin data
+          fi
