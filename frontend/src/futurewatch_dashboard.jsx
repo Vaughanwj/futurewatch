@@ -21,8 +21,8 @@ export const C = {
   track: '#1a2030',
 };
 
-const mono = "'IBM Plex Mono', ui-monospace, monospace";
-const sans = "'Inter', system-ui, sans-serif";
+export const mono = "'IBM Plex Mono', ui-monospace, monospace";
+export const sans = "'Inter', system-ui, sans-serif";
 
 const PLAIN = {
   selfLearning: 'Learning on the fly from experience',
@@ -36,7 +36,27 @@ const PLAIN = {
   aiIndexEconomy: 'Showing up across the wider economy',
 };
 
+// Concise labels for compact rows (pillar detail cards) — PLAIN above is the
+// longer narrative phrasing used in the "what's missing" triptych panel.
+const INDICATOR_LABELS = {
+  hendrycksAgiScore: 'AGI Definition Score',
+  epochBenchmarks: 'Epoch Benchmarks',
+  arcGap: 'ARC-AGI Gap',
+  selfLearning: 'Self-Learning Gain',
+  realTimeEngagement: 'Real-Time Engagement',
+  metrTimeHorizon: 'METR Time Horizon',
+  agenticAutonomyLevel: 'Agentic Autonomy',
+  anthropicEconIndex: 'Anthropic Econ Index',
+  aiIndexEconomy: 'AI Index Economy',
+};
+
 const PILLAR_LABELS = { capability: 'Capability', autonomy: 'Autonomy', deployment: 'Deployment' };
+
+// Single decimal everywhere a score is displayed, so the page never mixes
+// "12", "12.75", and "30" in the same list.
+function fmt1(v) {
+  return typeof v === 'number' && Number.isFinite(v) ? v.toFixed(1) : (v ?? '—');
+}
 
 // Fallback for standalone previews (artifact runners, storybooks) that render
 // the component without props. Production always passes the fetched snapshot.
@@ -169,7 +189,7 @@ function Hero({ snapshot }) {
     <Panel style={{ padding: '26px 26px 20px' }}>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 14, flexWrap: 'wrap' }}>
         <span style={{ fontFamily: mono, fontSize: '3.6rem', fontWeight: 600, color: C.orange, lineHeight: 1 }}>
-          {v ?? '—'}
+          {fmt1(v)}
         </span>
         <span style={{ fontFamily: sans, color: C.textDim, fontSize: '1rem' }}>of 100 on the road to AGI</span>
         <span style={{ fontFamily: mono, fontSize: '0.72rem', color: C.textLow, marginLeft: 'auto' }}>
@@ -211,7 +231,7 @@ function WhatsLeft({ snapshot }) {
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <div style={{ flex: 1 }}><Bar value={d.score} color={scoreColor(d.score)} height={5} /></div>
-            <span style={{ fontFamily: mono, fontSize: '0.72rem', color: scoreColor(d.score), minWidth: 28, textAlign: 'right' }}>{d.score}</span>
+            <span style={{ fontFamily: mono, fontSize: '0.72rem', color: scoreColor(d.score), minWidth: 32, textAlign: 'right' }}>{fmt1(d.score)}</span>
           </div>
         </div>
       ))}
@@ -309,7 +329,7 @@ function Divergence({ snapshot }) {
         <div key={row.label} style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
           <span style={{ fontFamily: sans, fontSize: '0.8rem', color: C.textDim, width: 78 }}>{row.label}</span>
           <div style={{ flex: 1 }}><Bar value={row.v} color={row.color} /></div>
-          <span style={{ fontFamily: mono, fontSize: '0.75rem', color: row.color, minWidth: 34, textAlign: 'right' }}>{row.v}</span>
+          <span style={{ fontFamily: mono, fontSize: '0.75rem', color: row.color, minWidth: 34, textAlign: 'right' }}>{fmt1(row.v)}</span>
         </div>
       ))}
       <div style={{ fontFamily: mono, fontSize: '0.68rem', color: C.textLow, marginTop: 8 }}>
@@ -326,7 +346,7 @@ function PillarCard({ name, pillar, indicators }) {
     <Panel>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
         <span style={{ fontFamily: mono, fontSize: '1.9rem', fontWeight: 600, color: scoreColor(pillar.score) }}>
-          {pillar.score ?? '—'}
+          {fmt1(pillar.score)}
         </span>
         <span style={{ fontFamily: sans, fontSize: '0.95rem', color: C.text, fontWeight: 600 }}>{PILLAR_LABELS[name]}</span>
         <span style={{ fontFamily: mono, fontSize: '0.68rem', color: C.textLow, marginLeft: 'auto' }}>
@@ -338,14 +358,14 @@ function PillarCard({ name, pillar, indicators }) {
         const meta = indicators?.[row.slug];
         return (
           <div key={row.slug} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '3px 0' }}>
-            <span style={{ fontFamily: mono, fontSize: '0.72rem', color: C.textDim, flex: 1 }}>{row.slug}</span>
+            <span style={{ fontFamily: sans, fontSize: '0.78rem', color: C.textDim, flex: 1 }}>{INDICATOR_LABELS[row.slug] ?? row.slug}</span>
             {meta?.confidence && meta.confidence !== 'verified' && (
               <span style={{ fontFamily: mono, fontSize: '0.6rem', color: C.yellow, border: `1px solid ${C.yellow}44`, borderRadius: 3, padding: '0 4px' }}>
                 {meta.confidence}
               </span>
             )}
-            <span style={{ fontFamily: mono, fontSize: '0.75rem', color: scoreColor(row.score), minWidth: 34, textAlign: 'right' }}>
-              {row.score ?? 'n/a'}
+            <span style={{ fontFamily: mono, fontSize: '0.75rem', color: scoreColor(row.score), minWidth: 38, textAlign: 'right' }}>
+              {row.score === null || row.score === undefined ? 'n/a' : fmt1(row.score)}
             </span>
           </div>
         );
@@ -397,6 +417,44 @@ function SourceHealth({ snapshot }) {
   );
 }
 
+// ── Shared nav + footer (also used by the About/Donate pages) ───────────────
+
+export const PAYPAL_DONATE_URL = 'https://www.paypal.com/donate/?hosted_button_id=RDHPCCG8WABRN';
+export const FROKKLE_URL = 'https://frokkle.com';
+export const GITHUB_URL = 'https://github.com/Vaughanwj/futurewatch';
+
+export function NavBar({ active, meta }) {
+  const linkStyle = (key) => ({
+    fontFamily: mono,
+    fontSize: '0.75rem',
+    letterSpacing: '0.06em',
+    textDecoration: 'none',
+    color: active === key ? C.orange : C.textDim,
+  });
+  return (
+    <div style={{ display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', gap: 16 }}>
+      <a href="/" style={{ fontFamily: mono, fontWeight: 600, fontSize: '1.05rem', letterSpacing: '0.14em', color: C.text, textDecoration: 'none' }}>
+        FUTUREWATCH
+      </a>
+      <span style={{ fontFamily: mono, fontSize: '0.75rem', color: C.textDim }}>· the meter</span>
+      <a href="/about" style={linkStyle('about')}>about</a>
+      <a href="/donate" style={linkStyle('donate')}>donate</a>
+      {meta && <span style={{ fontFamily: mono, fontSize: '0.68rem', color: C.textLow, marginLeft: 'auto' }}>{meta}</span>}
+    </div>
+  );
+}
+
+export function Footer() {
+  return (
+    <div style={{ fontFamily: sans, fontSize: '0.72rem', color: C.textLow, lineHeight: 1.6, marginTop: 8 }}>
+      Not a prediction. A reading. Scores derive from public data normalized against written anchor tables;
+      forecast content is labeled and never enters the composite. Methodology and per-indicator sources:
+      {' '}<a href={GITHUB_URL} style={{ color: C.textDim }}>github.com/Vaughanwj/futurewatch</a>.
+      {' '}A FutureWatch presentation · a <a href={FROKKLE_URL} style={{ color: C.textDim }}>Frokkle</a> production.
+    </div>
+  );
+}
+
 // ── Page ─────────────────────────────────────────────────────────────────────
 
 export default function FuturewatchDashboard({ snapshot = SAMPLE_SNAPSHOT }) {
@@ -405,15 +463,7 @@ export default function FuturewatchDashboard({ snapshot = SAMPLE_SNAPSHOT }) {
   return (
     <div style={{ background: C.bg, minHeight: '100vh', color: C.text }}>
       <div style={{ maxWidth: 960, margin: '0 auto', padding: '28px 20px 56px', display: 'flex', flexDirection: 'column', gap: 14 }}>
-        <div style={{ display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', gap: 8 }}>
-          <span style={{ fontFamily: mono, fontWeight: 600, fontSize: '1.05rem', letterSpacing: '0.14em', color: C.text }}>
-            FUTUREWATCH
-          </span>
-          <span style={{ fontFamily: mono, fontSize: '0.75rem', color: C.textDim }}>· the meter</span>
-          <span style={{ fontFamily: mono, fontSize: '0.68rem', color: C.textLow, marginLeft: 'auto' }}>
-            reading {snapshot.generatedAt?.slice(0, 10)} · not a prediction, a reading
-          </span>
-        </div>
+        <NavBar active="home" meta={`reading ${snapshot.generatedAt?.slice(0, 10)} · not a prediction, a reading`} />
 
         <Hero snapshot={snapshot} />
 
@@ -438,12 +488,7 @@ export default function FuturewatchDashboard({ snapshot = SAMPLE_SNAPSHOT }) {
 
         <Stories snapshot={snapshot} />
 
-        <div style={{ fontFamily: sans, fontSize: '0.72rem', color: C.textLow, lineHeight: 1.6, marginTop: 8 }}>
-          Not a prediction. A reading. Scores derive from public data normalized against written anchor tables;
-          forecast content is labeled and never enters the composite. Methodology and per-indicator sources:
-          {' '}<a href="https://github.com/Vaughanwj/futurewatch" style={{ color: C.textDim }}>github.com/Vaughanwj/futurewatch</a>.
-          A FutureWatch presentation · a Frokkle production.
-        </div>
+        <Footer />
       </div>
     </div>
   );

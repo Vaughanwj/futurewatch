@@ -1,8 +1,10 @@
 import { StrictMode, useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import FuturewatchDashboard, { C } from './futurewatch_dashboard.jsx';
+import AboutPage from './AboutPage.jsx';
+import DonatePage from './DonatePage.jsx';
 
-function App() {
+function Home() {
   const [snapshot, setSnapshot] = useState(null);
   const [error, setError] = useState(null);
 
@@ -21,6 +23,13 @@ function App() {
   if (error) return <div style={center}>meter data unavailable ({error}) — try again shortly</div>;
   if (!snapshot) return <div style={center}>reading the meter…</div>;
   return <FuturewatchDashboard snapshot={snapshot} />;
+}
+
+function App() {
+  const path = window.location.pathname.replace(/\/+$/, '') || '/';
+  if (path === '/about') return <AboutPage />;
+  if (path === '/donate') return <DonatePage />;
+  return <Home />;
 }
 
 createRoot(document.getElementById('root')).render(
