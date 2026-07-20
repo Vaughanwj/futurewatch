@@ -1,13 +1,13 @@
 # Deployment — futurewatch.ai (FutureWatch Meter)
 
-Same pattern as Frokkle (see recdash-v2/DEPLOY.md): static Vite/React frontend \+ a one-shot pipeline that writes static JSON. GitHub Actions runs the pipeline weekly, builds the frontend, and pushes both to the `data` branch; the VM pulls on a cron and nginx serves everything.
+Same pattern as Frokkle (see recdash-v2/DEPLOY.md): static Vite/React frontend \+ a one-shot pipeline that writes static JSON. GitHub Actions runs the pipeline daily, builds the frontend, and pushes both to the `data` branch; the VM pulls on a cron and nginx serves everything.
 
 Use startssh.ps1 for access to the VM where [futurewatch.ai](http://futurewatch.ai) is pointed. 
 
 ## What's deployed
 
 1. **Frontend** — `frontend/dist/` static build. Fetches `/data/futurewatch.json` same-origin at runtime.  
-2. **Pipeline** — `backend/src/index.js`, Mondays 17:00 UTC via `.github/workflows/weekly-fetch.yml`. Fetches METR, Metaculus, RSS; reads `futurewatch-manual.json`; writes `backend/data/futurewatch.json` \+ `history.json`.
+2. **Pipeline** — `backend/src/index.js`, daily 17:00 UTC (~noon US Central) via `.github/workflows/daily-fetch.yml`. Fetches METR, Metaculus, RSS; reads `futurewatch-manual.json`; writes `backend/data/futurewatch.json` \+ `history.json`.
 
 No API keys required — every automated source is public and unauthenticated.
 
@@ -55,9 +55,9 @@ Then `nginx -t && systemctl reload nginx`, and certbot for TLS as usual.
 
 ## VM pull cron (Option A, same as Frokkle)
 
-\# /etc/cron.d/futurewatch-data — pipeline runs Mondays 17:00 UTC
+\# /etc/cron.d/futurewatch-data — pipeline runs daily 17:00 UTC
 
-30 17 \* \* 1 futurewatch cd /opt/futurewatch && git fetch origin data && \\
+30 17 \* \* \* futurewatch cd /opt/futurewatch && git fetch origin data && \\
 
   git checkout origin/data \-- futurewatch.json history.json dist && \\
 
@@ -73,7 +73,7 @@ Then `nginx -t && systemctl reload nginx`, and certbot for TLS as usual.
 
 - [ ] Push this repo to github.com/Vaughanwj/futurewatch (`main`)  
 - [ ] Settings → Actions → General → Workflow permissions → "Read and write"  
-- [ ] Trigger `weekly-fetch.yml` manually (workflow\_dispatch) — verify: tests pass, pipeline runs with live METR/Metaculus data, `data` branch appears with futurewatch.json \+ dist/  
+- [ ] Trigger `daily-fetch.yml` manually (workflow\_dispatch) — verify: tests pass, pipeline runs with live METR/Metaculus data, `data` branch appears with futurewatch.json \+ dist/  
 - [ ] Inspect futurewatch.json from the data branch — sanity-check composite (\~46 expected) and that `errors` is empty or explainable
 
 ### VM (over ssh)

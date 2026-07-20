@@ -1,8 +1,8 @@
-name: Weekly Fetch
+name: Daily Fetch
 
 on:
   schedule:
-    - cron: '0 17 * * 1'   # Mondays 17:00 UTC — mirrors Frokkle's weekly cadence
+    - cron: '0 17 * * *'   # daily 17:00 UTC (~noon US Central; shifts to ~1pm CST outside DST)
   workflow_dispatch:        # manual trigger for testing
 
 jobs:

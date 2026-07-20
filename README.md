@@ -27,7 +27,7 @@ backend/
   config/feeds.json           Curated-stories RSS list
   scripts/probe.js            Dumps raw source responses for parser verification
   test/                       Fixture tests — no network in CI
-.github/workflows/weekly-fetch.yml   Mondays 17:00 UTC → data branch
+.github/workflows/daily-fetch.yml    Daily 17:00 UTC → data branch
 research/                     Methodology, anchors, survey, decision log
 ```
 
