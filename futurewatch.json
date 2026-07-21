@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-20T23:30:46.455Z",
+  "generatedAt": "2026-07-21T00:23:26.878Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -201,25 +201,25 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 2481,
+      "fetchMs": 2055,
       "indicatorCount": 1
     },
     {
       "source": "metaculus",
       "ok": false,
-      "fetchMs": 340,
+      "fetchMs": 79,
       "indicatorCount": 0
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 1,
+      "fetchMs": 0,
       "indicatorCount": 9
     },
     {
       "source": "rss",
       "ok": false,
-      "fetchMs": 691,
+      "fetchMs": 345,
       "indicatorCount": 0
     }
   ],
