@@ -56,7 +56,12 @@ jobs:
           if [ -f "$RUNNER_TEMP/history.json" ]; then
             cp "$RUNNER_TEMP/history.json" history.json
           fi
-          rsync -a --delete "$RUNNER_TEMP/dist/" dist/
+          # --checksum: index.html is the same byte size on every build (only
+          # its embedded JS-hash reference changes), so rsync's default
+          # mtime+size quick-check can wrongly decide it's unchanged and skip
+          # it — leaving index.html pointing at a JS bundle that --delete just
+          # removed. Checksum comparison makes the sync content-accurate.
+          rsync -a --checksum --delete "$RUNNER_TEMP/dist/" dist/
 
           git add futurewatch.json dist/
           git add history.json 2>/dev/null || true

@@ -63,7 +63,7 @@ Then `nginx -t && systemctl reload nginx`, and certbot for TLS as usual.
 
   cp futurewatch.json history.json /var/www/futurewatch/data/ && \\
 
-  rsync \-a \--delete dist/ /var/www/futurewatch/dist/
+  rsync \-a \--checksum \--delete dist/ /var/www/futurewatch/dist/
 
 (The data branch holds `futurewatch.json`, `history.json`, and the built `dist/` at its root — the workflow puts them there.)
 
