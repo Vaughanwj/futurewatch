@@ -1,6 +1,7 @@
 node_modules/
 backend/probe-output/
 *.pem
+*.ps1
 .env*
 backend/data/futurewatch.json
 backend/data/history.json
