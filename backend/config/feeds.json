@@ -1,7 +1,7 @@
 {
   "_instructions": "Curated-stories sources. label shows in the UI; maxItems caps per-feed items. Keep this list short and high-signal.",
   "feeds": [
-    { "label": "metr.org", "url": "https://metr.substack.com/feed", "maxItems": 3 },
+    { "label": "metr.org", "url": "https://metr.org/feed.xml", "maxItems": 3 },
     { "label": "arXiv cs.AI", "url": "https://rss.arxiv.org/rss/cs.AI", "maxItems": 3 },
     { "label": "Epoch AI", "url": "https://epochai.substack.com/feed", "maxItems": 3 },
     { "label": "FutureWatch", "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCucUSYUHIlVClOiUHjVVM_g", "maxItems": 3 }

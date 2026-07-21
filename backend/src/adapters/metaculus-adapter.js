@@ -50,12 +50,13 @@ export const metaculusAdapter = {
     const errors = [];
     const indicators = {};
 
+    const token = process.env.METACULUS_API_KEY;
+    const headers = { Accept: 'application/json', 'User-Agent': 'futurewatch-meter/0.1' };
+    if (token) headers.Authorization = `Token ${token}`;
+
     for (const { key, id, label } of QUESTIONS) {
       try {
-        const { data } = await axios.get(API(id), {
-          timeout: 15000,
-          headers: { Accept: 'application/json', 'User-Agent': 'futurewatch-meter/0.1' },
-        });
+        const { data } = await axios.get(API(id), { timeout: 15000, headers });
         const median = extractMedianDate(data);
         if (!median) {
           errors.push(`metaculus ${id}: response fetched but median not found (run npm run probe)`);
