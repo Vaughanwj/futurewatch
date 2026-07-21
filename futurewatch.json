@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-21T00:23:26.878Z",
+  "generatedAt": "2026-07-21T00:44:06.483Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -185,6 +185,24 @@
       "feed": "FutureWatch"
     },
     {
+      "title": "Because 8 ≈ e², Anthropic's researcher uplift is plausibly >2x",
+      "link": "https://metr.org/notes/2026-07-08-anthropic-researcher-uplift/",
+      "published": "Wed, 08 Jul 2026 00:00:00 -0700",
+      "feed": "metr.org"
+    },
+    {
+      "title": "Summary of METR's predeployment evaluation of GPT-5.6 Sol",
+      "link": "https://metr.org/blog/2026-06-26-gpt-5-6-sol/",
+      "published": "Fri, 26 Jun 2026 00:00:00 -0700",
+      "feed": "metr.org"
+    },
+    {
+      "title": "前沿 AI 风险报告（2026 年 2–3 月）",
+      "link": "https://metr.org/zh-Hans/blog/2026-05-19-frontier-risk-report/",
+      "published": "Tue, 19 May 2026 11:00:00 -0700",
+      "feed": "metr.org"
+    },
+    {
       "title": "People may actually LIKE you! How the Internet Rewired Our Self-Perception",
       "link": "https://www.youtube.com/watch?v=9fCCXNpW9AI",
       "published": "2026-05-13T01:59:21+00:00",
@@ -201,13 +219,13 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 2055,
+      "fetchMs": 2818,
       "indicatorCount": 1
     },
     {
       "source": "metaculus",
       "ok": false,
-      "fetchMs": 79,
+      "fetchMs": 716,
       "indicatorCount": 0
     },
     {
@@ -219,7 +237,7 @@
     {
       "source": "rss",
       "ok": false,
-      "fetchMs": 345,
+      "fetchMs": 655,
       "indicatorCount": 0
     }
   ],
@@ -410,9 +428,8 @@
     }
   },
   "errors": [
-    "metaculus 3479: Request failed with status code 403",
-    "metaculus 5121: Request failed with status code 403",
-    "rss metr.org: Request failed with status code 403",
+    "metaculus 3479: response fetched but median not found (run npm run probe)",
+    "metaculus 5121: response fetched but median not found (run npm run probe)",
     "rss Epoch AI: Request failed with status code 403"
   ],
   "escalation": {
