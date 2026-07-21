@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-21T00:44:06.483Z",
+  "generatedAt": "2026-07-21T02:32:53.432Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -77,9 +77,10 @@
     }
   },
   "expectation": {
-    "weakAgi": null,
-    "fullAgi": null,
-    "label": "Community forecast (Metaculus) — a forecast, not a measurement"
+    "superforecasterAgi": 2047,
+    "expertAgi": 2050,
+    "label": "Forecasting Research Institute — LEAP panel (experts & superforecasters) — a forecast, not a measurement",
+    "source": "Forecasting Research Institute — LEAP panel, Wave 8 (forecastingresearch.org); cf. Samotsvety Forecasting (~28% probability of AGI by 2030)"
   },
   "safety": {
     "score": 42.5,
@@ -179,12 +180,6 @@
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "The Rise of Cognitive Debt.",
-      "link": "https://www.youtube.com/shorts/63kM8vEABjI",
-      "published": "2026-07-12T23:06:30+00:00",
-      "feed": "FutureWatch"
-    },
-    {
       "title": "Because 8 ≈ e², Anthropic's researcher uplift is plausibly >2x",
       "link": "https://metr.org/notes/2026-07-08-anthropic-researcher-uplift/",
       "published": "Wed, 08 Jul 2026 00:00:00 -0700",
@@ -201,43 +196,25 @@
       "link": "https://metr.org/zh-Hans/blog/2026-05-19-frontier-risk-report/",
       "published": "Tue, 19 May 2026 11:00:00 -0700",
       "feed": "metr.org"
-    },
-    {
-      "title": "People may actually LIKE you! How the Internet Rewired Our Self-Perception",
-      "link": "https://www.youtube.com/watch?v=9fCCXNpW9AI",
-      "published": "2026-05-13T01:59:21+00:00",
-      "feed": "FutureWatch"
-    },
-    {
-      "title": "Love in the Time of Silicon",
-      "link": "https://www.youtube.com/shorts/6cn3tE6egQU",
-      "published": "2026-03-29T21:11:19+00:00",
-      "feed": "FutureWatch"
     }
   ],
   "sourceHealth": [
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 2818,
+      "fetchMs": 2123,
       "indicatorCount": 1
-    },
-    {
-      "source": "metaculus",
-      "ok": false,
-      "fetchMs": 716,
-      "indicatorCount": 0
     },
     {
       "source": "manual",
       "ok": true,
       "fetchMs": 0,
-      "indicatorCount": 9
+      "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": false,
-      "fetchMs": 655,
+      "fetchMs": 1516,
       "indicatorCount": 0
     }
   ],
@@ -415,6 +392,16 @@
       "source": "Stanford HAI AI Index 2026, Economy chapter (hai.stanford.edu/ai-index)",
       "confidence": "judgment"
     },
+    "friLeapAgi": {
+      "value": null,
+      "raw": {
+        "superforecasterMedianYear": 2047,
+        "expertMedianYear": 2050
+      },
+      "asOf": "2026-05-11",
+      "source": "Forecasting Research Institute — LEAP panel, Wave 8 (forecastingresearch.org); cf. Samotsvety Forecasting (~28% probability of AGI by 2030)",
+      "confidence": "provisional"
+    },
     "fliSafetyIndex": {
       "value": null,
       "raw": {
@@ -428,9 +415,8 @@
     }
   },
   "errors": [
-    "metaculus 3479: response fetched but median not found (run npm run probe)",
-    "metaculus 5121: response fetched but median not found (run npm run probe)",
-    "rss Epoch AI: Request failed with status code 403"
+    "rss Epoch AI: Request failed with status code 403",
+    "rss FutureWatch: Request failed with status code 404"
   ],
   "escalation": {
     "flagged": false
