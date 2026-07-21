@@ -18,13 +18,13 @@ const targets = [
   { name: 'metr-runs-head.jsonl', url: 'https://raw.githubusercontent.com/METR/eval-analysis-public/main/reports/time-horizon-1-1/data/raw/runs.jsonl', headLines: 50 },
 ];
 
+const metaculusToken = process.env.METACULUS_API_KEY;
+
 for (const t of targets) {
   try {
-    const { data } = await axios.get(t.url, {
-      timeout: 60000,
-      responseType: 'text',
-      headers: { Accept: 'application/json, text/plain, */*', 'User-Agent': 'futurewatch-meter/0.1' },
-    });
+    const headers = { Accept: 'application/json, text/plain, */*', 'User-Agent': 'futurewatch-meter/0.1' };
+    if (metaculusToken && t.url.includes('metaculus.com')) headers.Authorization = `Token ${metaculusToken}`;
+    const { data } = await axios.get(t.url, { timeout: 60000, responseType: 'text', headers });
     let text = typeof data === 'string' ? data : JSON.stringify(data, null, 2);
     if (t.headLines) text = text.split('\n').slice(0, t.headLines).join('\n');
     await writeFile(path.join(OUT, t.name), text);
