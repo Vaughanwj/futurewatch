@@ -159,8 +159,8 @@ Challenge point: weakest anchor set in the document — the 100-condition is qua
 
 ## Beside the meter (unscored in composite)
 
-### Expectation — Metaculus (automated, weekly)
-No anchors. Displayed as dates with the "forecast, not measurement" label. Weakly-general and full-AGI questions shown side by side with their definitions one click away.
+### Expectation — FRI LEAP panel (manual, ~monthly wave / quarterly review)
+No anchors. Displayed as median AGI-arrival years with the "forecast, not measurement" label — superforecaster median and expert median shown side by side (D4). Previously sourced live from the Metaculus API; retired 2026-07 when Metaculus stopped serving aggregation data through the API for anti-abuse reasons (confirmed via their own "Changes to the Metaculus API" notice — not fixable client-side, tested both endpoint families and the `with_cp` param their own official client uses).
 
 ### Safety — FLI AI Safety Index (manual, semiannual)
 Divergence bar uses **best-lab existential-safety domain grade** (not overall GPA — overall flatters, since it mixes in PR-friendly domains): grade points ÷ 4 × 100.
@@ -182,6 +182,7 @@ Note this lands *lower* than the mockup's illustrative 61 and lower than Hendryc
 | --- | --- | --- | --- |
 | D1 | 2026-07-20 | `metrTimeHorizon` 100-anchor = 1 work-month (rubiconic threshold; beyond it is iteration, not novelty) | Vaughan |
 | D2 | 2026-07-20 | `realTimeEngagement` rubric M1–M5 approved with equal 20-pt weights; revisit weighting only if live scoring reveals a dominant milestone | Vaughan |
+| D4 | 2026-07-21 | Retired Metaculus API for the Expectation panel (data withheld by their own anti-abuse policy change); replaced with `friLeapAgi`, a manual quarterly entry from FRI's LEAP panel (experts + superforecasters), cf. Samotsvety Forecasting as secondary citation | Vaughan |
 
 ## Open challenges (ranked by how much they move the needle)
 

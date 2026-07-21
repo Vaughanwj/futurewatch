@@ -7,7 +7,6 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import { createPipeline } from './app.js';
 import { metrAdapter } from './adapters/metr-adapter.js';
-import { metaculusAdapter } from './adapters/metaculus-adapter.js';
 import { manualAdapter } from './adapters/manual-adapter.js';
 import { rssAdapter } from './adapters/rss-adapter.js';
 
@@ -24,7 +23,7 @@ async function readJsonOrNull(p) {
 }
 
 const pipeline = createPipeline({
-  adapters: { metr: metrAdapter, metaculus: metaculusAdapter, manual: manualAdapter, rss: rssAdapter },
+  adapters: { metr: metrAdapter, manual: manualAdapter, rss: rssAdapter },
 });
 
 const previous = await readJsonOrNull(SNAPSHOT_PATH);

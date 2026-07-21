@@ -52,8 +52,8 @@ AI doing economically real work in the wild.
 - Placement note: deployment lags capability by construction; its lower weight reflects that it *confirms* rather than *predicts*.
 
 ### Expectation (no composite weight — powers the ETA panel)
-- `metaculusWeakAgi`, `metaculusFullAgi` — community forecast dates via API (automated, weekly)
-- Optional later: expert-survey medians (AI Impacts or successors)
+- `friLeapAgi` — median AGI-arrival year from FRI's LEAP panel, experts vs. superforecasters (manual, ~monthly wave / quarterly review; decision D4)
+- Previously `metaculusWeakAgi`/`metaculusFullAgi` via API (automated) — retired 2026-07 when Metaculus stopped serving live aggregation data through the API
 
 ### Safety (beside the meter, not in it)
 - `fliSafetyIndex` — best overall lab grade + existential-safety grade (manual, semiannual)
@@ -72,14 +72,14 @@ Frokkle pattern, reused deliberately:
 
 1. **HOW FAR** — big composite number + progress bar from 2019 mark to AGI line, ASI zone beyond.
 2. **WHAT'S LEFT** — top 3 deficits in plain language, driven by the jaggedness profile (today: long-term memory, learning-on-the-fly, handling truly novel interactive environments). Each links to its indicator.
-3. **HOW FAST** — sparkline of composite since 2019, current doubling stat ("autonomous task horizon doubling every ~4 months"), and the Metaculus arrival window clearly labeled as *forecast, not measurement*.
+3. **HOW FAST** — sparkline of composite since 2019, current doubling stat ("autonomous task horizon doubling every ~4 months"), and the LEAP-panel arrival window clearly labeled as *forecast, not measurement*.
 
 Below the fold: pillar cards (Frokkle card pattern), Divergence view, curated-stories panel (RSS: labs, arXiv, FutureWatch YouTube), source health.
 
 ## 6. Cadence and pipeline
 
-- Weekly cron (GitHub Actions) → automated adapters (Epoch, METR repo, Metaculus, RSS) → `futurewatch.json` (static).
-- Manual file (`futurewatch-manual.json`) for Hendrycks scores, rubric indicators, FLI, Stanford, Anthropic Econ — each entry carries `_instructions` and next-update month, per Frokkle discipline.
+- Daily cron (GitHub Actions, ~noon US Central) → automated adapters (METR repo, RSS) → `futurewatch.json` (static).
+- Manual file (`futurewatch-manual.json`) for Hendrycks scores, rubric indicators, FLI, Stanford, Anthropic Econ, and the FRI LEAP expectation panel — each entry carries `_instructions` and next-update month, per Frokkle discipline.
 - Hex architecture throughout; Azure static hosting; same adapter contract as Frokkle (`{ indicators, fetchMs, errors }`).
 
 ## 7. Honesty rules (carry-overs and additions)

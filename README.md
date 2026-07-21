@@ -9,7 +9,7 @@ A public reading of progress toward AGI, built from peer-reviewed frameworks and
 ## Structure
 
 - **Composite** = Capability (45%) + Autonomy (35%) + Deployment (20%), level components only (Decision D3).
-- **Expectation** (Metaculus forecasts) and **Safety** (FLI AI Safety Index) are displayed beside the meter, never inside it.
+- **Expectation** (FRI LEAP panel forecasts) and **Safety** (FLI AI Safety Index) are displayed beside the meter, never inside it.
 - Full methodology: `research/methodology-draft.md`. Normalization anchors with citations: `research/anchor-tables.md`. Source survey: `research/framework-survey.md`.
 
 ## Repo layout
@@ -18,7 +18,7 @@ A public reading of progress toward AGI, built from peer-reviewed frameworks and
 backend/
   src/
     domain/        Pure scoring: anchors, pillar/composite scorer, METR logistic fit, snapshot builder
-    adapters/      I/O: METR, Metaculus, manual file, RSS
+    adapters/      I/O: METR, manual file, RSS
     ports/         JSDoc type contracts
     app.js         Orchestrator (DI)
     index.js       Entry point → data/futurewatch.json + data/history.json

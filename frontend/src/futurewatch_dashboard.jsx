@@ -91,7 +91,7 @@ const SAMPLE_SNAPSHOT = {
       ],
     },
   },
-  expectation: { weakAgi: '2028-06-20', fullAgi: '2033-01-15' },
+  expectation: { superforecasterAgi: 2047, expertAgi: 2050 },
   safety: { score: 42.5, existentialGrade: 'C-', overallBestGpa: 2.66, bestLab: 'Anthropic' },
   trajectory: {
     metrDoublingDaysSince2023: 131,
@@ -120,8 +120,7 @@ const SAMPLE_SNAPSHOT = {
     { title: 'ARC-AGI-3 remains unbeaten by frontier agents', link: 'https://arcprize.org', feed: 'arcprize.org' },
   ],
   sourceHealth: [
-    { source: 'metr', ok: true }, { source: 'metaculus', ok: true },
-    { source: 'manual', ok: true }, { source: 'rss', ok: true },
+    { source: 'metr', ok: true }, { source: 'manual', ok: true }, { source: 'rss', ok: true },
   ],
   errors: [],
 };
@@ -258,18 +257,20 @@ function HowFast({ snapshot }) {
 }
 
 function Forecasters({ snapshot }) {
-  const { weakAgi, fullAgi } = snapshot.expectation ?? {};
-  const yr = (d) => (d ? d.slice(0, 4) : null);
-  const range = yr(weakAgi) && yr(fullAgi) ? `${yr(weakAgi)}–${yr(fullAgi)}` : yr(weakAgi) ?? yr(fullAgi) ?? '—';
+  const { superforecasterAgi, expertAgi } = snapshot.expectation ?? {};
+  const range =
+    superforecasterAgi && expertAgi
+      ? `${superforecasterAgi}–${expertAgi}`
+      : superforecasterAgi ?? expertAgi ?? '—';
   return (
     <Panel>
       <PanelTitle>Forecasters say</PanelTitle>
       <div style={{ fontFamily: mono, fontSize: '1.7rem', fontWeight: 600, color: C.text }}>{range}</div>
       <div style={{ fontFamily: sans, fontSize: '0.82rem', color: C.textDim, marginTop: 6, lineHeight: 1.45 }}>
-        weakly-general to full AGI, community median
+        median AGI year, superforecasters to experts
       </div>
       <div style={{ fontFamily: mono, fontSize: '0.68rem', color: C.yellow, marginTop: 10 }}>
-        forecast, not a measurement · Metaculus
+        forecast, not a measurement · FRI LEAP panel, cf. Samotsvety
       </div>
     </Panel>
   );

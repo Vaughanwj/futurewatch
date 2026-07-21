@@ -7,7 +7,7 @@ Use startssh.ps1 for access to the VM where [futurewatch.ai](http://futurewatch.
 ## What's deployed
 
 1. **Frontend** — `frontend/dist/` static build. Fetches `/data/futurewatch.json` same-origin at runtime.  
-2. **Pipeline** — `backend/src/index.js`, daily 17:00 UTC (~noon US Central) via `.github/workflows/daily-fetch.yml`. Fetches METR, Metaculus, RSS; reads `futurewatch-manual.json`; writes `backend/data/futurewatch.json` \+ `history.json`.
+2. **Pipeline** — `backend/src/index.js`, daily 17:00 UTC (~noon US Central) via `.github/workflows/daily-fetch.yml`. Fetches METR + RSS; reads `futurewatch-manual.json`; writes `backend/data/futurewatch.json` \+ `history.json`.
 
 No API keys required — every automated source is public and unauthenticated.
 
@@ -73,7 +73,7 @@ Then `nginx -t && systemctl reload nginx`, and certbot for TLS as usual.
 
 - [ ] Push this repo to github.com/Vaughanwj/futurewatch (`main`)  
 - [ ] Settings → Actions → General → Workflow permissions → "Read and write"  
-- [ ] Trigger `daily-fetch.yml` manually (workflow\_dispatch) — verify: tests pass, pipeline runs with live METR/Metaculus data, `data` branch appears with futurewatch.json \+ dist/  
+- [ ] Trigger `daily-fetch.yml` manually (workflow\_dispatch) — verify: tests pass, pipeline runs with live METR data, `data` branch appears with futurewatch.json \+ dist/  
 - [ ] Inspect futurewatch.json from the data branch — sanity-check composite (\~46 expected) and that `errors` is empty or explainable
 
 ### VM (over ssh)
@@ -95,7 +95,7 @@ The pipeline exits code 2 if the composite moves \>5 pts between runs (methodolo
 
 | When | What |
 | :---- | :---- |
-| Quarterly | `realTimeEngagement` scoring session (rubric D2, Vaughan signs off); `agenticAutonomyLevel`; ARC ratios from arcprize.org |
+| Quarterly | `realTimeEngagement` scoring session (rubric D2, Vaughan signs off); `agenticAutonomyLevel`; ARC ratios from arcprize.org; `friLeapAgi` review (forecastingresearch.substack.com, publishes ~monthly) |
 | Semiannual | FLI AI Safety Index (summer/winter releases) |
 | Annual (\~April) | Stanford AI Index economy chapter |
 | Per frontier model | `hendrycksAgiScore` from agidefinition.ai |

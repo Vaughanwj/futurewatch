@@ -40,7 +40,8 @@ export default function AboutPage() {
           <P>
             <strong>Not a prediction. A reading.</strong> Every score on the page derives from public data,
             normalized against written anchor tables — not from a model of the future. Forecast content
-            (Metaculus community forecasts) is shown separately and never enters the composite.
+            (median AGI-arrival estimates from the Forecasting Research Institute's LEAP panel of AI experts
+            and superforecasters) is shown separately and never enters the composite.
           </P>
         </Panel>
 

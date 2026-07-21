@@ -26,8 +26,6 @@ jobs:
       - name: Run pipeline
         run: node src/index.js
         working-directory: backend
-        env:
-          METACULUS_API_KEY: ${{ secrets.METACULUS_API_KEY }}
         # Exit code 2 = escalation (composite moved >5 pts). The job fails so
         # the run is reviewed rather than silently published (methodology §7).
 

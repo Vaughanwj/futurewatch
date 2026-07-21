@@ -79,6 +79,15 @@
     "nextUpdate": "2027-04"
   },
 
+  "friLeapAgi": {
+    "raw": { "superforecasterMedianYear": 2047, "expertMedianYear": 2050 },
+    "asOf": "2026-05-11",
+    "source": "Forecasting Research Institute — LEAP panel, Wave 8 (forecastingresearch.org); cf. Samotsvety Forecasting (~28% probability of AGI by 2030)",
+    "confidence": "provisional",
+    "_instructions": "Replaces the old Metaculus-API expectation feed (Metaculus stopped serving live aggregation data via API, 2026-07, anti-abuse policy — see decision log D4). LEAP surveys AI experts and superforecasters monthly; medianYear is conditional on AGI occurring, using LEAP's definition (commercially available system beating 90th-percentile professionals on 90% of economically useful non-physical tasks at <=5x human labor cost — NOT the same definition as metrTimeHorizon, do not conflate). Check forecastingresearch.substack.com each wave; update on a >=1yr shift in either median, quarterly review minimum.",
+    "nextUpdate": "2026-10"
+  },
+
   "fliSafetyIndex": {
     "raw": { "existentialGrade": "C-", "overallBestGpa": 2.66, "bestLab": "Anthropic" },
     "asOf": "2026-07-15",

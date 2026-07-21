@@ -73,10 +73,12 @@ export function buildSnapshot({ results, now = new Date() }) {
     metrDoublingDaysAll: doublingTimeDays(series),
   };
 
+  const leapRaw = merged.friLeapAgi?.raw;
   const expectation = {
-    weakAgi: merged.weakAgi?.raw?.medianDate ?? null,
-    fullAgi: merged.fullAgi?.raw?.medianDate ?? null,
-    label: 'Community forecast (Metaculus) — a forecast, not a measurement',
+    superforecasterAgi: leapRaw?.superforecasterMedianYear ?? null,
+    expertAgi: leapRaw?.expertMedianYear ?? null,
+    label: 'Forecasting Research Institute — LEAP panel (experts & superforecasters) — a forecast, not a measurement',
+    source: merged.friLeapAgi?.source ?? null,
   };
 
   const safetyRaw = merged.fliSafetyIndex?.raw;

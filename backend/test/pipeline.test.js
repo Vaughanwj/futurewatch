@@ -40,19 +40,6 @@ const stubMetr = {
   },
 };
 
-const stubMetaculus = {
-  async fetch() {
-    return {
-      indicators: {
-        weakAgi: { value: null, raw: { medianDate: '2028-06-20', questionId: 3479 }, asOf: '2026-07-20', source: 'stub', confidence: 'verified' },
-        fullAgi: { value: null, raw: { medianDate: '2033-01-15', questionId: 5121 }, asOf: '2026-07-20', source: 'stub', confidence: 'verified' },
-      },
-      fetchMs: 1,
-      errors: [],
-    };
-  },
-};
-
 const stubRss = {
   async fetch() {
     return { indicators: {}, stories: [{ title: 'stub story', link: 'https://example.com', published: '2026-07-19', feed: 'stub' }], fetchMs: 1, errors: [] };
@@ -61,7 +48,7 @@ const stubRss = {
 
 test('pipeline produces a complete snapshot from stubs + real manual file', async () => {
   const pipeline = createPipeline({
-    adapters: { metr: stubMetr, metaculus: stubMetaculus, manual: createManualAdapter(MANUAL_PATH), rss: stubRss },
+    adapters: { metr: stubMetr, manual: createManualAdapter(MANUAL_PATH), rss: stubRss },
     now: () => new Date('2026-07-20T12:00:00Z'),
   });
   const snap = await pipeline.run();
@@ -73,17 +60,18 @@ test('pipeline produces a complete snapshot from stubs + real manual file', asyn
 
   assert.ok(Math.abs(snap.pillars.autonomy.indicators.find((i) => i.slug === 'metrTimeHorizon').score - 71) < 1);
   assert.equal(snap.pillars.capability.coverage, 1);
-  assert.equal(snap.expectation.weakAgi, '2028-06-20');
+  assert.equal(snap.expectation.superforecasterAgi, 2047);
+  assert.equal(snap.expectation.expertAgi, 2050);
   assert.ok(Math.abs(snap.safety.score - 42.5) < 0.1);
   assert.ok(snap.trajectory.metrDoublingDaysSince2023 > 0);
   assert.equal(snap.stories.length, 1);
-  assert.equal(snap.sourceHealth.length, 4);
+  assert.equal(snap.sourceHealth.length, 3);
   assert.equal(snap.escalation.flagged, false);
 });
 
 test('escalation flags >5pt composite move', async () => {
   const pipeline = createPipeline({
-    adapters: { metr: stubMetr, metaculus: stubMetaculus, manual: createManualAdapter(MANUAL_PATH), rss: stubRss },
+    adapters: { metr: stubMetr, manual: createManualAdapter(MANUAL_PATH), rss: stubRss },
   });
   const snap = await pipeline.run({ composite: { value: 99 } });
   assert.equal(snap.escalation.flagged, true);
