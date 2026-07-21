@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-21T03:03:23.420Z",
+  "generatedAt": "2026-07-21T18:13:14.595Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -162,22 +162,28 @@
   },
   "stories": [
     {
-      "title": "GraphDx: A Cost-Aware Knowledge-Enhanced Multi-Agent Framework for Sequential Diagnosis",
-      "link": "https://arxiv.org/abs/2607.15280",
-      "published": "Mon, 20 Jul 2026 00:00:00 -0400",
+      "title": "Rater State Bias in RLHF Preference Data: An Audit Framework",
+      "link": "https://arxiv.org/abs/2607.16195",
+      "published": "Tue, 21 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Causal-Audit: Explicit and Auditable Graph-based Reasoning via Target-Aware Causal Chain Construction",
-      "link": "https://arxiv.org/abs/2607.15281",
-      "published": "Mon, 20 Jul 2026 00:00:00 -0400",
+      "title": "Design and Validation of a Lightweight 1D CNN for Affective Touch Classification in Soft Plush Companions",
+      "link": "https://arxiv.org/abs/2607.16196",
+      "published": "Tue, 21 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Cura 1T: Specialized Model for Agentic Healthcare",
-      "link": "https://arxiv.org/abs/2607.15314",
-      "published": "Mon, 20 Jul 2026 00:00:00 -0400",
+      "title": "Some Large Language Models Exhibit Consistent Risk Attitudes",
+      "link": "https://arxiv.org/abs/2607.16197",
+      "published": "Tue, 21 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "The Rise of Cognitive Debt.",
+      "link": "https://www.youtube.com/shorts/63kM8vEABjI",
+      "published": "2026-07-12T23:06:30+00:00",
+      "feed": "FutureWatch"
     },
     {
       "title": "Because 8 ≈ e², Anthropic's researcher uplift is plausibly >2x",
@@ -196,13 +202,25 @@
       "link": "https://metr.org/zh-Hans/blog/2026-05-19-frontier-risk-report/",
       "published": "Tue, 19 May 2026 11:00:00 -0700",
       "feed": "metr.org"
+    },
+    {
+      "title": "People may actually LIKE you! How the Internet Rewired Our Self-Perception",
+      "link": "https://www.youtube.com/watch?v=9fCCXNpW9AI",
+      "published": "2026-05-13T01:59:21+00:00",
+      "feed": "FutureWatch"
+    },
+    {
+      "title": "Love in the Time of Silicon",
+      "link": "https://www.youtube.com/shorts/6cn3tE6egQU",
+      "published": "2026-03-29T21:11:19+00:00",
+      "feed": "FutureWatch"
     }
   ],
   "sourceHealth": [
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 2100,
+      "fetchMs": 16013,
       "indicatorCount": 1
     },
     {
@@ -214,7 +232,7 @@
     {
       "source": "rss",
       "ok": false,
-      "fetchMs": 1256,
+      "fetchMs": 1045,
       "indicatorCount": 0
     }
   ],
@@ -415,8 +433,7 @@
     }
   },
   "errors": [
-    "rss Epoch AI: Request failed with status code 403",
-    "rss FutureWatch: Request failed with status code 404"
+    "rss Epoch AI: Request failed with status code 403"
   ],
   "escalation": {
     "flagged": false
