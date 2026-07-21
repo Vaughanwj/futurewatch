@@ -14,10 +14,6 @@ await mkdir(OUT, { recursive: true });
 const targets = [
   { name: 'metaculus-3479.json', url: 'https://www.metaculus.com/api2/questions/3479/' },
   { name: 'metaculus-5121.json', url: 'https://www.metaculus.com/api2/questions/5121/' },
-  { name: 'metaculus-posts-3479.json', url: 'https://www.metaculus.com/api/posts/3479/' },
-  { name: 'metaculus-posts-5121.json', url: 'https://www.metaculus.com/api/posts/5121/' },
-  { name: 'metaculus-posts-3479-withcp.json', url: 'https://www.metaculus.com/api/posts/3479/?with_cp=true' },
-  { name: 'metaculus-questions-3479-withcp.json', url: 'https://www.metaculus.com/api2/questions/3479/?with_cp=true' },
   { name: 'metr-release-dates.yaml', url: 'https://raw.githubusercontent.com/METR/eval-analysis-public/main/data/external/release_dates.yaml' },
   { name: 'metr-runs-head.jsonl', url: 'https://raw.githubusercontent.com/METR/eval-analysis-public/main/reports/time-horizon-1-1/data/raw/runs.jsonl', headLines: 50 },
 ];
