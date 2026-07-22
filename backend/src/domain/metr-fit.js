@@ -55,6 +55,16 @@ export function fitP50Horizon(runs) {
 }
 
 /**
+ * Merge model lists from two suites: primary (TH1.1) wins on alias collision;
+ * legacy (TH1.0) fills in models the newer suite dropped — critically the
+ * pre-2023 models (GPT-2, GPT-3) that anchor the road-from-2019 chart.
+ */
+export function mergeModels(primary, legacy) {
+  const seen = new Set((primary ?? []).map((m) => m.alias));
+  return (primary ?? []).concat((legacy ?? []).filter((m) => !seen.has(m.alias)));
+}
+
+/**
  * Frontier series: for each release date, the max p50 among models released
  * on or before it. Input: [{alias, releaseDate, p50Minutes}].
  * Output: sorted [{date, value, alias}] keeping only frontier advances.

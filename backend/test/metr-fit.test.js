@@ -1,6 +1,22 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { fitP50Horizon, frontierSeries } from '../src/domain/metr-fit.js';
+import { fitP50Horizon, frontierSeries, mergeModels } from '../src/domain/metr-fit.js';
+
+test('mergeModels: primary wins collisions, legacy fills pre-2023 gap', () => {
+  const primary = [
+    { alias: 'GPT-4 0314', p50Minutes: 3.6, suite: 'TH1.1' },
+    { alias: 'GPT-5', p50Minutes: 214, suite: 'TH1.1' },
+  ];
+  const legacy = [
+    { alias: 'GPT-2', p50Minutes: 0.067, suite: 'TH1.0' },
+    { alias: 'GPT-4 0314', p50Minutes: 5.4, suite: 'TH1.0' }, // collision — dropped
+  ];
+  const merged = mergeModels(primary, legacy);
+  assert.equal(merged.length, 3);
+  assert.equal(merged.find((m) => m.alias === 'GPT-4 0314').p50Minutes, 3.6);
+  assert.ok(merged.some((m) => m.alias === 'GPT-2'));
+  assert.deepEqual(mergeModels([], legacy).map((m) => m.alias), ['GPT-2', 'GPT-4 0314']);
+});
 
 test('logistic fit recovers a known p50 from synthetic runs', () => {
   // True p50 = 60 min: generate probabilistic-looking but deterministic data —

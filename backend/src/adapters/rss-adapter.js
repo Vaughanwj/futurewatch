@@ -35,14 +35,28 @@ const decode = (s) =>
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'");
 
+// Skip non-English mirror posts (e.g. metr.org publishes /zh-Hans/ variants
+// of each article) so the stories panel doesn't show duplicates.
+const CJK = /[぀-ヿ㐀-鿿가-힯]/;
+const LOCALE_PATH = /\/(?:zh-Han[st]|ja|ko|fr|de|es|pt-BR)\//i;
+
+function isEnglishItem(item) {
+  if (item.title && CJK.test(item.title)) return false;
+  if (item.link && LOCALE_PATH.test(item.link)) return false;
+  return true;
+}
+
 function parseFeed(xml, feedLabel, maxItems) {
   const blocks = xml.match(/<(?:item|entry)[\s>][\s\S]*?<\/(?:item|entry)>/gi) ?? [];
-  return blocks.slice(0, maxItems).map((b) => ({
-    title: pick(b, 'title') ?? '(untitled)',
-    link: pick(b, 'link') || pickAtomLink(b),
-    published: pick(b, 'pubDate') ?? pick(b, 'published') ?? pick(b, 'updated'),
-    feed: feedLabel,
-  }));
+  return blocks
+    .map((b) => ({
+      title: pick(b, 'title') ?? '(untitled)',
+      link: pick(b, 'link') || pickAtomLink(b),
+      published: pick(b, 'pubDate') ?? pick(b, 'published') ?? pick(b, 'updated'),
+      feed: feedLabel,
+    }))
+    .filter(isEnglishItem)
+    .slice(0, maxItems);
 }
 
 export function createRssAdapter(configPath = DEFAULT_CONFIG) {
@@ -63,7 +77,13 @@ export function createRssAdapter(configPath = DEFAULT_CONFIG) {
           const { data } = await axios.get(feed.url, {
             timeout: 15000,
             responseType: 'text',
-            headers: { 'User-Agent': 'futurewatch-meter/0.1' },
+            // Browser-like UA: several feed hosts (notably Substack) 403
+            // generic bot UAs from datacenter IPs.
+            headers: {
+              'User-Agent':
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36 FutureWatchMeter/0.1 (+https://futurewatch.ai)',
+              Accept: 'application/rss+xml, application/atom+xml, application/xml, text/xml, */*',
+            },
           });
           stories.push(...parseFeed(String(data), feed.label, feed.maxItems ?? 3));
         } catch (err) {
@@ -73,9 +93,17 @@ export function createRssAdapter(configPath = DEFAULT_CONFIG) {
 
       stories.sort((a, b) => (Date.parse(b.published) || 0) - (Date.parse(a.published) || 0));
 
+      // Dedupe by link across feeds
+      const seen = new Set();
+      const deduped = stories.filter((s) => {
+        if (!s.link || seen.has(s.link)) return false;
+        seen.add(s.link);
+        return true;
+      });
+
       return {
         indicators: {},
-        stories: stories.slice(0, 12),
+        stories: deduped.slice(0, 12),
         fetchMs: Date.now() - t0,
         errors,
       };

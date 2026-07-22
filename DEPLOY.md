@@ -59,11 +59,13 @@ Then `nginx -t && systemctl reload nginx`, and certbot for TLS as usual.
 
 30 17 \* \* \* futurewatch cd /opt/futurewatch && git fetch origin data && \\
 
-  git checkout origin/data \-- futurewatch.json history.json dist && \\
+  rm -rf dist && git checkout origin/data \-- futurewatch.json history.json dist && \\
 
   cp futurewatch.json history.json /var/www/futurewatch/data/ && \\
 
   rsync \-a \--checksum \--delete dist/ /var/www/futurewatch/dist/
+
+(`rm -rf dist` before the checkout is required — `dist/` isn't tracked on `main`, so `git checkout <ref> -- dist` only ever adds/updates files and never prunes ones from a prior pull that the latest snapshot no longer has, e.g. an old content-hashed JS bundle.)
 
 (The data branch holds `futurewatch.json`, `history.json`, and the built `dist/` at its root — the workflow puts them there.)
 

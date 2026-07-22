@@ -6,13 +6,13 @@
  * Returns raw values; normalization happens in domain (anchors.js).
  */
 import axios from 'axios';
-import { fitP50Horizon, frontierSeries } from '../domain/metr-fit.js';
+import { fitP50Horizon, frontierSeries, mergeModels } from '../domain/metr-fit.js';
 
 const BASE = 'https://raw.githubusercontent.com/METR/eval-analysis-public/main';
-const RUNS_URLS = [
-  `${BASE}/reports/time-horizon-1-1/data/raw/runs.jsonl`,
-  `${BASE}/reports/time-horizon-1-0/data/raw/runs.jsonl`, // fallback
-];
+// TH1.1 is the primary suite; TH1.0 supplements with legacy models (GPT-2,
+// GPT-3 era) that TH1.1 never re-ran — METR's own "hybrid trend" approach.
+const PRIMARY_URL = `${BASE}/reports/time-horizon-1-1/data/raw/runs.jsonl`;
+const LEGACY_URL = `${BASE}/reports/time-horizon-1-0/data/raw/runs.jsonl`;
 const DATES_URL = `${BASE}/data/external/release_dates.yaml`;
 
 function parseReleaseDates(yamlText) {
@@ -50,44 +50,52 @@ function parseRuns(jsonlText) {
   return byModel;
 }
 
+function fitModels(byModel, releaseDates, suite) {
+  const models = [];
+  for (const [alias, runs] of byModel) {
+    const { p50Minutes, n } = fitP50Horizon(runs);
+    if (p50Minutes !== null) {
+      models.push({ alias, p50Minutes, n, suite, releaseDate: releaseDates[alias] ?? null });
+    }
+  }
+  return models;
+}
+
 export const metrAdapter = {
   async fetch() {
     const t0 = Date.now();
     const errors = [];
-    let runsText = null;
-    let suite = null;
 
-    for (const url of RUNS_URLS) {
+    async function fetchText(url, label) {
       try {
         const { data } = await axios.get(url, { timeout: 60000, responseType: 'text' });
-        runsText = data;
-        suite = url.includes('1-1') ? 'TH1.1' : 'TH1.0';
-        break;
+        return data;
       } catch (err) {
-        errors.push(`metr runs ${url.split('/reports/')[1] ?? url}: ${err.message}`);
+        errors.push(`metr ${label}: ${err.message}`);
+        return null;
       }
     }
 
-    let releaseDates = {};
-    try {
-      const { data } = await axios.get(DATES_URL, { timeout: 15000, responseType: 'text' });
-      releaseDates = parseReleaseDates(data);
-    } catch (err) {
-      errors.push(`metr release_dates: ${err.message}`);
-    }
+    const [primaryText, legacyText, datesText] = [
+      await fetchText(PRIMARY_URL, 'runs TH1.1'),
+      await fetchText(LEGACY_URL, 'runs TH1.0'),
+      await fetchText(DATES_URL, 'release_dates'),
+    ];
 
-    if (!runsText) {
+    const releaseDates = datesText ? parseReleaseDates(datesText) : {};
+
+    if (!primaryText && !legacyText) {
       return { indicators: {}, fetchMs: Date.now() - t0, errors };
     }
 
-    const byModel = parseRuns(runsText);
-    const models = [];
-    for (const [alias, runs] of byModel) {
-      const { p50Minutes, n } = fitP50Horizon(runs);
-      if (p50Minutes !== null) {
-        models.push({ alias, p50Minutes, n, releaseDate: releaseDates[alias] ?? null });
-      }
-    }
+    const primaryModels = primaryText ? fitModels(parseRuns(primaryText), releaseDates, 'TH1.1') : [];
+    const legacyModels = legacyText ? fitModels(parseRuns(legacyText), releaseDates, 'TH1.0') : [];
+    // Primary wins collisions; legacy contributes only the models TH1.1
+    // dropped — restoring the 2019–2022 stretch of the road chart.
+    const models = mergeModels(primaryModels, legacyModels);
+    const suite = primaryText
+      ? legacyText ? 'TH1.1 + TH1.0 legacy' : 'TH1.1'
+      : 'TH1.0';
 
     const series = frontierSeries(models);
     const frontier = series.length > 0 ? series[series.length - 1] : null;
