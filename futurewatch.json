@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-22T14:14:12.086Z",
+  "generatedAt": "2026-07-22T18:05:21.235Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,6 +182,12 @@
   },
   "stories": [
     {
+      "title": "The Economics of Recursive Self-Improvement",
+      "link": "https://metr.org/notes/2026-07-22-economics-of-recursive-self-improvement/",
+      "published": "Wed, 22 Jul 2026 00:00:00 -0700",
+      "feed": "metr.org"
+    },
+    {
       "title": "SysAdmin: Measuring Instrumental Power-Seeking in Frontier AI",
       "link": "https://arxiv.org/abs/2607.18239",
       "published": "Wed, 22 Jul 2026 00:00:00 -0400",
@@ -236,12 +242,6 @@
       "feed": "Import AI"
     },
     {
-      "title": "Summary of METR's predeployment evaluation of GPT-5.6 Sol",
-      "link": "https://metr.org/blog/2026-06-26-gpt-5-6-sol/",
-      "published": "Fri, 26 Jun 2026 00:00:00 -0700",
-      "feed": "metr.org"
-    },
-    {
       "title": "People may actually LIKE you! How the Internet Rewired Our Self-Perception",
       "link": "https://www.youtube.com/watch?v=9fCCXNpW9AI",
       "published": "2026-05-13T01:59:21+00:00",
@@ -258,7 +258,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5079,
+      "fetchMs": 5467,
       "indicatorCount": 1
     },
     {
@@ -270,7 +270,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 567,
+      "fetchMs": 1406,
       "indicatorCount": 0
     }
   ],
