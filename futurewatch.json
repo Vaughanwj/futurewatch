@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-21T18:13:14.595Z",
+  "generatedAt": "2026-07-22T13:57:43.563Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -92,6 +92,21 @@
   "trajectory": {
     "frontierSeries": [
       {
+        "date": "2019-02-14",
+        "value": 0.05367579494023331,
+        "alias": "GPT-2"
+      },
+      {
+        "date": "2020-05-28",
+        "value": 0.14584746498544598,
+        "alias": "davinci-002 (GPT-3)"
+      },
+      {
+        "date": "2022-03-15",
+        "value": 0.60021288828414,
+        "alias": "gpt-3.5-turbo-instruct"
+      },
+      {
         "date": "2023-03-14",
         "value": 3.987227600429893,
         "alias": "GPT-4 0314"
@@ -100,6 +115,11 @@
         "date": "2023-11-06",
         "value": 4.044903243695019,
         "alias": "GPT-4 1106"
+      },
+      {
+        "date": "2024-01-25",
+        "value": 6.347108815839549,
+        "alias": "GPT-4 0125"
       },
       {
         "date": "2024-05-13",
@@ -157,27 +177,33 @@
         "alias": "GPT-5.2"
       }
     ],
-    "metrDoublingDaysSince2023": 134,
-    "metrDoublingDaysAll": 134
+    "metrDoublingDaysSince2023": 133,
+    "metrDoublingDaysAll": 193
   },
   "stories": [
     {
-      "title": "Rater State Bias in RLHF Preference Data: An Audit Framework",
-      "link": "https://arxiv.org/abs/2607.16195",
-      "published": "Tue, 21 Jul 2026 00:00:00 -0400",
+      "title": "SysAdmin: Measuring Instrumental Power-Seeking in Frontier AI",
+      "link": "https://arxiv.org/abs/2607.18239",
+      "published": "Wed, 22 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Design and Validation of a Lightweight 1D CNN for Affective Touch Classification in Soft Plush Companions",
-      "link": "https://arxiv.org/abs/2607.16196",
-      "published": "Tue, 21 Jul 2026 00:00:00 -0400",
+      "title": "Calibrated Selective Fact-Checking via Evidence Chain Evaluation",
+      "link": "https://arxiv.org/abs/2607.18240",
+      "published": "Wed, 22 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Some Large Language Models Exhibit Consistent Risk Attitudes",
-      "link": "https://arxiv.org/abs/2607.16197",
-      "published": "Tue, 21 Jul 2026 00:00:00 -0400",
+      "title": "BatchDAG: LLM-Planned Execution Graphs for Scalable Ad-Hoc Analysis Over Enterprise Data",
+      "link": "https://arxiv.org/abs/2607.18241",
+      "published": "Wed, 22 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Expenditure Horizon: Measuring Optimization Ability, with an Application to NanoGPT",
+      "link": "https://metr.org/blog/2026-07-21-expenditure-horizon/",
+      "published": "Tue, 21 Jul 2026 00:00:00 -0700",
+      "feed": "metr.org"
     },
     {
       "title": "The Rise of Cognitive Debt.",
@@ -198,12 +224,6 @@
       "feed": "metr.org"
     },
     {
-      "title": "前沿 AI 风险报告（2026 年 2–3 月）",
-      "link": "https://metr.org/zh-Hans/blog/2026-05-19-frontier-risk-report/",
-      "published": "Tue, 19 May 2026 11:00:00 -0700",
-      "feed": "metr.org"
-    },
-    {
       "title": "People may actually LIKE you! How the Internet Rewired Our Self-Perception",
       "link": "https://www.youtube.com/watch?v=9fCCXNpW9AI",
       "published": "2026-05-13T01:59:21+00:00",
@@ -220,7 +240,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 16013,
+      "fetchMs": 4337,
       "indicatorCount": 1
     },
     {
@@ -232,7 +252,7 @@
     {
       "source": "rss",
       "ok": false,
-      "fetchMs": 1045,
+      "fetchMs": 1180,
       "indicatorCount": 0
     }
   ],
@@ -242,9 +262,24 @@
       "raw": {
         "p50Minutes": 352.24235849272736,
         "frontierModel": "GPT-5.2",
-        "suite": "TH1.1",
-        "modelCount": 21,
+        "suite": "TH1.1 + TH1.0 legacy",
+        "modelCount": 38,
         "frontierSeries": [
+          {
+            "date": "2019-02-14",
+            "value": 0.05367579494023331,
+            "alias": "GPT-2"
+          },
+          {
+            "date": "2020-05-28",
+            "value": 0.14584746498544598,
+            "alias": "davinci-002 (GPT-3)"
+          },
+          {
+            "date": "2022-03-15",
+            "value": 0.60021288828414,
+            "alias": "gpt-3.5-turbo-instruct"
+          },
           {
             "date": "2023-03-14",
             "value": 3.987227600429893,
@@ -254,6 +289,11 @@
             "date": "2023-11-06",
             "value": 4.044903243695019,
             "alias": "GPT-4 1106"
+          },
+          {
+            "date": "2024-01-25",
+            "value": 6.347108815839549,
+            "alias": "GPT-4 0125"
           },
           {
             "date": "2024-05-13",
