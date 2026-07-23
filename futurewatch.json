@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-23T18:08:44.587Z",
+  "generatedAt": "2026-07-23T21:21:30.134Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -258,7 +258,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5442,
+      "fetchMs": 5230,
       "indicatorCount": 1
     },
     {
@@ -270,7 +270,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 994,
+      "fetchMs": 1217,
       "indicatorCount": 0
     }
   ],
