@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-22T18:05:21.235Z",
+  "generatedAt": "2026-07-23T18:08:44.587Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,28 +182,28 @@
   },
   "stories": [
     {
-      "title": "The Economics of Recursive Self-Improvement",
-      "link": "https://metr.org/notes/2026-07-22-economics-of-recursive-self-improvement/",
-      "published": "Wed, 22 Jul 2026 00:00:00 -0700",
-      "feed": "metr.org"
-    },
-    {
       "title": "SysAdmin: Measuring Instrumental Power-Seeking in Frontier AI",
       "link": "https://arxiv.org/abs/2607.18239",
-      "published": "Wed, 22 Jul 2026 00:00:00 -0400",
+      "published": "Thu, 23 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "Calibrated Selective Fact-Checking via Evidence Chain Evaluation",
       "link": "https://arxiv.org/abs/2607.18240",
-      "published": "Wed, 22 Jul 2026 00:00:00 -0400",
+      "published": "Thu, 23 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "BatchDAG: LLM-Planned Execution Graphs for Scalable Ad-Hoc Analysis Over Enterprise Data",
       "link": "https://arxiv.org/abs/2607.18241",
-      "published": "Wed, 22 Jul 2026 00:00:00 -0400",
+      "published": "Thu, 23 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "The Economics of Recursive Self-Improvement",
+      "link": "https://metr.org/notes/2026-07-22-economics-of-recursive-self-improvement/",
+      "published": "Wed, 22 Jul 2026 00:00:00 -0700",
+      "feed": "metr.org"
     },
     {
       "title": "Expenditure Horizon: Measuring Optimization Ability, with an Application to NanoGPT",
@@ -258,7 +258,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5467,
+      "fetchMs": 5442,
       "indicatorCount": 1
     },
     {
@@ -270,7 +270,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1406,
+      "fetchMs": 994,
       "indicatorCount": 0
     }
   ],
