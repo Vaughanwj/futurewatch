@@ -3,7 +3,7 @@
  * Triptych: how far / what's left / how fast, per methodology-draft.md §5.
  * Reads /data/futurewatch.json (weekly pipeline output).
  */
-import { useMemo } from 'react';
+import { useMemo, useState, useRef, useLayoutEffect } from 'react';
 
 // ── Palette (Frokkle-adjacent dark terminal) ─────────────────────────────────
 export const C = {
@@ -56,6 +56,122 @@ const PILLAR_LABELS = { capability: 'Capability', autonomy: 'Autonomy', deployme
 // "12", "12.75", and "30" in the same list.
 function fmt1(v) {
   return typeof v === 'number' && Number.isFinite(v) ? v.toFixed(1) : (v ?? '—');
+}
+
+// ── Tooltips — every measure explains itself ─────────────────────────────────
+
+const TIPS = {
+  composite:
+    'A weighted blend of three evidence pillars: Capability 45%, Autonomy 35%, Deployment 20%. 0 is the 2019 frontier (GPT-2); 100 is the AGI line — the cognitive versatility and proficiency of a well-educated adult, with the ASI zone beyond. Forecasts and safety grades are shown separately and never counted in this number.',
+  whatsLeft:
+    'The three lowest-scoring capability measures right now — the plainest statement of what separates today’s AI from the AGI line. These update automatically as the data moves.',
+  howFast:
+    'How quickly the unsupervised-work horizon doubles, from METR’s published data. The horizon is the longest task (in human working time) the best AI completes with 50% reliability.',
+  forecasters:
+    'Median predictions from the Forecasting Research Institute’s LEAP panel of experts and superforecasters. This is expectation, not measurement — it never enters the meter.',
+  road:
+    'Each dot is a new record: the longest task, measured in the time it takes a skilled human, that the best AI of the day could complete unsupervised at 50% reliability. Log scale — each gridline is a multiple of the one below.',
+  divergence:
+    'The meter reading (capability) beside how seriously frontier labs take existential safety — the best grade any lab earned in the Future of Life Institute’s independent Safety Index, converted to 0–100. The gap is the point.',
+  sourceHealth:
+    'How many of the meter’s data sources responded on schedule in the latest run. Published so you can judge how fresh the reading is — a meter that hides its own failures isn’t worth trusting.',
+  capability:
+    'What frontier AI can do cognitively — knowledge, reasoning, novel problem-solving, learning, social interaction. Averaged over five measures. 45% of the composite.',
+  autonomy:
+    'How long and how independently AI works without a human — the time horizon of unsupervised work, plus how much real deployments trust it. 35% of the composite.',
+  deployment:
+    'Whether AI is doing real economic work in the wild, not just passing tests. Deliberately the smallest weight — it confirms progress rather than predicts it. 20% of the composite.',
+  hendrycksAgiScore:
+    'Published score from a large research consortium (Hendrycks, Bengio and others): how much of a well-educated adult’s cognitive versatility the best AI matches, across ten domains of human cognition. 100 = fully matches.',
+  epochBenchmarks:
+    'Frontier performance on a basket of the hardest public benchmarks — graduate-level science, competition math, real software fixes — as a fraction of expert-human level. Data: Epoch AI. Currently a provisional estimate.',
+  arcGap:
+    'How close AI comes to ordinary humans on ARC-AGI puzzles: tasks built to be unlike anything in training data. Humans solve nearly all of them; AI still fails most, especially the interactive version.',
+  selfLearning:
+    'Whether AI improves from its own accumulated experience, measured against the same system running with no memory (CL-Bench). Near zero today: models don’t yet learn on the job.',
+  realTimeEngagement:
+    'Our own five-milestone rubric for live, multi-person interaction: real-time voice, group conversation, unprompted contributions, remembering people across sessions, and holding a valued role in a human group for weeks. Criteria published in the repo.',
+  metrTimeHorizon:
+    'The longest task — in human working time — the best AI completes unsupervised with 50% reliability (METR). Log scale from ~4 seconds (GPT-2, 2019) to one working month, the point we treat as the autonomy Rubicon.',
+  agenticAutonomyLevel:
+    'How independently AI routinely operates in real deployments, on DeepMind’s published ladder: tool → consultant → collaborator → expert → autonomous agent.',
+  anthropicEconIndex:
+    'How much real economic work AI performs: the breadth of occupations using it materially, combined with the share of total work it does. From Anthropic’s Economic Index.',
+  aiIndexEconomy:
+    'A cross-check from Stanford’s AI Index: business adoption of AI and AI’s share of job postings, scaled so 2019 counts as zero.',
+};
+
+const CONFIDENCE_TIPS = {
+  provisional: 'From a published source we haven’t re-verified this cycle.',
+  judgment: 'Scored by our published rubric — a documented judgment call, not a measured feed.',
+};
+
+const TOOLTIP_WIDTH = 250;
+const TOOLTIP_GUTTER = 10;
+
+// Positioned in viewport (fixed) coordinates computed from the button's own
+// getBoundingClientRect, then clamped to stay fully on-screen — a binary
+// left/right anchor choice isn't enough, since several Info dots sit on
+// dynamic content (e.g. WhatsLeft's lowest-scoring indicators) whose on-screen
+// position varies with the data, and a button near the middle of a narrow
+// viewport can be too far from *both* edges for either fixed anchor to fit.
+function Info({ tip }) {
+  const [open, setOpen] = useState(false);
+  const [pos, setPos] = useState(null);
+  const anchorRef = useRef(null);
+
+  useLayoutEffect(() => {
+    if (!open) return;
+    const rect = anchorRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    const viewportWidth = document.documentElement.clientWidth;
+    const left = Math.max(
+      TOOLTIP_GUTTER,
+      Math.min(rect.left, viewportWidth - TOOLTIP_WIDTH - TOOLTIP_GUTTER)
+    );
+    setPos({ top: rect.bottom + 7, left });
+  }, [open]);
+
+  if (!tip) return null;
+  return (
+    <span
+      ref={anchorRef}
+      style={{ position: 'relative', display: 'inline-block', marginLeft: 6, verticalAlign: 'middle' }}
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      <button
+        type="button"
+        aria-label="About this measure"
+        onClick={() => setOpen((o) => !o)}
+        onBlur={() => setOpen(false)}
+        style={{
+          all: 'unset', boxSizing: 'border-box', cursor: 'help', width: 14, height: 14,
+          borderRadius: '50%', border: `1px solid ${C.textLow}`, color: C.textLow,
+          fontSize: '0.58rem', fontFamily: sans, fontStyle: 'italic', fontWeight: 600,
+          display: 'inline-flex', alignItems: 'center', justifyContent: 'center', lineHeight: 1,
+        }}
+      >
+        i
+      </button>
+      {open && pos && (
+        <span
+          role="tooltip"
+          style={{
+            position: 'fixed', zIndex: 30, top: pos.top, left: pos.left, boxSizing: 'border-box',
+            width: TOOLTIP_WIDTH, maxWidth: `calc(100vw - ${TOOLTIP_GUTTER * 2}px)`, background: '#161b28',
+            border: `1px solid ${C.panelEdge}`, borderRadius: 8, padding: '10px 12px',
+            fontFamily: sans, fontSize: '0.75rem', fontWeight: 400, fontStyle: 'normal',
+            lineHeight: 1.55, color: C.text,
+            textTransform: 'none', letterSpacing: 'normal', whiteSpace: 'normal',
+            boxShadow: '0 8px 24px rgba(0,0,0,0.5)',
+          }}
+        >
+          {tip}
+        </span>
+      )}
+    </span>
+  );
 }
 
 // Fallback for standalone previews (artifact runners, storybooks) that render
@@ -161,10 +277,11 @@ function Panel({ children, style }) {
   );
 }
 
-function PanelTitle({ children }) {
+function PanelTitle({ children, tip }) {
   return (
     <div style={{ fontFamily: sans, fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: C.textDim, marginBottom: 12 }}>
       {children}
+      {tip && <Info tip={tip} />}
     </div>
   );
 }
@@ -190,7 +307,10 @@ function Hero({ snapshot }) {
         <span style={{ fontFamily: mono, fontSize: '3.6rem', fontWeight: 600, color: C.orange, lineHeight: 1 }}>
           {fmt1(v)}
         </span>
-        <span style={{ fontFamily: sans, color: C.textDim, fontSize: '1rem' }}>of 100 on the road to AGI</span>
+        <span style={{ fontFamily: sans, color: C.textDim, fontSize: '1rem' }}>
+          of 100 on the road to AGI
+          <Info tip={TIPS.composite} />
+        </span>
         <span style={{ fontFamily: mono, fontSize: '0.72rem', color: C.textLow, marginLeft: 'auto' }}>
           scored on {Math.round((coverage ?? 0) * 100)}% of indicators · v0.1 provisional
         </span>
@@ -222,11 +342,12 @@ function WhatsLeft({ snapshot }) {
   }, [snapshot]);
   return (
     <Panel>
-      <PanelTitle>What's still missing</PanelTitle>
+      <PanelTitle tip={TIPS.whatsLeft}>What's still missing</PanelTitle>
       {deficits.map((d) => (
         <div key={d.slug} style={{ marginBottom: 10 }}>
           <div style={{ fontFamily: sans, fontSize: '0.88rem', color: C.text, marginBottom: 4 }}>
             {PLAIN[d.slug] ?? d.slug}
+            <Info tip={TIPS[d.slug]} />
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             <div style={{ flex: 1 }}><Bar value={d.score} color={scoreColor(d.score)} height={5} /></div>
@@ -243,7 +364,7 @@ function HowFast({ snapshot }) {
   const frontier = snapshot.indicators?.metrTimeHorizon?.raw;
   return (
     <Panel>
-      <PanelTitle>How fast</PanelTitle>
+      <PanelTitle tip={TIPS.howFast}>How fast</PanelTitle>
       <div style={{ fontFamily: mono, fontSize: '1.7rem', fontWeight: 600, color: C.text }}>{doubling ?? '—'}</div>
       <div style={{ fontFamily: sans, fontSize: '0.82rem', color: C.textDim, marginTop: 6, lineHeight: 1.45 }}>
         to double how long AI can work unsupervised
@@ -264,7 +385,7 @@ function Forecasters({ snapshot }) {
       : superforecasterAgi ?? expertAgi ?? '—';
   return (
     <Panel>
-      <PanelTitle>Forecasters say</PanelTitle>
+      <PanelTitle tip={TIPS.forecasters}>Forecasters say</PanelTitle>
       <div style={{ fontFamily: mono, fontSize: '1.7rem', fontWeight: 600, color: C.text }}>{range}</div>
       <div style={{ fontFamily: sans, fontSize: '0.82rem', color: C.textDim, marginTop: 6, lineHeight: 1.45 }}>
         median AGI year, superforecasters to experts
@@ -341,7 +462,7 @@ function RoadChart({ snapshot }) {
   const last = points[points.length - 1];
   return (
     <Panel>
-      <PanelTitle>The road so far — autonomous task horizon (log scale)</PanelTitle>
+      <PanelTitle tip={TIPS.road}>The road so far — autonomous task horizon (log scale)</PanelTitle>
       <svg viewBox={`0 0 ${W} ${H}`} style={{ width: '100%', height: 'auto', display: 'block' }}>
         {gridlines.map((g) => (
           <g key={g.label}>
@@ -384,7 +505,7 @@ function Divergence({ snapshot }) {
   if (!Number.isFinite(safety.score)) return null;
   return (
     <Panel>
-      <PanelTitle>Capability vs. safety practice</PanelTitle>
+      <PanelTitle tip={TIPS.divergence}>Capability vs. safety practice</PanelTitle>
       {[
         { label: 'Capability', v: cap, color: C.blue },
         { label: 'Safety', v: safety.score, color: C.yellow },
@@ -411,7 +532,10 @@ function PillarCard({ name, pillar, indicators }) {
         <span style={{ fontFamily: mono, fontSize: '1.9rem', fontWeight: 600, color: scoreColor(pillar.score) }}>
           {fmt1(pillar.score)}
         </span>
-        <span style={{ fontFamily: sans, fontSize: '0.95rem', color: C.text, fontWeight: 600 }}>{PILLAR_LABELS[name]}</span>
+        <span style={{ fontFamily: sans, fontSize: '0.95rem', color: C.text, fontWeight: 600 }}>
+          {PILLAR_LABELS[name]}
+          <Info tip={TIPS[name]} />
+        </span>
         <span style={{ fontFamily: mono, fontSize: '0.68rem', color: C.textLow, marginLeft: 'auto' }}>
           {Math.round(pillar.weight * 100)}% of composite
         </span>
@@ -421,9 +545,15 @@ function PillarCard({ name, pillar, indicators }) {
         const meta = indicators?.[row.slug];
         return (
           <div key={row.slug} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '3px 0' }}>
-            <span style={{ fontFamily: sans, fontSize: '0.78rem', color: C.textDim, flex: 1 }}>{INDICATOR_LABELS[row.slug] ?? row.slug}</span>
+            <span style={{ fontFamily: sans, fontSize: '0.78rem', color: C.textDim, flex: 1 }}>
+              {INDICATOR_LABELS[row.slug] ?? row.slug}
+              <Info tip={TIPS[row.slug]} />
+            </span>
             {meta?.confidence && meta.confidence !== 'verified' && (
-              <span style={{ fontFamily: mono, fontSize: '0.6rem', color: C.yellow, border: `1px solid ${C.yellow}44`, borderRadius: 3, padding: '0 4px' }}>
+              <span
+                title={CONFIDENCE_TIPS[meta.confidence]}
+                style={{ fontFamily: mono, fontSize: '0.6rem', color: C.yellow, border: `1px solid ${C.yellow}44`, borderRadius: 3, padding: '0 4px', cursor: 'help' }}
+              >
                 {meta.confidence}
               </span>
             )}
@@ -467,7 +597,10 @@ function SourceHealth({ snapshot }) {
         <span style={{ fontFamily: mono, fontSize: '1.4rem', fontWeight: 600, color: okPct >= 75 ? C.green : okPct >= 50 ? C.yellow : C.red }}>
           {okPct}%
         </span>
-        <span style={{ fontFamily: sans, fontSize: '0.85rem', color: C.textDim }}>sources healthy this run</span>
+        <span style={{ fontFamily: sans, fontSize: '0.85rem', color: C.textDim }}>
+          sources healthy this run
+          <Info tip={TIPS.sourceHealth} />
+        </span>
       </div>
       <div style={{ marginTop: 8 }}>
         {sources.map((s) => (
