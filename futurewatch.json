@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-23T21:21:30.134Z",
+  "generatedAt": "2026-07-24T18:13:51.595Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,21 +182,21 @@
   },
   "stories": [
     {
-      "title": "SysAdmin: Measuring Instrumental Power-Seeking in Frontier AI",
-      "link": "https://arxiv.org/abs/2607.18239",
-      "published": "Thu, 23 Jul 2026 00:00:00 -0400",
+      "title": "AINTMA: Agentic AI Architecture for Autonomous Test Management with Generative Intelligence, Secure Cloud Communication and Adaptive Quality Analytics",
+      "link": "https://arxiv.org/abs/2607.20452",
+      "published": "Fri, 24 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Calibrated Selective Fact-Checking via Evidence Chain Evaluation",
-      "link": "https://arxiv.org/abs/2607.18240",
-      "published": "Thu, 23 Jul 2026 00:00:00 -0400",
+      "title": "Marking the Wrong Symptoms: Evaluating LLM Watermarks in Medical Texts",
+      "link": "https://arxiv.org/abs/2607.20462",
+      "published": "Fri, 24 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "BatchDAG: LLM-Planned Execution Graphs for Scalable Ad-Hoc Analysis Over Enterprise Data",
-      "link": "https://arxiv.org/abs/2607.18241",
-      "published": "Thu, 23 Jul 2026 00:00:00 -0400",
+      "title": "ClickGuard: Detecting and Spoiling Clickbait News with Informativeness Measures and Large Language Models",
+      "link": "https://arxiv.org/abs/2607.20463",
+      "published": "Fri, 24 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
@@ -258,7 +258,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5230,
+      "fetchMs": 5891,
       "indicatorCount": 1
     },
     {
@@ -270,7 +270,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1217,
+      "fetchMs": 1489,
       "indicatorCount": 0
     }
   ],
