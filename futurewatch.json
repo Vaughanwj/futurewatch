@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-24T18:13:51.595Z",
+  "generatedAt": "2026-07-25T17:53:51.600Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,22 +182,10 @@
   },
   "stories": [
     {
-      "title": "AINTMA: Agentic AI Architecture for Autonomous Test Management with Generative Intelligence, Secure Cloud Communication and Adaptive Quality Analytics",
-      "link": "https://arxiv.org/abs/2607.20452",
-      "published": "Fri, 24 Jul 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Marking the Wrong Symptoms: Evaluating LLM Watermarks in Medical Texts",
-      "link": "https://arxiv.org/abs/2607.20462",
-      "published": "Fri, 24 Jul 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "ClickGuard: Detecting and Spoiling Clickbait News with Informativeness Measures and Large Language Models",
-      "link": "https://arxiv.org/abs/2607.20463",
-      "published": "Fri, 24 Jul 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
+      "title": "Metrics of Agent Ability",
+      "link": "https://metr.org/notes/2026-07-24-metrics-of-model-ability/",
+      "published": "Fri, 24 Jul 2026 00:00:00 -0700",
+      "feed": "metr.org"
     },
     {
       "title": "The Economics of Recursive Self-Improvement",
@@ -222,12 +210,6 @@
       "link": "https://www.youtube.com/shorts/63kM8vEABjI",
       "published": "2026-07-12T23:06:30+00:00",
       "feed": "FutureWatch"
-    },
-    {
-      "title": "Because 8 ≈ e², Anthropic's researcher uplift is plausibly >2x",
-      "link": "https://metr.org/notes/2026-07-08-anthropic-researcher-uplift/",
-      "published": "Wed, 08 Jul 2026 00:00:00 -0700",
-      "feed": "metr.org"
     },
     {
       "title": "Import AI 464: Fables writes GPU kernels; AI automation; and analog computation",
@@ -258,7 +240,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5891,
+      "fetchMs": 5651,
       "indicatorCount": 1
     },
     {
@@ -270,7 +252,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1489,
+      "fetchMs": 1351,
       "indicatorCount": 0
     }
   ],
