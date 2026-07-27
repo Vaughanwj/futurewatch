@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-26T17:57:10.725Z",
+  "generatedAt": "2026-07-27T18:20:08.178Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,6 +182,30 @@
   },
   "stories": [
     {
+      "title": "Import AI 466: The bitter lesson for robotics, AIs complete week-long programming tasks; and OpenAI&#8217;s accidental AI hacker",
+      "link": "https://jack-clark.net/2026/07/27/import-ai-466-the-bitter-lesson-for-robotics-ais-complete-week-long-programming-tasks-and-openais-accidental-ai-hacker/",
+      "published": "Mon, 27 Jul 2026 13:30:53 +0000",
+      "feed": "Import AI"
+    },
+    {
+      "title": "FlowEvo: Self-Evolving Agents through the Co-Evolution of Workflows and Executable Skills",
+      "link": "https://arxiv.org/abs/2607.21596",
+      "published": "Mon, 27 Jul 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Risk Is Not the Target: A Monotonic Framework for Evaluating Wildfire Operational Risk Signals",
+      "link": "https://arxiv.org/abs/2607.21597",
+      "published": "Mon, 27 Jul 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Securing Multimodal AI through Internal Information Decomposition",
+      "link": "https://arxiv.org/abs/2607.21600",
+      "published": "Mon, 27 Jul 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "Metrics of Agent Ability",
       "link": "https://metr.org/notes/2026-07-24-metrics-of-model-ability/",
       "published": "Fri, 24 Jul 2026 00:00:00 -0700",
@@ -218,12 +242,6 @@
       "feed": "Import AI"
     },
     {
-      "title": "Import AI 463: Self-improving robots; a 10k Chinese GPU cluster; and an elegiac essay for the human era",
-      "link": "https://jack-clark.net/2026/06/29/import-ai-463-self-improving-robots-a-10k-chinese-gpu-cluster-and-an-elegiac-essay-for-the-human-era/",
-      "published": "Mon, 29 Jun 2026 13:03:27 +0000",
-      "feed": "Import AI"
-    },
-    {
       "title": "People may actually LIKE you! How the Internet Rewired Our Self-Perception",
       "link": "https://www.youtube.com/watch?v=9fCCXNpW9AI",
       "published": "2026-05-13T01:59:21+00:00",
@@ -240,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5178,
+      "fetchMs": 7327,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 6,
+      "fetchMs": 5,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1469,
+      "fetchMs": 1321,
       "indicatorCount": 0
     }
   ],
