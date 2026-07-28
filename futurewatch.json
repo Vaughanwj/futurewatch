@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-27T18:20:08.178Z",
+  "generatedAt": "2026-07-28T18:08:19.903Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,28 +182,28 @@
   },
   "stories": [
     {
-      "title": "Import AI 466: The bitter lesson for robotics, AIs complete week-long programming tasks; and OpenAI&#8217;s accidental AI hacker",
-      "link": "https://jack-clark.net/2026/07/27/import-ai-466-the-bitter-lesson-for-robotics-ais-complete-week-long-programming-tasks-and-openais-accidental-ai-hacker/",
-      "published": "Mon, 27 Jul 2026 13:30:53 +0000",
-      "feed": "Import AI"
-    },
-    {
       "title": "FlowEvo: Self-Evolving Agents through the Co-Evolution of Workflows and Executable Skills",
       "link": "https://arxiv.org/abs/2607.21596",
-      "published": "Mon, 27 Jul 2026 00:00:00 -0400",
+      "published": "Tue, 28 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "Risk Is Not the Target: A Monotonic Framework for Evaluating Wildfire Operational Risk Signals",
       "link": "https://arxiv.org/abs/2607.21597",
-      "published": "Mon, 27 Jul 2026 00:00:00 -0400",
+      "published": "Tue, 28 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "Securing Multimodal AI through Internal Information Decomposition",
       "link": "https://arxiv.org/abs/2607.21600",
-      "published": "Mon, 27 Jul 2026 00:00:00 -0400",
+      "published": "Tue, 28 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Import AI 466: The bitter lesson for robotics, AIs complete week-long programming tasks; and OpenAI&#8217;s accidental AI hacker",
+      "link": "https://jack-clark.net/2026/07/27/import-ai-466-the-bitter-lesson-for-robotics-ais-complete-week-long-programming-tasks-and-openais-accidental-ai-hacker/",
+      "published": "Mon, 27 Jul 2026 13:30:53 +0000",
+      "feed": "Import AI"
     },
     {
       "title": "Metrics of Agent Ability",
@@ -258,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 7327,
+      "fetchMs": 6065,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 5,
+      "fetchMs": 0,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1321,
+      "fetchMs": 1149,
       "indicatorCount": 0
     }
   ],
