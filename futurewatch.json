@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-28T18:08:19.903Z",
+  "generatedAt": "2026-07-29T18:02:51.710Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,22 +182,28 @@
   },
   "stories": [
     {
-      "title": "FlowEvo: Self-Evolving Agents through the Co-Evolution of Workflows and Executable Skills",
-      "link": "https://arxiv.org/abs/2607.21596",
-      "published": "Tue, 28 Jul 2026 00:00:00 -0400",
+      "title": "Do Models Fake Alignment Without Clear Consequences?",
+      "link": "https://arxiv.org/abs/2607.24758",
+      "published": "Wed, 29 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Risk Is Not the Target: A Monotonic Framework for Evaluating Wildfire Operational Risk Signals",
-      "link": "https://arxiv.org/abs/2607.21597",
-      "published": "Tue, 28 Jul 2026 00:00:00 -0400",
+      "title": "Beyond Memory: A Templated Substrate for Heterogeneous Collaborative Knowledge Work with LLM Agents",
+      "link": "https://arxiv.org/abs/2607.24759",
+      "published": "Wed, 29 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Securing Multimodal AI through Internal Information Decomposition",
-      "link": "https://arxiv.org/abs/2607.21600",
-      "published": "Tue, 28 Jul 2026 00:00:00 -0400",
+      "title": "Kernel Forge: An Agent Harness for LLM-based Generation and Optimization of CUDA Kernels",
+      "link": "https://arxiv.org/abs/2607.24762",
+      "published": "Wed, 29 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "How independent researchers could investigate AI propensities after misalignment incidents",
+      "link": "https://metr.org/blog/2026-07-28-investigating-ai-propensities-after-incidents/",
+      "published": "Tue, 28 Jul 2026 00:00:00 -0700",
+      "feed": "metr.org"
     },
     {
       "title": "Import AI 466: The bitter lesson for robotics, AIs complete week-long programming tasks; and OpenAI&#8217;s accidental AI hacker",
@@ -215,12 +221,6 @@
       "title": "The Economics of Recursive Self-Improvement",
       "link": "https://metr.org/notes/2026-07-22-economics-of-recursive-self-improvement/",
       "published": "Wed, 22 Jul 2026 00:00:00 -0700",
-      "feed": "metr.org"
-    },
-    {
-      "title": "Expenditure Horizon: Measuring Optimization Ability, with an Application to NanoGPT",
-      "link": "https://metr.org/blog/2026-07-21-expenditure-horizon/",
-      "published": "Tue, 21 Jul 2026 00:00:00 -0700",
       "feed": "metr.org"
     },
     {
@@ -258,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 6065,
+      "fetchMs": 6300,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 0,
+      "fetchMs": 1,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1149,
+      "fetchMs": 1271,
       "indicatorCount": 0
     }
   ],
