@@ -6,8 +6,9 @@ Use startssh.ps1 for access to the VM where [futurewatch.ai](http://futurewatch.
 
 ## What's deployed
 
-1. **Frontend** — `frontend/dist/` static build. Fetches `/data/futurewatch.json` same-origin at runtime.  
+1. **Frontend** — `frontend/dist/` static build. Fetches `/data/futurewatch.json` and `/data/capabilities.json` same-origin at runtime.  
 2. **Pipeline** — `backend/src/index.js`, daily 17:00 UTC (~noon US Central) via `.github/workflows/daily-fetch.yml`. Fetches METR + RSS; reads `futurewatch-manual.json`; writes `backend/data/futurewatch.json` \+ `history.json`.
+3. **Four Capabilities Watch pipeline** — `backend/src/capabilities-index.js` (`npm run capabilities`), same workflow run, same cadence. Separate output file (`backend/data/capabilities.json`) and separate frontend panel — never merged into the composite above. See `research/capabilities-methodology.md`.
 
 No API keys required — every automated source is public and unauthenticated.
 
@@ -49,6 +50,16 @@ server {
 
     }
 
+    location /data/capabilities.json {
+
+        alias /var/www/futurewatch/data/capabilities.json;
+
+        add\_header Cache-Control "public, max-age=3600";
+
+        add\_header Access-Control-Allow-Origin "\*";
+
+    }
+
 }
 
 Then `nginx -t && systemctl reload nginx`, and certbot for TLS as usual.
@@ -59,9 +70,9 @@ Then `nginx -t && systemctl reload nginx`, and certbot for TLS as usual.
 
 30 17 \* \* \* futurewatch cd /opt/futurewatch && git fetch origin data && \\
 
-  rm -rf dist && git checkout origin/data \-- futurewatch.json history.json dist && \\
+  rm -rf dist && git checkout origin/data \-- futurewatch.json history.json capabilities.json dist && \\
 
-  cp futurewatch.json history.json /var/www/futurewatch/data/ && \\
+  cp futurewatch.json history.json capabilities.json /var/www/futurewatch/data/ && \\
 
   rsync \-a \--checksum \--delete dist/ /var/www/futurewatch/dist/
 
@@ -75,8 +86,9 @@ Then `nginx -t && systemctl reload nginx`, and certbot for TLS as usual.
 
 - [ ] Push this repo to github.com/Vaughanwj/futurewatch (`main`)  
 - [ ] Settings → Actions → General → Workflow permissions → "Read and write"  
-- [ ] Trigger `daily-fetch.yml` manually (workflow\_dispatch) — verify: tests pass, pipeline runs with live METR data, `data` branch appears with futurewatch.json \+ dist/  
-- [ ] Inspect futurewatch.json from the data branch — sanity-check composite (\~46 expected) and that `errors` is empty or explainable
+- [ ] Trigger `daily-fetch.yml` manually (workflow\_dispatch) — verify: tests pass, both pipelines run with live METR data, `data` branch appears with futurewatch.json \+ capabilities.json \+ dist/  
+- [ ] Inspect futurewatch.json from the data branch — sanity-check composite (\~46 expected) and that `errors` is empty or explainable  
+- [ ] Inspect capabilities.json from the data branch — sanity-check the four cards and that `sourceHealth` shows the pending sources as `pending: true`, not `ok: false`
 
 ### VM (over ssh)
 
@@ -93,14 +105,17 @@ Then `nginx -t && systemctl reload nginx`, and certbot for TLS as usual.
 
 The pipeline exits code 2 if the composite moves \>5 pts between runs (methodology §7). The Actions job then fails **before committing**, so a wild reading is never auto-published. Review the run log, and if the move is real (e.g., a manual-file update you made deliberately), re-run the workflow — the second run compares against the same previous snapshot and will flag again; if so, temporarily accept by deleting `futurewatch.json` from the data branch checkout the pipeline reads, or update the manual file in smaller steps. Log the event in `research/anchor-tables.md` decision log.
 
+**Fixed 2026-07-29:** this check silently never fired before that date — the workflow never restored the previous published `futurewatch.json`/`history.json` into the checkout before running the pipeline, so `previous` was always `null`, `history.json` never accumulated past one point, and the >5pt escalation comparison had nothing to compare against. The "Restore previously published data" step now fetches them from the `data` branch first. Same restore now backs `capabilities.json`'s observation dedup (below).
+
 ## Maintenance cadence
 
 | When | What |
 | :---- | :---- |
-| Quarterly | `realTimeEngagement` scoring session (rubric D2, Vaughan signs off); `agenticAutonomyLevel`; ARC ratios from arcprize.org; `friLeapAgi` review (forecastingresearch.substack.com, publishes ~monthly) |
+| Quarterly | `realTimeEngagement` scoring session (rubric D2, Vaughan signs off); `agenticAutonomyLevel`; ARC ratios from arcprize.org; `friLeapAgi` review (forecastingresearch.substack.com, publishes ~monthly); Vending-Bench 2 leaderboard recheck (andonlabs.com/evals/vending-bench-2 — client-rendered, use a real browser) |
 | Semiannual | FLI AI Safety Index (summer/winter releases) |
 | Annual (\~April) | Stanford AI Index economy chapter |
 | Per frontier model | `hendrycksAgiScore` from agidefinition.ai |
-| Once, soon | Replace `epochBenchmarks` placeholder with the Epoch adapter (basket B-2026.1) |
+| Once, soon | Replace `epochBenchmarks` placeholder with the Epoch adapter (basket B-2026.1); same open question for the Epoch-sourced Four Capabilities Watch signals (see `research/capabilities-methodology.md` known limitations) |
+| As evidence appears | Review qualitative AI-improvement / goal-autonomy evidence (research/capabilities-review-workflow.md) and promote to `backend/data/capabilities-manual.json` |
 
-All manual entries carry `_instructions` inside `backend/data/futurewatch-manual.json`.  
+All manual entries carry `_instructions` inside `backend/data/futurewatch-manual.json` or `backend/data/capabilities-manual.json`.  

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { fitP50Horizon, frontierSeries, mergeModels } from '../src/domain/metr-fit.js';
+import { fitP50Horizon, frontierSeries, mergeModels, horizonAtSuccessRate } from '../src/domain/metr-fit.js';
 
 test('mergeModels: primary wins collisions, legacy fills pre-2023 gap', () => {
   const primary = [
@@ -31,6 +31,40 @@ test('logistic fit recovers a known p50 from synthetic runs', () => {
   }
   const { p50Minutes } = fitP50Horizon(runs);
   assert.ok(p50Minutes > 40 && p50Minutes < 90, `p50 ${p50Minutes} not near 60`);
+});
+
+test('horizonAtSuccessRate(a,b,0.5) reproduces the same p50 the fit already found', () => {
+  const runs = [];
+  const lengths = [1, 2, 4, 8, 15, 30, 60, 120, 240, 480, 960];
+  for (const m of lengths) {
+    const p = 1 / (1 + Math.exp(1.2 * (Math.log2(m) - Math.log2(60))));
+    const n = 20;
+    const successes = Math.round(p * n);
+    for (let i = 0; i < n; i++) runs.push({ humanMinutes: m, success: i < successes ? 1 : 0 });
+  }
+  const { p50Minutes, a, b } = fitP50Horizon(runs);
+  const recomputed = horizonAtSuccessRate(a, b, 0.5);
+  assert.ok(Math.abs(recomputed - p50Minutes) < 1e-6);
+});
+
+test('the 80% (reliable) horizon is shorter than the 50% (frontier) horizon on the same curve', () => {
+  const { a, b } = fitP50Horizon((() => {
+    const runs = [];
+    for (const m of [1, 2, 4, 8, 15, 30, 60, 120, 240, 480, 960]) {
+      const p = 1 / (1 + Math.exp(1.2 * (Math.log2(m) - Math.log2(60))));
+      for (let i = 0; i < 20; i++) runs.push({ humanMinutes: m, success: i < Math.round(p * 20) ? 1 : 0 });
+    }
+    return runs;
+  })());
+  const p50 = horizonAtSuccessRate(a, b, 0.5);
+  const p80 = horizonAtSuccessRate(a, b, 0.8);
+  assert.ok(p80 < p50, `expected 80% horizon (${p80}) < 50% horizon (${p50})`);
+});
+
+test('horizonAtSuccessRate rejects out-of-range probabilities and a non-decreasing curve', () => {
+  assert.equal(horizonAtSuccessRate(1, -0.5, 0), null);
+  assert.equal(horizonAtSuccessRate(1, -0.5, 1), null);
+  assert.equal(horizonAtSuccessRate(1, 0.5, 0.8), null); // b >= 0: success doesn't decrease with length
 });
 
 test('fit refuses pathological data', () => {

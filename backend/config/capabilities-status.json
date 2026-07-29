@@ -1,0 +1,5 @@
+{
+  "_instructions": "Headline shown at the top of the Four Capabilities Watch section. Change only when specific reviewed evidence (see capabilities-review-queue.json / capabilities-manual.json workflow, research/capabilities-review-workflow.md) directly supports a different assessment — never on general impression or a single benchmark result.",
+  "headline": "No integrated autonomous self-expansion observed. Component capabilities are advancing independently.",
+  "lastReviewed": "2026-07-29"
+}

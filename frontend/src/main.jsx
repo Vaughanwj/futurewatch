@@ -3,6 +3,8 @@ import { createRoot } from 'react-dom/client';
 import FuturewatchDashboard, { C } from './futurewatch_dashboard.jsx';
 import AboutPage from './AboutPage.jsx';
 import DonatePage from './DonatePage.jsx';
+import CapabilitiesWatch from './CapabilitiesWatch.jsx';
+import CapabilitiesMethodologyPage from './CapabilitiesMethodologyPage.jsx';
 
 function Home() {
   const [snapshot, setSnapshot] = useState(null);
@@ -22,13 +24,18 @@ function Home() {
 
   if (error) return <div style={center}>meter data unavailable ({error}) — try again shortly</div>;
   if (!snapshot) return <div style={center}>reading the meter…</div>;
-  return <FuturewatchDashboard snapshot={snapshot} />;
+  return (
+    <FuturewatchDashboard snapshot={snapshot}>
+      <CapabilitiesWatch />
+    </FuturewatchDashboard>
+  );
 }
 
 function App() {
   const path = window.location.pathname.replace(/\/+$/, '') || '/';
   if (path === '/about') return <AboutPage />;
   if (path === '/donate') return <DonatePage />;
+  if (path === '/capabilities-methodology') return <CapabilitiesMethodologyPage />;
   return <Home />;
 }
 

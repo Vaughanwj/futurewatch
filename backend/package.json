@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "start": "node src/index.js",
+    "capabilities": "node src/capabilities-index.js",
     "probe": "node scripts/probe.js",
     "test": "node --test"
   },

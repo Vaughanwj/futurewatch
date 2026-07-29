@@ -23,11 +23,34 @@ jobs:
         run: npm test
         working-directory: backend
 
+      - name: Restore previously published data (if any)
+        # Both pipelines compare against / accumulate onto their previous
+        # published snapshot (composite escalation check, history.json trend
+        # points, capabilities.json observation dedup) — but a fresh checkout
+        # of main never has that state, since these files are gitignored
+        # there and only ever committed to the data branch. Without this
+        # restore step, every run starts from a blank slate: escalation
+        # detection never has a previous value, history.json never
+        # accumulates past one point, and capabilities dedup never fires.
+        run: |
+          if git ls-remote --exit-code --heads origin data >/dev/null 2>&1; then
+            git fetch origin data
+            git show origin/data:futurewatch.json > backend/data/futurewatch.json 2>/dev/null || true
+            git show origin/data:history.json > backend/data/history.json 2>/dev/null || true
+            git show origin/data:capabilities.json > backend/data/capabilities.json 2>/dev/null || true
+          fi
+
       - name: Run pipeline
         run: node src/index.js
         working-directory: backend
         # Exit code 2 = escalation (composite moved >5 pts). The job fails so
         # the run is reviewed rather than silently published (methodology §7).
+
+      - name: Run capabilities pipeline
+        run: npm run capabilities
+        working-directory: backend
+        # Four Capabilities Watch — a separate panel/file, never merged into
+        # the composite above. See research/capabilities-methodology.md.
 
       - name: Build frontend
         run: npm ci && npm run build
@@ -38,6 +61,7 @@ jobs:
           set -e
           cp backend/data/futurewatch.json "$RUNNER_TEMP/futurewatch.json"
           cp backend/data/history.json "$RUNNER_TEMP/history.json" 2>/dev/null || true
+          cp backend/data/capabilities.json "$RUNNER_TEMP/capabilities.json" 2>/dev/null || true
           cp -r frontend/dist "$RUNNER_TEMP/dist"
 
           git config user.name "fetcher-bot"
@@ -56,6 +80,9 @@ jobs:
           if [ -f "$RUNNER_TEMP/history.json" ]; then
             cp "$RUNNER_TEMP/history.json" history.json
           fi
+          if [ -f "$RUNNER_TEMP/capabilities.json" ]; then
+            cp "$RUNNER_TEMP/capabilities.json" capabilities.json
+          fi
           # --checksum: index.html is the same byte size on every build (only
           # its embedded JS-hash reference changes), so rsync's default
           # mtime+size quick-check can wrongly decide it's unchanged and skip
@@ -65,6 +92,7 @@ jobs:
 
           git add futurewatch.json dist/
           git add history.json 2>/dev/null || true
+          git add capabilities.json 2>/dev/null || true
 
           if git diff --cached --quiet; then
             echo "No snapshot changes to commit"

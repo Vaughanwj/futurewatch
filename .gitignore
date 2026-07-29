@@ -5,6 +5,7 @@ backend/probe-output/
 .env*
 backend/data/futurewatch.json
 backend/data/history.json
+backend/data/capabilities.json
 .env
 *.log
 frontend/dist/

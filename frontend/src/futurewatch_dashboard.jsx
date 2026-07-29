@@ -54,7 +54,7 @@ const PILLAR_LABELS = { capability: 'Capability', autonomy: 'Autonomy', deployme
 
 // Single decimal everywhere a score is displayed, so the page never mixes
 // "12", "12.75", and "30" in the same list.
-function fmt1(v) {
+export function fmt1(v) {
   return typeof v === 'number' && Number.isFinite(v) ? v.toFixed(1) : (v ?? '—');
 }
 
@@ -115,7 +115,7 @@ const TOOLTIP_GUTTER = 10;
 // dynamic content (e.g. WhatsLeft's lowest-scoring indicators) whose on-screen
 // position varies with the data, and a button near the middle of a narrow
 // viewport can be too far from *both* edges for either fixed anchor to fit.
-function Info({ tip }) {
+export function Info({ tip }) {
   const [open, setOpen] = useState(false);
   const [pos, setPos] = useState(null);
   const anchorRef = useRef(null);
@@ -241,7 +241,7 @@ const SAMPLE_SNAPSHOT = {
   errors: [],
 };
 
-function scoreColor(v) {
+export function scoreColor(v) {
   if (v === null || v === undefined) return C.textLow;
   if (v < 25) return C.red;
   if (v < 50) return C.yellow;
@@ -249,7 +249,7 @@ function scoreColor(v) {
   return C.green;
 }
 
-function humanizeMinutes(min) {
+export function humanizeMinutes(min) {
   if (!Number.isFinite(min)) return '—';
   if (min < 1) return `${Math.round(min * 60)} seconds`;
   if (min < 90) return `${Math.round(min)} minutes`;
@@ -269,7 +269,7 @@ function fmtDoubling(days) {
 
 // ── Building blocks ──────────────────────────────────────────────────────────
 
-function Panel({ children, style }) {
+export function Panel({ children, style }) {
   return (
     <div style={{ background: C.panel, border: `1px solid ${C.panelEdge}`, borderRadius: 10, padding: '18px 20px', ...style }}>
       {children}
@@ -277,7 +277,7 @@ function Panel({ children, style }) {
   );
 }
 
-function PanelTitle({ children, tip }) {
+export function PanelTitle({ children, tip }) {
   return (
     <div style={{ fontFamily: sans, fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: C.textDim, marginBottom: 12 }}>
       {children}
@@ -286,7 +286,7 @@ function PanelTitle({ children, tip }) {
   );
 }
 
-function Bar({ value, color, height = 8 }) {
+export function Bar({ value, color, height = 8 }) {
   return (
     <div style={{ background: C.track, borderRadius: height / 2, height, overflow: 'hidden' }}>
       <div style={{ width: `${Math.max(0, Math.min(100, value ?? 0))}%`, height, background: color, borderRadius: height / 2 }} />
@@ -653,7 +653,7 @@ export function Footer() {
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 
-export default function FuturewatchDashboard({ snapshot = SAMPLE_SNAPSHOT }) {
+export default function FuturewatchDashboard({ snapshot = SAMPLE_SNAPSHOT, children }) {
   if (!snapshot) snapshot = SAMPLE_SNAPSHOT;
   const grid3 = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 14 };
   return (
@@ -683,6 +683,8 @@ export default function FuturewatchDashboard({ snapshot = SAMPLE_SNAPSHOT }) {
         </div>
 
         <Stories snapshot={snapshot} />
+
+        {children}
 
         <Footer />
       </div>

@@ -1,0 +1,5 @@
+{
+  "_readme": "Pure human workspace — the pipeline never reads or writes this file. It stands in for the admin evidence-review API this repo doesn't run a server for (see research/capabilities-review-workflow.md). Use it as scratch space for qualitative evidence found outside the automated adapters (a system card, an Apollo Research report, a news report) before deciding whether it's solid enough to promote into backend/data/capabilities-manual.json as an approved observation. Automated candidates that require review (goal_autonomy level 2-4, or any high-risk phrase match) already show up with reviewStatus 'pending' directly in the published capabilities.json observations list — check there first; this file is only for evidence you're evaluating that hasn't gone through an adapter at all.",
+
+  "pending": []
+}

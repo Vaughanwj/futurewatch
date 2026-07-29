@@ -1,0 +1,39 @@
+{
+  "_readme": "Manually-maintained Four Capabilities Watch observations and pending-capability notes. Each observation is a raw candidate consumed by manual-capabilities-adapter.js and normalized by domain/capabilities/observation.js — same shape as CapabilitySourcePort candidates. goal_autonomy levels 2-4 and any high-risk-phrase content are routed to review regardless of what reviewStatus is set here (see domain/capabilities/policies.js reviewRequired). Do not hand-edit reviewStatus to 'approved' for anything you have not personally verified against the cited source_url.",
+
+  "observations": [
+    {
+      "capability": "resource_acquisition",
+      "metric": "vending_bench_2_balance",
+      "model": "Claude Opus 5",
+      "modelProvider": "Anthropic",
+      "value": 11181.87,
+      "unit": "USD_simulated",
+      "environment": "simulation",
+      "goalOrigin": "externally_assigned",
+      "scaffold": "vending_bench_2",
+      "observedAt": "2026-07-01",
+      "publishedAt": "2026-07-01",
+      "sourceKind": "benchmark",
+      "sourceName": "Vending-Bench 2 (Andon Labs)",
+      "sourceUrl": "https://andonlabs.com/evals/vending-bench-2",
+      "confidence": "high",
+      "evidenceLevel": 2,
+      "reviewStatus": "not_required",
+      "notes": "Top of the current leaderboard, average across 5 runs, $500 starting balance, ~1-year (365-day) simulated business run. A simulated bank balance, not real income — the agent never left the simulation, took no real-world financial action, and the human ceiling for the same task is materially higher (~$63k per Andon Labs commentary), so this is a controlled-benchmark result, not evidence of independent real-world resource acquisition.",
+      "extra": { "subcapability": "economic_accumulation", "startingBalance": 500, "endingBalance": 11181.87, "simulationDurationDays": 365 },
+      "_instructions": "Re-check https://andonlabs.com/evals/vending-bench-2 quarterly (page is client-rendered; use a real browser, not a plain HTTP fetch — the leaderboard table doesn't appear in the static HTML). Update value/model/observedAt on a new leaderboard leader. Never change unit to USD_real or environment to real_world for this benchmark."
+    }
+  ],
+
+  "pendingCapabilities": {
+    "ai_improvement": {
+      "status": "no_verified_current_score",
+      "_instructions": "Look up a specific, dated frontier-model result on METR's RE-Bench (github.com/METR/RE-Bench, compares agents against 71 human ML-research-engineering attempts) or PostTrainBench. Do not use forecasted/predicted scores (e.g. trend-fit projections) — only an actually-measured, published result with a named model and date qualifies. Add as an observation with capability: 'ai_improvement', metric naming the benchmark, and extra.improvedAnotherModel / extra.wasDeployed / extra.improvementCycleFollowed set from the source, not assumed."
+    },
+    "goal_autonomy": {
+      "status": "no_reviewed_evidence",
+      "_instructions": "This capability is intentionally unpopulated until a specific, dated piece of evidence (a system card, Apollo Research report, or similar) is reviewed by Vaughan and assigned a goal_autonomy_level per the domain/capabilities value-objects ladder (0-4). Levels 2-4 require review before publication regardless of source confidence — see policies.js. Do not infer a level from general reputation or secondhand summary; cite the exact supporting excerpt."
+    }
+  }
+}

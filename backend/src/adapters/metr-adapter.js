@@ -4,6 +4,12 @@
  * Primary source verified 2026-07-20 (see research/framework-survey.md).
  *
  * Returns raw values; normalization happens in domain (anchors.js).
+ *
+ * fetchMetrSource() is the shared fetch+fit step — both this adapter (the
+ * road-chart/scored metrTimeHorizon indicator) and metr-capabilities-adapter
+ * (the Four Capabilities Watch operational_autonomy observations) need the
+ * same underlying model fits and must not issue duplicate network requests
+ * for the same two files.
  */
 import axios from 'axios';
 import { fitP50Horizon, frontierSeries, mergeModels } from '../domain/metr-fit.js';
@@ -53,55 +59,66 @@ function parseRuns(jsonlText) {
 function fitModels(byModel, releaseDates, suite) {
   const models = [];
   for (const [alias, runs] of byModel) {
-    const { p50Minutes, n } = fitP50Horizon(runs);
+    const { p50Minutes, a, b, n } = fitP50Horizon(runs);
     if (p50Minutes !== null) {
-      models.push({ alias, p50Minutes, n, suite, releaseDate: releaseDates[alias] ?? null });
+      models.push({ alias, p50Minutes, a, b, n, suite, releaseDate: releaseDates[alias] ?? null });
     }
   }
   return models;
 }
 
+/**
+ * @returns {Promise<{models: object[], series: object[], suite: string, errors: string[]}>}
+ * models retain `a`/`b` (the fitted logistic coefficients) so callers can
+ * derive horizons at success rates other than 50% without refetching or
+ * refitting.
+ */
+export async function fetchMetrSource() {
+  const errors = [];
+
+  async function fetchText(url, label) {
+    try {
+      const { data } = await axios.get(url, { timeout: 60000, responseType: 'text' });
+      return data;
+    } catch (err) {
+      errors.push(`metr ${label}: ${err.message}`);
+      return null;
+    }
+  }
+
+  const [primaryText, legacyText, datesText] = [
+    await fetchText(PRIMARY_URL, 'runs TH1.1'),
+    await fetchText(LEGACY_URL, 'runs TH1.0'),
+    await fetchText(DATES_URL, 'release_dates'),
+  ];
+
+  const releaseDates = datesText ? parseReleaseDates(datesText) : {};
+
+  if (!primaryText && !legacyText) {
+    return { models: [], series: [], suite: null, errors };
+  }
+
+  const primaryModels = primaryText ? fitModels(parseRuns(primaryText), releaseDates, 'TH1.1') : [];
+  const legacyModels = legacyText ? fitModels(parseRuns(legacyText), releaseDates, 'TH1.0') : [];
+  // Primary wins collisions; legacy contributes only the models TH1.1
+  // dropped — restoring the 2019–2022 stretch of the road chart.
+  const models = mergeModels(primaryModels, legacyModels);
+  const suite = primaryText
+    ? legacyText ? 'TH1.1 + TH1.0 legacy' : 'TH1.1'
+    : 'TH1.0';
+
+  const series = frontierSeries(models);
+  return { models, series, suite, errors };
+}
+
 export const metrAdapter = {
   async fetch() {
     const t0 = Date.now();
-    const errors = [];
-
-    async function fetchText(url, label) {
-      try {
-        const { data } = await axios.get(url, { timeout: 60000, responseType: 'text' });
-        return data;
-      } catch (err) {
-        errors.push(`metr ${label}: ${err.message}`);
-        return null;
-      }
-    }
-
-    const [primaryText, legacyText, datesText] = [
-      await fetchText(PRIMARY_URL, 'runs TH1.1'),
-      await fetchText(LEGACY_URL, 'runs TH1.0'),
-      await fetchText(DATES_URL, 'release_dates'),
-    ];
-
-    const releaseDates = datesText ? parseReleaseDates(datesText) : {};
-
-    if (!primaryText && !legacyText) {
-      return { indicators: {}, fetchMs: Date.now() - t0, errors };
-    }
-
-    const primaryModels = primaryText ? fitModels(parseRuns(primaryText), releaseDates, 'TH1.1') : [];
-    const legacyModels = legacyText ? fitModels(parseRuns(legacyText), releaseDates, 'TH1.0') : [];
-    // Primary wins collisions; legacy contributes only the models TH1.1
-    // dropped — restoring the 2019–2022 stretch of the road chart.
-    const models = mergeModels(primaryModels, legacyModels);
-    const suite = primaryText
-      ? legacyText ? 'TH1.1 + TH1.0 legacy' : 'TH1.1'
-      : 'TH1.0';
-
-    const series = frontierSeries(models);
+    const { series, models, suite, errors } = await fetchMetrSource();
     const frontier = series.length > 0 ? series[series.length - 1] : null;
 
     if (!frontier) {
-      errors.push('metr: no frontier model produced a valid p50 fit');
+      if (models.length === 0 && errors.length === 0) errors.push('metr: no frontier model produced a valid p50 fit');
       return { indicators: {}, fetchMs: Date.now() - t0, errors };
     }
 

@@ -55,6 +55,21 @@ export function fitP50Horizon(runs) {
 }
 
 /**
+ * Horizon (minutes) at an arbitrary success rate, reusing the a,b already
+ * produced by fitP50Horizon — same logistic curve, different crossing
+ * point. p=0.5 reproduces the existing p50Minutes exactly; p=0.8 gives the
+ * stricter "reliable" horizon METR also reports publicly. Pure algebra, no
+ * refit — a and b fully determine the curve.
+ */
+export function horizonAtSuccessRate(a, b, p) {
+  if (!(p > 0 && p < 1)) return null;
+  if (!Number.isFinite(a) || !Number.isFinite(b) || b >= 0) return null;
+  const logit = Math.log(p / (1 - p));
+  const minutes = Math.pow(2, (logit - a) / b);
+  return Number.isFinite(minutes) && minutes > 0 ? minutes : null;
+}
+
+/**
  * Merge model lists from two suites: primary (TH1.1) wins on alias collision;
  * legacy (TH1.0) fills in models the newer suite dropped — critically the
  * pre-2023 models (GPT-2, GPT-3) that anchor the road-from-2019 chart.
