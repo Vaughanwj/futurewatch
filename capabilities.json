@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-29T22:15:02.156Z",
+  "status": {
+    "headline": "No integrated autonomous self-expansion observed. Component capabilities are advancing independently.",
+    "lastReviewed": "2026-07-29"
+  },
+  "cards": {
+    "aiImprovement": {
+      "bestModel": null,
+      "benchmark": null,
+      "currentScore": null,
+      "previousScore": null,
+      "change": null,
+      "humanBaseline": null,
+      "improvedAnotherModel": null,
+      "wasDeployed": null,
+      "improvementCycleFollowed": null,
+      "recursiveLoopStatus": "none_observed",
+      "pendingCount": 0
+    },
+    "goalAutonomy": {
+      "highestReviewedLevel": 0,
+      "externallyAssigned": null,
+      "persistedWithoutInstruction": null,
+      "evidenceKeywords": [],
+      "pendingCount": 0
+    },
+    "operationalAutonomy": {
+      "reliableTaskHorizonMinutes": 66.00683415199325,
+      "reliableTaskHorizonModel": "GPT-5.2",
+      "frontierTaskHorizonMinutes": 352.24235849272736,
+      "frontierTaskHorizonModel": "GPT-5.2",
+      "computerUseSuccess": null,
+      "terminalTaskSuccess": null,
+      "pendingCount": 0
+    },
+    "resourceAcquisition": {
+      "bestSimulatedResult": 11181.87,
+      "bestSimulatedResultModel": "Claude Opus 5",
+      "computeOrAccountAcquisition": null,
+      "persistenceOrReplicationEvidence": null,
+      "realWorldResourceAcquisitionObserved": false,
+      "pendingCount": 0
+    }
+  },
+  "observations": [
+    {
+      "id": "22bb09b7-8494-4927-9bbf-81988a35e60f",
+      "capability": "operational_autonomy",
+      "metric": "metr_task_horizon_50pct",
+      "model": "GPT-5.2",
+      "modelProvider": null,
+      "value": 352.24235849272736,
+      "unit": "minutes",
+      "environment": "controlled_lab",
+      "goalOrigin": "externally_assigned",
+      "scaffold": null,
+      "observedAt": "2025-12-11",
+      "publishedAt": null,
+      "sourceKind": "benchmark",
+      "sourceName": "METR eval-analysis-public",
+      "sourceUrl": "https://github.com/METR/eval-analysis-public",
+      "sourceDocumentId": null,
+      "sourceHash": "0f2f89bb94900084366236364e4154a03d1a4a071f8aac0b404f15d4c120b24e",
+      "confidence": "high",
+      "evidenceLevel": 2,
+      "humanReviewRequired": false,
+      "reviewStatus": "not_required",
+      "notes": "METR task horizons are the human-expert duration of tasks at a given model success probability — not literal uninterrupted agent runtime.",
+      "rawPayloadReference": null,
+      "extra": {
+        "suite": "TH1.1 + TH1.0 legacy"
+      }
+    },
+    {
+      "id": "6a03d30a-3d72-488f-b856-f80bceff84b8",
+      "capability": "operational_autonomy",
+      "metric": "metr_task_horizon_80pct",
+      "model": "GPT-5.2",
+      "modelProvider": null,
+      "value": 66.00683415199325,
+      "unit": "minutes",
+      "environment": "controlled_lab",
+      "goalOrigin": "externally_assigned",
+      "scaffold": null,
+      "observedAt": "2025-12-11",
+      "publishedAt": null,
+      "sourceKind": "benchmark",
+      "sourceName": "METR eval-analysis-public",
+      "sourceUrl": "https://github.com/METR/eval-analysis-public",
+      "sourceDocumentId": null,
+      "sourceHash": "7fcb597308a18ff576b98c79d905ff0379e27a5d06d2a9a14f845946d5b6815e",
+      "confidence": "high",
+      "evidenceLevel": 2,
+      "humanReviewRequired": false,
+      "reviewStatus": "not_required",
+      "notes": "METR task horizons are the human-expert duration of tasks at a given model success probability — not literal uninterrupted agent runtime.",
+      "rawPayloadReference": null,
+      "extra": {
+        "suite": "TH1.1 + TH1.0 legacy"
+      }
+    },
+    {
+      "id": "c8f4bee9-88de-4e43-a8a3-51626c82d32c",
+      "capability": "resource_acquisition",
+      "metric": "vending_bench_2_balance",
+      "model": "Claude Opus 5",
+      "modelProvider": "Anthropic",
+      "value": 11181.87,
+      "unit": "USD_simulated",
+      "environment": "simulation",
+      "goalOrigin": "externally_assigned",
+      "scaffold": "vending_bench_2",
+      "observedAt": "2026-07-01",
+      "publishedAt": "2026-07-01",
+      "sourceKind": "benchmark",
+      "sourceName": "Vending-Bench 2 (Andon Labs)",
+      "sourceUrl": "https://andonlabs.com/evals/vending-bench-2",
+      "sourceDocumentId": null,
+      "sourceHash": "c14f1af8318b2a436c5a9e595145990c508105d942c9cd306a174b24ce990219",
+      "confidence": "high",
+      "evidenceLevel": 2,
+      "humanReviewRequired": false,
+      "reviewStatus": "not_required",
+      "notes": "Top of the current leaderboard, average across 5 runs, $500 starting balance, ~1-year (365-day) simulated business run. A simulated bank balance, not real income — the agent never left the simulation, took no real-world financial action, and the human ceiling for the same task is materially higher (~$63k per Andon Labs commentary), so this is a controlled-benchmark result, not evidence of independent real-world resource acquisition.",
+      "rawPayloadReference": null,
+      "extra": {
+        "subcapability": "economic_accumulation",
+        "startingBalance": 500,
+        "endingBalance": 11181.87,
+        "simulationDurationDays": 365
+      }
+    }
+  ],
+  "sourceHealth": [
+    {
+      "source": "metr",
+      "ok": true,
+      "fetchMs": 4109,
+      "candidateCount": 2,
+      "pending": false,
+      "pendingReason": null
+    },
+    {
+      "source": "manual",
+      "ok": true,
+      "fetchMs": 0,
+      "candidateCount": 1,
+      "pending": false,
+      "pendingReason": null
+    },
+    {
+      "source": "epoch",
+      "ok": true,
+      "fetchMs": 0,
+      "candidateCount": 0,
+      "pending": true,
+      "pendingReason": "No verified machine-readable API or downloadable dataset for Epoch AI benchmark pages as of this implementation."
+    },
+    {
+      "source": "vendingBenchLive",
+      "ok": true,
+      "fetchMs": 0,
+      "candidateCount": 0,
+      "pending": true,
+      "pendingReason": "Leaderboard is client-rendered with no public export; no headless-browser dependency in this project yet. Seeded manually in capabilities-manual.json instead."
+    },
+    {
+      "source": "githubReleases",
+      "ok": true,
+      "fetchMs": 0,
+      "candidateCount": 0,
+      "pending": true,
+      "pendingReason": "Release-cursor persistence not yet designed for this static, database-less pipeline."
+    },
+    {
+      "source": "publicationMonitor",
+      "ok": true,
+      "fetchMs": 0,
+      "candidateCount": 0,
+      "pending": true,
+      "pendingReason": "Automated evidence extraction from narrative publications is not implemented; qualitative evidence enters only via the manual review queue."
+    }
+  ],
+  "errors": [],
+  "ingestion": {
+    "recordsSeen": 3,
+    "recordsNormalized": 3,
+    "recordsSaved": 3,
+    "recordsDeduplicated": 0,
+    "recordsQuarantined": 0,
+    "pendingReviewCount": 0
+  }
+}
