@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-29T22:14:57.765Z",
+  "generatedAt": "2026-07-30T18:11:09.742Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,21 +182,21 @@
   },
   "stories": [
     {
-      "title": "Do Models Fake Alignment Without Clear Consequences?",
-      "link": "https://arxiv.org/abs/2607.24758",
-      "published": "Wed, 29 Jul 2026 00:00:00 -0400",
+      "title": "Probing the Origins of Reasoning Performance: Representational Quality for Mathematical Problem-Solving in RL vs. SFT Fine-Tuned Models",
+      "link": "https://arxiv.org/abs/2607.26119",
+      "published": "Thu, 30 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Beyond Memory: A Templated Substrate for Heterogeneous Collaborative Knowledge Work with LLM Agents",
-      "link": "https://arxiv.org/abs/2607.24759",
-      "published": "Wed, 29 Jul 2026 00:00:00 -0400",
+      "title": "Even More Deception: Objective Misalignment in Mixed-Motive LLM Multi-Agent Systems",
+      "link": "https://arxiv.org/abs/2607.26120",
+      "published": "Thu, 30 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Kernel Forge: An Agent Harness for LLM-based Generation and Optimization of CUDA Kernels",
-      "link": "https://arxiv.org/abs/2607.24762",
-      "published": "Wed, 29 Jul 2026 00:00:00 -0400",
+      "title": "ClinLens: Towards Long-Horizon Coding Agents for Longitudinal Multimodal Clinical Data Science",
+      "link": "https://arxiv.org/abs/2607.26155",
+      "published": "Thu, 30 Jul 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
@@ -258,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5939,
+      "fetchMs": 4846,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 0,
+      "fetchMs": 1,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1595,
+      "fetchMs": 1290,
       "indicatorCount": 0
     }
   ],
