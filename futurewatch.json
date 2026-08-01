@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-31T18:15:58.536Z",
+  "generatedAt": "2026-08-01T17:56:12.420Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,24 +182,6 @@
   },
   "stories": [
     {
-      "title": "Probing the Origins of Reasoning Performance: Representational Quality for Mathematical Problem-Solving in RL vs. SFT Fine-Tuned Models",
-      "link": "https://arxiv.org/abs/2607.26119",
-      "published": "Fri, 31 Jul 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Even More Deception: Objective Misalignment in Mixed-Motive LLM Multi-Agent Systems",
-      "link": "https://arxiv.org/abs/2607.26120",
-      "published": "Fri, 31 Jul 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "ClinLens: Towards Long-Horizon Coding Agents for Longitudinal Multimodal Clinical Data Science",
-      "link": "https://arxiv.org/abs/2607.26155",
-      "published": "Fri, 31 Jul 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
       "title": "How independent researchers could investigate AI propensities after misalignment incidents",
       "link": "https://metr.org/blog/2026-07-28-investigating-ai-propensities-after-incidents/",
       "published": "Tue, 28 Jul 2026 00:00:00 -0700",
@@ -258,19 +240,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 4427,
+      "fetchMs": 5297,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 0,
+      "fetchMs": 1,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1288,
+      "fetchMs": 831,
       "indicatorCount": 0
     }
   ],
