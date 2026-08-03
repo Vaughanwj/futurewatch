@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-02T17:56:53.772Z",
+  "generatedAt": "2026-08-03T18:45:27.103Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,6 +182,30 @@
   },
   "stories": [
     {
+      "title": "Import AI 467: Self-sustaining AI viruses; pacing AI progress; confusion about AI and creativity",
+      "link": "https://jack-clark.net/2026/08/03/import-ai-467-self-sustaining-ai-viruses-pacing-ai-progress-confusion-about-ai-and-creativity/",
+      "published": "Mon, 03 Aug 2026 13:31:22 +0000",
+      "feed": "Import AI"
+    },
+    {
+      "title": "OpenClaw and Ollama in Agentic AI: Toward Fully Autonomous and Scalable AI Agent Systems",
+      "link": "https://arxiv.org/abs/2607.28629",
+      "published": "Mon, 03 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Can AI Evaluate AI Scientists? A Benchmarking Study of Autonomous Research Generation Systems Using Automated Multi-Model Review",
+      "link": "https://arxiv.org/abs/2607.28631",
+      "published": "Mon, 03 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "LLM Framework for Discovering Major Mathematical Conjectures: AI's Quest for the Next Riemann Hypothesis",
+      "link": "https://arxiv.org/abs/2607.28632",
+      "published": "Mon, 03 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "How independent researchers could investigate AI propensities after misalignment incidents",
       "link": "https://metr.org/blog/2026-07-28-investigating-ai-propensities-after-incidents/",
       "published": "Tue, 28 Jul 2026 00:00:00 -0700",
@@ -218,12 +242,6 @@
       "feed": "FutureWatch"
     },
     {
-      "title": "Import AI 464: Fables writes GPU kernels; AI automation; and analog computation",
-      "link": "https://jack-clark.net/2026/07/06/import-ai-464-fables-writes-gpu-kernels-ai-automation-and-analog-computation/",
-      "published": "Mon, 06 Jul 2026 12:31:05 +0000",
-      "feed": "Import AI"
-    },
-    {
       "title": "People may actually LIKE you! How the Internet Rewired Our Self-Perception",
       "link": "https://www.youtube.com/watch?v=9fCCXNpW9AI",
       "published": "2026-05-13T01:59:21+00:00",
@@ -240,7 +258,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5679,
+      "fetchMs": 5576,
       "indicatorCount": 1
     },
     {
@@ -252,7 +270,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 909,
+      "fetchMs": 435,
       "indicatorCount": 0
     }
   ],
