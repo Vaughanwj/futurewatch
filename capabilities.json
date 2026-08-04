@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-03T18:45:31.545Z",
+  "generatedAt": "2026-08-04T18:25:12.566Z",
   "status": {
     "headline": "No integrated autonomous self-expansion observed. Component capabilities are advancing independently.",
     "lastReviewed": "2026-07-29"
@@ -137,7 +137,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 4141,
+      "fetchMs": 4083,
       "candidateCount": 2,
       "pending": false,
       "pendingReason": null
