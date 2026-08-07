@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-05T18:16:25.761Z",
+  "generatedAt": "2026-08-07T17:42:56.020Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,21 +182,21 @@
   },
   "stories": [
     {
-      "title": "Revisiting Classic Thought Experiments to Measure Consciousness for Artificial Intelligence Safety",
-      "link": "https://arxiv.org/abs/2608.00001",
-      "published": "Wed, 05 Aug 2026 00:00:00 -0400",
+      "title": "Agentic Nesting: A New Methodology for Existing Enterprise Application Integration and Services",
+      "link": "https://arxiv.org/abs/2608.05159",
+      "published": "Fri, 07 Aug 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "AutoFOAM: The Self-Refining Autonomous OpenFOAM Agent",
-      "link": "https://arxiv.org/abs/2608.00003",
-      "published": "Wed, 05 Aug 2026 00:00:00 -0400",
+      "title": "The Ignition Index: Measuring Global Workspace Dynamics in Language Models",
+      "link": "https://arxiv.org/abs/2608.05160",
+      "published": "Fri, 07 Aug 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Enhancing LLMs with Context-Specific Knowledge for Mitigating Misinformation in SMEs: A RAG-based Modeling and Analysis",
-      "link": "https://arxiv.org/abs/2608.00006",
-      "published": "Wed, 05 Aug 2026 00:00:00 -0400",
+      "title": "Woodpecker Distillation: Weak Models Diagnose Reasoning Bugs in Strong Models",
+      "link": "https://arxiv.org/abs/2608.05168",
+      "published": "Fri, 07 Aug 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
@@ -258,7 +258,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5751,
+      "fetchMs": 5184,
       "indicatorCount": 1
     },
     {
@@ -270,7 +270,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1993,
+      "fetchMs": 1369,
       "indicatorCount": 0
     }
   ],
