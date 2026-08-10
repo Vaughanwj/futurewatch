@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-09T17:24:40.256Z",
+  "generatedAt": "2026-08-10T17:45:38.113Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,6 +182,30 @@
   },
   "stories": [
     {
+      "title": "Import AI 468: 23 RSI ideas; PostTrainBench+; and how trust and transparency interplay with AI racing",
+      "link": "https://jack-clark.net/2026/08/10/import-ai-468-23-rsi-ideas-posttrainbench-and-how-trust-and-transparency-interplay-with-ai-racing/",
+      "published": "Mon, 10 Aug 2026 12:32:20 +0000",
+      "feed": "Import AI"
+    },
+    {
+      "title": "Towards Multi-Label Graph Foundation Models: from Single-Vector Representation Learning to Multi-Semantic Basis Learning",
+      "link": "https://arxiv.org/abs/2608.06394",
+      "published": "Mon, 10 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "EntropyMoE: Entropy-Aware Sparse Expert Routing for Tokenizer-Free LLMs",
+      "link": "https://arxiv.org/abs/2608.06398",
+      "published": "Mon, 10 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Beyond Routing Weights: Faithful Response-Level Interpretation of Mixture-of-Experts Reward Models via Contribution Contrast",
+      "link": "https://arxiv.org/abs/2608.06400",
+      "published": "Mon, 10 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "Import AI 467: Self-sustaining AI viruses; pacing AI progress; confusion about AI and creativity",
       "link": "https://jack-clark.net/2026/08/03/import-ai-467-self-sustaining-ai-viruses-pacing-ai-progress-confusion-about-ai-and-creativity/",
       "published": "Mon, 03 Aug 2026 13:31:22 +0000",
@@ -212,12 +236,6 @@
       "feed": "metr.org"
     },
     {
-      "title": "Import AI 465: Open vs closed gaps; Kimi K3; Demis&#8217; big policy plan",
-      "link": "https://jack-clark.net/2026/07/20/import-ai-465-open-vs-closed-gaps-kimi-k3-demis-big-policy-plan/",
-      "published": "Mon, 20 Jul 2026 12:31:45 +0000",
-      "feed": "Import AI"
-    },
-    {
       "title": "The Rise of Cognitive Debt.",
       "link": "https://www.youtube.com/shorts/63kM8vEABjI",
       "published": "2026-07-12T23:06:30+00:00",
@@ -240,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 4483,
+      "fetchMs": 5573,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 5,
+      "fetchMs": 4,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1119,
+      "fetchMs": 657,
       "indicatorCount": 0
     }
   ],
