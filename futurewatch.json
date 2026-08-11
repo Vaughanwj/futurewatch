@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-10T17:45:38.113Z",
+  "generatedAt": "2026-08-11T17:53:01.828Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,28 +182,28 @@
   },
   "stories": [
     {
+      "title": "Towards an Argumentative Foundation for Evaluative AI",
+      "link": "https://arxiv.org/abs/2608.07473",
+      "published": "Tue, 11 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Flow-by-Flow:Content-Judgment Bypass for Governing AI Output in High-Loss Domains",
+      "link": "https://arxiv.org/abs/2608.07474",
+      "published": "Tue, 11 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Determinization in Structure Theories: A Unified Framework via Closure, Comparability, and Joint Admissibility",
+      "link": "https://arxiv.org/abs/2608.07476",
+      "published": "Tue, 11 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "Import AI 468: 23 RSI ideas; PostTrainBench+; and how trust and transparency interplay with AI racing",
       "link": "https://jack-clark.net/2026/08/10/import-ai-468-23-rsi-ideas-posttrainbench-and-how-trust-and-transparency-interplay-with-ai-racing/",
       "published": "Mon, 10 Aug 2026 12:32:20 +0000",
       "feed": "Import AI"
-    },
-    {
-      "title": "Towards Multi-Label Graph Foundation Models: from Single-Vector Representation Learning to Multi-Semantic Basis Learning",
-      "link": "https://arxiv.org/abs/2608.06394",
-      "published": "Mon, 10 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "EntropyMoE: Entropy-Aware Sparse Expert Routing for Tokenizer-Free LLMs",
-      "link": "https://arxiv.org/abs/2608.06398",
-      "published": "Mon, 10 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Beyond Routing Weights: Faithful Response-Level Interpretation of Mixture-of-Experts Reward Models via Contribution Contrast",
-      "link": "https://arxiv.org/abs/2608.06400",
-      "published": "Mon, 10 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
     },
     {
       "title": "Import AI 467: Self-sustaining AI viruses; pacing AI progress; confusion about AI and creativity",
@@ -258,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5573,
+      "fetchMs": 6281,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 4,
+      "fetchMs": 1,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 657,
+      "fetchMs": 943,
       "indicatorCount": 0
     }
   ],
