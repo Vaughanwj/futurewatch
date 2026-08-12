@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-11T17:53:01.828Z",
+  "generatedAt": "2026-08-12T17:53:30.452Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -184,19 +184,19 @@
     {
       "title": "Towards an Argumentative Foundation for Evaluative AI",
       "link": "https://arxiv.org/abs/2608.07473",
-      "published": "Tue, 11 Aug 2026 00:00:00 -0400",
+      "published": "Wed, 12 Aug 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "Flow-by-Flow:Content-Judgment Bypass for Governing AI Output in High-Loss Domains",
       "link": "https://arxiv.org/abs/2608.07474",
-      "published": "Tue, 11 Aug 2026 00:00:00 -0400",
+      "published": "Wed, 12 Aug 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "Determinization in Structure Theories: A Unified Framework via Closure, Comparability, and Joint Admissibility",
       "link": "https://arxiv.org/abs/2608.07476",
-      "published": "Tue, 11 Aug 2026 00:00:00 -0400",
+      "published": "Wed, 12 Aug 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
@@ -258,7 +258,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 6281,
+      "fetchMs": 5367,
       "indicatorCount": 1
     },
     {
@@ -270,7 +270,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 943,
+      "fetchMs": 1358,
       "indicatorCount": 0
     }
   ],
