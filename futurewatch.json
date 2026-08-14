@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-13T17:52:34.891Z",
+  "generatedAt": "2026-08-14T17:46:43.727Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -184,19 +184,19 @@
     {
       "title": "Dynamic Governance of Multi-LLM Agent Systems for Collaborative Conversational Outcomes",
       "link": "https://arxiv.org/abs/2608.11207",
-      "published": "Thu, 13 Aug 2026 00:00:00 -0400",
+      "published": "Fri, 14 Aug 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "Distribird: Literature-Informed Prior Distribution Design for Bayesian Model Calibration",
       "link": "https://arxiv.org/abs/2608.11210",
-      "published": "Thu, 13 Aug 2026 00:00:00 -0400",
+      "published": "Fri, 14 Aug 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "A Forced-Structure Reduction and Verifiable Bounds for Conway's 99-Graph",
       "link": "https://arxiv.org/abs/2608.11211",
-      "published": "Thu, 13 Aug 2026 00:00:00 -0400",
+      "published": "Fri, 14 Aug 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
@@ -258,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5173,
+      "fetchMs": 5098,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 5,
+      "fetchMs": 0,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1290,
+      "fetchMs": 4806,
       "indicatorCount": 0
     }
   ],
