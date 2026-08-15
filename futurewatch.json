@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-14T17:46:43.727Z",
+  "generatedAt": "2026-08-15T17:14:38.922Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,22 +182,28 @@
   },
   "stories": [
     {
-      "title": "Dynamic Governance of Multi-LLM Agent Systems for Collaborative Conversational Outcomes",
-      "link": "https://arxiv.org/abs/2608.11207",
-      "published": "Fri, 14 Aug 2026 00:00:00 -0400",
+      "title": "Position: Reasoning is a Learnable Rule-Based Process",
+      "link": "https://arxiv.org/abs/2608.12325",
+      "published": "Sat, 15 Aug 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Distribird: Literature-Informed Prior Distribution Design for Bayesian Model Calibration",
-      "link": "https://arxiv.org/abs/2608.11210",
-      "published": "Fri, 14 Aug 2026 00:00:00 -0400",
+      "title": "Diagnostic Foundation for Evaluating LLMs' Research Integrity as Co-Scientists",
+      "link": "https://arxiv.org/abs/2608.12345",
+      "published": "Sat, 15 Aug 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "A Forced-Structure Reduction and Verifiable Bounds for Conway's 99-Graph",
-      "link": "https://arxiv.org/abs/2608.11211",
-      "published": "Fri, 14 Aug 2026 00:00:00 -0400",
+      "title": "Position: The Alignment Community is Unintentionally Building a Censor's Toolkit",
+      "link": "https://arxiv.org/abs/2608.12346",
+      "published": "Sat, 15 Aug 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Have We Seen an Acceleration in Discoveries?",
+      "link": "https://metr.org/notes/2026-08-14-llm-contribution-to-discoveries/",
+      "published": "Fri, 14 Aug 2026 00:00:00 -0700",
+      "feed": "metr.org"
     },
     {
       "title": "Import AI 468: 23 RSI ideas; PostTrainBench+; and how trust and transparency interplay with AI racing",
@@ -230,12 +236,6 @@
       "feed": "metr.org"
     },
     {
-      "title": "The Economics of Recursive Self-Improvement",
-      "link": "https://metr.org/notes/2026-07-22-economics-of-recursive-self-improvement/",
-      "published": "Wed, 22 Jul 2026 00:00:00 -0700",
-      "feed": "metr.org"
-    },
-    {
       "title": "The Rise of Cognitive Debt.",
       "link": "https://www.youtube.com/shorts/63kM8vEABjI",
       "published": "2026-07-12T23:06:30+00:00",
@@ -258,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5098,
+      "fetchMs": 4635,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 0,
+      "fetchMs": 1,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 4806,
+      "fetchMs": 1410,
       "indicatorCount": 0
     }
   ],
