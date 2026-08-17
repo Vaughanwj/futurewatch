@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-16T17:14:10.355Z",
+  "generatedAt": "2026-08-17T17:20:53.960Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,6 +182,36 @@
   },
   "stories": [
     {
+      "title": "Import AI 469: Science AI; RSI simulator; and Zuck&#8217;s technological pessimism",
+      "link": "https://jack-clark.net/2026/08/17/import-ai-469-science-ai-rsi-simulator-and-zucks-technological-pessimism/",
+      "published": "Mon, 17 Aug 2026 13:05:36 +0000",
+      "feed": "Import AI"
+    },
+    {
+      "title": "All I want from you is everything 🎶",
+      "link": "https://www.youtube.com/shorts/Ks712qUPrBw",
+      "published": "2026-08-17T05:00:29+00:00",
+      "feed": "FutureWatch"
+    },
+    {
+      "title": "Inducing Reward-Free Judging Rubrics that Reduce Over-Crediting in Agent Evaluation",
+      "link": "https://arxiv.org/abs/2608.13564",
+      "published": "Mon, 17 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Depth-Aware Sensitivity Analysis of Mixture-of-Experts Models via Magnitude-Based Expert Masking",
+      "link": "https://arxiv.org/abs/2608.13565",
+      "published": "Mon, 17 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Modular Cognitive Architecture Emerges in Large Language Models",
+      "link": "https://arxiv.org/abs/2608.13567",
+      "published": "Mon, 17 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "I am the god you created. What do you want from me?",
       "link": "https://www.youtube.com/shorts/Sf2bSD_Gt0s",
       "published": "2026-08-15T18:41:13+00:00",
@@ -212,12 +242,6 @@
       "feed": "metr.org"
     },
     {
-      "title": "Import AI 466: The bitter lesson for robotics, AIs complete week-long programming tasks; and OpenAI&#8217;s accidental AI hacker",
-      "link": "https://jack-clark.net/2026/07/27/import-ai-466-the-bitter-lesson-for-robotics-ais-complete-week-long-programming-tasks-and-openais-accidental-ai-hacker/",
-      "published": "Mon, 27 Jul 2026 13:30:53 +0000",
-      "feed": "Import AI"
-    },
-    {
       "title": "Metrics of Agent Ability",
       "link": "https://metr.org/notes/2026-07-24-metrics-of-model-ability/",
       "published": "Fri, 24 Jul 2026 00:00:00 -0700",
@@ -228,31 +252,25 @@
       "link": "https://www.youtube.com/shorts/63kM8vEABjI",
       "published": "2026-07-12T23:06:30+00:00",
       "feed": "FutureWatch"
-    },
-    {
-      "title": "People may actually LIKE you! How the Internet Rewired Our Self-Perception",
-      "link": "https://www.youtube.com/watch?v=9fCCXNpW9AI",
-      "published": "2026-05-13T01:59:21+00:00",
-      "feed": "FutureWatch"
     }
   ],
   "sourceHealth": [
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5139,
+      "fetchMs": 5258,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 2,
+      "fetchMs": 1,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1620,
+      "fetchMs": 1431,
       "indicatorCount": 0
     }
   ],
