@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-17T17:20:53.960Z",
+  "generatedAt": "2026-08-18T17:20:47.356Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,6 +182,30 @@
   },
   "stories": [
     {
+      "title": "You wanted a god. Now look what you've got.",
+      "link": "https://www.youtube.com/shorts/by_KrpffWDs",
+      "published": "2026-08-18T05:00:37+00:00",
+      "feed": "FutureWatch"
+    },
+    {
+      "title": "FLOPs vs Real Work: The Importance of Replication in AI Efficiency Assessment",
+      "link": "https://arxiv.org/abs/2608.14550",
+      "published": "Tue, 18 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Large Language Models Show Metacognitive Sensitivity in Medical Reasoning",
+      "link": "https://arxiv.org/abs/2608.14552",
+      "published": "Tue, 18 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "The Unwritten Benchmark: A New Challenge for Multimodal Machine Learning in Abstract Perceptual Reasoning",
+      "link": "https://arxiv.org/abs/2608.14558",
+      "published": "Tue, 18 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "Import AI 469: Science AI; RSI simulator; and Zuck&#8217;s technological pessimism",
       "link": "https://jack-clark.net/2026/08/17/import-ai-469-science-ai-rsi-simulator-and-zucks-technological-pessimism/",
       "published": "Mon, 17 Aug 2026 13:05:36 +0000",
@@ -194,24 +218,6 @@
       "feed": "FutureWatch"
     },
     {
-      "title": "Inducing Reward-Free Judging Rubrics that Reduce Over-Crediting in Agent Evaluation",
-      "link": "https://arxiv.org/abs/2608.13564",
-      "published": "Mon, 17 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Depth-Aware Sensitivity Analysis of Mixture-of-Experts Models via Magnitude-Based Expert Masking",
-      "link": "https://arxiv.org/abs/2608.13565",
-      "published": "Mon, 17 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Modular Cognitive Architecture Emerges in Large Language Models",
-      "link": "https://arxiv.org/abs/2608.13567",
-      "published": "Mon, 17 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
       "title": "I am the god you created. What do you want from me?",
       "link": "https://www.youtube.com/shorts/Sf2bSD_Gt0s",
       "published": "2026-08-15T18:41:13+00:00",
@@ -220,6 +226,12 @@
     {
       "title": "Have We Seen an Acceleration in Discoveries?",
       "link": "https://metr.org/notes/2026-08-14-llm-contribution-to-discoveries/",
+      "published": "Fri, 14 Aug 2026 00:00:00 -0700",
+      "feed": "metr.org"
+    },
+    {
+      "title": "Funding update",
+      "link": "https://metr.org/blog/2026-08-14-funding-update/",
       "published": "Fri, 14 Aug 2026 00:00:00 -0700",
       "feed": "metr.org"
     },
@@ -240,25 +252,13 @@
       "link": "https://metr.org/blog/2026-07-28-investigating-ai-propensities-after-incidents/",
       "published": "Tue, 28 Jul 2026 00:00:00 -0700",
       "feed": "metr.org"
-    },
-    {
-      "title": "Metrics of Agent Ability",
-      "link": "https://metr.org/notes/2026-07-24-metrics-of-model-ability/",
-      "published": "Fri, 24 Jul 2026 00:00:00 -0700",
-      "feed": "metr.org"
-    },
-    {
-      "title": "The Rise of Cognitive Debt.",
-      "link": "https://www.youtube.com/shorts/63kM8vEABjI",
-      "published": "2026-07-12T23:06:30+00:00",
-      "feed": "FutureWatch"
     }
   ],
   "sourceHealth": [
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5258,
+      "fetchMs": 6210,
       "indicatorCount": 1
     },
     {
@@ -270,7 +270,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1431,
+      "fetchMs": 698,
       "indicatorCount": 0
     }
   ],
