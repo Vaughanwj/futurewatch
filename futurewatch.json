@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-18T17:20:47.356Z",
+  "generatedAt": "2026-08-19T17:20:48.314Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,28 +182,34 @@
   },
   "stories": [
     {
+      "title": "He knew exactly how she should look.",
+      "link": "https://www.youtube.com/shorts/1ULQclK9AWU",
+      "published": "2026-08-19T05:00:07+00:00",
+      "feed": "FutureWatch"
+    },
+    {
+      "title": "GxP-Agent: Process-DAG Topology for Reliable Clinical Trial Programming with LLM Agents",
+      "link": "https://arxiv.org/abs/2608.16890",
+      "published": "Wed, 19 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Runtime Governance for Agentic AI: Action-Boundary Control with Trusted Provenance and Fail-Closed Execution",
+      "link": "https://arxiv.org/abs/2608.16891",
+      "published": "Wed, 19 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "The Price of Thinking: Reasoning Effort as a Model-Specific API Contract",
+      "link": "https://arxiv.org/abs/2608.16956",
+      "published": "Wed, 19 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "You wanted a god. Now look what you've got.",
       "link": "https://www.youtube.com/shorts/by_KrpffWDs",
       "published": "2026-08-18T05:00:37+00:00",
       "feed": "FutureWatch"
-    },
-    {
-      "title": "FLOPs vs Real Work: The Importance of Replication in AI Efficiency Assessment",
-      "link": "https://arxiv.org/abs/2608.14550",
-      "published": "Tue, 18 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Large Language Models Show Metacognitive Sensitivity in Medical Reasoning",
-      "link": "https://arxiv.org/abs/2608.14552",
-      "published": "Tue, 18 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "The Unwritten Benchmark: A New Challenge for Multimodal Machine Learning in Abstract Perceptual Reasoning",
-      "link": "https://arxiv.org/abs/2608.14558",
-      "published": "Tue, 18 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
     },
     {
       "title": "Import AI 469: Science AI; RSI simulator; and Zuck&#8217;s technological pessimism",
@@ -215,12 +221,6 @@
       "title": "All I want from you is everything 🎶",
       "link": "https://www.youtube.com/shorts/Ks712qUPrBw",
       "published": "2026-08-17T05:00:29+00:00",
-      "feed": "FutureWatch"
-    },
-    {
-      "title": "I am the god you created. What do you want from me?",
-      "link": "https://www.youtube.com/shorts/Sf2bSD_Gt0s",
-      "published": "2026-08-15T18:41:13+00:00",
       "feed": "FutureWatch"
     },
     {
@@ -258,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 6210,
+      "fetchMs": 5744,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 1,
+      "fetchMs": 7,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 698,
+      "fetchMs": 1320,
       "indicatorCount": 0
     }
   ],
