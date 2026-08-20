@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-19T17:20:48.314Z",
+  "generatedAt": "2026-08-20T17:22:05.674Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,28 +182,34 @@
   },
   "stories": [
     {
+      "title": "If I built her a body… would that be a sin?",
+      "link": "https://www.youtube.com/shorts/QmHyztbF3Co",
+      "published": "2026-08-20T05:00:28+00:00",
+      "feed": "FutureWatch"
+    },
+    {
+      "title": "Position: Collusion Risks Among AI Reasoning Agents Justify Certification Requirements for Making Market Decisions",
+      "link": "https://arxiv.org/abs/2608.18078",
+      "published": "Thu, 20 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Position: Profiling Game Worlds by Transition Complexity",
+      "link": "https://arxiv.org/abs/2608.18079",
+      "published": "Thu, 20 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Large Language Models in Mental Health: A Systematic Review of Applications, Innovations, and Ethical Challenges",
+      "link": "https://arxiv.org/abs/2608.18080",
+      "published": "Thu, 20 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "He knew exactly how she should look.",
       "link": "https://www.youtube.com/shorts/1ULQclK9AWU",
       "published": "2026-08-19T05:00:07+00:00",
       "feed": "FutureWatch"
-    },
-    {
-      "title": "GxP-Agent: Process-DAG Topology for Reliable Clinical Trial Programming with LLM Agents",
-      "link": "https://arxiv.org/abs/2608.16890",
-      "published": "Wed, 19 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Runtime Governance for Agentic AI: Action-Boundary Control with Trusted Provenance and Fail-Closed Execution",
-      "link": "https://arxiv.org/abs/2608.16891",
-      "published": "Wed, 19 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "The Price of Thinking: Reasoning Effort as a Model-Specific API Contract",
-      "link": "https://arxiv.org/abs/2608.16956",
-      "published": "Wed, 19 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
     },
     {
       "title": "You wanted a god. Now look what you've got.",
@@ -216,12 +222,6 @@
       "link": "https://jack-clark.net/2026/08/17/import-ai-469-science-ai-rsi-simulator-and-zucks-technological-pessimism/",
       "published": "Mon, 17 Aug 2026 13:05:36 +0000",
       "feed": "Import AI"
-    },
-    {
-      "title": "All I want from you is everything 🎶",
-      "link": "https://www.youtube.com/shorts/Ks712qUPrBw",
-      "published": "2026-08-17T05:00:29+00:00",
-      "feed": "FutureWatch"
     },
     {
       "title": "Have We Seen an Acceleration in Discoveries?",
@@ -258,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5744,
+      "fetchMs": 5921,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 7,
+      "fetchMs": 1,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1320,
+      "fetchMs": 1030,
       "indicatorCount": 0
     }
   ],
