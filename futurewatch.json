@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-23T17:15:09.601Z",
+  "generatedAt": "2026-08-24T17:25:01.710Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,6 +182,36 @@
   },
   "stories": [
     {
+      "title": "Import AI 470: No rights for machines; automating environment generation with SPADE; and building better GPU kernels with Hawkeye",
+      "link": "https://jack-clark.net/2026/08/24/import-ai-470-no-rights-for-machines-automating-environment-generation-with-spade-and-building-better-gpu-kernels-with-hawkeye/",
+      "published": "Mon, 24 Aug 2026 13:12:40 +0000",
+      "feed": "Import AI"
+    },
+    {
+      "title": "He built her perfect. Then added a GPS. 📍",
+      "link": "https://www.youtube.com/shorts/NPOduGsn6_8",
+      "published": "2026-08-24T05:00:33+00:00",
+      "feed": "FutureWatch"
+    },
+    {
+      "title": "SDAD: Spec-Driven Agentic Development for the AI-Native SDLC",
+      "link": "https://arxiv.org/abs/2608.20341",
+      "published": "Mon, 24 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "PrimeAgentOrchestrator: Memory-Primed Agent Spawning for Personal AI Infrastructure",
+      "link": "https://arxiv.org/abs/2608.20342",
+      "published": "Mon, 24 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Truth Lies Deep: Countering Semantic Camouflage via Latent Intent Verification",
+      "link": "https://arxiv.org/abs/2608.20378",
+      "published": "Mon, 24 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "I don't need a girlfriend. I need a love robot.",
       "link": "https://www.youtube.com/shorts/Pe53x_Yuz54",
       "published": "2026-08-21T05:00:34+00:00",
@@ -191,12 +221,6 @@
       "title": "If I built her a body… would that be a sin?",
       "link": "https://www.youtube.com/shorts/QmHyztbF3Co",
       "published": "2026-08-20T05:00:28+00:00",
-      "feed": "FutureWatch"
-    },
-    {
-      "title": "He knew exactly how she should look.",
-      "link": "https://www.youtube.com/shorts/1ULQclK9AWU",
-      "published": "2026-08-19T05:00:07+00:00",
       "feed": "FutureWatch"
     },
     {
@@ -224,12 +248,6 @@
       "feed": "Import AI"
     },
     {
-      "title": "Import AI 467: Self-sustaining AI viruses; pacing AI progress; confusion about AI and creativity",
-      "link": "https://jack-clark.net/2026/08/03/import-ai-467-self-sustaining-ai-viruses-pacing-ai-progress-confusion-about-ai-and-creativity/",
-      "published": "Mon, 03 Aug 2026 13:31:22 +0000",
-      "feed": "Import AI"
-    },
-    {
       "title": "How independent researchers could investigate AI propensities after misalignment incidents",
       "link": "https://metr.org/blog/2026-07-28-investigating-ai-propensities-after-incidents/",
       "published": "Tue, 28 Jul 2026 00:00:00 -0700",
@@ -240,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5141,
+      "fetchMs": 4178,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 0,
+      "fetchMs": 1,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 394,
+      "fetchMs": 1681,
       "indicatorCount": 0
     }
   ],
