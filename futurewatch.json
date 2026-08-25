@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-24T17:25:01.710Z",
+  "generatedAt": "2026-08-25T17:24:55.049Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,6 +182,30 @@
   },
   "stories": [
     {
+      "title": "Love in the Time of Silicon 🎶 (title track)",
+      "link": "https://www.youtube.com/shorts/GwgycjP3kto",
+      "published": "2026-08-25T05:00:01+00:00",
+      "feed": "FutureWatch"
+    },
+    {
+      "title": "KVBoost: Chunk-Level Key-Value Cache Reuse with Deviation-Guided Recomputation for Efficient Large Language Model Inference",
+      "link": "https://arxiv.org/abs/2608.21362",
+      "published": "Tue, 25 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "AIREP: A Protocol for Per-Decision Evidence in AI Runtime Governance",
+      "link": "https://arxiv.org/abs/2608.21363",
+      "published": "Tue, 25 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Reviewing Model Collapse and Countermeasures",
+      "link": "https://arxiv.org/abs/2608.21366",
+      "published": "Tue, 25 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "Import AI 470: No rights for machines; automating environment generation with SPADE; and building better GPU kernels with Hawkeye",
       "link": "https://jack-clark.net/2026/08/24/import-ai-470-no-rights-for-machines-automating-environment-generation-with-spade-and-building-better-gpu-kernels-with-hawkeye/",
       "published": "Mon, 24 Aug 2026 13:12:40 +0000",
@@ -194,33 +218,9 @@
       "feed": "FutureWatch"
     },
     {
-      "title": "SDAD: Spec-Driven Agentic Development for the AI-Native SDLC",
-      "link": "https://arxiv.org/abs/2608.20341",
-      "published": "Mon, 24 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "PrimeAgentOrchestrator: Memory-Primed Agent Spawning for Personal AI Infrastructure",
-      "link": "https://arxiv.org/abs/2608.20342",
-      "published": "Mon, 24 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Truth Lies Deep: Countering Semantic Camouflage via Latent Intent Verification",
-      "link": "https://arxiv.org/abs/2608.20378",
-      "published": "Mon, 24 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
       "title": "I don't need a girlfriend. I need a love robot.",
       "link": "https://www.youtube.com/shorts/Pe53x_Yuz54",
       "published": "2026-08-21T05:00:34+00:00",
-      "feed": "FutureWatch"
-    },
-    {
-      "title": "If I built her a body… would that be a sin?",
-      "link": "https://www.youtube.com/shorts/QmHyztbF3Co",
-      "published": "2026-08-20T05:00:28+00:00",
       "feed": "FutureWatch"
     },
     {
@@ -258,7 +258,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 4178,
+      "fetchMs": 5239,
       "indicatorCount": 1
     },
     {
@@ -270,7 +270,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1681,
+      "fetchMs": 1056,
       "indicatorCount": 0
     }
   ],
