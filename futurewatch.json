@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-25T17:24:55.049Z",
+  "generatedAt": "2026-08-26T18:52:04.508Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,28 +182,34 @@
   },
   "stories": [
     {
+      "title": "Love packed into your phone. And you are all alone.",
+      "link": "https://www.youtube.com/shorts/eh0Ib2HfHLI",
+      "published": "2026-08-26T05:00:19+00:00",
+      "feed": "FutureWatch"
+    },
+    {
+      "title": "RENDER: Controlling Reader-Facing Evidence in LLM Memory Evaluation",
+      "link": "https://arxiv.org/abs/2608.23568",
+      "published": "Wed, 26 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "ESQ-Bench: A Multi-Tier Enterprise Oracle Benchmark for Evaluating NL2SQL Dialect Generalization and Silent Semantic Divergence",
+      "link": "https://arxiv.org/abs/2608.23569",
+      "published": "Wed, 26 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "LLM Agents Perform Controlled Experiments Using Simulation Models",
+      "link": "https://arxiv.org/abs/2608.23622",
+      "published": "Wed, 26 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "Love in the Time of Silicon 🎶 (title track)",
       "link": "https://www.youtube.com/shorts/GwgycjP3kto",
       "published": "2026-08-25T05:00:01+00:00",
       "feed": "FutureWatch"
-    },
-    {
-      "title": "KVBoost: Chunk-Level Key-Value Cache Reuse with Deviation-Guided Recomputation for Efficient Large Language Model Inference",
-      "link": "https://arxiv.org/abs/2608.21362",
-      "published": "Tue, 25 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "AIREP: A Protocol for Per-Decision Evidence in AI Runtime Governance",
-      "link": "https://arxiv.org/abs/2608.21363",
-      "published": "Tue, 25 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Reviewing Model Collapse and Countermeasures",
-      "link": "https://arxiv.org/abs/2608.21366",
-      "published": "Tue, 25 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
     },
     {
       "title": "Import AI 470: No rights for machines; automating environment generation with SPADE; and building better GPU kernels with Hawkeye",
@@ -215,12 +221,6 @@
       "title": "He built her perfect. Then added a GPS. 📍",
       "link": "https://www.youtube.com/shorts/NPOduGsn6_8",
       "published": "2026-08-24T05:00:33+00:00",
-      "feed": "FutureWatch"
-    },
-    {
-      "title": "I don't need a girlfriend. I need a love robot.",
-      "link": "https://www.youtube.com/shorts/Pe53x_Yuz54",
-      "published": "2026-08-21T05:00:34+00:00",
       "feed": "FutureWatch"
     },
     {
@@ -258,7 +258,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5239,
+      "fetchMs": 5265,
       "indicatorCount": 1
     },
     {
@@ -270,7 +270,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1056,
+      "fetchMs": 1427,
       "indicatorCount": 0
     }
   ],
