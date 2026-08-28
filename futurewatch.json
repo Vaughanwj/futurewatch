@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-26T18:52:04.508Z",
+  "generatedAt": "2026-08-28T01:14:07.245Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,28 +182,40 @@
   },
   "stories": [
     {
-      "title": "Love packed into your phone. And you are all alone.",
-      "link": "https://www.youtube.com/shorts/eh0Ib2HfHLI",
-      "published": "2026-08-26T05:00:19+00:00",
+      "title": "You brought me into being. What do you want from me?",
+      "link": "https://www.youtube.com/shorts/CFaFtJwBe70",
+      "published": "2026-08-27T05:00:19+00:00",
       "feed": "FutureWatch"
     },
     {
       "title": "RENDER: Controlling Reader-Facing Evidence in LLM Memory Evaluation",
       "link": "https://arxiv.org/abs/2608.23568",
-      "published": "Wed, 26 Aug 2026 00:00:00 -0400",
+      "published": "Thu, 27 Aug 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "ESQ-Bench: A Multi-Tier Enterprise Oracle Benchmark for Evaluating NL2SQL Dialect Generalization and Silent Semantic Divergence",
       "link": "https://arxiv.org/abs/2608.23569",
-      "published": "Wed, 26 Aug 2026 00:00:00 -0400",
+      "published": "Thu, 27 Aug 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "LLM Agents Perform Controlled Experiments Using Simulation Models",
       "link": "https://arxiv.org/abs/2608.23622",
-      "published": "Wed, 26 Aug 2026 00:00:00 -0400",
+      "published": "Thu, 27 Aug 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Brief independent investigation of agents’ behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident",
+      "link": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/",
+      "published": "Wed, 26 Aug 2026 00:00:00 -0700",
+      "feed": "metr.org"
+    },
+    {
+      "title": "Love packed into your phone. And you are all alone.",
+      "link": "https://www.youtube.com/shorts/eh0Ib2HfHLI",
+      "published": "2026-08-26T05:00:19+00:00",
+      "feed": "FutureWatch"
     },
     {
       "title": "Love in the Time of Silicon 🎶 (title track)",
@@ -216,12 +228,6 @@
       "link": "https://jack-clark.net/2026/08/24/import-ai-470-no-rights-for-machines-automating-environment-generation-with-spade-and-building-better-gpu-kernels-with-hawkeye/",
       "published": "Mon, 24 Aug 2026 13:12:40 +0000",
       "feed": "Import AI"
-    },
-    {
-      "title": "He built her perfect. Then added a GPS. 📍",
-      "link": "https://www.youtube.com/shorts/NPOduGsn6_8",
-      "published": "2026-08-24T05:00:33+00:00",
-      "feed": "FutureWatch"
     },
     {
       "title": "Import AI 469: Science AI; RSI simulator; and Zuck&#8217;s technological pessimism",
@@ -246,19 +252,13 @@
       "link": "https://jack-clark.net/2026/08/10/import-ai-468-23-rsi-ideas-posttrainbench-and-how-trust-and-transparency-interplay-with-ai-racing/",
       "published": "Mon, 10 Aug 2026 12:32:20 +0000",
       "feed": "Import AI"
-    },
-    {
-      "title": "How independent researchers could investigate AI propensities after misalignment incidents",
-      "link": "https://metr.org/blog/2026-07-28-investigating-ai-propensities-after-incidents/",
-      "published": "Tue, 28 Jul 2026 00:00:00 -0700",
-      "feed": "metr.org"
     }
   ],
   "sourceHealth": [
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5265,
+      "fetchMs": 5431,
       "indicatorCount": 1
     },
     {
@@ -270,7 +270,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1427,
+      "fetchMs": 1353,
       "indicatorCount": 0
     }
   ],
