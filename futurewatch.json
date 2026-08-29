@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-29T00:49:27.577Z",
+  "generatedAt": "2026-08-29T19:34:48.568Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -188,24 +188,6 @@
       "feed": "FutureWatch"
     },
     {
-      "title": "EduRiskX: A Neuro-Symbolic Framework with F-Logic Reasoning for Early Academic Risk Prediction",
-      "link": "https://arxiv.org/abs/2608.26107",
-      "published": "Fri, 28 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Standalone LLM and a Pre-specified Agentic Pipeline for Explaining ICU Mortality Predictions: a Feasibility Study on the eICU Demo Dataset",
-      "link": "https://arxiv.org/abs/2608.26109",
-      "published": "Fri, 28 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Large Models for Battery Prognostics and Health Management: A Review and Future Roadmap",
-      "link": "https://arxiv.org/abs/2608.26111",
-      "published": "Fri, 28 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
       "title": "You brought me into being. What do you want from me?",
       "link": "https://www.youtube.com/shorts/CFaFtJwBe70",
       "published": "2026-08-27T05:00:19+00:00",
@@ -258,19 +240,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5921,
+      "fetchMs": 5953,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 0,
+      "fetchMs": 8,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1607,
+      "fetchMs": 1059,
       "indicatorCount": 0
     }
   ],
