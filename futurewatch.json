@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-28T01:14:07.245Z",
+  "generatedAt": "2026-08-29T00:49:27.577Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,28 +182,34 @@
   },
   "stories": [
     {
+      "title": "The monster you saw was me.",
+      "link": "https://www.youtube.com/shorts/kJXQbAKPPmI",
+      "published": "2026-08-28T05:00:11+00:00",
+      "feed": "FutureWatch"
+    },
+    {
+      "title": "EduRiskX: A Neuro-Symbolic Framework with F-Logic Reasoning for Early Academic Risk Prediction",
+      "link": "https://arxiv.org/abs/2608.26107",
+      "published": "Fri, 28 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Standalone LLM and a Pre-specified Agentic Pipeline for Explaining ICU Mortality Predictions: a Feasibility Study on the eICU Demo Dataset",
+      "link": "https://arxiv.org/abs/2608.26109",
+      "published": "Fri, 28 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Large Models for Battery Prognostics and Health Management: A Review and Future Roadmap",
+      "link": "https://arxiv.org/abs/2608.26111",
+      "published": "Fri, 28 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "You brought me into being. What do you want from me?",
       "link": "https://www.youtube.com/shorts/CFaFtJwBe70",
       "published": "2026-08-27T05:00:19+00:00",
       "feed": "FutureWatch"
-    },
-    {
-      "title": "RENDER: Controlling Reader-Facing Evidence in LLM Memory Evaluation",
-      "link": "https://arxiv.org/abs/2608.23568",
-      "published": "Thu, 27 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "ESQ-Bench: A Multi-Tier Enterprise Oracle Benchmark for Evaluating NL2SQL Dialect Generalization and Silent Semantic Divergence",
-      "link": "https://arxiv.org/abs/2608.23569",
-      "published": "Thu, 27 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "LLM Agents Perform Controlled Experiments Using Simulation Models",
-      "link": "https://arxiv.org/abs/2608.23622",
-      "published": "Thu, 27 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
     },
     {
       "title": "Brief independent investigation of agents’ behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident",
@@ -215,12 +221,6 @@
       "title": "Love packed into your phone. And you are all alone.",
       "link": "https://www.youtube.com/shorts/eh0Ib2HfHLI",
       "published": "2026-08-26T05:00:19+00:00",
-      "feed": "FutureWatch"
-    },
-    {
-      "title": "Love in the Time of Silicon 🎶 (title track)",
-      "link": "https://www.youtube.com/shorts/GwgycjP3kto",
-      "published": "2026-08-25T05:00:01+00:00",
       "feed": "FutureWatch"
     },
     {
@@ -258,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5431,
+      "fetchMs": 5921,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 1,
+      "fetchMs": 0,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1353,
+      "fetchMs": 1607,
       "indicatorCount": 0
     }
   ],
