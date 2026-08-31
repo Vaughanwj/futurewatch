@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-30T19:35:30.473Z",
+  "generatedAt": "2026-08-31T21:42:37.812Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,6 +182,36 @@
   },
   "stories": [
     {
+      "title": "Import AI 471: Why Hugging Face worries me; space mining; FIve Eyes on AI",
+      "link": "https://jack-clark.net/2026/08/31/import-ai-471-why-hugging-face-worries-me-space-mining-five-eyes-on-ai/",
+      "published": "Mon, 31 Aug 2026 13:31:06 +0000",
+      "feed": "Import AI"
+    },
+    {
+      "title": "I wanted love to hold. But I wrapped it in a chain.",
+      "link": "https://www.youtube.com/shorts/1QwaE7hkOFg",
+      "published": "2026-08-31T05:00:23+00:00",
+      "feed": "FutureWatch"
+    },
+    {
+      "title": "Time Capsule of Testable Human Knowledge: 41 Years of Jeopardy! in a Single Free Local Model",
+      "link": "https://arxiv.org/abs/2608.27459",
+      "published": "Mon, 31 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Rating the Raters: Rasch Measurement Theory for LLM Evaluation",
+      "link": "https://arxiv.org/abs/2608.27463",
+      "published": "Mon, 31 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Not All Explanations Are Sought: Information-Seeking Psychology for Human-Centered XAI",
+      "link": "https://arxiv.org/abs/2608.27464",
+      "published": "Mon, 31 Aug 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "The monster you saw was me.",
       "link": "https://www.youtube.com/shorts/kJXQbAKPPmI",
       "published": "2026-08-28T05:00:11+00:00",
@@ -198,12 +228,6 @@
       "link": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/",
       "published": "Wed, 26 Aug 2026 00:00:00 -0700",
       "feed": "metr.org"
-    },
-    {
-      "title": "Love packed into your phone. And you are all alone.",
-      "link": "https://www.youtube.com/shorts/eh0Ib2HfHLI",
-      "published": "2026-08-26T05:00:19+00:00",
-      "feed": "FutureWatch"
     },
     {
       "title": "Import AI 470: No rights for machines; automating environment generation with SPADE; and building better GPU kernels with Hawkeye",
@@ -228,19 +252,13 @@
       "link": "https://metr.org/blog/2026-08-14-funding-update/",
       "published": "Fri, 14 Aug 2026 00:00:00 -0700",
       "feed": "metr.org"
-    },
-    {
-      "title": "Import AI 468: 23 RSI ideas; PostTrainBench+; and how trust and transparency interplay with AI racing",
-      "link": "https://jack-clark.net/2026/08/10/import-ai-468-23-rsi-ideas-posttrainbench-and-how-trust-and-transparency-interplay-with-ai-racing/",
-      "published": "Mon, 10 Aug 2026 12:32:20 +0000",
-      "feed": "Import AI"
     }
   ],
   "sourceHealth": [
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5312,
+      "fetchMs": 5189,
       "indicatorCount": 1
     },
     {
@@ -252,7 +270,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1629,
+      "fetchMs": 663,
       "indicatorCount": 0
     }
   ],
