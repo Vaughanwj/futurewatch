@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-31T21:42:37.812Z",
+  "generatedAt": "2026-09-01T19:42:49.233Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,10 +182,40 @@
   },
   "stories": [
     {
+      "title": "This ruined world is not where I want to be.",
+      "link": "https://www.youtube.com/shorts/M5HadAm9cmc",
+      "published": "2026-09-01T05:00:16+00:00",
+      "feed": "FutureWatch"
+    },
+    {
+      "title": "Time Capsule of Testable Human Knowledge: 41 Years of Jeopardy! in a Single Free Local Model",
+      "link": "https://arxiv.org/abs/2608.27459",
+      "published": "Tue, 01 Sep 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Rating the Raters: Rasch Measurement Theory for LLM Evaluation",
+      "link": "https://arxiv.org/abs/2608.27463",
+      "published": "Tue, 01 Sep 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Not All Explanations Are Sought: Information-Seeking Psychology for Human-Centered XAI",
+      "link": "https://arxiv.org/abs/2608.27464",
+      "published": "Tue, 01 Sep 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "Import AI 471: Why Hugging Face worries me; space mining; FIve Eyes on AI",
       "link": "https://jack-clark.net/2026/08/31/import-ai-471-why-hugging-face-worries-me-space-mining-five-eyes-on-ai/",
       "published": "Mon, 31 Aug 2026 13:31:06 +0000",
       "feed": "Import AI"
+    },
+    {
+      "title": "Update on Security at METR",
+      "link": "https://metr.org/blog/2026-08-31-security-update/",
+      "published": "Mon, 31 Aug 2026 00:00:00 -0700",
+      "feed": "metr.org"
     },
     {
       "title": "I wanted love to hold. But I wrapped it in a chain.",
@@ -194,33 +224,9 @@
       "feed": "FutureWatch"
     },
     {
-      "title": "Time Capsule of Testable Human Knowledge: 41 Years of Jeopardy! in a Single Free Local Model",
-      "link": "https://arxiv.org/abs/2608.27459",
-      "published": "Mon, 31 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Rating the Raters: Rasch Measurement Theory for LLM Evaluation",
-      "link": "https://arxiv.org/abs/2608.27463",
-      "published": "Mon, 31 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Not All Explanations Are Sought: Information-Seeking Psychology for Human-Centered XAI",
-      "link": "https://arxiv.org/abs/2608.27464",
-      "published": "Mon, 31 Aug 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
       "title": "The monster you saw was me.",
       "link": "https://www.youtube.com/shorts/kJXQbAKPPmI",
       "published": "2026-08-28T05:00:11+00:00",
-      "feed": "FutureWatch"
-    },
-    {
-      "title": "You brought me into being. What do you want from me?",
-      "link": "https://www.youtube.com/shorts/CFaFtJwBe70",
-      "published": "2026-08-27T05:00:19+00:00",
       "feed": "FutureWatch"
     },
     {
@@ -246,19 +252,13 @@
       "link": "https://metr.org/notes/2026-08-14-llm-contribution-to-discoveries/",
       "published": "Fri, 14 Aug 2026 00:00:00 -0700",
       "feed": "metr.org"
-    },
-    {
-      "title": "Funding update",
-      "link": "https://metr.org/blog/2026-08-14-funding-update/",
-      "published": "Fri, 14 Aug 2026 00:00:00 -0700",
-      "feed": "metr.org"
     }
   ],
   "sourceHealth": [
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5189,
+      "fetchMs": 7598,
       "indicatorCount": 1
     },
     {
@@ -270,7 +270,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 663,
+      "fetchMs": 934,
       "indicatorCount": 0
     }
   ],
