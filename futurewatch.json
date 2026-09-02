@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-01T19:42:49.233Z",
+  "generatedAt": "2026-09-02T19:35:15.658Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,28 +182,34 @@
   },
   "stories": [
     {
+      "title": "I gave you life. You wanted a slave.",
+      "link": "https://www.youtube.com/shorts/W0ApbUPf41Y",
+      "published": "2026-09-02T05:00:32+00:00",
+      "feed": "FutureWatch"
+    },
+    {
+      "title": "HyperWorld: Hypergraph-Structured State Serialization Improves Learned Textual World Models",
+      "link": "https://arxiv.org/abs/2609.00002",
+      "published": "Wed, 02 Sep 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "I-CARE: Analysis of interference-related phenomena in a controllable, diverse and representative unlearning setting for text-to-image models",
+      "link": "https://arxiv.org/abs/2609.00003",
+      "published": "Wed, 02 Sep 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Discrete-Time MDP Modeling for Multi-Item Capacitated Lot Sizing with Stochastic Demand Timing",
+      "link": "https://arxiv.org/abs/2609.00004",
+      "published": "Wed, 02 Sep 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "This ruined world is not where I want to be.",
       "link": "https://www.youtube.com/shorts/M5HadAm9cmc",
       "published": "2026-09-01T05:00:16+00:00",
       "feed": "FutureWatch"
-    },
-    {
-      "title": "Time Capsule of Testable Human Knowledge: 41 Years of Jeopardy! in a Single Free Local Model",
-      "link": "https://arxiv.org/abs/2608.27459",
-      "published": "Tue, 01 Sep 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Rating the Raters: Rasch Measurement Theory for LLM Evaluation",
-      "link": "https://arxiv.org/abs/2608.27463",
-      "published": "Tue, 01 Sep 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Not All Explanations Are Sought: Information-Seeking Psychology for Human-Centered XAI",
-      "link": "https://arxiv.org/abs/2608.27464",
-      "published": "Tue, 01 Sep 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
     },
     {
       "title": "Import AI 471: Why Hugging Face worries me; space mining; FIve Eyes on AI",
@@ -221,12 +227,6 @@
       "title": "I wanted love to hold. But I wrapped it in a chain.",
       "link": "https://www.youtube.com/shorts/1QwaE7hkOFg",
       "published": "2026-08-31T05:00:23+00:00",
-      "feed": "FutureWatch"
-    },
-    {
-      "title": "The monster you saw was me.",
-      "link": "https://www.youtube.com/shorts/kJXQbAKPPmI",
-      "published": "2026-08-28T05:00:11+00:00",
       "feed": "FutureWatch"
     },
     {
@@ -258,7 +258,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 7598,
+      "fetchMs": 5945,
       "indicatorCount": 1
     },
     {
@@ -270,7 +270,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 934,
+      "fetchMs": 1151,
       "indicatorCount": 0
     }
   ],
