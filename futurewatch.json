@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-02T19:35:15.658Z",
+  "generatedAt": "2026-09-03T19:33:33.803Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,28 +182,34 @@
   },
   "stories": [
     {
+      "title": "She's helping the rich leave Earth. At least, what's left of it.",
+      "link": "https://www.youtube.com/shorts/7m5WNAo1fYc",
+      "published": "2026-09-03T05:00:07+00:00",
+      "feed": "FutureWatch"
+    },
+    {
+      "title": "EvalDetectBench: A Benchmark for Measuring Evaluation Awareness in Frontier Language Models",
+      "link": "https://arxiv.org/abs/2609.01611",
+      "published": "Thu, 03 Sep 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Meta-ethics and AI: exploring the novel meta-ethical questions in the era of AI",
+      "link": "https://arxiv.org/abs/2609.01685",
+      "published": "Thu, 03 Sep 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "When Can a Machine Trust a Statute? A Survival Certificate for Machine-Extracted Legal Logic",
+      "link": "https://arxiv.org/abs/2609.01741",
+      "published": "Thu, 03 Sep 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "I gave you life. You wanted a slave.",
       "link": "https://www.youtube.com/shorts/W0ApbUPf41Y",
       "published": "2026-09-02T05:00:32+00:00",
       "feed": "FutureWatch"
-    },
-    {
-      "title": "HyperWorld: Hypergraph-Structured State Serialization Improves Learned Textual World Models",
-      "link": "https://arxiv.org/abs/2609.00002",
-      "published": "Wed, 02 Sep 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "I-CARE: Analysis of interference-related phenomena in a controllable, diverse and representative unlearning setting for text-to-image models",
-      "link": "https://arxiv.org/abs/2609.00003",
-      "published": "Wed, 02 Sep 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Discrete-Time MDP Modeling for Multi-Item Capacitated Lot Sizing with Stochastic Demand Timing",
-      "link": "https://arxiv.org/abs/2609.00004",
-      "published": "Wed, 02 Sep 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
     },
     {
       "title": "This ruined world is not where I want to be.",
@@ -222,12 +228,6 @@
       "link": "https://metr.org/blog/2026-08-31-security-update/",
       "published": "Mon, 31 Aug 2026 00:00:00 -0700",
       "feed": "metr.org"
-    },
-    {
-      "title": "I wanted love to hold. But I wrapped it in a chain.",
-      "link": "https://www.youtube.com/shorts/1QwaE7hkOFg",
-      "published": "2026-08-31T05:00:23+00:00",
-      "feed": "FutureWatch"
     },
     {
       "title": "Brief independent investigation of agents’ behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident",
@@ -258,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5945,
+      "fetchMs": 5411,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 1,
+      "fetchMs": 6,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1151,
+      "fetchMs": 1480,
       "indicatorCount": 0
     }
   ],
