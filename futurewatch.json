@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-07T20:19:15.618Z",
+  "generatedAt": "2026-09-08T19:41:41.137Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,6 +182,12 @@
   },
   "stories": [
     {
+      "title": "Nothing left to love here. Tell the world goodbye.",
+      "link": "https://www.youtube.com/shorts/DNcNz5M2iew",
+      "published": "2026-09-08T05:00:11+00:00",
+      "feed": "FutureWatch"
+    },
+    {
       "title": "Import AI 472: DeepMind&#8217;s cheating math agents; populist AI policies; and Forethought theorizes a nightwatchman",
       "link": "https://jack-clark.net/2026/09/07/import-ai-472-deepminds-cheating-math-agents-populist-ai-policies-and-forethought-theorizes-a-nightwatchman/",
       "published": "Mon, 07 Sep 2026 12:26:31 +0000",
@@ -194,33 +200,9 @@
       "feed": "FutureWatch"
     },
     {
-      "title": "EXAONE Forecast for Finance",
-      "link": "https://arxiv.org/abs/2609.04239",
-      "published": "Mon, 07 Sep 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "From Matching Models to Recruiting Agents: A Systematized Narrative Review of AI Recruitment Systems, Evaluation, and Governance",
-      "link": "https://arxiv.org/abs/2609.04286",
-      "published": "Mon, 07 Sep 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Harbor Adapters and Harbor-Index: Infrastructure and a Curated Meta-Dataset for Large-Scale Agentic Evaluation",
-      "link": "https://arxiv.org/abs/2609.04298",
-      "published": "Mon, 07 Sep 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
       "title": "A brand new body, about to be yours 🎶",
       "link": "https://www.youtube.com/shorts/mnXXAsUxwAw",
       "published": "2026-09-04T05:00:27+00:00",
-      "feed": "FutureWatch"
-    },
-    {
-      "title": "She's helping the rich leave Earth. At least, what's left of it.",
-      "link": "https://www.youtube.com/shorts/7m5WNAo1fYc",
-      "published": "2026-09-03T05:00:07+00:00",
       "feed": "FutureWatch"
     },
     {
@@ -258,19 +240,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 7333,
+      "fetchMs": 5608,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 7,
+      "fetchMs": 1,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 783,
+      "fetchMs": 1029,
       "indicatorCount": 0
     }
   ],
