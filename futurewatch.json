@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-09T19:34:39.000Z",
+  "generatedAt": "2026-09-10T19:24:54.144Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,21 +182,21 @@
   },
   "stories": [
     {
-      "title": "Beyond Right and Wrong: Evaluating Second-order Social Reasoning in Large Language Models",
-      "link": "https://arxiv.org/abs/2609.05437",
-      "published": "Wed, 09 Sep 2026 00:00:00 -0400",
+      "title": "OpenDiscoveryTrace: Process Traces for Evaluating AI Scientist Workflows",
+      "link": "https://arxiv.org/abs/2609.09203",
+      "published": "Thu, 10 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "CriticGen: Generation-Aware Evaluation as Actionable Feedback",
-      "link": "https://arxiv.org/abs/2609.05439",
-      "published": "Wed, 09 Sep 2026 00:00:00 -0400",
+      "title": "Adaptive Entangled Game Modules in Artificial General Intelligence",
+      "link": "https://arxiv.org/abs/2609.09226",
+      "published": "Thu, 10 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "When Does Memory Help? A Cost-Aware Evaluation of Long-Term Memory in Tool-Using LLM Agents",
-      "link": "https://arxiv.org/abs/2609.05441",
-      "published": "Wed, 09 Sep 2026 00:00:00 -0400",
+      "title": "Subagents vs Agent Skills: Executing Reusable Knowledge for Long-Horizon Agentic Tasks",
+      "link": "https://arxiv.org/abs/2609.09233",
+      "published": "Thu, 10 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
@@ -258,7 +258,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5395,
+      "fetchMs": 5216,
       "indicatorCount": 1
     },
     {
@@ -270,7 +270,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1085,
+      "fetchMs": 1347,
       "indicatorCount": 0
     }
   ],
