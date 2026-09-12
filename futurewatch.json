@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-11T19:23:01.860Z",
+  "generatedAt": "2026-09-12T18:53:21.840Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,21 +182,21 @@
   },
   "stories": [
     {
-      "title": "OpenDiscoveryTrace: Process Traces for Evaluating AI Scientist Workflows",
-      "link": "https://arxiv.org/abs/2609.09203",
-      "published": "Fri, 11 Sep 2026 00:00:00 -0400",
+      "title": "Probabilistic Focal Search: Accelerating Bounded-Suboptimal Search via Lower-Bound Advancement",
+      "link": "https://arxiv.org/abs/2609.10584",
+      "published": "Sat, 12 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Adaptive Entangled Game Modules in Artificial General Intelligence",
-      "link": "https://arxiv.org/abs/2609.09226",
-      "published": "Fri, 11 Sep 2026 00:00:00 -0400",
+      "title": "Automating Quadratic Unconstrained Binary Optimization (QUBO) Formulation Generation from Natural Language",
+      "link": "https://arxiv.org/abs/2609.10629",
+      "published": "Sat, 12 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Subagents vs Agent Skills: Executing Reusable Knowledge for Long-Horizon Agentic Tasks",
-      "link": "https://arxiv.org/abs/2609.09233",
-      "published": "Fri, 11 Sep 2026 00:00:00 -0400",
+      "title": "A Multi-Stage Rule-Chaining Framework for Compositional and Interpretable Cognitive Reasoning",
+      "link": "https://arxiv.org/abs/2609.10654",
+      "published": "Sat, 12 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
@@ -258,7 +258,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5136,
+      "fetchMs": 5335,
       "indicatorCount": 1
     },
     {
@@ -270,7 +270,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 787,
+      "fetchMs": 705,
       "indicatorCount": 0
     }
   ],
