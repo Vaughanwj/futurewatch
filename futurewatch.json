@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-13T19:10:14.743Z",
+  "generatedAt": "2026-09-14T20:42:34.026Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,6 +182,24 @@
   },
   "stories": [
     {
+      "title": "Occamy-1.0: Open Pareto-frontier 35B Intelligence for Co-work",
+      "link": "https://arxiv.org/abs/2609.11977",
+      "published": "Mon, 14 Sep 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Harness or Model? Isolating the Harness Effect in Agentic Coding with a Contamination-Controlled Private Suite",
+      "link": "https://arxiv.org/abs/2609.11987",
+      "published": "Mon, 14 Sep 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Reading the Whole Heart: Latent-Attention Masked Autoencoders for Multimodal Cardiac Representation Learning",
+      "link": "https://arxiv.org/abs/2609.12035",
+      "published": "Mon, 14 Sep 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "Nothing left to love here. Tell the world goodbye.",
       "link": "https://www.youtube.com/shorts/DNcNz5M2iew",
       "published": "2026-09-08T05:00:11+00:00",
@@ -240,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5268,
+      "fetchMs": 5147,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 8,
+      "fetchMs": 0,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1504,
+      "fetchMs": 1298,
       "indicatorCount": 0
     }
   ],
