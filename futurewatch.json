@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-15T19:56:47.268Z",
+  "generatedAt": "2026-09-16T19:49:16.004Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -184,19 +184,19 @@
     {
       "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
       "link": "https://arxiv.org/abs/2609.13356",
-      "published": "Tue, 15 Sep 2026 00:00:00 -0400",
+      "published": "Wed, 16 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "Converge Then Diversify: Decoupling Convergence and Diversity in Multi-Objective Bayesian Optimisation",
       "link": "https://arxiv.org/abs/2609.13396",
-      "published": "Tue, 15 Sep 2026 00:00:00 -0400",
+      "published": "Wed, 16 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "Generalized Agent Iteration: One Formal Framework for Iterative Policy Improvement and Recursive Self-Improvement",
       "link": "https://arxiv.org/abs/2609.13406",
-      "published": "Tue, 15 Sep 2026 00:00:00 -0400",
+      "published": "Wed, 16 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
@@ -258,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5807,
+      "fetchMs": 4771,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 1,
+      "fetchMs": 0,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1309,
+      "fetchMs": 1424,
       "indicatorCount": 0
     }
   ],
