@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-16T19:49:16.004Z",
+  "generatedAt": "2026-09-17T19:57:20.543Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,21 +182,21 @@
   },
   "stories": [
     {
-      "title": "ZGCM-1: A Fully Open and Extremely Efficient Foundation Model for Math and Agentic Search",
-      "link": "https://arxiv.org/abs/2609.13356",
-      "published": "Wed, 16 Sep 2026 00:00:00 -0400",
+      "title": "Making AI-Assisted Claims Independently Challengeable: Publication Authority and a Protocol for Falsifiable Publication Records",
+      "link": "https://arxiv.org/abs/2609.17631",
+      "published": "Thu, 17 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Converge Then Diversify: Decoupling Convergence and Diversity in Multi-Objective Bayesian Optimisation",
-      "link": "https://arxiv.org/abs/2609.13396",
-      "published": "Wed, 16 Sep 2026 00:00:00 -0400",
+      "title": "EvolveTrade: Experience-Driven Policy Refinement for Self-Evolving LLM Trading Agents",
+      "link": "https://arxiv.org/abs/2609.17632",
+      "published": "Thu, 17 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Generalized Agent Iteration: One Formal Framework for Iterative Policy Improvement and Recursive Self-Improvement",
-      "link": "https://arxiv.org/abs/2609.13406",
-      "published": "Wed, 16 Sep 2026 00:00:00 -0400",
+      "title": "One Color Preprocessing Improves DSATUR",
+      "link": "https://arxiv.org/abs/2609.17633",
+      "published": "Thu, 17 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
@@ -258,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 4771,
+      "fetchMs": 5286,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 0,
+      "fetchMs": 1,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1424,
+      "fetchMs": 1362,
       "indicatorCount": 0
     }
   ],
