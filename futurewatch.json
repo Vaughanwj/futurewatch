@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T19:57:20.543Z",
+  "generatedAt": "2026-09-18T19:21:56.565Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,21 +182,21 @@
   },
   "stories": [
     {
-      "title": "Making AI-Assisted Claims Independently Challengeable: Publication Authority and a Protocol for Falsifiable Publication Records",
-      "link": "https://arxiv.org/abs/2609.17631",
-      "published": "Thu, 17 Sep 2026 00:00:00 -0400",
+      "title": "Regularized Emphatic Temporal-Difference Learning: Stability under Constant Stepsizes",
+      "link": "https://arxiv.org/abs/2609.19170",
+      "published": "Fri, 18 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "EvolveTrade: Experience-Driven Policy Refinement for Self-Evolving LLM Trading Agents",
-      "link": "https://arxiv.org/abs/2609.17632",
-      "published": "Thu, 17 Sep 2026 00:00:00 -0400",
+      "title": "BioPhys-Bridge: A Benchmark for Interdisciplinary Scientific Reasoning in Physics-Grounded Biological Research",
+      "link": "https://arxiv.org/abs/2609.19180",
+      "published": "Fri, 18 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "One Color Preprocessing Improves DSATUR",
-      "link": "https://arxiv.org/abs/2609.17633",
-      "published": "Thu, 17 Sep 2026 00:00:00 -0400",
+      "title": "What Do We Expect from LLMs? Mapping the Design of LLM Benchmarks",
+      "link": "https://arxiv.org/abs/2609.19182",
+      "published": "Fri, 18 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
@@ -258,7 +258,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5286,
+      "fetchMs": 5221,
       "indicatorCount": 1
     },
     {
@@ -270,7 +270,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1362,
+      "fetchMs": 1652,
       "indicatorCount": 0
     }
   ],
