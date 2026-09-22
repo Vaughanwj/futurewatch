@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T20:43:13.894Z",
+  "generatedAt": "2026-09-22T19:59:03.544Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,28 +182,28 @@
   },
   "stories": [
     {
-      "title": "Import AI 473: The US&#8217;s superintelligence strategy; human brain in a mouse skull; and machine hermeneutics",
-      "link": "https://jack-clark.net/2026/09/21/import-ai-473-the-uss-superintelligence-strategy-human-brain-in-a-mouse-skull-and-machine-hermeneutics/",
-      "published": "Mon, 21 Sep 2026 12:31:04 +0000",
-      "feed": "Import AI"
-    },
-    {
       "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
       "link": "https://arxiv.org/abs/2609.20971",
-      "published": "Mon, 21 Sep 2026 00:00:00 -0400",
+      "published": "Tue, 22 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
       "link": "https://arxiv.org/abs/2609.20974",
-      "published": "Mon, 21 Sep 2026 00:00:00 -0400",
+      "published": "Tue, 22 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "CaLR: Causal Latent Revision for Robust Diffusion Reasoning",
       "link": "https://arxiv.org/abs/2609.20981",
-      "published": "Mon, 21 Sep 2026 00:00:00 -0400",
+      "published": "Tue, 22 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Import AI 473: The US&#8217;s superintelligence strategy; human brain in a mouse skull; and machine hermeneutics",
+      "link": "https://jack-clark.net/2026/09/21/import-ai-473-the-uss-superintelligence-strategy-human-brain-in-a-mouse-skull-and-machine-hermeneutics/",
+      "published": "Mon, 21 Sep 2026 12:31:04 +0000",
+      "feed": "Import AI"
     },
     {
       "title": "Nothing left to love here. Tell the world goodbye.",
@@ -258,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5153,
+      "fetchMs": 5204,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 0,
+      "fetchMs": 1,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 702,
+      "fetchMs": 569,
       "indicatorCount": 0
     }
   ],
