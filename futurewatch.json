@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-22T19:59:03.544Z",
+  "generatedAt": "2026-09-23T19:56:07.846Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,22 +182,28 @@
   },
   "stories": [
     {
-      "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
-      "link": "https://arxiv.org/abs/2609.20971",
-      "published": "Tue, 22 Sep 2026 00:00:00 -0400",
+      "title": "Do Synthetic Personas Predict Real Audience Response? A Sim-to-Real Study Where a No-Persona Baseline Beats Persona-Based Copy Simulation",
+      "link": "https://arxiv.org/abs/2609.25010",
+      "published": "Wed, 23 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
-      "link": "https://arxiv.org/abs/2609.20974",
-      "published": "Tue, 22 Sep 2026 00:00:00 -0400",
+      "title": "Do Existing Preconditioners Improve Biomedical Tabular Foundation Learning? An Empirical Study on TabPFN Optimization",
+      "link": "https://arxiv.org/abs/2609.25013",
+      "published": "Wed, 23 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "CaLR: Causal Latent Revision for Robust Diffusion Reasoning",
-      "link": "https://arxiv.org/abs/2609.20981",
-      "published": "Tue, 22 Sep 2026 00:00:00 -0400",
+      "title": "4DGS-JEPA: Temporally Compositional Joint-Embedding Prediction for Dynamic Gaussian Splatting",
+      "link": "https://arxiv.org/abs/2609.25036",
+      "published": "Wed, 23 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Summary of METR's predeployment evaluation of Claude Opus 5.5",
+      "link": "https://metr.org/blog/2026-09-22-claude-opus-5-5/",
+      "published": "Tue, 22 Sep 2026 00:00:00 -0700",
+      "feed": "metr.org"
     },
     {
       "title": "Import AI 473: The US&#8217;s superintelligence strategy; human brain in a mouse skull; and machine hermeneutics",
@@ -246,19 +252,13 @@
       "link": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/",
       "published": "Wed, 26 Aug 2026 00:00:00 -0700",
       "feed": "metr.org"
-    },
-    {
-      "title": "Have We Seen an Acceleration in Discoveries?",
-      "link": "https://metr.org/notes/2026-08-14-llm-contribution-to-discoveries/",
-      "published": "Fri, 14 Aug 2026 00:00:00 -0700",
-      "feed": "metr.org"
     }
   ],
   "sourceHealth": [
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5204,
+      "fetchMs": 4675,
       "indicatorCount": 1
     },
     {
@@ -270,7 +270,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 569,
+      "fetchMs": 1531,
       "indicatorCount": 0
     }
   ],
