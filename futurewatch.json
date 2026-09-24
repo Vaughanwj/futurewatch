@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-23T19:56:07.846Z",
+  "generatedAt": "2026-09-24T20:13:48.604Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -184,19 +184,19 @@
     {
       "title": "Do Synthetic Personas Predict Real Audience Response? A Sim-to-Real Study Where a No-Persona Baseline Beats Persona-Based Copy Simulation",
       "link": "https://arxiv.org/abs/2609.25010",
-      "published": "Wed, 23 Sep 2026 00:00:00 -0400",
+      "published": "Thu, 24 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "Do Existing Preconditioners Improve Biomedical Tabular Foundation Learning? An Empirical Study on TabPFN Optimization",
       "link": "https://arxiv.org/abs/2609.25013",
-      "published": "Wed, 23 Sep 2026 00:00:00 -0400",
+      "published": "Thu, 24 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "4DGS-JEPA: Temporally Compositional Joint-Embedding Prediction for Dynamic Gaussian Splatting",
       "link": "https://arxiv.org/abs/2609.25036",
-      "published": "Wed, 23 Sep 2026 00:00:00 -0400",
+      "published": "Thu, 24 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
@@ -258,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 4675,
+      "fetchMs": 3628,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 1,
+      "fetchMs": 0,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1531,
+      "fetchMs": 1119,
       "indicatorCount": 0
     }
   ],
