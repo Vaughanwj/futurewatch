@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-25T20:11:58.334Z",
+  "generatedAt": "2026-09-26T19:30:25.051Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,24 +182,6 @@
   },
   "stories": [
     {
-      "title": "When Should Forecasting Agents Reason? Behavioral Stress Tests for Reliability Routing",
-      "link": "https://arxiv.org/abs/2609.28475",
-      "published": "Fri, 25 Sep 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "TW3Cast: A Frozen Router of Lightly Fine-Tuned Foundation Models for Time-Series Forecasting on GIFT-Eval, Selected Entirely on the Training Split",
-      "link": "https://arxiv.org/abs/2609.28506",
-      "published": "Fri, 25 Sep 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "PAWS: Policy-driven Agentic World Simulation",
-      "link": "https://arxiv.org/abs/2609.28547",
-      "published": "Fri, 25 Sep 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
       "title": "Summary of METR's predeployment evaluation of Claude Opus 5.5",
       "link": "https://metr.org/blog/2026-09-22-claude-opus-5-5/",
       "published": "Tue, 22 Sep 2026 00:00:00 -0700",
@@ -258,7 +240,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5420,
+      "fetchMs": 4613,
       "indicatorCount": 1
     },
     {
@@ -270,7 +252,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1280,
+      "fetchMs": 908,
       "indicatorCount": 0
     }
   ],
