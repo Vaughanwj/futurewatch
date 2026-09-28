@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-27T19:56:47.015Z",
+  "generatedAt": "2026-09-28T22:22:23.774Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,6 +182,36 @@
   },
   "stories": [
     {
+      "title": "Import AI 474: Platonic mindspace; TPUs in space; Zhipu starts an outer RSI loop",
+      "link": "https://jack-clark.net/2026/09/28/import-ai-474-platonic-mindspace-tpus-in-space-zhipu-starts-an-outer-rsi-loop/",
+      "published": "Mon, 28 Sep 2026 12:32:03 +0000",
+      "feed": "Import AI"
+    },
+    {
+      "title": "Bringing AI to Autonomous Systems -- From Cognition to Collective Intelligence",
+      "link": "https://arxiv.org/abs/2609.30291",
+      "published": "Mon, 28 Sep 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "ScopeBench: Do Agents Preserve Engagement Boundaries Under Goal Pressure?",
+      "link": "https://arxiv.org/abs/2609.30325",
+      "published": "Mon, 28 Sep 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "When Is a Multi-Agent Code Judge Actually Grounded? Two Label-Free Measurements, and a Judge That Declines to Guess",
+      "link": "https://arxiv.org/abs/2609.30328",
+      "published": "Mon, 28 Sep 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Implementing and Evaluating a Basic Per-Action Monitor for Safer Evals",
+      "link": "https://metr.org/notes/2026-09-27-implementing-a-basic-blocking-action-monitor/",
+      "published": "Sun, 27 Sep 2026 00:00:00 -0700",
+      "feed": "metr.org"
+    },
+    {
       "title": "Summary of METR's predeployment evaluation of Claude Opus 5.5",
       "link": "https://metr.org/blog/2026-09-22-claude-opus-5-5/",
       "published": "Tue, 22 Sep 2026 00:00:00 -0700",
@@ -218,21 +248,9 @@
       "feed": "FutureWatch"
     },
     {
-      "title": "Import AI 471: Why Hugging Face worries me; space mining; FIve Eyes on AI",
-      "link": "https://jack-clark.net/2026/08/31/import-ai-471-why-hugging-face-worries-me-space-mining-five-eyes-on-ai/",
-      "published": "Mon, 31 Aug 2026 13:31:06 +0000",
-      "feed": "Import AI"
-    },
-    {
       "title": "Update on Security at METR",
       "link": "https://metr.org/blog/2026-08-31-security-update/",
       "published": "Mon, 31 Aug 2026 00:00:00 -0700",
-      "feed": "metr.org"
-    },
-    {
-      "title": "Brief independent investigation of agents’ behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident",
-      "link": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/",
-      "published": "Wed, 26 Aug 2026 00:00:00 -0700",
       "feed": "metr.org"
     }
   ],
@@ -240,7 +258,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5272,
+      "fetchMs": 5991,
       "indicatorCount": 1
     },
     {
@@ -252,7 +270,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1376,
+      "fetchMs": 1138,
       "indicatorCount": 0
     }
   ],
