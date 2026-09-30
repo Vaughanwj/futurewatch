@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-29T21:11:54.499Z",
+  "generatedAt": "2026-09-30T21:09:07.335Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,21 +182,27 @@
   },
   "stories": [
     {
-      "title": "SMARtCARE: Privacy-Preserving Agentic AI Systems for Bounded-Autonomy Clinical Decision Support",
-      "link": "https://arxiv.org/abs/2609.31763",
-      "published": "Tue, 29 Sep 2026 00:00:00 -0400",
+      "title": "Chris Painter's testimony to the U.S. Senate on AI agent incidents",
+      "link": "https://metr.org/blog/2026-09-30-chris-painter-senate-testimony/",
+      "published": "Wed, 30 Sep 2026 00:00:00 -0700",
+      "feed": "metr.org"
+    },
+    {
+      "title": "OpenAI-HuggingFace: A Reproduction & Lessons for Alignment Testing",
+      "link": "https://arxiv.org/abs/2609.35799",
+      "published": "Wed, 30 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Witeness Overlap: Directional Provenance Inside Open-Weight Model Families",
-      "link": "https://arxiv.org/abs/2609.31784",
-      "published": "Tue, 29 Sep 2026 00:00:00 -0400",
+      "title": "Neurosymbolic Routing for Reliable Reasoning on Resource-Constrained Edge Devices",
+      "link": "https://arxiv.org/abs/2609.35833",
+      "published": "Wed, 30 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "CP-Agent: A Harness-Engineered Agent for Crystal Plasticity Simulation Workflows",
-      "link": "https://arxiv.org/abs/2609.31790",
-      "published": "Tue, 29 Sep 2026 00:00:00 -0400",
+      "title": "Is Human-Readable Text Necessary for Effective LLM Fine-Tuning?",
+      "link": "https://arxiv.org/abs/2609.35868",
+      "published": "Wed, 30 Sep 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
@@ -246,31 +252,25 @@
       "link": "https://www.youtube.com/shorts/mnXXAsUxwAw",
       "published": "2026-09-04T05:00:27+00:00",
       "feed": "FutureWatch"
-    },
-    {
-      "title": "Update on Security at METR",
-      "link": "https://metr.org/blog/2026-08-31-security-update/",
-      "published": "Mon, 31 Aug 2026 00:00:00 -0700",
-      "feed": "metr.org"
     }
   ],
   "sourceHealth": [
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5332,
+      "fetchMs": 5391,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 1,
+      "fetchMs": 6,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 642,
+      "fetchMs": 852,
       "indicatorCount": 0
     }
   ],
