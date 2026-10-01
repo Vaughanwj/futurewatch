@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-30T21:09:07.335Z",
+  "generatedAt": "2026-10-01T21:31:39.342Z",
   "composite": {
     "value": 46.5,
     "coverage": 1
@@ -182,28 +182,28 @@
   },
   "stories": [
     {
+      "title": "Improving OCR Faithfulness via Gated and Attenuated On-Policy Distillation",
+      "link": "https://arxiv.org/abs/2609.38282",
+      "published": "Thu, 01 Oct 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks",
+      "link": "https://arxiv.org/abs/2609.38288",
+      "published": "Thu, 01 Oct 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "MoFlow: Multi-Objective Agentic Workflow Generation",
+      "link": "https://arxiv.org/abs/2609.38294",
+      "published": "Thu, 01 Oct 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "Chris Painter's testimony to the U.S. Senate on AI agent incidents",
       "link": "https://metr.org/blog/2026-09-30-chris-painter-senate-testimony/",
       "published": "Wed, 30 Sep 2026 00:00:00 -0700",
       "feed": "metr.org"
-    },
-    {
-      "title": "OpenAI-HuggingFace: A Reproduction & Lessons for Alignment Testing",
-      "link": "https://arxiv.org/abs/2609.35799",
-      "published": "Wed, 30 Sep 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Neurosymbolic Routing for Reliable Reasoning on Resource-Constrained Edge Devices",
-      "link": "https://arxiv.org/abs/2609.35833",
-      "published": "Wed, 30 Sep 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Is Human-Readable Text Necessary for Effective LLM Fine-Tuning?",
-      "link": "https://arxiv.org/abs/2609.35868",
-      "published": "Wed, 30 Sep 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
     },
     {
       "title": "Import AI 474: Platonic mindspace; TPUs in space; Zhipu starts an outer RSI loop",
@@ -258,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5391,
+      "fetchMs": 5515,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 6,
+      "fetchMs": 1,
       "indicatorCount": 10
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 852,
+      "fetchMs": 694,
       "indicatorCount": 0
     }
   ],
