@@ -1,21 +1,23 @@
 {
-  "_readme": "Manually-maintained indicators. Each entry: raw (source values consumed by domain/anchors.js), asOf, source, confidence (verified|provisional|judgment), _instructions, nextUpdate. Anchor definitions live in research/anchor-tables.md.",
+  "_readme": "Manually-maintained indicators. Each entry: raw (source values consumed by domain/anchors.js), asOf, reviewBy, source, confidence (verified|provisional|judgment), _instructions, nextUpdate. reviewBy is an ISO date and is authoritative for staleness: the site shows each input's status (fresh / due / stale) and the daily workflow opens a GitHub issue for anything past it (see domain/freshness.js, DEPLOY.md). Set it from the entry's own documented cadence — and move it forward only after actually re-checking the source, never just to clear a warning. nextUpdate is a human-readable note. Anchor definitions live in research/anchor-tables.md.",
 
   "hendrycksAgiScore": {
     "raw": { "publishedPct": 58, "model": "GPT-5" },
     "asOf": "2025-10-21",
+    "reviewBy": "2026-04-21",
     "source": "Hendrycks et al., A Definition of AGI (arXiv:2510.18212, agidefinition.ai)",
     "confidence": "provisional",
-    "_instructions": "Update when the consortium publishes a score for a new frontier model. Use their number verbatim; do not interpolate between models.",
-    "nextUpdate": "on new frontier model scoring"
+    "_instructions": "Update when the consortium publishes a score for a new frontier model. Use their number verbatim; do not interpolate between models. STALE: agidefinition.ai still lists only GPT-4 (27%) and GPT-5 (57%) as of 2026-10-02, while at least a dozen frontier models have shipped since. Decision D8: replace with an Epoch Capabilities Index–based indicator (Tier 1); reviewBy is 6 months after the last score.",
+    "nextUpdate": "replace per D8"
   },
 
   "epochBenchmarks": {
     "raw": { "fractions": [0.6], "basket": "PROVISIONAL-SINGLE-VALUE" },
     "asOf": "2026-07-20",
+    "reviewBy": "2026-08-20",
     "source": "Placeholder pending Epoch adapter (epoch.ai/benchmarks, CC-BY)",
     "confidence": "judgment",
-    "_instructions": "TEMPORARY. Replace with automated Epoch adapter once basket B-2026.1 members are confirmed against what Epoch serves (open challenge 2, anchor-tables.md). Until then this is a judgment placeholder — mean fraction-of-expert-human across {GPQA Diamond, SWE-bench Verified, FrontierMath, HLE}.",
+    "_instructions": "TEMPORARY placeholder — mean fraction-of-expert-human across {GPQA Diamond, SWE-bench Verified, FrontierMath, HLE}, set by judgment. Replace with the automated Epoch adapter (Tier 1): Epoch publishes this data as a CC-BY ZIP at epoch.ai/data/benchmark_data.zip (refreshed daily). As of 2026-10-02 the frontier on those four is roughly GPQA 95.8%, SWE-bench Verified 83.5%, FrontierMath T1-3 93.7%, HLE 54.8%.",
     "nextUpdate": "at Epoch adapter build"
   },
 
@@ -25,15 +27,17 @@
       { "name": "ARC-AGI-3", "frontierOverHuman": 0.005 }
     ] },
     "asOf": "2026-03-31",
+    "reviewBy": "2026-06-30",
     "source": "ARC Prize technical reports (arXiv:2601.10904, arXiv:2603.24621); verify current at arcprize.org",
     "confidence": "provisional",
-    "_instructions": "Update from arcprize.org leaderboards quarterly. frontierOverHuman = frontier score / human score per active generation. Generations retire at ratio > 0.85 (ratchet rule) — log retirement in decision log. NOTE: an unverified secondary claim puts ARC-AGI-2 much higher (97.9% by a meta-system, Apr 2026) — verify before next publish.",
-    "nextUpdate": "2026-10"
+    "_instructions": "Update from arcprize.org leaderboards quarterly. frontierOverHuman = frontier score / human score per active generation. Generations retire at ratio > 0.85 (ratchet rule) — log retirement in decision log. STALE (overdue since 2026-06-30): as of 2026-10-02 the official leaderboard (arcprize.org/media/data/leaderboard/v3.json) shows ARC-AGI-2 at 95.0% (retires under the ratchet) and ARC-AGI-3 at 62.7% on the Standard harness / 99.9% on the Provider Adapter harness; the 0.005 here is the earliest ARC-AGI-3 result. Decision D6: score the Standard harness, display the Provider Adapter result alongside. Refresh lands with the Tier 1/2 re-baseline (D7), not as a silent edit.",
+    "nextUpdate": "2026-06 (overdue; refresh per D6/D7)"
   },
 
   "selfLearning": {
     "raw": { "gainRatio": 0.06 },
     "asOf": "2026-06-05",
+    "reviewBy": "2026-12-01",
     "source": "CL-Bench (arXiv:2606.05661) — Gain barely positive across domains",
     "confidence": "judgment",
     "_instructions": "gainRatio = observed Gain as fraction of human learning-curve improvement. Human baselines not yet published by CL-Bench, so this is judgment-tagged. Re-estimate when CL-Bench or successors publish comparable human curves.",
@@ -43,6 +47,7 @@
   "realTimeEngagement": {
     "raw": { "milestones": { "m1": 20, "m2": 10, "m3": 0, "m4": 0, "m5": 0 } },
     "asOf": "2026-07-20",
+    "reviewBy": "2026-10-20",
     "source": "FutureWatch rubric D2 (research/anchor-tables.md); evidence: public voice-mode deployments (M1), group-chat demos (M2 partial)",
     "confidence": "judgment",
     "_instructions": "Quarterly scoring session. Each milestone 0/10/20 with written justification appended to scoringLog. Evidence standard: public demonstrations or peer-reviewed evals, not vendor marketing. Vaughan signs off.",
@@ -55,6 +60,7 @@
   "agenticAutonomyLevel": {
     "raw": { "routineLevel": "collaborator", "nextDemonstrated": true },
     "asOf": "2026-07-20",
+    "reviewBy": "2026-10-20",
     "source": "Morris et al. autonomy rubric (arXiv:2311.02462), scored on routine deployment",
     "confidence": "judgment",
     "_instructions": "Quarterly. routineLevel ∈ tool|consultant|collaborator|expert|agent = highest level ROUTINE in deployed general-purpose systems. nextDemonstrated = next level credibly shown in limited settings (+10).",
@@ -64,15 +70,17 @@
   "anthropicEconIndex": {
     "raw": { "breadth": 0.36, "depth": 0.22 },
     "asOf": "2026-06-26",
+    "reviewBy": "2026-09-26",
     "source": "Anthropic Economic Index (anthropic.com/economic-index), June 2026 report",
     "confidence": "provisional",
-    "_instructions": "Update per AEI report (~quarterly). breadth = fraction of occupational categories with material AI task usage; depth = AI share of TOTAL work performed (NOT automation share of AI traffic — see anchor-tables.md challenge note). Both require reading the report's underlying data, not the headline stats. Flag: proxy for the economy via Claude usage; cross-check against aiIndexEconomy.",
+    "_instructions": "Update per AEI report (~quarterly). breadth = fraction of occupational categories with material AI task usage; depth = AI share of TOTAL work performed (NOT automation share of AI traffic — see anchor-tables.md challenge note). Both require reading the report's underlying data, not the headline stats. Flag: proxy for the economy via Claude usage; cross-check against aiIndexEconomy. As of 2026-10-02 the June 26 'Cadences' report is still the latest I could find — check for a newer one.",
     "nextUpdate": "2026-10"
   },
 
   "aiIndexEconomy": {
     "raw": { "adoption01": 0.55, "postings01": 0.3 },
     "asOf": "2026-04-15",
+    "reviewBy": "2027-04-15",
     "source": "Stanford HAI AI Index 2026, Economy chapter (hai.stanford.edu/ai-index)",
     "confidence": "judgment",
     "_instructions": "Annual (~April). adoption01 = firm genAI adoption rebased 2019=0, near-universal=1. postings01 = AI share of job postings rebased likewise. Weakest anchor set in the system — candidate for replacement if a better public series appears.",
@@ -82,18 +90,25 @@
   "friLeapAgi": {
     "raw": { "superforecasterMedianYear": 2047, "expertMedianYear": 2050 },
     "asOf": "2026-05-11",
+    "reviewBy": "2026-08-11",
     "source": "Forecasting Research Institute — LEAP panel, Wave 8 (forecastingresearch.org); cf. Samotsvety Forecasting (~28% probability of AGI by 2030)",
     "confidence": "provisional",
-    "_instructions": "Replaces the old Metaculus-API expectation feed (Metaculus stopped serving live aggregation data via API, 2026-07, anti-abuse policy — see decision log D4). LEAP surveys AI experts and superforecasters monthly; medianYear is conditional on AGI occurring, using LEAP's definition (commercially available system beating 90th-percentile professionals on 90% of economically useful non-physical tasks at <=5x human labor cost — NOT the same definition as metrTimeHorizon, do not conflate). Check forecastingresearch.substack.com each wave; update on a >=1yr shift in either median, quarterly review minimum.",
-    "nextUpdate": "2026-10"
+    "_instructions": "Replaces the old Metaculus-API expectation feed (Metaculus stopped serving live aggregation data via API, 2026-07, anti-abuse policy — see decision log D4). LEAP surveys AI experts and superforecasters monthly; medianYear is conditional on AGI occurring, using LEAP's definition (commercially available system beating 90th-percentile professionals on 90% of economically useful non-physical tasks at <=5x human labor cost — NOT the same definition as metrTimeHorizon, do not conflate). Check forecastingresearch.substack.com each wave; update on a >=1yr shift in either median, quarterly review minimum. REVIEW OVERDUE: Wave 8 (Apr 20-May 11) is the last AGI-year number I found, but Waves 9 (Jun 30) and 10 (Jul 28) have been published and haven't been read for timeline updates; the field has also moved a great deal since May.",
+    "nextUpdate": "2026-08 (overdue)"
   },
 
   "fliSafetyIndex": {
-    "raw": { "existentialGrade": "C-", "overallBestGpa": 2.66, "bestLab": "Anthropic" },
+    "raw": {
+      "existentialGrade": "D+",
+      "overallBestGpa": 2.66,
+      "bestLab": "Anthropic (tied with OpenAI)",
+      "evidence": "Summer 2026 scorecard, Existential Safety row (companies in FLI's order Anthropic, OpenAI, Google DeepMind, Meta, Z.ai, Alibaba Cloud, xAI, DeepSeek, Mistral): D+ D+ D F F F F F F. Overall: Anthropic C+ (2.66), OpenAI C (2.28), Google DeepMind C (2.01)."
+    },
     "asOf": "2026-07-15",
+    "reviewBy": "2027-01-15",
     "source": "FLI AI Safety Index, Summer 2026 (futureoflife.org/ai-safety-index-summer-2026)",
     "confidence": "provisional",
-    "_instructions": "Semiannual (summer/winter). existentialGrade = best lab's existential-safety domain grade — this drives the divergence bar (harsher-grade decision, anchor-tables.md). overallBestGpa recorded for context display only.",
+    "_instructions": "Semiannual (summer/winter). existentialGrade = best lab's grade in the scorecard's Existential Safety row — read the TABLE, not the prose: the page text says 'No company exceeds C-', a loose upper bound that was previously entered as the grade (corrected to D+ on 2026-10-02, decision D5). This drives the divergence bar (harsher-grade decision, anchor-tables.md). overallBestGpa recorded for context display only.",
     "nextUpdate": "2027-01"
   }
 }

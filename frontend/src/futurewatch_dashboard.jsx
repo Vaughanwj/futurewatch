@@ -74,7 +74,9 @@ const TIPS = {
   divergence:
     'The meter reading (capability) beside how seriously frontier labs take existential safety — the best grade any lab earned in the Future of Life Institute’s independent Safety Index, converted to 0–100. The gap is the point.',
   sourceHealth:
-    'How many of the meter’s data sources responded on schedule in the latest run. Published so you can judge how fresh the reading is — a meter that hides its own failures isn’t worth trusting.',
+    'How many of the meter’s data sources responded in the latest run. This only measures whether fetches succeeded — not whether the data is current. Input freshness is tracked separately, just below.',
+  freshness:
+    'Every input has a review date set from its own update cadence. “Due” means up to 30 days past it; “stale” means more than 30. Overdue inputs are still counted in the score, but the value may no longer reflect the field — treat the reading as lower-confidence until they are refreshed. A meter that hides its own staleness isn’t worth trusting.',
   capability:
     'What frontier AI can do cognitively — knowledge, reasoning, novel problem-solving, learning, social interaction. Averaged over five measures. 45% of the composite.',
   autonomy:
@@ -208,7 +210,7 @@ const SAMPLE_SNAPSHOT = {
     },
   },
   expectation: { superforecasterAgi: 2047, expertAgi: 2050 },
-  safety: { score: 42.5, existentialGrade: 'C-', overallBestGpa: 2.66, bestLab: 'Anthropic' },
+  safety: { score: 32.5, existentialGrade: 'D+', overallBestGpa: 2.66, bestLab: 'Anthropic (tied with OpenAI)' },
   trajectory: {
     metrDoublingDaysSince2023: 131,
     frontierSeries: [
@@ -249,16 +251,41 @@ export function scoreColor(v) {
   return C.green;
 }
 
+const plural = (n, unit) => `${n} ${unit}${n === 1 ? '' : 's'}`;
+
 export function humanizeMinutes(min) {
   if (!Number.isFinite(min)) return '—';
-  if (min < 1) return `${Math.round(min * 60)} seconds`;
-  if (min < 90) return `${Math.round(min)} minutes`;
+  if (min < 1) return plural(Math.round(min * 60), 'second');
+  if (min < 90) return plural(Math.round(min), 'minute');
   const hours = min / 60;
   if (hours < 7) return `${hours.toFixed(1)} hours`;
   if (hours < 10) return 'most of a working day';
   const days = hours / 8;
-  if (days < 15) return `${Math.round(days)} working days`;
-  return `${Math.round(days / 21)} working months`;
+  // Half-day precision under 3 days: rounding 12 hours (1.5 working days)
+  // to a whole "1 working day" would throw away a third of the value.
+  if (days < 3) return plural(Math.round(days * 2) / 2, 'working day');
+  if (days < 15) return plural(Math.round(days), 'working day');
+  return plural(Math.round(days / 21), 'working month');
+}
+
+// "2026-03-31" -> "Mar 2026" (UTC, so the date never shifts with the viewer's timezone)
+export function fmtAsOf(iso) {
+  if (typeof iso !== 'string') return null;
+  const m = iso.match(/^(\d{4})-(\d{2})/);
+  if (!m) return null;
+  const names = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const month = names[Number(m[2]) - 1];
+  return month ? `${month} ${m[1]}` : null;
+}
+
+const FRESHNESS_COLOR = (status) => (status === 'stale' ? C.red : status === 'due' ? C.yellow : C.textLow);
+
+function freshnessTitle(f) {
+  if (!f) return undefined;
+  if (f.status === 'fresh') return `Within its review date (${f.reviewBy}).`;
+  if (f.status === 'unknown') return 'No review date recorded for this input.';
+  const label = f.status === 'stale' ? 'Stale' : 'Due for review';
+  return `${label}: review was due ${f.reviewBy} (${f.daysOverdue} days ago). The value shown may no longer reflect the current state of the field.`;
 }
 
 function fmtDoubling(days) {
@@ -299,6 +326,8 @@ export function Bar({ value, color, height = 8 }) {
 function Hero({ snapshot }) {
   const v = snapshot.composite?.value;
   const coverage = snapshot.composite?.coverage;
+  const fr = snapshot.freshness?.scored ?? { total: 0, due: 0, stale: 0 };
+  const overdueScored = (fr.due ?? 0) + (fr.stale ?? 0);
   // The visual track runs 0..120: AGI line at 100, ASI zone beyond.
   const AGI_AT = 100 / 120;
   return (
@@ -326,6 +355,12 @@ function Hero({ snapshot }) {
         <span style={{ marginLeft: 'auto', marginRight: '8%' }}>AGI line</span>
         <span>ASI zone →</span>
       </div>
+      {overdueScored > 0 && (
+        <div style={{ fontFamily: mono, fontSize: '0.7rem', color: fr.stale > 0 ? C.red : C.yellow, marginTop: 12, lineHeight: 1.5 }}>
+          ▲ {overdueScored} of {fr.total} scored inputs are past their review date — this reading may lag current progress
+          <Info tip={TIPS.freshness} />
+        </div>
+      )}
     </Panel>
   );
 }
@@ -543,11 +578,21 @@ function PillarCard({ name, pillar, indicators }) {
       <div style={{ margin: '10px 0 12px' }}><Bar value={pillar.score} color={scoreColor(pillar.score)} height={6} /></div>
       {pillar.indicators.map((row) => {
         const meta = indicators?.[row.slug];
+        const fresh = meta?.freshness;
+        const asOf = fmtAsOf(meta?.asOf);
         return (
           <div key={row.slug} style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '3px 0' }}>
             <span style={{ fontFamily: sans, fontSize: '0.78rem', color: C.textDim, flex: 1 }}>
               {INDICATOR_LABELS[row.slug] ?? row.slug}
               <Info tip={TIPS[row.slug]} />
+              {asOf && (
+                <span
+                  title={freshnessTitle(fresh)}
+                  style={{ display: 'block', fontFamily: mono, fontSize: '0.6rem', marginTop: 1, color: FRESHNESS_COLOR(fresh?.status), cursor: fresh ? 'help' : 'default' }}
+                >
+                  as of {asOf}{fresh?.status === 'stale' ? ' · stale' : fresh?.status === 'due' ? ' · review due' : ''}
+                </span>
+              )}
             </span>
             {meta?.confidence && meta.confidence !== 'verified' && (
               <span
@@ -591,6 +636,9 @@ function SourceHealth({ snapshot }) {
   const sources = snapshot.sourceHealth ?? [];
   if (!sources.length) return null;
   const okPct = Math.round((sources.filter((s) => s.ok).length / sources.length) * 100);
+  const fr = snapshot.freshness?.scored;
+  const staleCount = fr?.stale ?? 0;
+  const dueCount = fr?.due ?? 0;
   return (
     <Panel>
       <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
@@ -609,6 +657,25 @@ function SourceHealth({ snapshot }) {
           </span>
         ))}
       </div>
+      {fr && fr.total > 0 && (
+        <div style={{ marginTop: 12, paddingTop: 10, borderTop: `1px solid ${C.panelEdge}` }}>
+          <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
+            <span style={{ fontFamily: mono, fontSize: '1.4rem', fontWeight: 600, color: staleCount > 0 ? C.red : dueCount > 0 ? C.yellow : C.green }}>
+              {fr.fresh}/{fr.total}
+            </span>
+            <span style={{ fontFamily: sans, fontSize: '0.85rem', color: C.textDim }}>
+              scored inputs within their review date
+              <Info tip={TIPS.freshness} />
+            </span>
+          </div>
+          {(staleCount > 0 || dueCount > 0) && (
+            <div style={{ fontFamily: mono, fontSize: '0.68rem', color: C.textLow, marginTop: 6 }}>
+              {staleCount > 0 && <span style={{ color: C.red, marginRight: 12 }}>{staleCount} stale</span>}
+              {dueCount > 0 && <span style={{ color: C.yellow }}>{dueCount} review due</span>}
+            </div>
+          )}
+        </div>
+      )}
     </Panel>
   );
 }

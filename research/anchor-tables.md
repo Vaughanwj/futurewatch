@@ -164,8 +164,9 @@ No anchors. Displayed as median AGI-arrival years with the "forecast, not measur
 
 ### Safety — FLI AI Safety Index (manual, semiannual)
 Divergence bar uses **best-lab existential-safety domain grade** (not overall GPA — overall flatters, since it mixes in PR-friendly domains): grade points ÷ 4 × 100.
-Provisional current: **~42** (best existential-safety grade C−, 1.7/4.0).
-Challenge point: fair to labs? Overall-GPA alternative would read ~66. I chose the harsher one because the divergence view exists to show the gap that matters. Your call.
+Current: **~32** (best existential-safety grade **D+**, 1.3/4.0 — Anthropic and OpenAI tied; Summer 2026 scorecard row reads D+ D+ D F F F F F F).
+Correction 2026-10-02 (D5): this previously read ~42 / C−. FLI's page text says "No company exceeds C−", which is a loose upper bound; the scorecard table is the actual grade. The earlier value took the bound as the grade.
+Challenge point: fair to labs? Overall-GPA alternative would read ~66 (Anthropic 2.66). I chose the harsher one because the divergence view exists to show the gap that matters. Your call.
 
 ---
 
@@ -183,6 +184,10 @@ Note this lands *lower* than the mockup's illustrative 61 and lower than Hendryc
 | D1 | 2026-07-20 | `metrTimeHorizon` 100-anchor = 1 work-month (rubiconic threshold; beyond it is iteration, not novelty) | Vaughan |
 | D2 | 2026-07-20 | `realTimeEngagement` rubric M1–M5 approved with equal 20-pt weights; revisit weighting only if live scoring reveals a dominant milestone | Vaughan |
 | D4 | 2026-07-21 | Retired Metaculus API for the Expectation panel (data withheld by their own anti-abuse policy change); replaced with `friLeapAgi`, a manual quarterly entry from FRI's LEAP panel (experts + superforecasters), cf. Samotsvety Forecasting as secondary citation | Vaughan |
+| D5 | 2026-10-02 | Corrections found in the Oct 2026 staleness audit: (a) METR release-date join dropped models listed only as "(Inspect)" in `release_dates.yaml` — Claude Opus 4.6 (719 min) was excluded, so the autonomy frontier read 352 min (GPT-5.2) instead of 719; fixed, composite 46.5 → ~48.0. (b) FLI existential-safety grade corrected C− → D+ (Safety bar 42.5 → 32.5). History before 2026-10-02 reflects the uncorrected values. Same audit adds per-input `reviewBy` freshness tracking | Vaughan (approved) |
+| D6 | 2026-10-02 | ARC-AGI-3 harness policy: score the **Standard** harness (conservative); record and display the Provider Adapter harness result alongside it. ARC Prize lists both. Implementation pending (Tier 1) | Vaughan |
+| D7 | 2026-10-02 | One-time re-baseline of the composite with refreshed inputs (ARC, Epoch basket, METR), shown on the site as a labeled discontinuity, plus a backfill of July–Oct from dated sources so history shows the real trajectory. Implementation pending (Tier 2) | Vaughan |
+| D8 | 2026-10-02 | Replace `hendrycksAgiScore` (no scores published after GPT-5, Oct 2025) with an Epoch Capabilities Index–based indicator. ECI → 0–100 anchor mapping to be proposed for sign-off. Implementation pending (Tier 1) | Vaughan |
 
 ## Open challenges (ranked by how much they move the needle)
 

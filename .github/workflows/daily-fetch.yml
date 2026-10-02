@@ -5,6 +5,10 @@ on:
     - cron: '0 17 * * *'   # daily 17:00 UTC (~noon US Central; shifts to ~1pm CST outside DST)
   workflow_dispatch:        # manual trigger for testing
 
+permissions:
+  contents: write   # push the data branch
+  issues: write     # open/update/close the stale-inputs tracking issue
+
 jobs:
   fetch:
     runs-on: ubuntu-latest
@@ -51,6 +55,34 @@ jobs:
         working-directory: backend
         # Four Capabilities Watch — a separate panel/file, never merged into
         # the composite above. See research/capabilities-methodology.md.
+
+      - name: Report stale inputs
+        # "Sources healthy" only means fetches succeeded. This is the check
+        # that notices when inputs have aged past their reviewBy dates: it
+        # keeps ONE tracking issue open (edited in place daily, so no
+        # notification spam) while anything is overdue, and closes it when
+        # nothing is. Non-blocking — a reporting hiccup must never stop the
+        # data from publishing.
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        working-directory: backend
+        run: |
+          set -e
+          count=$(node scripts/staleness-report.js --count)
+          existing=$(gh issue list --state open --label stale-inputs --json number --jq '.[0].number // empty')
+          if [ "$count" -gt 0 ]; then
+            node scripts/staleness-report.js > "$RUNNER_TEMP/stale-issue.md"
+            gh label create stale-inputs --color D93F0B --description "Inputs past their review date" 2>/dev/null || true
+            title="Stale inputs: $count past their review date"
+            if [ -n "$existing" ]; then
+              gh issue edit "$existing" --title "$title" --body-file "$RUNNER_TEMP/stale-issue.md"
+            else
+              gh issue create --title "$title" --label stale-inputs --body-file "$RUNNER_TEMP/stale-issue.md"
+            fi
+          elif [ -n "$existing" ]; then
+            gh issue close "$existing" --comment "All inputs are within their review dates."
+          fi
 
       - name: Build frontend
         run: npm ci && npm run build

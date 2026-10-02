@@ -8,6 +8,8 @@
  * @property {number|null} value      Normalized 0–100 score (null if unscoreable)
  * @property {*}           raw        Raw source value(s) before normalization
  * @property {string}      asOf       ISO date the underlying data refers to
+ * @property {string|null} [reviewBy] ISO date by which a human should re-check this input
+ *                                    (manual entries; automated feeds derive it from asOf age)
  * @property {string}      source     Human-readable source label with URL
  * @property {'verified'|'provisional'|'judgment'} confidence
  */
@@ -38,7 +40,8 @@
  * @property {Object} safety       Divergence panel data (never in composite)
  * @property {Object} trajectory   Frontier time-horizon series + doubling stats
  * @property {Array}  stories      Curated feed items
- * @property {Array}  sourceHealth Per-source status
+ * @property {Array}  sourceHealth Per-source status (did the fetch succeed — NOT whether data is current)
+ * @property {{scored:Object, overdue:Array}} freshness Roll-up of per-input review status
  * @property {string[]} errors
  */
 

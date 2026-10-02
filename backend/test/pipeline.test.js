@@ -62,7 +62,9 @@ test('pipeline produces a complete snapshot from stubs + real manual file', asyn
   assert.equal(snap.pillars.capability.coverage, 1);
   assert.equal(snap.expectation.superforecasterAgi, 2047);
   assert.equal(snap.expectation.expertAgi, 2050);
-  assert.ok(Math.abs(snap.safety.score - 42.5) < 0.1);
+  // FLI Summer 2026 scorecard: best existential-safety grade is D+ (1.3/4) -> 32.5
+  assert.equal(snap.safety.existentialGrade, 'D+');
+  assert.ok(Math.abs(snap.safety.score - 32.5) < 0.1);
   assert.ok(snap.trajectory.metrDoublingDaysSince2023 > 0);
   assert.equal(snap.stories.length, 1);
   assert.equal(snap.sourceHealth.length, 3);

@@ -26,6 +26,7 @@ export function createManualAdapter(filePath = DEFAULT_PATH) {
             value: null, // normalized by domain from raw
             raw: entry.raw,
             asOf: entry.asOf,
+            reviewBy: entry.reviewBy ?? null, // ISO date; drives the freshness status (domain/freshness.js)
             source: entry.source,
             confidence: entry.confidence ?? 'provisional',
           };

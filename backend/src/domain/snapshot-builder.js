@@ -16,6 +16,10 @@ import {
   normalizeSafetyGrade,
 } from './anchors.js';
 import { scorePillar, scoreComposite, doublingTimeDays, PILLAR_DEFS } from './scorer.js';
+import { assessFreshness, summarizeFreshness } from './freshness.js';
+
+// Inputs that feed the composite — what the headline number rests on.
+const SCORED_SLUGS = new Set(Object.values(PILLAR_DEFS).flatMap((def) => Object.keys(def)));
 
 const NORMALIZERS = {
   metrTimeHorizon: (raw) => normalizeMetrTimeHorizon(raw?.p50Minutes),
@@ -81,6 +85,19 @@ export function buildSnapshot({ results, now = new Date() }) {
     source: merged.friLeapAgi?.source ?? null,
   };
 
+  // Freshness per input, then a roll-up. Kept apart from sourceHealth on
+  // purpose: that only records whether a fetch succeeded, which is how 8 of
+  // 9 scored inputs went months out of date while the panel read "100% healthy".
+  const freshnessBySlug = Object.fromEntries(
+    Object.entries(merged).map(([slug, r]) => [
+      slug,
+      assessFreshness({ slug, asOf: r.asOf, reviewBy: r.reviewBy, now }),
+    ])
+  );
+  const freshness = summarizeFreshness(
+    Object.entries(freshnessBySlug).map(([slug, f]) => ({ slug, scored: SCORED_SLUGS.has(slug), freshness: f }))
+  );
+
   const safetyRaw = merged.fliSafetyIndex?.raw;
   const safety = safetyRaw
     ? {
@@ -102,10 +119,14 @@ export function buildSnapshot({ results, now = new Date() }) {
     trajectory,
     stories,
     sourceHealth,
+    freshness,
     indicators: Object.fromEntries(
       Object.entries(merged).map(([slug, r]) => [
         slug,
-        { value: r.value, raw: r.raw, asOf: r.asOf, source: r.source, confidence: r.confidence },
+        {
+          value: r.value, raw: r.raw, asOf: r.asOf, source: r.source, confidence: r.confidence,
+          freshness: freshnessBySlug[slug],
+        },
       ])
     ),
     errors,
