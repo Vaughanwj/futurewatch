@@ -61,7 +61,7 @@ function results() {
   return {
     manual: {
       indicators: {
-        hendrycksAgiScore: ind('2025-10-21', '2026-04-21', { publishedPct: 58 }),            // stale
+        eciCapability: ind('2025-10-21', '2026-04-21', { publishedPct: 58 }),            // stale
         anthropicEconIndex: ind('2026-06-26', '2026-09-26', { breadth: 0.36, depth: 0.22 }), // due
         aiIndexEconomy: ind('2026-04-15', '2027-04-15', { adoption01: 0.55, postings01: 0.3 }), // fresh
         friLeapAgi: ind('2026-05-11', '2026-08-11', { superforecasterMedianYear: 2047, expertMedianYear: 2050 }), // stale, unscored
@@ -79,7 +79,7 @@ function results() {
 
 test('snapshot attaches freshness to every indicator', () => {
   const snap = buildSnapshot({ results: results(), now: NOW });
-  assert.equal(snap.indicators.hendrycksAgiScore.freshness.status, 'stale');
+  assert.equal(snap.indicators.eciCapability.freshness.status, 'stale');
   assert.equal(snap.indicators.anthropicEconIndex.freshness.status, 'due');
   assert.equal(snap.indicators.aiIndexEconomy.freshness.status, 'fresh');
   assert.equal(snap.indicators.metrTimeHorizon.freshness.status, 'stale', 'automated feed ages out from its newest data point');

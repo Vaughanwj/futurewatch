@@ -18,5 +18,5 @@ import { makePendingAdapter } from './pending-adapter.js';
 
 export const vendingBenchLiveAdapter = makePendingAdapter(
   'vendingbench-live',
-  'Leaderboard is client-rendered with no public export; no headless-browser dependency in this project yet. Seeded manually in capabilities-manual.json instead.'
+  "Andon Labs' own leaderboard is client-rendered with no public export, so it is not scraped. Vending-Bench 2 results now arrive through Epoch's CC-BY archive (epoch-capabilities adapter); this stub is kept only as a placeholder for a first-party feed."
 );

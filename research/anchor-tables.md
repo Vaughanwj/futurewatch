@@ -18,22 +18,25 @@ Date: 2026-07-20
 
 ## P1 — Capability (45%)
 
-### `hendrycksAgiScore` — published AGI % (manual, per model generation)
+### `eciCapability` — Epoch Capabilities Index (automated, daily; replaced `hendrycksAgiScore`, D8)
 
-Source: agidefinition.ai / arXiv:2510.18212. Their scale is already "% of well-educated-adult cognitive versatility," i.e., natively 0→AGI-line.
+Source: Epoch AI Capabilities Index (epoch.ai/benchmarks, CC-BY 4.0; `epoch_capabilities_index/eci_scores.csv` in the daily archive). Value = ECI of the top model.
 
-| Anchor | Score |
-| --- | --- |
-| Their published score, used directly | identity |
-| 2019 check: GPT-2 unscored by them; treat pre-GPT-3 as ≈2 `[J]` | 2 |
+The ECI is an open scale pinned by Epoch at GPT-5 = 150 and GPT-4 (Mar 2023) = 125.89. We map it to the 0–100 scale by a straight line through the two AGI-score points that Hendrycks et al. (agidefinition.ai, arXiv:2510.18212) published for those same two models:
 
-Provisional current: **~58** (GPT-5, their number).
-Challenge point: we inherit their methodology risk wholesale. Mitigated by it being one of five capability indicators, not the headline.
+| Anchor | ECI | Score |
+| --- | --- | --- |
+| GPT-4 (Mar 2023) — Hendrycks et al. 27% | 125.89 | 27 |
+| GPT-5 (Aug 2025) — Hendrycks et al. 57% | 150.00 | 57 |
+| Extrapolation | slope 1.244 score-pts per ECI pt; clamp 0–100; reaches 100 at ECI ≈ 184.6 | |
+
+Provisional current: **78.6** (Claude Opus 5.5, ECI 167.35, 2026-09-22).
+Challenge points: (1) the line is extrapolated beyond its two anchor points — the further ECI runs past 150, the more this is Epoch's scale wearing Hendrycks's units; (2) it overlaps with `epochBenchmarks` (ECI is built partly from the same benchmarks), so capability is partly double-counted; (3) a re-anchoring of the ECI by Epoch would silently change the mapping — the adapter verifies both anchor values on every fetch and refuses the reading if they move. The old manual entry is kept under `_retired_hendrycksAgiScore` in futurewatch-manual.json.
 
 ### `epochBenchmarks` — frontier benchmark basket (automated, weekly)
 
 Source: Epoch AI Benchmarking Hub (CC-BY, CSV/API).
-Recipe: versioned basket **B-2026.1** = mean of frontier SOTA on {GPQA Diamond, SWE-bench Verified, FrontierMath, Humanity's Last Exam}, each expressed as fraction of expert-human performance on that benchmark. Basket contents to be finalized against what Epoch actually serves at build time.
+Recipe (implemented 2026-10-02): versioned basket **B-2026.1** = mean of the best published score on {GPQA Diamond, SWE-bench Verified, FrontierMath Tiers 1–3 (v2), Humanity's Last Exam}, each as a raw 0–1 fraction. **Correction to the original recipe:** these are raw benchmark scores, *not* normalized to expert-human performance — Epoch publishes no human baseline for them. A member scoring ≥ 90% is flagged `saturated` in the data (ratchet rule: rotate it out under a new basket version). All four members must resolve or the indicator is withheld — a partial basket is a different indicator.
 
 | Anchor | Score |
 | --- | --- |
@@ -41,7 +44,7 @@ Recipe: versioned basket **B-2026.1** = mean of frontier SOTA on {GPQA Diamond, 
 | Frontier averages 50% of expert-human across basket | 50 |
 | Frontier matches expert-human across entire unsaturated basket | 100 |
 
-Provisional current: **~55–65** (to be computed from Epoch data at build).
+Current: **81.9** (GPQA 95.8%, SWE-bench Verified 83.5%, FrontierMath T1–3 93.7%, HLE 54.8%; 2026-10-02). GPQA and FrontierMath already sit near the ceiling, so this indicator is close to saturated and the next real movement will come from rotating the basket.
 Challenge point: basket choice is the whole indicator. Rotation per ratchet rule when any member saturates >90%.
 
 ### `arcGap` — novel-reasoning gap (automated/scrape, per release)
@@ -55,7 +58,7 @@ Recipe: mean over *active* ARC generations of (frontier score ÷ human score). A
 | Frontier at half of human performance | 50 |
 | Frontier matches humans on every active generation (incl. interactive) | 100 |
 
-Provisional current: **~15–25** — ARC-AGI-2 partially closed, ARC-AGI-3 near zero (frontier <1% vs. humans 100%). Exact figures need the [U]-flagged leaderboard claims verified first.
+Current (automated, 2026-10-02): **62.7**. ARC-AGI-2 (Semi-Private) is at 95.0% of the human panel and has retired under the ratchet; only ARC-AGI-3 remains active, scored on the Standard harness at 62.7% (Provider-Adapter harness: 99.9%, displayed not scored — D6). Note the indicator is now a mean over a single generation, so its next large move happens when ARC-AGI-3 retires (then 100) or a new generation is added.
 Challenge point: is 85% the right retirement threshold?
 
 ### `selfLearning` — learning from experience (manual, sporadic)
@@ -185,9 +188,9 @@ Note this lands *lower* than the mockup's illustrative 61 and lower than Hendryc
 | D2 | 2026-07-20 | `realTimeEngagement` rubric M1–M5 approved with equal 20-pt weights; revisit weighting only if live scoring reveals a dominant milestone | Vaughan |
 | D4 | 2026-07-21 | Retired Metaculus API for the Expectation panel (data withheld by their own anti-abuse policy change); replaced with `friLeapAgi`, a manual quarterly entry from FRI's LEAP panel (experts + superforecasters), cf. Samotsvety Forecasting as secondary citation | Vaughan |
 | D5 | 2026-10-02 | Corrections found in the Oct 2026 staleness audit: (a) METR release-date join dropped models listed only as "(Inspect)" in `release_dates.yaml` — Claude Opus 4.6 (719 min) was excluded, so the autonomy frontier read 352 min (GPT-5.2) instead of 719; fixed, composite 46.5 → ~48.0. (b) FLI existential-safety grade corrected C− → D+ (Safety bar 42.5 → 32.5). History before 2026-10-02 reflects the uncorrected values. Same audit adds per-input `reviewBy` freshness tracking | Vaughan (approved) |
-| D6 | 2026-10-02 | ARC-AGI-3 harness policy: score the **Standard** harness (conservative); record and display the Provider Adapter harness result alongside it. ARC Prize lists both. Implementation pending (Tier 1) | Vaughan |
+| D6 | 2026-10-02 | ARC-AGI-3 harness policy: score the **Standard** harness (conservative); record and display the Provider Adapter harness result alongside it. ARC Prize lists both. Implemented 2026-10-02 (`domain/arc-extract.js`): ARC-AGI-2 = Semi-Private set vs. the human panel; ARC-AGI-3 Standard-harness rows are scored, rows whose id contains `provider-adapter` are carried as `providerAdapter` for display only. Current: ARC-AGI-2 95.0% (retired under the 85% ratchet), ARC-AGI-3 Standard 62.7% → arcGap 62.7 | Vaughan |
 | D7 | 2026-10-02 | One-time re-baseline of the composite with refreshed inputs (ARC, Epoch basket, METR), shown on the site as a labeled discontinuity, plus a backfill of July–Oct from dated sources so history shows the real trajectory. Implementation pending (Tier 2) | Vaughan |
-| D8 | 2026-10-02 | Replace `hendrycksAgiScore` (no scores published after GPT-5, Oct 2025) with an Epoch Capabilities Index–based indicator. ECI → 0–100 anchor mapping to be proposed for sign-off. Implementation pending (Tier 1) | Vaughan |
+| D8 | 2026-10-02 | Replace `hendrycksAgiScore` (no scores published after GPT-5, Oct 2025) with an Epoch Capabilities Index–based indicator. Mapping approved (two-point linear calibration, see `eciCapability` above). Implemented 2026-10-02 | Vaughan |
 
 ## Open challenges (ranked by how much they move the needle)
 
@@ -196,3 +199,4 @@ Note this lands *lower* than the mockup's illustrative 61 and lower than Hendryc
 3. Safety bar: existential-safety grade vs. overall GPA.
 4. arcGap retirement threshold (85%).
 5. P2 internal split (timeHorizon 70% / autonomyLevel 30%) `[J]`.
+| D9 | 2026-10-02 | Tier 1 adapters built (branch `tier1-adapters`, not yet published). METR horizons now come from Epoch's mirror of METR's published numbers (p50/p80/CI), with METR's GitHub runs as fallback; automated inputs that return nothing are **carried forward** from the previous snapshot with their original `asOf` (never silently dropped — that would renormalize the composite) plus an error line. Local dry run against live data: composite 48.0 → 57.0 (capability 53.0, autonomy 74.6, deployment 35.3). Exceeds the 5-pt escalation gate, so publishing needs the labeled re-baseline (D7) | Claude (publication awaits Vaughan) |

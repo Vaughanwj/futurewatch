@@ -119,6 +119,18 @@ The pipeline exits code 2 if the composite moves \>5 pts between runs (methodolo
 - The Daily Fetch workflow's **Report stale inputs** step keeps one GitHub issue (label `stale-inputs`) open and edited in place while anything is overdue, and closes it when nothing is. The step is non-blocking and needs the workflow's `issues: write` permission (declared at the top of `daily-fetch.yml`).
 - **Clearing an item** means re-checking the source named in the entry's `_instructions`, updating the value and `asOf`, and only then moving `reviewBy` forward. Moving `reviewBy` without re-checking defeats the point.
 
+### Automated inputs (Tier 1, added 2026-10-02)
+
+| Indicator | Source | Adapter |
+| :---- | :---- | :---- |
+| `eciCapability` | Epoch Capabilities Index, top model (replaces the manual Hendrycks score) | `adapters/epoch-adapter.js` |
+| `epochBenchmarks` | Frontier basket B-2026.1: GPQA Diamond, SWE-bench Verified, FrontierMath T1–3 v2, HLE | `adapters/epoch-adapter.js` |
+| `arcGap` | arcprize.org `evaluations.json` + `leaderboard/v3.json` (ARC-AGI-3 on the Standard harness, D6) | `adapters/arc-adapter.js` |
+| `metrTimeHorizon` | METR published horizons via Epoch's archive; METR GitHub runs as fallback | `adapters/metr-adapter.js` |
+| Capability cards | PostTrainBench, Vending-Bench 2, OSWorld, Terminal-Bench from the same Epoch archive | `adapters/capabilities/epoch-capabilities-adapter.js` |
+
+Epoch's archive (`epoch.ai/data/benchmark_data.zip`, ~2 MB, CC-BY 4.0, no key) is downloaded once per process by `adapters/epoch-source.js`. Safeguards worth knowing when a run reports an error: the ECI is **refused** if Epoch re-anchors GPT-5 = 150 / GPT-4 = 125.89 (the 0–100 mapping depends on them); the basket is refused if any member is missing or has collapsed to few rows; ARC is refused unless both ARC-AGI-2 and ARC-AGI-3 resolve; a dataset whose newest model is over 120 days old is treated as a dead feed. In every refusal case the **previous reading is carried forward** (original `asOf`, flagged `carriedForward`, error line in `errors`) so the composite is never renormalized by a one-day outage — and the freshness model ages it honestly if the outage lasts. No API keys are involved.
+
 Automated inputs clear themselves when upstream publishes newer data — but upstream can lag. METR's public data last gained a model on 2026-04-07 and its task suite saturates above ~16 h, so `metrTimeHorizon` is expected to show stale until METR publishes again.
 
 ## Maintenance cadence
@@ -127,11 +139,10 @@ Authoritative dates live in each entry's `reviewBy` (above); this table is the h
 
 | When | What |
 | :---- | :---- |
-| Quarterly | `realTimeEngagement` scoring session (rubric D2, Vaughan signs off); `agenticAutonomyLevel`; ARC ratios from arcprize.org; `friLeapAgi` review (forecastingresearch.substack.com, publishes ~monthly); Vending-Bench 2 leaderboard recheck (andonlabs.com/evals/vending-bench-2 — client-rendered, use a real browser) |
+| Quarterly | `realTimeEngagement` scoring session (rubric D2, Vaughan signs off); `agenticAutonomyLevel`; `friLeapAgi` review (forecastingresearch.substack.com, publishes ~monthly) |
 | Semiannual | FLI AI Safety Index (summer/winter releases). Read the scorecard TABLE for grades, not the prose — see decision D5 |
 | Annual (\~April) | Stanford AI Index economy chapter |
-| Per frontier model | `hendrycksAgiScore` from agidefinition.ai — being replaced by an ECI-based indicator (D8) |
-| Next (Tier 1) | Automate `epochBenchmarks`, ARC (v3 JSON), METR (YAML), and the capability cards from Epoch's CC-BY `benchmark_data.zip` (epoch.ai/data/benchmark_data.zip, refreshed daily) |
+| Daily (automatic) | `eciCapability`, `epochBenchmarks`, `arcGap`, `metrTimeHorizon` and the Epoch-fed capability cards — nothing to do unless the run reports an error |
 | As evidence appears | Review qualitative AI-improvement / goal-autonomy evidence (research/capabilities-review-workflow.md) and promote to `backend/data/capabilities-manual.json` |
 
 All manual entries carry `_instructions` inside `backend/data/futurewatch-manual.json` or `backend/data/capabilities-manual.json`.  

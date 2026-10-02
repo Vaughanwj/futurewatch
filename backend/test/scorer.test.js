@@ -6,7 +6,7 @@ const ind = (value) => ({ value });
 
 test('pillar scoring with full coverage matches anchor-table sanity check', () => {
   const capability = scorePillar('capability', {
-    hendrycksAgiScore: ind(58),
+    eciCapability: ind(58),
     epochBenchmarks: ind(60),
     arcGap: ind(12.75),
     selfLearning: ind(12),
@@ -35,7 +35,7 @@ test('pillar scoring with full coverage matches anchor-table sanity check', () =
 
 test('missing indicator renormalizes weights and reports coverage', () => {
   const p = scorePillar('capability', {
-    hendrycksAgiScore: ind(60),
+    eciCapability: ind(60),
     epochBenchmarks: ind(null),
     arcGap: ind(20),
     selfLearning: ind(null),
@@ -48,7 +48,7 @@ test('missing indicator renormalizes weights and reports coverage', () => {
 test('empty pillar yields null score, composite renormalizes', () => {
   const empty = scorePillar('deployment', {});
   assert.equal(empty.score, null);
-  const cap = scorePillar('capability', { hendrycksAgiScore: ind(50), epochBenchmarks: ind(50), arcGap: ind(50), selfLearning: ind(50), realTimeEngagement: ind(50) });
+  const cap = scorePillar('capability', { eciCapability: ind(50), epochBenchmarks: ind(50), arcGap: ind(50), selfLearning: ind(50), realTimeEngagement: ind(50) });
   const aut = scorePillar('autonomy', { metrTimeHorizon: ind(50), agenticAutonomyLevel: ind(50) });
   const composite = scoreComposite({ capability: cap, autonomy: aut, deployment: empty });
   assert.equal(composite.value, 50); // renormalized over scored pillars

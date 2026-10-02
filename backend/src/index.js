@@ -9,6 +9,8 @@ import { createPipeline } from './app.js';
 import { metrAdapter } from './adapters/metr-adapter.js';
 import { manualAdapter } from './adapters/manual-adapter.js';
 import { rssAdapter } from './adapters/rss-adapter.js';
+import { epochAdapter } from './adapters/epoch-adapter.js';
+import { arcAdapter } from './adapters/arc-adapter.js';
 
 const DATA_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'data');
 const SNAPSHOT_PATH = path.join(DATA_DIR, 'futurewatch.json');
@@ -23,7 +25,7 @@ async function readJsonOrNull(p) {
 }
 
 const pipeline = createPipeline({
-  adapters: { metr: metrAdapter, manual: manualAdapter, rss: rssAdapter },
+  adapters: { metr: metrAdapter, epoch: epochAdapter, arc: arcAdapter, manual: manualAdapter, rss: rssAdapter },
 });
 
 const previous = await readJsonOrNull(SNAPSHOT_PATH);

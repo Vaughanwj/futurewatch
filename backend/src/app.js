@@ -5,6 +5,7 @@
  * silently publishing.
  */
 import { buildSnapshot } from './domain/snapshot-builder.js';
+import { carryForward } from './domain/carry-forward.js';
 
 export function createPipeline({ adapters, now = () => new Date() }) {
   return {
@@ -19,7 +20,9 @@ export function createPipeline({ adapters, now = () => new Date() }) {
         }
       }
 
-      const snapshot = buildSnapshot({ results, now: now() });
+      const present = Object.assign({}, ...Object.values(results).map((r) => r.indicators ?? {}));
+      const carried = carryForward(present, previousSnapshot);
+      const snapshot = buildSnapshot({ results, carried, now: now() });
 
       const prev = previousSnapshot?.composite?.value;
       const curr = snapshot.composite?.value;

@@ -16,7 +16,7 @@ export const PILLAR_WEIGHTS = { capability: 0.45, autonomy: 0.35, deployment: 0.
 // P2 split 70/30 is [J] — open challenge 5 in anchor-tables.md.
 export const PILLAR_DEFS = {
   capability: {
-    hendrycksAgiScore: 0.2,
+    eciCapability: 0.2,
     epochBenchmarks: 0.2,
     arcGap: 0.2,
     selfLearning: 0.2,

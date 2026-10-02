@@ -56,6 +56,12 @@ export default function AboutPage() {
             honestly rather than silently filling the gap.
           </P>
           <P>
+            Benchmark data is from Epoch AI's{' '}
+            <a href="https://epoch.ai/benchmarks" style={{ color: C.blue }}>Capabilities &amp; benchmarking</a>{' '}
+            hub (CC-BY 4.0), which also mirrors METR's time-horizon results; ARC-AGI results are from the{' '}
+            <a href="https://arcprize.org/leaderboard" style={{ color: C.blue }}>ARC Prize leaderboard</a>.
+          </P>
+          <P>
             Full methodology, per-indicator sources, and the anchor tables used to normalize raw data onto
             the 0–100 scale are public: {' '}
             <a href={GITHUB_URL} style={{ color: C.blue }}>github.com/Vaughanwj/futurewatch</a>.

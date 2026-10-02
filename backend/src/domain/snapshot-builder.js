@@ -6,7 +6,7 @@
 import {
   normalizeMetrTimeHorizon,
   normalizeAutonomyLevel,
-  normalizeHendrycks,
+  normalizeEciCapability,
   normalizeArcGap,
   normalizeSelfLearning,
   normalizeRealTimeEngagement,
@@ -24,7 +24,7 @@ const SCORED_SLUGS = new Set(Object.values(PILLAR_DEFS).flatMap((def) => Object.
 const NORMALIZERS = {
   metrTimeHorizon: (raw) => normalizeMetrTimeHorizon(raw?.p50Minutes),
   agenticAutonomyLevel: (raw) => normalizeAutonomyLevel(raw?.routineLevel, raw?.nextDemonstrated),
-  hendrycksAgiScore: (raw) => normalizeHendrycks(raw?.publishedPct),
+  eciCapability: (raw) => normalizeEciCapability(raw?.eci),
   arcGap: (raw) => normalizeArcGap(raw?.generations),
   selfLearning: (raw) => normalizeSelfLearning(raw?.gainRatio),
   realTimeEngagement: (raw) => normalizeRealTimeEngagement(raw?.milestones),
@@ -39,7 +39,7 @@ const NORMALIZERS = {
  * @param {Date} [opts.now]
  * @returns {import('../ports/types.js').FuturewatchSnapshot}
  */
-export function buildSnapshot({ results, now = new Date() }) {
+export function buildSnapshot({ results, carried = null, now = new Date() }) {
   const errors = [];
   const sourceHealth = [];
   const merged = {};
@@ -55,6 +55,15 @@ export function buildSnapshot({ results, now = new Date() }) {
     });
     Object.assign(merged, res.indicators ?? {});
     if (Array.isArray(res.stories)) stories = stories.concat(res.stories);
+  }
+
+  // Last-known readings for automated inputs that produced nothing this run
+  // (domain/carry-forward.js). Never overrides a fresh reading.
+  if (carried) {
+    errors.push(...carried.errors);
+    for (const [slug, reading] of Object.entries(carried.indicators)) {
+      if (!merged[slug]) merged[slug] = reading;
+    }
   }
 
   // Normalize every scoreable indicator
@@ -126,6 +135,7 @@ export function buildSnapshot({ results, now = new Date() }) {
         {
           value: r.value, raw: r.raw, asOf: r.asOf, source: r.source, confidence: r.confidence,
           freshness: freshnessBySlug[slug],
+          ...(r.carriedForward ? { carriedForward: true } : {}),
         },
       ])
     ),

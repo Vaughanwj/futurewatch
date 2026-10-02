@@ -20,7 +20,11 @@ const DAY_MS = 86_400_000;
 export const DUE_GRACE_DAYS = 30;
 
 // Max age of the newest data point for automated feeds, keyed by indicator.
-export const AUTOMATED_MAX_AGE_DAYS = { metrTimeHorizon: 120 };
+// eciCapability / arcGap are dated by data-through (the feed's own newest
+// timestamp), so they go stale only if the feed stops updating; epochBenchmarks
+// is dated by its newest frontier result, which can legitimately sit still
+// longer.
+export const AUTOMATED_MAX_AGE_DAYS = { metrTimeHorizon: 120, eciCapability: 45, arcGap: 45, epochBenchmarks: 90 };
 export const DEFAULT_MAX_AGE_DAYS = 365;
 
 function parseDay(iso) {

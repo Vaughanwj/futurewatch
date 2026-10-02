@@ -98,22 +98,24 @@ export default function CapabilitiesMethodologyPage() {
         <Panel>
           <H2>Sources</H2>
           <P>
-            <strong>Live, automated:</strong> METR's public eval-analysis-public data (task horizons at 50% and
-            80% success), reused from the same fit already powering the home page's autonomy pillar.
+            <strong>Live, automated:</strong> METR's published task horizons (50% and 80% success, mirrored by Epoch AI;
+            METR's own task set is thin above about 16 hours, so very long horizons are low-confidence), and
+            Epoch AI's CC-BY benchmark archive for the other cards: PostTrainBench (AI Improvement),
+            Vending-Bench 2 (Resource Acquisition), and OSWorld and Terminal-Bench (Operational Autonomy). Each
+            card shows the record-setting results, labelled as simulation or controlled-lab, never as real-world
+            behaviour.
           </P>
           <P>
-            <strong>Manual, human-reviewed:</strong> Vending-Bench 2 (Andon Labs) — the leaderboard is a
-            client-rendered page with no public export we could find, so results are periodically re-checked by
-            hand and entered with full source attribution. AI Improvement and Goal Autonomy currently have no
-            populated entries — we did not find a specific, dated, actually-measured (not forecast) result we
-            were confident citing at launch. See{' '}
+            <strong>Manual, human-reviewed:</strong> anything qualitative. Goal Autonomy has no populated
+            entries — we did not find a specific, dated piece of evidence we were confident citing, and levels 2
+            and above always wait for a human. See{' '}
             <a href={`${GITHUB_URL}/blob/main/backend/data/capabilities-manual.json`} style={{ color: C.blue }}>
               capabilities-manual.json
             </a>{' '}
-            for the exact pending notes.
+            for the exact notes.
           </P>
           <P>
-            <strong>Not yet implemented (pending):</strong> Epoch AI benchmark data, live Vending-Bench 2 scraping,
+            <strong>Not yet implemented (pending):</strong> a first-party Vending-Bench feed from Andon Labs,
             GitHub release monitoring, and automated monitoring of official publications (UK AI Security
             Institute, METR, Apollo Research, Anthropic, OpenAI, Google DeepMind). Each has a defined interface
             and fixture tests but no live integration — see{' '}

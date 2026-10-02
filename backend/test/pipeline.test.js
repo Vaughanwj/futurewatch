@@ -5,6 +5,29 @@ import path from 'node:path';
 import { createPipeline } from '../src/app.js';
 import { createManualAdapter } from '../src/adapters/manual-adapter.js';
 
+// Stubs for the automated capability inputs (no network in CI).
+const stubEpoch = {
+  async fetch() {
+    return {
+      indicators: {
+        eciCapability: { value: null, raw: { eci: 150, model: 'GPT-5' }, asOf: '2026-07-19', source: 'stub', confidence: 'verified' },
+        epochBenchmarks: { value: null, raw: { fractions: [0.9, 0.8, 0.9, 0.5] }, asOf: '2026-07-19', source: 'stub', confidence: 'verified' },
+      },
+      fetchMs: 1, errors: [],
+    };
+  },
+};
+const stubArc = {
+  async fetch() {
+    return {
+      indicators: {
+        arcGap: { value: null, raw: { generations: [{ name: 'ARC-AGI-3', frontierOverHuman: 0.3 }] }, asOf: '2026-07-19', source: 'stub', confidence: 'verified' },
+      },
+      fetchMs: 1, errors: [],
+    };
+  },
+};
+
 const MANUAL_PATH = path.join(
   path.dirname(fileURLToPath(import.meta.url)),
   '..', 'data', 'futurewatch-manual.json'
@@ -48,7 +71,7 @@ const stubRss = {
 
 test('pipeline produces a complete snapshot from stubs + real manual file', async () => {
   const pipeline = createPipeline({
-    adapters: { metr: stubMetr, manual: createManualAdapter(MANUAL_PATH), rss: stubRss },
+    adapters: { metr: stubMetr, epoch: stubEpoch, arc: stubArc, manual: createManualAdapter(MANUAL_PATH), rss: stubRss },
     now: () => new Date('2026-07-20T12:00:00Z'),
   });
   const snap = await pipeline.run();
@@ -67,13 +90,13 @@ test('pipeline produces a complete snapshot from stubs + real manual file', asyn
   assert.ok(Math.abs(snap.safety.score - 32.5) < 0.1);
   assert.ok(snap.trajectory.metrDoublingDaysSince2023 > 0);
   assert.equal(snap.stories.length, 1);
-  assert.equal(snap.sourceHealth.length, 3);
+  assert.equal(snap.sourceHealth.length, 5);
   assert.equal(snap.escalation.flagged, false);
 });
 
 test('escalation flags >5pt composite move', async () => {
   const pipeline = createPipeline({
-    adapters: { metr: stubMetr, manual: createManualAdapter(MANUAL_PATH), rss: stubRss },
+    adapters: { metr: stubMetr, epoch: stubEpoch, arc: stubArc, manual: createManualAdapter(MANUAL_PATH), rss: stubRss },
   });
   const snap = await pipeline.run({ composite: { value: 99 } });
   assert.equal(snap.escalation.flagged, true);

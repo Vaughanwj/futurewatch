@@ -63,30 +63,30 @@ real-world, and vice versa.
 ## Sources
 
 ### Live, automated
-- **METR** (`backend/src/adapters/capabilities/metr-capabilities-adapter.js`) — reuses
-  `fetchMetrSource()` from the existing `metr-adapter.js`, so this never issues a second set of HTTP requests for
-  the same two files. Public, unauthenticated, official `eval-analysis-public` GitHub data.
+- **METR** (`backend/src/adapters/capabilities/metr-capabilities-adapter.js`) — reuses `fetchMetrSource()` from
+  `metr-adapter.js`. Preferred source is METR's published horizons as mirrored in Epoch's archive (p50, p80 and
+  confidence interval as METR reports them); if that is unreachable it falls back to refitting METR's public
+  `eval-analysis-public` runs, and says so in `errors`. METR's own caveat applies: its task set is thin above
+  ~16 hours, so very long horizons are low-confidence.
+- **Epoch AI** (`epoch-capabilities-adapter.js`, shared download in `adapters/epoch-source.js`) — the CC-BY 4.0
+  `epoch.ai/data/benchmark_data.zip` archive (refreshed daily, no key). The last three record-setting results per
+  metric become observations: **PostTrainBench** → AI Improvement (controlled lab; explicitly *not* recursive
+  self-improvement — one cycle on a small open model, not deployed); **Vending-Bench 2** → Resource Acquisition
+  (simulated USD, simulation); **OSWorld** → `computer_use_success` and **Terminal-Bench 2.0** →
+  `terminal_task_success` (sandbox). Epoch's coverage lags the benchmarks' own leaderboards for some models (OSWorld
+  in particular), so these show the best result *in Epoch's table*, not necessarily the best in the world.
 
 ### Manual, human-reviewed
-- **Vending-Bench 2 / Andon Labs** — `backend/data/capabilities-manual.json`. The leaderboard at
-  `andonlabs.com/evals/vending-bench-2` is a client-rendered SvelteKit app with no public JSON/CSV export found
-  during this implementation — the leaderboard table does not appear anywhere in the server-rendered HTML, only
-  after JS execution. Seeded with the verified current top result (Claude Opus 5, $11,181.87 average over 5 runs,
-  $500 starting balance, 365-day simulation) as of 2026-07, with quarterly recheck instructions.
-- **AI Improvement**, **Goal Autonomy** — intentionally unpopulated at launch. We looked for a specific, dated,
-  *actually measured* (not forecast) frontier-model result on METR's RE-Bench (`github.com/METR/RE-Bench`) and
-  found only forecasted/projected figures, which this project's own principle forbids conflating with a
-  measurement. Goal Autonomy additionally requires a specific reviewed piece of qualitative evidence (a system
-  card, an Apollo Research report) that we did not evaluate during this implementation. Both show "no verified
-  data yet" on the public cards rather than an invented number.
+- **Vending-Bench 2 / Andon Labs** — one hand-entered observation (Claude Opus 5, $11,181.87, 2026-07) remains in
+  `backend/data/capabilities-manual.json` from before the Epoch feed existed; it matches Epoch's figure for the same
+  model and is harmless history. Andon's own leaderboard is client-rendered with no public export, so it is not scraped.
+- **Goal Autonomy** — intentionally unpopulated. It requires a specific reviewed piece of qualitative evidence (a
+  system card, an Apollo Research report), and levels 2–4 always wait for a human. It shows "no verified data yet"
+  rather than an invented number.
 
 ### Not yet implemented (pending, per adapter)
-- **Epoch AI** (`epoch-capabilities-adapter.js`) — no verified machine-readable API or downloadable dataset found;
-  epoch.ai rendered as a client-side app with no documented public endpoint.
-- **Vending-Bench 2 live scraping** (`vendingbench-live-adapter.js`) — same client-rendering issue as above; a
-  reliable scraper needs a headless-browser dependency (e.g. Playwright) this project doesn't carry, plus the
-  explicit-selector/fixture/change-detection scaffolding the original brief calls for. Worth building once, not
-  rushed.
+- **Vending-Bench 2 first-party feed** (`vendingbench-live-adapter.js`) — Andon Labs' own leaderboard is
+  client-rendered; a scraper would need a headless browser. Results already arrive via Epoch, so this is low priority.
 - **GitHub release monitoring** (`github-release-adapter.js`) — straightforward against the GitHub API, but needs
   a persisted "last seen release" cursor this database-less pipeline doesn't have a home for yet.
 - **Official-publication monitoring** (`publication-monitor-adapter.js`) — automated evidence extraction from
@@ -110,11 +110,12 @@ its own desires." / "The AI became self-aware." / "The AI escaped." / "The AI is
 
 ## Known limitations
 
-1. No live integration for Epoch AI, Vending-Bench 2, GitHub releases, or official-publication monitoring — see
-   "pending" adapters above. All conform to the port contract and are covered by conformance tests, but produce
-   no data.
-2. AI Improvement and Goal Autonomy have no populated observations at launch — no specific, dated, measured (not
-   forecast) result was verified with enough confidence to cite.
+1. No live integration for GitHub releases or official-publication monitoring — see "pending" adapters above. All
+   conform to the port contract and are covered by conformance tests, but produce no data.
+2. Goal Autonomy has no populated observations. AI Improvement is populated from PostTrainBench only, which measures
+   one controlled improvement cycle on a small model; it is a proxy for the capability, not evidence of a loop.
+   Epoch's benchmark tables can lag the benchmarks' own leaderboards (OSWorld notably), so card values are "best in
+   Epoch's data".
 3. `capabilities.json`'s observation history lives entirely in the published static file — there is no database.
    A daily job restores the previous snapshot from the `data` branch before running (see DEPLOY.md), so dedup and
    accumulation work correctly in production, but this is a file, not a queryable store.

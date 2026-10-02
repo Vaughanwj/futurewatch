@@ -13,6 +13,13 @@
  */
 import axios from 'axios';
 import { fitP50Horizon, frontierSeries, mergeModels } from '../domain/metr-fit.js';
+import { getEpochArchive } from './epoch-source.js';
+import { extractMetrHorizons, buildDisplayNames } from '../domain/epoch-extract.js';
+
+// METR's own caveat: the task suite is thin above ~16 hours, so estimates
+// past it are low-confidence (both CI and the choice of scoring treatment
+// move them a lot). Surfaced on the indicator, not used to clip it.
+export const METR_SUITE_CEILING_MINUTES = 16 * 60;
 
 const BASE = 'https://raw.githubusercontent.com/METR/eval-analysis-public/main';
 // TH1.1 is the primary suite; TH1.0 supplements with legacy models (GPT-2,
@@ -98,15 +105,48 @@ async function defaultGetText(url) {
 }
 
 /**
- * @param {{getText?: (url: string) => Promise<string>}} [deps] injectable
- *   fetcher so tests can run against fixtures with no network.
+ * METR's published horizons as mirrored in Epoch's benchmark archive: one
+ * fetch, METR's own p50/p80/CI numbers (not our refit), and it picks up new
+ * models long before METR's GitHub runs files do (those last gained a model
+ * on 2026-03-06; the mirror runs through 2026-04-07).
+ * @returns {Promise<{horizons: object[], errors: string[]}>}
+ */
+export async function defaultGetHorizons() {
+  const { tables, errors } = await getEpochArchive();
+  const rows = tables['metr_time_horizons_external.csv'];
+  if (!rows) return { horizons: [], errors: errors.length ? errors : ['metr: horizons table missing from Epoch archive'] };
+  const displayNames = buildDisplayNames(tables['model_metadata.csv'] ?? []);
+  return { horizons: extractMetrHorizons(rows, { displayNames }), errors };
+}
+
+/**
+ * Source preference: the Epoch mirror of METR's published horizons; if that
+ * is unreachable, METR's GitHub runs refit locally (older, but independent).
+ *
+ * @param {{getText?: (url: string) => Promise<string>,
+ *          getHorizons?: () => Promise<{horizons: object[], errors: string[]}>}} [deps]
+ *   injectable fetchers so tests can run against fixtures with no network.
  * @returns {Promise<{models: object[], series: object[], suite: string, errors: string[]}>}
  * models retain `a`/`b` (the fitted logistic coefficients) so callers can
  * derive horizons at success rates other than 50% without refetching or
  * refitting.
  */
-export async function fetchMetrSource({ getText = defaultGetText } = {}) {
+export async function fetchMetrSource({ getText = defaultGetText, getHorizons = defaultGetHorizons } = {}) {
   const errors = [];
+
+  let mirror = { horizons: [], errors: [] };
+  try {
+    mirror = await getHorizons();
+  } catch (err) {
+    mirror = { horizons: [], errors: [`metr: Epoch mirror failed: ${err.message}`] };
+  }
+  if (mirror.horizons.length > 0) {
+    const models = mirror.horizons.map((h) => ({ ...h, a: null, b: null, n: null }));
+    return { models, series: frontierSeries(models), suite: 'METR Time Horizon (via Epoch AI)', errors: [] };
+  }
+  if (mirror.errors.length > 0) {
+    errors.push(...mirror.errors, 'metr: falling back to METR GitHub runs (stale: newest model there is from early 2026)');
+  }
 
   async function fetchText(url, label) {
     try {
@@ -159,6 +199,7 @@ export const metrAdapter = {
     const t0 = Date.now();
     const { series, models, suite, errors } = await fetchMetrSource();
     const frontier = series.length > 0 ? series[series.length - 1] : null;
+    const frontierModelRow = frontier ? models.find((m) => m.alias === frontier.alias) : null;
 
     if (!frontier) {
       if (models.length === 0 && errors.length === 0) errors.push('metr: no frontier model produced a valid p50 fit');
@@ -172,12 +213,16 @@ export const metrAdapter = {
           raw: {
             p50Minutes: frontier.value,
             frontierModel: frontier.alias,
+            p80Minutes: frontierModelRow?.p80Minutes ?? null,
+            ciLowMinutes: frontierModelRow?.ciLow ?? null,
+            ciHighMinutes: frontierModelRow?.ciHigh ?? null,
+            aboveSuiteCeiling: frontier.value > METR_SUITE_CEILING_MINUTES,
             suite,
             modelCount: models.length,
             frontierSeries: series,
           },
           asOf: frontier.date,
-          source: 'METR eval-analysis-public (github.com/METR/eval-analysis-public)',
+          source: 'METR time horizons (metr.org; github.com/METR/eval-analysis-public), mirrored by Epoch AI (CC-BY 4.0)',
           confidence: 'verified',
         },
       },

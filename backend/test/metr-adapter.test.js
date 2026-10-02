@@ -2,6 +2,10 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { parseReleaseDates, fetchMetrSource, findUndatedModels } from '../src/adapters/metr-adapter.js';
 
+// The Epoch mirror is the preferred source; these tests exercise the GitHub
+// refit path, so they switch the mirror off (and never touch the network).
+const noMirror = async () => ({ horizons: [], errors: [] });
+
 // ── fixtures in METR's real file shapes ──────────────────────────────────
 
 // Mirrors the real release_dates.yaml: older models appear twice (plain and
@@ -63,7 +67,7 @@ test('REGRESSION: a model listed only as "(Inspect)" in release_dates reaches th
     runsFor('Claude Opus 4.5 (Inspect)', 290),
     runsFor('Claude Opus 4.6 (Inspect)', 720),
   ].join('\n');
-  const { series, models, errors } = await fetchMetrSource({ getText: stubGetText({ runs }) });
+  const { series, models, errors } = await fetchMetrSource({ getText: stubGetText({ runs }), getHorizons: noMirror });
 
   assert.deepEqual(errors, []);
   assert.ok(models.every((m) => m.releaseDate), 'every fitted model should have a date');
@@ -73,7 +77,7 @@ test('REGRESSION: a model listed only as "(Inspect)" in release_dates reaches th
 
 test('a fitted model with no release date is surfaced as an error, not dropped silently', async () => {
   const runs = [runsFor('GPT-5.2', 350), runsFor('Mystery Model (Inspect)', 900)].join('\n');
-  const { series, errors } = await fetchMetrSource({ getText: stubGetText({ runs }) });
+  const { series, errors } = await fetchMetrSource({ getText: stubGetText({ runs }), getHorizons: noMirror });
 
   assert.ok(errors.some((e) => e.includes('no release date') && e.includes('Mystery Model')), `errors: ${errors}`);
   assert.ok(!series.some((p) => p.alias === 'Mystery Model'));
@@ -81,14 +85,14 @@ test('a fitted model with no release date is surfaced as an error, not dropped s
 
 test('the human baseline rows are neither a model nor a warning', async () => {
   const runs = [runsFor('GPT-5.2', 350), runsFor('human', 100)].join('\n');
-  const { models, errors } = await fetchMetrSource({ getText: stubGetText({ runs }) });
+  const { models, errors } = await fetchMetrSource({ getText: stubGetText({ runs }), getHorizons: noMirror });
   assert.ok(!models.some((m) => m.alias === 'human'));
   assert.deepEqual(errors, []);
 });
 
 test('if the dates file itself fails, report that once instead of flagging every model undated', async () => {
   const runs = runsFor('GPT-5.2', 350);
-  const { errors } = await fetchMetrSource({ getText: stubGetText({ runs, dates: null }) });
+  const { errors } = await fetchMetrSource({ getText: stubGetText({ runs, dates: null }), getHorizons: noMirror });
   assert.equal(errors.length, 1);
   assert.ok(errors[0].includes('release_dates'));
 });

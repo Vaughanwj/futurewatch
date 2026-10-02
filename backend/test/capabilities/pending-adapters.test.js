@@ -1,12 +1,10 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { epochCapabilitiesAdapter } from '../../src/adapters/capabilities/epoch-capabilities-adapter.js';
 import { vendingBenchLiveAdapter } from '../../src/adapters/capabilities/vendingbench-live-adapter.js';
 import { githubReleaseAdapter } from '../../src/adapters/capabilities/github-release-adapter.js';
 import { publicationMonitorAdapter } from '../../src/adapters/capabilities/publication-monitor-adapter.js';
 
 const PENDING_ADAPTERS = [
-  ['epoch', epochCapabilitiesAdapter],
   ['vendingbench-live', vendingBenchLiveAdapter],
   ['github-releases', githubReleaseAdapter],
   ['publication-monitor', publicationMonitorAdapter],

@@ -28,7 +28,7 @@ const PLAIN = {
   selfLearning: 'Learning on the fly from experience',
   realTimeEngagement: 'Holding its own in live group conversation',
   arcGap: 'Handling truly novel situations',
-  hendrycksAgiScore: 'Matching a well-educated adult across the board',
+  eciCapability: 'Matching a well-educated adult across the board',
   epochBenchmarks: 'Expert-level scores on the hardest benchmarks',
   metrTimeHorizon: 'Working unsupervised for long stretches',
   agenticAutonomyLevel: 'Acting independently on open-ended goals',
@@ -39,7 +39,7 @@ const PLAIN = {
 // Concise labels for compact rows (pillar detail cards) — PLAIN above is the
 // longer narrative phrasing used in the "what's missing" triptych panel.
 const INDICATOR_LABELS = {
-  hendrycksAgiScore: 'AGI Definition Score',
+  eciCapability: 'Epoch Capabilities Index',
   epochBenchmarks: 'Epoch Benchmarks',
   arcGap: 'ARC-AGI Gap',
   selfLearning: 'Self-Learning Gain',
@@ -83,18 +83,18 @@ const TIPS = {
     'How long and how independently AI works without a human — the time horizon of unsupervised work, plus how much real deployments trust it. 35% of the composite.',
   deployment:
     'Whether AI is doing real economic work in the wild, not just passing tests. Deliberately the smallest weight — it confirms progress rather than predicts it. 20% of the composite.',
-  hendrycksAgiScore:
-    'Published score from a large research consortium (Hendrycks, Bengio and others): how much of a well-educated adult’s cognitive versatility the best AI matches, across ten domains of human cognition. 100 = fully matches.',
+  eciCapability:
+    'Epoch AI’s Capabilities Index for the strongest model today — one number combining its results across dozens of benchmarks. We map it onto a 0–100 scale using two points: GPT-4 (2023) ≈ 27 and GPT-5 (2025) ≈ 57, the AGI-definition scores published for those models. 100 would mean fully matching a well-educated adult across the board. Updates automatically.',
   epochBenchmarks:
-    'Frontier performance on a basket of the hardest public benchmarks — graduate-level science, competition math, real software fixes — as a fraction of expert-human level. Data: Epoch AI. Currently a provisional estimate.',
+    'The best published score on each of four hard benchmarks — graduate-level science (GPQA Diamond), real software fixes (SWE-bench Verified), research-level math (FrontierMath Tiers 1–3) and Humanity’s Last Exam — averaged, where 100 is a perfect score. Data: Epoch AI. Updates automatically; a benchmark that tops out is swapped out rather than left to flatten the reading.',
   arcGap:
-    'How close AI comes to ordinary humans on ARC-AGI puzzles: tasks built to be unlike anything in training data. Humans solve nearly all of them; AI still fails most, especially the interactive version.',
+    'How close AI comes to ordinary humans on ARC-AGI puzzles: tasks built to be unlike anything in training data. A version counts until AI reaches 85% of human performance on it (ARC-AGI-2 now has), then it drops out; ARC-AGI-3, the interactive version, is scored on the standard setup every model gets — results from labs’ own tuned harnesses run far higher and are shown beside it, not scored. Updates automatically.',
   selfLearning:
     'Whether AI improves from its own accumulated experience, measured against the same system running with no memory (CL-Bench). Near zero today: models don’t yet learn on the job.',
   realTimeEngagement:
     'Our own five-milestone rubric for live, multi-person interaction: real-time voice, group conversation, unprompted contributions, remembering people across sessions, and holding a valued role in a human group for weeks. Criteria published in the repo.',
   metrTimeHorizon:
-    'The longest task — in human working time — the best AI completes unsupervised with 50% reliability (METR). Log scale from ~4 seconds (GPT-2, 2019) to one working month, the point we treat as the autonomy Rubicon.',
+    'The longest task — in human working time — the best AI completes unsupervised with 50% reliability (METR). Log scale from ~4 seconds (GPT-2, 2019) to one working month, the point we treat as the autonomy Rubicon. METR says its task set is thin beyond about 16 hours, so readings past that are low-confidence.',
   agenticAutonomyLevel:
     'How independently AI routinely operates in real deployments, on DeepMind’s published ladder: tool → consultant → collaborator → expert → autonomous agent.',
   anthropicEconIndex:
@@ -187,9 +187,9 @@ const SAMPLE_SNAPSHOT = {
     capability: {
       name: 'capability', weight: 0.45, score: 34.6, coverage: 1,
       indicators: [
-        { slug: 'hendrycksAgiScore', score: 58, weight: 0.2 },
-        { slug: 'epochBenchmarks', score: 60, weight: 0.2 },
-        { slug: 'arcGap', score: 12.8, weight: 0.2 },
+        { slug: 'eciCapability', score: 78.6, weight: 0.2 },
+        { slug: 'epochBenchmarks', score: 81.9, weight: 0.2 },
+        { slug: 'arcGap', score: 62.7, weight: 0.2 },
         { slug: 'selfLearning', score: 12, weight: 0.2 },
         { slug: 'realTimeEngagement', score: 30, weight: 0.2 },
       ],
@@ -223,9 +223,9 @@ const SAMPLE_SNAPSHOT = {
     ],
   },
   indicators: {
-    hendrycksAgiScore: { confidence: 'provisional' },
-    epochBenchmarks: { confidence: 'judgment' },
-    arcGap: { confidence: 'provisional' },
+    eciCapability: { confidence: 'verified' },
+    epochBenchmarks: { confidence: 'verified' },
+    arcGap: { confidence: 'verified' },
     selfLearning: { confidence: 'judgment' },
     realTimeEngagement: { confidence: 'judgment' },
     metrTimeHorizon: { confidence: 'verified', raw: { p50Minutes: 320, suite: 'TH1.1' } },

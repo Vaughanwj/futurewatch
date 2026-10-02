@@ -32,12 +32,6 @@ export function normalizeAutonomyLevel(routineLevel, nextDemonstrated = false) {
   return clamp(base + (nextDemonstrated ? 10 : 0));
 }
 
-// ── P1: hendrycksAgiScore ────────────────────────────────────────────────────
-// Identity: their published % (agidefinition.ai) is natively 0→AGI-line.
-export function normalizeHendrycks(publishedPct) {
-  return Number.isFinite(publishedPct) ? clamp(publishedPct) : null;
-}
-
 // ── P1: arcGap ───────────────────────────────────────────────────────────────
 // Mean over active ARC generations of (frontier ÷ human). Generations with
 // frontier > 85% of human retire from the mean (ratchet rule).
@@ -119,4 +113,24 @@ export function normalizeSafetyGrade(letter) {
   const gpa = GRADE_POINTS[letter];
   if (gpa === undefined) return null;
   return clamp((gpa / 4.0) * 100);
+}
+
+// ── P1: eciCapability ────────────────────────────────────────────────────────
+// Epoch Capabilities Index of the top model, mapped through the two published
+// AGI-score points that Hendrycks et al. (agidefinition.ai) give for models
+// that are also anchors of the ECI itself — a straight line through
+//   GPT-4 (Mar 2023): ECI 125.89 → 27%
+//   GPT-5 (Aug 2025): ECI 150.00 → 57%
+// Decision D8. Extrapolates both ways and clamps to 0–100 (the line reaches
+// 100 at ECI ≈ 184.6). The two ECI anchors are verified on every fetch
+// (domain/epoch-extract.js) so a re-anchored index can't silently shift this.
+export const ECI_CALIBRATION = {
+  lo: { eci: 125.89, score: 27, model: 'GPT-4 (Mar 2023)' },
+  hi: { eci: 150.0, score: 57, model: 'GPT-5' },
+};
+
+export function normalizeEciCapability(eci) {
+  if (!Number.isFinite(eci)) return null;
+  const { lo, hi } = ECI_CALIBRATION;
+  return clamp(lo.score + ((eci - lo.eci) / (hi.eci - lo.eci)) * (hi.score - lo.score));
 }

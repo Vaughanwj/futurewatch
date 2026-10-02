@@ -59,8 +59,14 @@ export function createMetrCapabilitiesAdapter(fetchSource = fetchMetrSource) {
         }),
       ];
 
-      if (frontierModel && Number.isFinite(frontierModel.a) && Number.isFinite(frontierModel.b)) {
-        const p80 = horizonAtSuccessRate(frontierModel.a, frontierModel.b, 0.8);
+      if (frontierModel) {
+        // Published p80 when the source gives one (Epoch mirror); otherwise
+        // derived from the local logistic fit's coefficients.
+        const p80 = Number.isFinite(frontierModel.p80Minutes)
+          ? frontierModel.p80Minutes
+          : Number.isFinite(frontierModel.a) && Number.isFinite(frontierModel.b)
+            ? horizonAtSuccessRate(frontierModel.a, frontierModel.b, 0.8)
+            : null;
         if (p80 !== null) {
           candidates.push(
             buildObservation({

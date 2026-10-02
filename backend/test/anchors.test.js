@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {
   normalizeMetrTimeHorizon,
   normalizeAutonomyLevel,
-  normalizeHendrycks,
+  normalizeEciCapability,
   normalizeArcGap,
   normalizeSelfLearning,
   normalizeRealTimeEngagement,
@@ -32,10 +32,14 @@ test('autonomy level rubric', () => {
   assert.equal(normalizeAutonomyLevel('wizard'), null);
 });
 
-test('hendrycks identity with clamp', () => {
-  assert.equal(normalizeHendrycks(58), 58);
-  assert.equal(normalizeHendrycks(120), 100);
-  assert.equal(normalizeHendrycks(undefined), null);
+test('eciCapability: two-point line through GPT-4 (125.89→27) and GPT-5 (150→57), clamped', () => {
+  assert.ok(Math.abs(normalizeEciCapability(125.89) - 27) < 1e-9);
+  assert.ok(Math.abs(normalizeEciCapability(150) - 57) < 1e-9);
+  assert.ok(Math.abs(normalizeEciCapability(167.35) - 78.59) < 0.01); // Claude Opus 5.5, Sep 2026
+  assert.equal(normalizeEciCapability(300), 100);
+  assert.equal(normalizeEciCapability(0), 0);
+  assert.equal(normalizeEciCapability(undefined), null);
+  assert.equal(normalizeEciCapability(NaN), null);
 });
 
 test('arcGap mean of active generations with ratchet retirement', () => {
