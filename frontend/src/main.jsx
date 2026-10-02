@@ -8,6 +8,7 @@ import CapabilitiesMethodologyPage from './CapabilitiesMethodologyPage.jsx';
 
 function Home() {
   const [snapshot, setSnapshot] = useState(null);
+  const [history, setHistory] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -15,6 +16,11 @@ function Home() {
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`))))
       .then(setSnapshot)
       .catch((e) => setError(e.message));
+    // The trend chart is optional: a missing history file just hides it.
+    fetch('/data/history.json')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((h) => h && setHistory(h))
+      .catch(() => {});
   }, []);
 
   const center = {
@@ -25,7 +31,7 @@ function Home() {
   if (error) return <div style={center}>meter data unavailable ({error}) — try again shortly</div>;
   if (!snapshot) return <div style={center}>reading the meter…</div>;
   return (
-    <FuturewatchDashboard snapshot={snapshot}>
+    <FuturewatchDashboard snapshot={snapshot} history={history}>
       <CapabilitiesWatch />
     </FuturewatchDashboard>
   );

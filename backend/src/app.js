@@ -6,8 +6,9 @@
  */
 import { buildSnapshot } from './domain/snapshot-builder.js';
 import { carryForward } from './domain/carry-forward.js';
+import { resolveRebaseline } from './domain/rebaseline.js';
 
-export function createPipeline({ adapters, now = () => new Date() }) {
+export function createPipeline({ adapters, now = () => new Date(), rebaselines = [] }) {
   return {
     async run(previousSnapshot = null) {
       const results = {};
@@ -26,10 +27,18 @@ export function createPipeline({ adapters, now = () => new Date() }) {
 
       const prev = previousSnapshot?.composite?.value;
       const curr = snapshot.composite?.value;
-      snapshot.escalation =
+      const escalation =
         Number.isFinite(prev) && Number.isFinite(curr) && Math.abs(curr - prev) > 5
           ? { flagged: true, previous: prev, current: curr, note: 'Composite moved >5 pts — review before publishing (methodology §7).' }
           : { flagged: false };
+
+      // A move this large is only accepted if it was declared in advance
+      // (config/rebaselines.json) — see domain/rebaseline.js.
+      const resolved = resolveRebaseline({
+        declared: rebaselines, previous: previousSnapshot, escalation, generatedAt: snapshot.generatedAt,
+      });
+      snapshot.escalation = resolved.escalation;
+      snapshot.rebaselines = resolved.rebaselines;
 
       return snapshot;
     },

@@ -71,6 +71,8 @@ const TIPS = {
     'Median predictions from the Forecasting Research Institute’s LEAP panel of experts and superforecasters. This is expectation, not measurement — it never enters the meter.',
   road:
     'Each dot is a new record: the longest task, measured in the time it takes a skilled human, that the best AI of the day could complete unsupervised at 50% reliability. Log scale — each gridline is a multiple of the one below.',
+  trend:
+    'The composite reading day by day since launch. Dashed = reconstructed: on 2 October several inputs were switched from hand-entered values to live feeds, so earlier days were recomputed from results dated on or before each day, on the same basis. The faint grey line is what was actually published back then. Hand-scored inputs are held at their current values.',
   divergence:
     'The meter reading (capability) beside how seriously frontier labs take existential safety — the best grade any lab earned in the Future of Life Institute’s independent Safety Index, converted to 0–100. The gap is the point.',
   sourceHealth:
@@ -253,6 +255,11 @@ export function scoreColor(v) {
 
 const plural = (n, unit) => `${n} ${unit}${n === 1 ? '' : 's'}`;
 
+const fmtDay = (iso) => {
+  const d = new Date(`${iso}T00:00:00Z`);
+  return Number.isNaN(d.getTime()) ? iso : d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
+};
+
 export function humanizeMinutes(min) {
   if (!Number.isFinite(min)) return '—';
   if (min < 1) return plural(Math.round(min * 60), 'second');
@@ -361,7 +368,24 @@ function Hero({ snapshot }) {
           <Info tip={TIPS.freshness} />
         </div>
       )}
+      <RebaselineNote rebaselines={snapshot.rebaselines} />
     </Panel>
+  );
+}
+
+// How long after a re-baseline the explanatory note stays under the headline.
+const REBASELINE_NOTE_DAYS = 90;
+
+function RebaselineNote({ rebaselines }) {
+  const latest = (rebaselines ?? []).at(-1);
+  if (!latest) return null;
+  const ageDays = (Date.now() - Date.parse(latest.date)) / 86400000;
+  if (!(ageDays <= REBASELINE_NOTE_DAYS)) return null;
+  return (
+    <div style={{ fontFamily: sans, fontSize: '0.74rem', color: C.textDim, marginTop: 12, lineHeight: 1.5 }}>
+      <span style={{ fontFamily: mono, color: C.blue }}>◆ {fmtDay(latest.date)} · re-baselined {fmt1(latest.from)} → {fmt1(latest.to)}.</span>{' '}
+      {latest.note}
+    </div>
   );
 }
 
@@ -512,12 +536,12 @@ function RoadChart({ snapshot }) {
         {callouts.map((i) => (
           <text
             key={i}
-            x={Math.min(Math.max(points[i].x, 40), W - 4)}
+            x={points[i].x > W - 110 ? Math.min(points[i].x + 6, W - 4) : Math.max(points[i].x, 40)}
             y={Math.max(points[i].y - 9, 10)}
             fill={C.text}
             fontSize="9"
             fontFamily={mono}
-            textAnchor="middle"
+            textAnchor={points[i].x > W - 110 ? 'end' : 'middle'}
           >
             {points[i].alias}
           </text>
@@ -527,6 +551,78 @@ function RoadChart({ snapshot }) {
       </svg>
       <div style={{ fontFamily: sans, fontSize: '0.75rem', color: C.textLow, marginTop: 6 }}>
         Each point is a frontier model's 50% time horizon at release, since METR's earliest covered model ({points[0].alias}, {firstYear}). Source: METR (public data).
+      </div>
+    </Panel>
+  );
+}
+
+// ── Trend: composite since launch ────────────────────────────────────────────
+
+function TrendChart({ history, rebaselines }) {
+  const chart = useMemo(() => {
+    const pts = (history?.points ?? []).filter((p) => Number.isFinite(p.composite));
+    if (pts.length < 2) return null;
+    const W = 560;
+    const H = 150;
+    const pad = { l: 30, r: 10, t: 14, b: 22 };
+    const t0 = Date.parse(pts[0].date);
+    const t1 = Date.parse(pts[pts.length - 1].date);
+    const all = pts.flatMap((p) => [p.composite, p.published?.composite]).filter(Number.isFinite);
+    const lo = Math.floor((Math.min(...all) - 2) / 5) * 5;
+    const hi = Math.ceil((Math.max(...all) + 2) / 5) * 5;
+    const x = (d) => pad.l + ((Date.parse(d) - t0) / (t1 - t0 || 1)) * (W - pad.l - pad.r);
+    const y = (v) => H - pad.b - ((v - lo) / (hi - lo || 1)) * (H - pad.t - pad.b);
+    const path = (rows, get) => rows.map((p) => `${x(p.date).toFixed(1)},${y(get(p)).toFixed(1)}`).join(' ');
+
+    const backfilled = pts.filter((p) => p.backfilled);
+    const live = pts.filter((p) => !p.backfilled);
+    // draw the dashed line through to the first live point so the two join
+    const dashed = live.length ? [...backfilled, live[0]] : backfilled;
+    const published = pts.filter((p) => Number.isFinite(p.published?.composite));
+    const ticks = [];
+    for (let v = lo; v <= hi; v += 5) ticks.push(v);
+    const marks = (rebaselines ?? [])
+      .filter((r) => Date.parse(r.date) >= t0 && Date.parse(r.date) <= t1)
+      .map((r) => ({ x: x(r.date), label: 're-baselined' }));
+    const last = pts[pts.length - 1];
+    return {
+      W, H, pad, ticks, y, marks,
+      dashed: dashed.length > 1 ? path(dashed, (p) => p.composite) : null,
+      live: live.length > 1 ? path(live, (p) => p.composite) : null,
+      published: published.length > 1 ? path(published, (p) => p.published.composite) : null,
+      last: { x: x(last.date), y: y(last.composite), v: last.composite },
+      from: pts[0].date,
+      to: last.date,
+    };
+  }, [history, rebaselines]);
+
+  if (!chart) return null;
+  const { W, H, pad, ticks, y, marks, dashed, live, published, last, from, to } = chart;
+  return (
+    <Panel>
+      <PanelTitle tip={TIPS.trend}>The reading since launch</PanelTitle>
+      <svg viewBox={`0 0 ${W} ${H}`} style={{ width: '100%', height: 'auto', display: 'block' }}>
+        {ticks.map((v) => (
+          <g key={v}>
+            <line x1={pad.l} y1={y(v)} x2={W - pad.r} y2={y(v)} stroke={C.panelEdge} strokeWidth="1" />
+            <text x={pad.l - 4} y={y(v) + 3} fill={C.textLow} fontSize="8" fontFamily={mono} textAnchor="end">{v}</text>
+          </g>
+        ))}
+        {published && <polyline points={published} fill="none" stroke={C.textLow} strokeOpacity="0.55" strokeWidth="1.5" />}
+        {dashed && <polyline points={dashed} fill="none" stroke={C.blue} strokeWidth="2.5" strokeDasharray="5 4" strokeLinejoin="round" />}
+        {live && <polyline points={live} fill="none" stroke={C.blue} strokeWidth="2.5" strokeLinejoin="round" />}
+        {marks.map((m, i) => (
+          <g key={i}>
+            <line x1={m.x} y1={pad.t - 4} x2={m.x} y2={H - pad.b} stroke={C.yellow} strokeOpacity="0.7" strokeDasharray="2 3" />
+            <text x={m.x - 4} y={pad.t + 4} fill={C.yellow} fontSize="8" fontFamily={mono} textAnchor="end">{m.label}</text>
+          </g>
+        ))}
+        <circle cx={last.x} cy={last.y} r="4" fill={C.orange} />
+        <text x={pad.l} y={H - 5} fill={C.textLow} fontSize="9" fontFamily={mono}>{fmtDay(from)}</text>
+        <text x={W - pad.r} y={H - 5} fill={C.textLow} fontSize="9" fontFamily={mono} textAnchor="end">{fmtDay(to)}</text>
+      </svg>
+      <div style={{ fontFamily: sans, fontSize: '0.75rem', color: C.textLow, marginTop: 6 }}>
+        Dashed: recomputed from dated results on the current basis. Grey: what was published at the time.
       </div>
     </Panel>
   );
@@ -720,7 +816,7 @@ export function Footer() {
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 
-export default function FuturewatchDashboard({ snapshot = SAMPLE_SNAPSHOT, children }) {
+export default function FuturewatchDashboard({ snapshot = SAMPLE_SNAPSHOT, history = null, children }) {
   if (!snapshot) snapshot = SAMPLE_SNAPSHOT;
   const grid3 = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 14 };
   return (
@@ -737,6 +833,8 @@ export default function FuturewatchDashboard({ snapshot = SAMPLE_SNAPSHOT, child
         </div>
 
         <RoadChart snapshot={snapshot} />
+
+        <TrendChart history={history} rebaselines={snapshot.rebaselines} />
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 14 }}>
           {Object.entries(snapshot.pillars ?? {}).map(([name, pillar]) => (

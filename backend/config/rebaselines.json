@@ -1,0 +1,12 @@
+{
+  "_readme": "Declared re-baselines (domain/rebaseline.js). A composite move larger than the 5-point escalation gate is normally rejected before publishing. A move that is deliberate (inputs swapped for live feeds, say) is declared here, in a reviewed commit, BEFORE the run that produces it. The pipeline accepts it exactly once: only if the run is escalated, falls within [date, date + windowDays], and the id is not already recorded in the previous snapshot. The accepted re-baseline is stored in futurewatch.json (`rebaselines`) and shown on the site. Pair it with scripts/backfill-history.js so the trend line is continuous.",
+  "rebaselines": [
+    {
+      "id": "2026-10-input-refresh",
+      "date": "2026-10-02",
+      "windowDays": 14,
+      "title": "Inputs refreshed",
+      "note": "Four capability and autonomy inputs moved from hand-entered values to live feeds — the Epoch Capabilities Index (replacing a score last updated October 2025), Epoch's benchmark basket, the ARC Prize leaderboard, and METR's time horizons — and the 2 October METR and FLI corrections were applied. The reading rose accordingly; the world did not jump overnight. History since 29 July has been recomputed on the same basis (dashed on the chart); the values originally published are kept in history.json."
+    }
+  ]
+}
