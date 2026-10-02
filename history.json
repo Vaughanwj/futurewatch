@@ -1227,8 +1227,7 @@
         "capability": 53,
         "autonomy": 74.6,
         "deployment": 35.3
-      },
-      "rebaseline": "2026-10-input-refresh"
+      }
     }
   ]
 }

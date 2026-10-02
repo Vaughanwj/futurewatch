@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-02T19:31:29.902Z",
+  "generatedAt": "2026-10-02T21:07:13.646Z",
   "composite": {
     "value": 57,
     "coverage": 1
@@ -253,31 +253,31 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 476,
+      "fetchMs": 375,
       "indicatorCount": 1
     },
     {
       "source": "epoch",
       "ok": true,
-      "fetchMs": 2,
+      "fetchMs": 3,
       "indicatorCount": 2
     },
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 147,
+      "fetchMs": 567,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 0,
+      "fetchMs": 1,
       "indicatorCount": 7
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 728,
+      "fetchMs": 1011,
       "indicatorCount": 0
     }
   ],
@@ -663,11 +663,7 @@
   },
   "errors": [],
   "escalation": {
-    "flagged": false,
-    "rebaselined": "2026-10-input-refresh",
-    "previous": 48,
-    "current": 57,
-    "note": "Composite moved 48 → 57; accepted as declared re-baseline \"2026-10-input-refresh\"."
+    "flagged": false
   },
   "rebaselines": [
     {
