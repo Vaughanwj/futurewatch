@@ -585,6 +585,15 @@
         "autonomy": 68.3,
         "deployment": 35.3
       }
+    },
+    {
+      "date": "2026-10-02",
+      "composite": 48,
+      "pillars": {
+        "capability": 34.6,
+        "autonomy": 72.4,
+        "deployment": 35.3
+      }
     }
   ]
 }

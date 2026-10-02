@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-01T21:31:39.342Z",
+  "generatedAt": "2026-10-02T17:21:03.261Z",
   "composite": {
-    "value": 46.5,
+    "value": 48,
     "coverage": 1
   },
   "pillars": {
@@ -42,13 +42,13 @@
     "autonomy": {
       "name": "autonomy",
       "weight": 0.35,
-      "score": 68.3,
+      "score": 72.4,
       "coverage": 1,
       "indicators": [
         {
           "slug": "metrTimeHorizon",
           "weight": 0.7,
-          "score": 71.806256728669
+          "score": 77.78217288986386
         },
         {
           "slug": "agenticAutonomyLevel",
@@ -83,10 +83,10 @@
     "source": "Forecasting Research Institute — LEAP panel, Wave 8 (forecastingresearch.org); cf. Samotsvety Forecasting (~28% probability of AGI by 2030)"
   },
   "safety": {
-    "score": 42.5,
-    "existentialGrade": "C-",
+    "score": 32.5,
+    "existentialGrade": "D+",
     "overallBestGpa": 2.66,
-    "bestLab": "Anthropic",
+    "bestLab": "Anthropic (tied with OpenAI)",
     "source": "FLI AI Safety Index, Summer 2026 (futureoflife.org/ai-safety-index-summer-2026)"
   },
   "trajectory": {
@@ -175,28 +175,33 @@
         "date": "2025-12-11",
         "value": 352.24235849272736,
         "alias": "GPT-5.2"
+      },
+      {
+        "date": "2026-02-05",
+        "value": 718.9097828213035,
+        "alias": "Claude Opus 4.6"
       }
     ],
-    "metrDoublingDaysSince2023": 133,
-    "metrDoublingDaysAll": 193
+    "metrDoublingDaysSince2023": 128,
+    "metrDoublingDaysAll": 188
   },
   "stories": [
     {
-      "title": "Improving OCR Faithfulness via Gated and Attenuated On-Policy Distillation",
-      "link": "https://arxiv.org/abs/2609.38282",
-      "published": "Thu, 01 Oct 2026 00:00:00 -0400",
+      "title": "Heavy-Tailed Memory Traces in Long-Horizon Language Agents",
+      "link": "https://arxiv.org/abs/2610.00010",
+      "published": "Fri, 02 Oct 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "AREX-2: Advancing Self-Improving Agents through Long-Horizon Reflective Tasks",
-      "link": "https://arxiv.org/abs/2609.38288",
-      "published": "Thu, 01 Oct 2026 00:00:00 -0400",
+      "title": "When Do Causal World Models Help Modular LLM Agents",
+      "link": "https://arxiv.org/abs/2610.00012",
+      "published": "Fri, 02 Oct 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "MoFlow: Multi-Objective Agentic Workflow Generation",
-      "link": "https://arxiv.org/abs/2609.38294",
-      "published": "Thu, 01 Oct 2026 00:00:00 -0400",
+      "title": "From Proposal to Verified Effect: Praxa, an Evidence-Bound Harness for Governed AI Agent Execution",
+      "link": "https://arxiv.org/abs/2610.00015",
+      "published": "Fri, 02 Oct 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
@@ -258,7 +263,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 5515,
+      "fetchMs": 4244,
       "indicatorCount": 1
     },
     {
@@ -270,18 +275,77 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 694,
+      "fetchMs": 1447,
       "indicatorCount": 0
     }
   ],
+  "freshness": {
+    "scored": {
+      "total": 9,
+      "fresh": 4,
+      "due": 1,
+      "stale": 4,
+      "unknown": 0
+    },
+    "overdue": [
+      {
+        "slug": "hendrycksAgiScore",
+        "scored": true,
+        "status": "stale",
+        "daysOverdue": 164,
+        "asOf": "2025-10-21",
+        "reviewBy": "2026-04-21"
+      },
+      {
+        "slug": "metrTimeHorizon",
+        "scored": true,
+        "status": "stale",
+        "daysOverdue": 119,
+        "asOf": "2026-02-05",
+        "reviewBy": "2026-06-05"
+      },
+      {
+        "slug": "arcGap",
+        "scored": true,
+        "status": "stale",
+        "daysOverdue": 94,
+        "asOf": "2026-03-31",
+        "reviewBy": "2026-06-30"
+      },
+      {
+        "slug": "friLeapAgi",
+        "scored": false,
+        "status": "stale",
+        "daysOverdue": 52,
+        "asOf": "2026-05-11",
+        "reviewBy": "2026-08-11"
+      },
+      {
+        "slug": "epochBenchmarks",
+        "scored": true,
+        "status": "stale",
+        "daysOverdue": 43,
+        "asOf": "2026-07-20",
+        "reviewBy": "2026-08-20"
+      },
+      {
+        "slug": "anthropicEconIndex",
+        "scored": true,
+        "status": "due",
+        "daysOverdue": 6,
+        "asOf": "2026-06-26",
+        "reviewBy": "2026-09-26"
+      }
+    ]
+  },
   "indicators": {
     "metrTimeHorizon": {
-      "value": 71.806256728669,
+      "value": 77.78217288986386,
       "raw": {
-        "p50Minutes": 352.24235849272736,
-        "frontierModel": "GPT-5.2",
+        "p50Minutes": 718.9097828213035,
+        "frontierModel": "Claude Opus 4.6",
         "suite": "TH1.1 + TH1.0 legacy",
-        "modelCount": 38,
+        "modelCount": 37,
         "frontierSeries": [
           {
             "date": "2019-02-14",
@@ -367,12 +431,23 @@
             "date": "2025-12-11",
             "value": 352.24235849272736,
             "alias": "GPT-5.2"
+          },
+          {
+            "date": "2026-02-05",
+            "value": 718.9097828213035,
+            "alias": "Claude Opus 4.6"
           }
         ]
       },
-      "asOf": "2025-12-11",
+      "asOf": "2026-02-05",
       "source": "METR eval-analysis-public (github.com/METR/eval-analysis-public)",
-      "confidence": "verified"
+      "confidence": "verified",
+      "freshness": {
+        "status": "stale",
+        "asOf": "2026-02-05",
+        "reviewBy": "2026-06-05",
+        "daysOverdue": 119
+      }
     },
     "hendrycksAgiScore": {
       "value": 58,
@@ -382,7 +457,13 @@
       },
       "asOf": "2025-10-21",
       "source": "Hendrycks et al., A Definition of AGI (arXiv:2510.18212, agidefinition.ai)",
-      "confidence": "provisional"
+      "confidence": "provisional",
+      "freshness": {
+        "status": "stale",
+        "asOf": "2025-10-21",
+        "reviewBy": "2026-04-21",
+        "daysOverdue": 164
+      }
     },
     "epochBenchmarks": {
       "value": 60,
@@ -394,7 +475,13 @@
       },
       "asOf": "2026-07-20",
       "source": "Placeholder pending Epoch adapter (epoch.ai/benchmarks, CC-BY)",
-      "confidence": "judgment"
+      "confidence": "judgment",
+      "freshness": {
+        "status": "stale",
+        "asOf": "2026-07-20",
+        "reviewBy": "2026-08-20",
+        "daysOverdue": 43
+      }
     },
     "arcGap": {
       "value": 12.75,
@@ -412,7 +499,13 @@
       },
       "asOf": "2026-03-31",
       "source": "ARC Prize technical reports (arXiv:2601.10904, arXiv:2603.24621); verify current at arcprize.org",
-      "confidence": "provisional"
+      "confidence": "provisional",
+      "freshness": {
+        "status": "stale",
+        "asOf": "2026-03-31",
+        "reviewBy": "2026-06-30",
+        "daysOverdue": 94
+      }
     },
     "selfLearning": {
       "value": 12,
@@ -421,7 +514,13 @@
       },
       "asOf": "2026-06-05",
       "source": "CL-Bench (arXiv:2606.05661) — Gain barely positive across domains",
-      "confidence": "judgment"
+      "confidence": "judgment",
+      "freshness": {
+        "status": "fresh",
+        "asOf": "2026-06-05",
+        "reviewBy": "2026-12-01",
+        "daysOverdue": -60
+      }
     },
     "realTimeEngagement": {
       "value": 30,
@@ -436,7 +535,13 @@
       },
       "asOf": "2026-07-20",
       "source": "FutureWatch rubric D2 (research/anchor-tables.md); evidence: public voice-mode deployments (M1), group-chat demos (M2 partial)",
-      "confidence": "judgment"
+      "confidence": "judgment",
+      "freshness": {
+        "status": "fresh",
+        "asOf": "2026-07-20",
+        "reviewBy": "2026-10-20",
+        "daysOverdue": -18
+      }
     },
     "agenticAutonomyLevel": {
       "value": 60,
@@ -446,7 +551,13 @@
       },
       "asOf": "2026-07-20",
       "source": "Morris et al. autonomy rubric (arXiv:2311.02462), scored on routine deployment",
-      "confidence": "judgment"
+      "confidence": "judgment",
+      "freshness": {
+        "status": "fresh",
+        "asOf": "2026-07-20",
+        "reviewBy": "2026-10-20",
+        "daysOverdue": -18
+      }
     },
     "anthropicEconIndex": {
       "value": 28.142494558940577,
@@ -456,7 +567,13 @@
       },
       "asOf": "2026-06-26",
       "source": "Anthropic Economic Index (anthropic.com/economic-index), June 2026 report",
-      "confidence": "provisional"
+      "confidence": "provisional",
+      "freshness": {
+        "status": "due",
+        "asOf": "2026-06-26",
+        "reviewBy": "2026-09-26",
+        "daysOverdue": 6
+      }
     },
     "aiIndexEconomy": {
       "value": 42.50000000000001,
@@ -466,7 +583,13 @@
       },
       "asOf": "2026-04-15",
       "source": "Stanford HAI AI Index 2026, Economy chapter (hai.stanford.edu/ai-index)",
-      "confidence": "judgment"
+      "confidence": "judgment",
+      "freshness": {
+        "status": "fresh",
+        "asOf": "2026-04-15",
+        "reviewBy": "2027-04-15",
+        "daysOverdue": -195
+      }
     },
     "friLeapAgi": {
       "value": null,
@@ -476,18 +599,31 @@
       },
       "asOf": "2026-05-11",
       "source": "Forecasting Research Institute — LEAP panel, Wave 8 (forecastingresearch.org); cf. Samotsvety Forecasting (~28% probability of AGI by 2030)",
-      "confidence": "provisional"
+      "confidence": "provisional",
+      "freshness": {
+        "status": "stale",
+        "asOf": "2026-05-11",
+        "reviewBy": "2026-08-11",
+        "daysOverdue": 52
+      }
     },
     "fliSafetyIndex": {
       "value": null,
       "raw": {
-        "existentialGrade": "C-",
+        "existentialGrade": "D+",
         "overallBestGpa": 2.66,
-        "bestLab": "Anthropic"
+        "bestLab": "Anthropic (tied with OpenAI)",
+        "evidence": "Summer 2026 scorecard, Existential Safety row (companies in FLI's order Anthropic, OpenAI, Google DeepMind, Meta, Z.ai, Alibaba Cloud, xAI, DeepSeek, Mistral): D+ D+ D F F F F F F. Overall: Anthropic C+ (2.66), OpenAI C (2.28), Google DeepMind C (2.01)."
       },
       "asOf": "2026-07-15",
       "source": "FLI AI Safety Index, Summer 2026 (futureoflife.org/ai-safety-index-summer-2026)",
-      "confidence": "provisional"
+      "confidence": "provisional",
+      "freshness": {
+        "status": "fresh",
+        "asOf": "2026-07-15",
+        "reviewBy": "2027-01-15",
+        "daysOverdue": -105
+      }
     }
   },
   "errors": [],

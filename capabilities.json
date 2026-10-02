@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-01T21:31:43.730Z",
+  "generatedAt": "2026-10-02T17:21:06.616Z",
   "status": {
     "headline": "No integrated autonomous self-expansion observed. Component capabilities are advancing independently.",
     "lastReviewed": "2026-07-29"
@@ -27,10 +27,10 @@
       "pendingCount": 0
     },
     "operationalAutonomy": {
-      "reliableTaskHorizonMinutes": 66.00683415199325,
-      "reliableTaskHorizonModel": "GPT-5.2",
-      "frontierTaskHorizonMinutes": 352.24235849272736,
-      "frontierTaskHorizonModel": "GPT-5.2",
+      "reliableTaskHorizonMinutes": 69.87292426255917,
+      "reliableTaskHorizonModel": "Claude Opus 4.6",
+      "frontierTaskHorizonMinutes": 718.9097828213035,
+      "frontierTaskHorizonModel": "Claude Opus 4.6",
       "computerUseSuccess": null,
       "terminalTaskSuccess": null,
       "pendingCount": 0
@@ -131,13 +131,69 @@
         "endingBalance": 11181.87,
         "simulationDurationDays": 365
       }
+    },
+    {
+      "id": "6832f698-313f-4c5a-a62a-0eb97ac68444",
+      "capability": "operational_autonomy",
+      "metric": "metr_task_horizon_50pct",
+      "model": "Claude Opus 4.6",
+      "modelProvider": null,
+      "value": 718.9097828213035,
+      "unit": "minutes",
+      "environment": "controlled_lab",
+      "goalOrigin": "externally_assigned",
+      "scaffold": null,
+      "observedAt": "2026-02-05",
+      "publishedAt": null,
+      "sourceKind": "benchmark",
+      "sourceName": "METR eval-analysis-public",
+      "sourceUrl": "https://github.com/METR/eval-analysis-public",
+      "sourceDocumentId": null,
+      "sourceHash": "f851e03bb613303e4642e59c3070c26580ab5da1255711b1177ae76953b2e7f4",
+      "confidence": "high",
+      "evidenceLevel": 2,
+      "humanReviewRequired": false,
+      "reviewStatus": "not_required",
+      "notes": "METR task horizons are the human-expert duration of tasks at a given model success probability — not literal uninterrupted agent runtime.",
+      "rawPayloadReference": null,
+      "extra": {
+        "suite": "TH1.1 + TH1.0 legacy"
+      }
+    },
+    {
+      "id": "8f4dd03e-da0c-46cf-bfa1-79f542dd97e3",
+      "capability": "operational_autonomy",
+      "metric": "metr_task_horizon_80pct",
+      "model": "Claude Opus 4.6",
+      "modelProvider": null,
+      "value": 69.87292426255917,
+      "unit": "minutes",
+      "environment": "controlled_lab",
+      "goalOrigin": "externally_assigned",
+      "scaffold": null,
+      "observedAt": "2026-02-05",
+      "publishedAt": null,
+      "sourceKind": "benchmark",
+      "sourceName": "METR eval-analysis-public",
+      "sourceUrl": "https://github.com/METR/eval-analysis-public",
+      "sourceDocumentId": null,
+      "sourceHash": "c525f7c2b277a3b689cfb32e97a27299874a8b8256f6e8dfbca39b9ca958e3a6",
+      "confidence": "high",
+      "evidenceLevel": 2,
+      "humanReviewRequired": false,
+      "reviewStatus": "not_required",
+      "notes": "METR task horizons are the human-expert duration of tasks at a given model success probability — not literal uninterrupted agent runtime.",
+      "rawPayloadReference": null,
+      "extra": {
+        "suite": "TH1.1 + TH1.0 legacy"
+      }
     }
   ],
   "sourceHealth": [
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 4092,
+      "fetchMs": 3128,
       "candidateCount": 2,
       "pending": false,
       "pendingReason": null
@@ -145,7 +201,7 @@
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 0,
+      "fetchMs": 1,
       "candidateCount": 1,
       "pending": false,
       "pendingReason": null
@@ -187,8 +243,8 @@
   "ingestion": {
     "recordsSeen": 3,
     "recordsNormalized": 3,
-    "recordsSaved": 0,
-    "recordsDeduplicated": 3,
+    "recordsSaved": 2,
+    "recordsDeduplicated": 1,
     "recordsQuarantined": 0,
     "pendingReviewCount": 0
   }
