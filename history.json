@@ -3,597 +3,1232 @@
   "points": [
     {
       "date": "2026-07-29",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
-      }
-    },
-    {
-      "date": "2026-07-29",
-      "composite": 46.5,
-      "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
-        "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-07-30",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-07-31",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-01",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-02",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-03",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-04",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-05",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
-      "date": "2026-08-07",
-      "composite": 46.5,
+      "date": "2026-08-06",
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true
+    },
+    {
+      "date": "2026-08-07",
+      "composite": 53.3,
+      "pillars": {
+        "capability": 44.7,
+        "autonomy": 74.6,
+        "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-08",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-09",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-10",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-11",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-12",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-13",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-14",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-15",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-16",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-17",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-18",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-19",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-20",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-21",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-22",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-23",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-24",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-25",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-26",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
+    },
+    {
+      "date": "2026-08-27",
+      "composite": 53.3,
+      "pillars": {
+        "capability": 44.7,
+        "autonomy": 74.6,
+        "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true
     },
     {
       "date": "2026-08-28",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-29",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
-      }
-    },
-    {
-      "date": "2026-08-29",
-      "composite": 46.5,
-      "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
-        "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-30",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-08-31",
-      "composite": 46.5,
+      "composite": 53.3,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 44.7,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-01",
-      "composite": 46.5,
+      "composite": 53.6,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 45.3,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-02",
-      "composite": 46.5,
+      "composite": 56.5,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 51.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-03",
-      "composite": 46.5,
+      "composite": 56.9,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 52.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-04",
-      "composite": 46.5,
+      "composite": 56.9,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 52.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-05",
-      "composite": 46.5,
+      "composite": 56.9,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 52.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-06",
-      "composite": 46.5,
+      "composite": 56.9,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 52.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-07",
-      "composite": 46.5,
+      "composite": 56.9,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 52.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-08",
-      "composite": 46.5,
+      "composite": 56.9,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 52.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-09",
-      "composite": 46.5,
+      "composite": 56.9,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 52.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-10",
-      "composite": 46.5,
+      "composite": 56.9,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 52.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-11",
-      "composite": 46.5,
+      "composite": 56.9,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 52.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-12",
-      "composite": 46.5,
+      "composite": 56.9,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 52.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-13",
-      "composite": 46.5,
+      "composite": 56.9,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 52.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-14",
-      "composite": 46.5,
+      "composite": 56.9,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 52.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-15",
-      "composite": 46.5,
+      "composite": 56.9,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 52.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-16",
-      "composite": 46.5,
+      "composite": 56.9,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 52.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-17",
-      "composite": 46.5,
+      "composite": 56.9,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 52.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-18",
-      "composite": 46.5,
+      "composite": 56.9,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 52.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-19",
-      "composite": 46.5,
+      "composite": 56.9,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 52.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-20",
-      "composite": 46.5,
+      "composite": 56.9,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 52.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-21",
-      "composite": 46.5,
+      "composite": 56.9,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 52.8,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-22",
-      "composite": 46.5,
+      "composite": 57,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 53,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-23",
-      "composite": 46.5,
+      "composite": 57,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 53,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-24",
-      "composite": 46.5,
+      "composite": 57,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 53,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-25",
-      "composite": 46.5,
+      "composite": 57,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 53,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-26",
-      "composite": 46.5,
+      "composite": 57,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 53,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-27",
-      "composite": 46.5,
+      "composite": 57,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 53,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-28",
-      "composite": 46.5,
+      "composite": 57,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 53,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-29",
-      "composite": 46.5,
+      "composite": 57,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 53,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-09-30",
-      "composite": 46.5,
+      "composite": 57,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 53,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-10-01",
-      "composite": 46.5,
+      "composite": 57,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 68.3,
+        "capability": 53,
+        "autonomy": 74.6,
         "deployment": 35.3
+      },
+      "coverage": 1,
+      "backfilled": true,
+      "published": {
+        "composite": 46.5,
+        "pillars": {
+          "capability": 34.6,
+          "autonomy": 68.3,
+          "deployment": 35.3
+        }
       }
     },
     {
       "date": "2026-10-02",
-      "composite": 48,
+      "composite": 57,
       "pillars": {
-        "capability": 34.6,
-        "autonomy": 72.4,
+        "capability": 53,
+        "autonomy": 74.6,
         "deployment": 35.3
-      }
+      },
+      "rebaseline": "2026-10-input-refresh"
     }
   ]
 }

@@ -1,31 +1,31 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-02T17:21:03.261Z",
+  "generatedAt": "2026-10-02T19:31:29.902Z",
   "composite": {
-    "value": 48,
+    "value": 57,
     "coverage": 1
   },
   "pillars": {
     "capability": {
       "name": "capability",
       "weight": 0.45,
-      "score": 34.6,
+      "score": 53,
       "coverage": 1,
       "indicators": [
         {
-          "slug": "hendrycksAgiScore",
+          "slug": "eciCapability",
           "weight": 0.2,
-          "score": 58
+          "score": 78.58855246785566
         },
         {
           "slug": "epochBenchmarks",
           "weight": 0.2,
-          "score": 60
+          "score": 81.93137173167078
         },
         {
           "slug": "arcGap",
           "weight": 0.2,
-          "score": 12.75
+          "score": 62.71280210060628
         },
         {
           "slug": "selfLearning",
@@ -42,13 +42,13 @@
     "autonomy": {
       "name": "autonomy",
       "weight": 0.35,
-      "score": 72.4,
+      "score": 74.6,
       "coverage": 1,
       "indicators": [
         {
           "slug": "metrTimeHorizon",
           "weight": 0.7,
-          "score": 77.78217288986386
+          "score": 80.91351675816124
         },
         {
           "slug": "agenticAutonomyLevel",
@@ -92,98 +92,88 @@
   "trajectory": {
     "frontierSeries": [
       {
-        "date": "2019-02-14",
-        "value": 0.05367579494023331,
-        "alias": "GPT-2"
-      },
-      {
-        "date": "2020-05-28",
-        "value": 0.14584746498544598,
-        "alias": "davinci-002 (GPT-3)"
-      },
-      {
-        "date": "2022-03-15",
-        "value": 0.60021288828414,
-        "alias": "gpt-3.5-turbo-instruct"
+        "date": "2019-11-05",
+        "value": 0.053778,
+        "alias": "gpt2-xl"
       },
       {
         "date": "2023-03-14",
-        "value": 3.987227600429893,
-        "alias": "GPT-4 0314"
-      },
-      {
-        "date": "2023-11-06",
-        "value": 4.044903243695019,
-        "alias": "GPT-4 1106"
+        "value": 5.364045,
+        "alias": "GPT-4 (Mar 2023)"
       },
       {
         "date": "2024-01-25",
-        "value": 6.347108815839549,
-        "alias": "GPT-4 0125"
+        "value": 5.366063,
+        "alias": "GPT-4 Turbo Preview (January 2024)"
       },
       {
-        "date": "2024-05-13",
-        "value": 6.990738069989227,
-        "alias": "GPT-4o"
+        "date": "2024-04-09",
+        "value": 6.567339,
+        "alias": "gpt-4-turbo-2024-04-09"
       },
       {
         "date": "2024-06-20",
-        "value": 11.394299643906457,
-        "alias": "Claude 3.5 Sonnet (Old)"
+        "value": 11.395377,
+        "alias": "Claude 3.5 Sonnet (Jun 2024)"
       },
       {
         "date": "2024-09-12",
-        "value": 20.329515581622992,
+        "value": 20.326586,
         "alias": "o1-preview"
       },
       {
         "date": "2024-10-22",
-        "value": 20.523230555175605,
-        "alias": "Claude 3.5 Sonnet (New)"
+        "value": 20.522872,
+        "alias": "Claude 3.5 Sonnet (Oct 2024)"
       },
       {
-        "date": "2024-12-05",
-        "value": 38.83091858287572,
-        "alias": "o1"
+        "date": "2024-12-17",
+        "value": 38.831588,
+        "alias": "o1 (medium)"
       },
       {
         "date": "2025-02-24",
-        "value": 60.38778032401745,
-        "alias": "Claude 3.7 Sonnet"
+        "value": 60.388937,
+        "alias": "claude-3-7-sonnet-20250219"
       },
       {
         "date": "2025-04-16",
-        "value": 119.73250130874918,
+        "value": 119.732634,
         "alias": "o3"
       },
       {
         "date": "2025-08-07",
-        "value": 202.99468215849848,
-        "alias": "GPT-5"
+        "value": 203.012577,
+        "alias": "GPT-5 (high)"
       },
       {
         "date": "2025-11-18",
-        "value": 224.34382043857565,
-        "alias": "Gemini 3 Pro"
+        "value": 224.325884,
+        "alias": "Gemini 3 Pro Preview"
       },
       {
         "date": "2025-11-24",
-        "value": 292.9994786748955,
+        "value": 292.994594,
         "alias": "Claude Opus 4.5"
       },
       {
         "date": "2025-12-11",
-        "value": 352.24235849272736,
-        "alias": "GPT-5.2"
+        "value": 352.249302,
+        "alias": "GPT-5.2 (high)"
       },
       {
         "date": "2026-02-05",
-        "value": 718.9097828213035,
+        "value": 718.80683,
         "alias": "Claude Opus 4.6"
+      },
+      {
+        "date": "2026-04-07",
+        "value": 1044.780145,
+        "alias": "Claude Mythos Preview (Early)"
       }
     ],
     "metrDoublingDaysSince2023": 128,
-    "metrDoublingDaysAll": 188
+    "metrDoublingDaysAll": 166
   },
   "stories": [
     {
@@ -263,54 +253,50 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 4244,
+      "fetchMs": 476,
+      "indicatorCount": 1
+    },
+    {
+      "source": "epoch",
+      "ok": true,
+      "fetchMs": 2,
+      "indicatorCount": 2
+    },
+    {
+      "source": "arc",
+      "ok": true,
+      "fetchMs": 147,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 1,
-      "indicatorCount": 10
+      "fetchMs": 0,
+      "indicatorCount": 7
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1447,
+      "fetchMs": 728,
       "indicatorCount": 0
     }
   ],
   "freshness": {
     "scored": {
       "total": 9,
-      "fresh": 4,
+      "fresh": 7,
       "due": 1,
-      "stale": 4,
+      "stale": 1,
       "unknown": 0
     },
     "overdue": [
       {
-        "slug": "hendrycksAgiScore",
-        "scored": true,
-        "status": "stale",
-        "daysOverdue": 164,
-        "asOf": "2025-10-21",
-        "reviewBy": "2026-04-21"
-      },
-      {
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 119,
-        "asOf": "2026-02-05",
-        "reviewBy": "2026-06-05"
-      },
-      {
-        "slug": "arcGap",
-        "scored": true,
-        "status": "stale",
-        "daysOverdue": 94,
-        "asOf": "2026-03-31",
-        "reviewBy": "2026-06-30"
+        "daysOverdue": 58,
+        "asOf": "2026-04-07",
+        "reviewBy": "2026-08-05"
       },
       {
         "slug": "friLeapAgi",
@@ -319,14 +305,6 @@
         "daysOverdue": 52,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
-      },
-      {
-        "slug": "epochBenchmarks",
-        "scored": true,
-        "status": "stale",
-        "daysOverdue": 43,
-        "asOf": "2026-07-20",
-        "reviewBy": "2026-08-20"
       },
       {
         "slug": "anthropicEconIndex",
@@ -340,171 +318,228 @@
   },
   "indicators": {
     "metrTimeHorizon": {
-      "value": 77.78217288986386,
+      "value": 80.91351675816124,
       "raw": {
-        "p50Minutes": 718.9097828213035,
-        "frontierModel": "Claude Opus 4.6",
-        "suite": "TH1.1 + TH1.0 legacy",
-        "modelCount": 37,
+        "p50Minutes": 1044.780145,
+        "frontierModel": "Claude Mythos Preview (Early)",
+        "p80Minutes": 185.911829,
+        "ciLowMinutes": 508.876789,
+        "ciHighMinutes": 3304.261235,
+        "aboveSuiteCeiling": true,
+        "suite": "METR Time Horizon (via Epoch AI)",
+        "modelCount": 48,
         "frontierSeries": [
           {
-            "date": "2019-02-14",
-            "value": 0.05367579494023331,
-            "alias": "GPT-2"
-          },
-          {
-            "date": "2020-05-28",
-            "value": 0.14584746498544598,
-            "alias": "davinci-002 (GPT-3)"
-          },
-          {
-            "date": "2022-03-15",
-            "value": 0.60021288828414,
-            "alias": "gpt-3.5-turbo-instruct"
+            "date": "2019-11-05",
+            "value": 0.053778,
+            "alias": "gpt2-xl"
           },
           {
             "date": "2023-03-14",
-            "value": 3.987227600429893,
-            "alias": "GPT-4 0314"
-          },
-          {
-            "date": "2023-11-06",
-            "value": 4.044903243695019,
-            "alias": "GPT-4 1106"
+            "value": 5.364045,
+            "alias": "GPT-4 (Mar 2023)"
           },
           {
             "date": "2024-01-25",
-            "value": 6.347108815839549,
-            "alias": "GPT-4 0125"
+            "value": 5.366063,
+            "alias": "GPT-4 Turbo Preview (January 2024)"
           },
           {
-            "date": "2024-05-13",
-            "value": 6.990738069989227,
-            "alias": "GPT-4o"
+            "date": "2024-04-09",
+            "value": 6.567339,
+            "alias": "gpt-4-turbo-2024-04-09"
           },
           {
             "date": "2024-06-20",
-            "value": 11.394299643906457,
-            "alias": "Claude 3.5 Sonnet (Old)"
+            "value": 11.395377,
+            "alias": "Claude 3.5 Sonnet (Jun 2024)"
           },
           {
             "date": "2024-09-12",
-            "value": 20.329515581622992,
+            "value": 20.326586,
             "alias": "o1-preview"
           },
           {
             "date": "2024-10-22",
-            "value": 20.523230555175605,
-            "alias": "Claude 3.5 Sonnet (New)"
+            "value": 20.522872,
+            "alias": "Claude 3.5 Sonnet (Oct 2024)"
           },
           {
-            "date": "2024-12-05",
-            "value": 38.83091858287572,
-            "alias": "o1"
+            "date": "2024-12-17",
+            "value": 38.831588,
+            "alias": "o1 (medium)"
           },
           {
             "date": "2025-02-24",
-            "value": 60.38778032401745,
-            "alias": "Claude 3.7 Sonnet"
+            "value": 60.388937,
+            "alias": "claude-3-7-sonnet-20250219"
           },
           {
             "date": "2025-04-16",
-            "value": 119.73250130874918,
+            "value": 119.732634,
             "alias": "o3"
           },
           {
             "date": "2025-08-07",
-            "value": 202.99468215849848,
-            "alias": "GPT-5"
+            "value": 203.012577,
+            "alias": "GPT-5 (high)"
           },
           {
             "date": "2025-11-18",
-            "value": 224.34382043857565,
-            "alias": "Gemini 3 Pro"
+            "value": 224.325884,
+            "alias": "Gemini 3 Pro Preview"
           },
           {
             "date": "2025-11-24",
-            "value": 292.9994786748955,
+            "value": 292.994594,
             "alias": "Claude Opus 4.5"
           },
           {
             "date": "2025-12-11",
-            "value": 352.24235849272736,
-            "alias": "GPT-5.2"
+            "value": 352.249302,
+            "alias": "GPT-5.2 (high)"
           },
           {
             "date": "2026-02-05",
-            "value": 718.9097828213035,
+            "value": 718.80683,
             "alias": "Claude Opus 4.6"
+          },
+          {
+            "date": "2026-04-07",
+            "value": 1044.780145,
+            "alias": "Claude Mythos Preview (Early)"
           }
         ]
       },
-      "asOf": "2026-02-05",
-      "source": "METR eval-analysis-public (github.com/METR/eval-analysis-public)",
+      "asOf": "2026-04-07",
+      "source": "METR time horizons (metr.org; github.com/METR/eval-analysis-public), mirrored by Epoch AI (CC-BY 4.0)",
       "confidence": "verified",
       "freshness": {
         "status": "stale",
-        "asOf": "2026-02-05",
-        "reviewBy": "2026-06-05",
-        "daysOverdue": 119
+        "asOf": "2026-04-07",
+        "reviewBy": "2026-08-05",
+        "daysOverdue": 58
       }
     },
-    "hendrycksAgiScore": {
-      "value": 58,
+    "eciCapability": {
+      "value": 78.58855246785566,
       "raw": {
-        "publishedPct": 58,
-        "model": "GPT-5"
+        "eci": 167.35,
+        "model": "Claude Opus 5.5",
+        "modelDate": "2026-09-22",
+        "ciLow": 164,
+        "ciHigh": 172,
+        "modelCount": 270
       },
-      "asOf": "2025-10-21",
-      "source": "Hendrycks et al., A Definition of AGI (arXiv:2510.18212, agidefinition.ai)",
-      "confidence": "provisional",
+      "asOf": "2026-09-28",
+      "source": "Epoch AI — Capabilities & benchmarking (epoch.ai/benchmarks, CC-BY 4.0) — Epoch Capabilities Index",
+      "confidence": "verified",
       "freshness": {
-        "status": "stale",
-        "asOf": "2025-10-21",
-        "reviewBy": "2026-04-21",
-        "daysOverdue": 164
+        "status": "fresh",
+        "asOf": "2026-09-28",
+        "reviewBy": "2026-11-12",
+        "daysOverdue": -41
       }
     },
     "epochBenchmarks": {
-      "value": 60,
+      "value": 81.93137173167078,
       "raw": {
+        "basket": "B-2026.1",
         "fractions": [
-          0.6
+          0.9577020202020202,
+          0.8347107438016529,
+          0.9368421052631579,
+          0.5479999999999999
         ],
-        "basket": "PROVISIONAL-SINGLE-VALUE"
+        "members": [
+          {
+            "key": "gpqa",
+            "label": "GPQA Diamond",
+            "score": 0.9577020202020202,
+            "model": "GPT-6 Astra (max)",
+            "date": "2026-09-03",
+            "rows": 317,
+            "saturated": true
+          },
+          {
+            "key": "swe",
+            "label": "SWE-bench Verified",
+            "score": 0.8347107438016529,
+            "model": "Claude Opus 4.7 (max)",
+            "date": "2026-04-16",
+            "rows": 35,
+            "saturated": false
+          },
+          {
+            "key": "fm",
+            "label": "FrontierMath Tiers 1–3 (v2)",
+            "score": 0.9368421052631579,
+            "model": "GPT-6 Astra (max)",
+            "date": "2026-09-03",
+            "rows": 114,
+            "saturated": true
+          },
+          {
+            "key": "hle",
+            "label": "Humanity's Last Exam",
+            "score": 0.5479999999999999,
+            "model": "GPT 6 Astra",
+            "date": "2026-09-03",
+            "rows": 54,
+            "saturated": false
+          }
+        ],
+        "saturated": [
+          "GPQA Diamond",
+          "FrontierMath Tiers 1–3 (v2)"
+        ]
       },
-      "asOf": "2026-07-20",
-      "source": "Placeholder pending Epoch adapter (epoch.ai/benchmarks, CC-BY)",
-      "confidence": "judgment",
+      "asOf": "2026-09-03",
+      "source": "Epoch AI — Capabilities & benchmarking (epoch.ai/benchmarks, CC-BY 4.0) — frontier basket B-2026.1",
+      "confidence": "verified",
       "freshness": {
-        "status": "stale",
-        "asOf": "2026-07-20",
-        "reviewBy": "2026-08-20",
-        "daysOverdue": 43
+        "status": "fresh",
+        "asOf": "2026-09-03",
+        "reviewBy": "2026-12-02",
+        "daysOverdue": -61
       }
     },
     "arcGap": {
-      "value": 12.75,
+      "value": 62.71280210060628,
       "raw": {
         "generations": [
           {
             "name": "ARC-AGI-2",
-            "frontierOverHuman": 0.25
+            "dataset": "Semi-Private",
+            "frontierScore": 0.95,
+            "humanScore": 1,
+            "frontierOverHuman": 0.95,
+            "model": "openai-gpt-6-astra-max",
+            "harness": "standard"
           },
           {
             "name": "ARC-AGI-3",
-            "frontierOverHuman": 0.005
+            "dataset": "Semi-Private",
+            "frontierScore": 0.6271280210060628,
+            "humanScore": 1,
+            "frontierOverHuman": 0.6271280210060628,
+            "model": "GPT-6 Astra (Max)",
+            "harness": "standard",
+            "providerAdapter": {
+              "score": 0.99945712321257,
+              "model": "GPT-6 Astra - Provider Adapter (High)"
+            }
           }
         ]
       },
-      "asOf": "2026-03-31",
-      "source": "ARC Prize technical reports (arXiv:2601.10904, arXiv:2603.24621); verify current at arcprize.org",
-      "confidence": "provisional",
+      "asOf": "2026-09-30",
+      "source": "ARC Prize leaderboard (arcprize.org/leaderboard) — ARC-AGI-2 Semi-Private, ARC-AGI-3 Standard harness",
+      "confidence": "verified",
       "freshness": {
-        "status": "stale",
-        "asOf": "2026-03-31",
-        "reviewBy": "2026-06-30",
-        "daysOverdue": 94
+        "status": "fresh",
+        "asOf": "2026-09-30",
+        "reviewBy": "2026-11-14",
+        "daysOverdue": -43
       }
     },
     "selfLearning": {
@@ -628,6 +663,20 @@
   },
   "errors": [],
   "escalation": {
-    "flagged": false
-  }
+    "flagged": false,
+    "rebaselined": "2026-10-input-refresh",
+    "previous": 48,
+    "current": 57,
+    "note": "Composite moved 48 → 57; accepted as declared re-baseline \"2026-10-input-refresh\"."
+  },
+  "rebaselines": [
+    {
+      "id": "2026-10-input-refresh",
+      "date": "2026-10-02",
+      "title": "Inputs refreshed",
+      "note": "Four capability and autonomy inputs moved from hand-entered values to live feeds — the Epoch Capabilities Index (replacing a score last updated October 2025), Epoch's benchmark basket, the ARC Prize leaderboard, and METR's time horizons — and the 2 October METR and FLI corrections were applied. The reading rose accordingly; the world did not jump overnight. History since 29 July has been recomputed on the same basis (dashed on the chart); the values originally published are kept in history.json.",
+      "from": 48,
+      "to": 57
+    }
+  ]
 }
