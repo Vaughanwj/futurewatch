@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-04T19:52:40.720Z",
+  "generatedAt": "2026-10-05T23:01:36.872Z",
   "composite": {
     "value": 57,
     "coverage": 1
@@ -15,7 +15,7 @@
         {
           "slug": "eciCapability",
           "weight": 0.2,
-          "score": 78.58855246785566
+          "score": 78.56366652841146
         },
         {
           "slug": "epochBenchmarks",
@@ -177,6 +177,30 @@
   },
   "stories": [
     {
+      "title": "Import AI 475: Swarm scaling; Google DeepMind watermarks biology; and the AI science economy",
+      "link": "https://jack-clark.net/2026/10/05/import-ai-475-swarm-scaling-google-deepmind-watermarks-biology-and-the-ai-science-economy/",
+      "published": "Mon, 05 Oct 2026 12:32:30 +0000",
+      "feed": "Import AI"
+    },
+    {
+      "title": "MintFlow: Minimal Trajectory Intervention for Constrained Flow Matching",
+      "link": "https://arxiv.org/abs/2610.02260",
+      "published": "Mon, 05 Oct 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses",
+      "link": "https://arxiv.org/abs/2610.02267",
+      "published": "Mon, 05 Oct 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "The AI Risk Observatory: What Can We Learn from AI Disclosures in Annual Reports About Societal Resilience?",
+      "link": "https://arxiv.org/abs/2610.02281",
+      "published": "Mon, 05 Oct 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "Chris Painter's testimony to the U.S. Senate on AI agent incidents",
       "link": "https://metr.org/blog/2026-09-30-chris-painter-senate-testimony/",
       "published": "Wed, 30 Sep 2026 00:00:00 -0700",
@@ -213,12 +237,6 @@
       "feed": "FutureWatch"
     },
     {
-      "title": "Import AI 472: DeepMind&#8217;s cheating math agents; populist AI policies; and Forethought theorizes a nightwatchman",
-      "link": "https://jack-clark.net/2026/09/07/import-ai-472-deepminds-cheating-math-agents-populist-ai-policies-and-forethought-theorizes-a-nightwatchman/",
-      "published": "Mon, 07 Sep 2026 12:26:31 +0000",
-      "feed": "Import AI"
-    },
-    {
       "title": "What started out as human, transcended to divine.",
       "link": "https://www.youtube.com/shorts/ignOaAqspHE",
       "published": "2026-09-07T05:00:19+00:00",
@@ -235,19 +253,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 312,
+      "fetchMs": 366,
       "indicatorCount": 1
     },
     {
       "source": "epoch",
       "ok": true,
-      "fetchMs": 1,
+      "fetchMs": 3,
       "indicatorCount": 2
     },
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 422,
+      "fetchMs": 262,
       "indicatorCount": 1
     },
     {
@@ -259,7 +277,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1584,
+      "fetchMs": 1439,
       "indicatorCount": 0
     }
   ],
@@ -276,7 +294,7 @@
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 60,
+        "daysOverdue": 61,
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05"
       },
@@ -284,7 +302,7 @@
         "slug": "friLeapAgi",
         "scored": false,
         "status": "stale",
-        "daysOverdue": 54,
+        "daysOverdue": 55,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
       },
@@ -292,7 +310,7 @@
         "slug": "anthropicEconIndex",
         "scored": true,
         "status": "due",
-        "daysOverdue": 8,
+        "daysOverdue": 9,
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26"
       }
@@ -400,26 +418,26 @@
         "status": "stale",
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05",
-        "daysOverdue": 60
+        "daysOverdue": 61
       }
     },
     "eciCapability": {
-      "value": 78.58855246785566,
+      "value": 78.56366652841146,
       "raw": {
-        "eci": 167.35,
+        "eci": 167.33,
         "model": "Claude Opus 5.5",
         "modelDate": "2026-09-22",
-        "ciLow": 164,
-        "ciHigh": 172,
-        "modelCount": 270
+        "ciLow": 164.06,
+        "ciHigh": 171.68,
+        "modelCount": 274
       },
-      "asOf": "2026-09-28",
+      "asOf": "2026-09-29",
       "source": "Epoch AI — Capabilities & benchmarking (epoch.ai/benchmarks, CC-BY 4.0) — Epoch Capabilities Index",
       "confidence": "verified",
       "freshness": {
         "status": "fresh",
-        "asOf": "2026-09-28",
-        "reviewBy": "2026-11-12",
+        "asOf": "2026-09-29",
+        "reviewBy": "2026-11-13",
         "daysOverdue": -39
       }
     },
@@ -483,7 +501,7 @@
         "status": "fresh",
         "asOf": "2026-09-03",
         "reviewBy": "2026-12-02",
-        "daysOverdue": -59
+        "daysOverdue": -58
       }
     },
     "arcGap": {
@@ -521,7 +539,7 @@
         "status": "fresh",
         "asOf": "2026-09-30",
         "reviewBy": "2026-11-14",
-        "daysOverdue": -41
+        "daysOverdue": -40
       }
     },
     "selfLearning": {
@@ -536,7 +554,7 @@
         "status": "fresh",
         "asOf": "2026-06-05",
         "reviewBy": "2026-12-01",
-        "daysOverdue": -58
+        "daysOverdue": -57
       }
     },
     "realTimeEngagement": {
@@ -557,7 +575,7 @@
         "status": "fresh",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": -16
+        "daysOverdue": -15
       }
     },
     "agenticAutonomyLevel": {
@@ -573,7 +591,7 @@
         "status": "fresh",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": -16
+        "daysOverdue": -15
       }
     },
     "anthropicEconIndex": {
@@ -589,7 +607,7 @@
         "status": "due",
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26",
-        "daysOverdue": 8
+        "daysOverdue": 9
       }
     },
     "aiIndexEconomy": {
@@ -605,7 +623,7 @@
         "status": "fresh",
         "asOf": "2026-04-15",
         "reviewBy": "2027-04-15",
-        "daysOverdue": -193
+        "daysOverdue": -192
       }
     },
     "friLeapAgi": {
@@ -621,7 +639,7 @@
         "status": "stale",
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11",
-        "daysOverdue": 54
+        "daysOverdue": 55
       }
     },
     "fliSafetyIndex": {
@@ -639,7 +657,7 @@
         "status": "fresh",
         "asOf": "2026-07-15",
         "reviewBy": "2027-01-15",
-        "daysOverdue": -103
+        "daysOverdue": -102
       }
     }
   },
