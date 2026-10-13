@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-12T23:24:50.048Z",
+  "generatedAt": "2026-10-13T21:41:26.712Z",
   "composite": {
-    "value": 57,
+    "value": 57.1,
     "coverage": 1
   },
   "pillars": {
     "capability": {
       "name": "capability",
       "weight": 0.45,
-      "score": 53,
+      "score": 53.1,
       "coverage": 1,
       "indicators": [
         {
@@ -20,7 +20,7 @@
         {
           "slug": "epochBenchmarks",
           "weight": 0.2,
-          "score": 81.93137173167078
+          "score": 82.08920001449907
         },
         {
           "slug": "arcGap",
@@ -188,24 +188,6 @@
       "feed": "Import AI"
     },
     {
-      "title": "Faithfulness Without Anchors: A Position Paper on the Structural Misalignments of Explainable AI Faithfulness Metrics for Feature Importance",
-      "link": "https://arxiv.org/abs/2610.12493",
-      "published": "Mon, 12 Oct 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "EliteTable: Self-Improving Program Search for Executable Control Policies",
-      "link": "https://arxiv.org/abs/2610.12536",
-      "published": "Mon, 12 Oct 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Equal-Budget Monte Carlo Tree Search versus Randomized-Restart List Scheduling for DAG Workflows: A Controlled Equal-Budget Computational Study",
-      "link": "https://arxiv.org/abs/2610.12542",
-      "published": "Mon, 12 Oct 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
       "title": "AI systems could cover up misbehavior",
       "link": "https://metr.org/blog/2026-10-06-ai-systems-could-cover-up-misbehavior/",
       "published": "Tue, 06 Oct 2026 00:00:00 -0700",
@@ -234,43 +216,25 @@
       "link": "https://metr.org/notes/2026-09-27-implementing-a-basic-blocking-action-monitor/",
       "published": "Sun, 27 Sep 2026 00:00:00 -0700",
       "feed": "metr.org"
-    },
-    {
-      "title": "Nothing left to love here. Tell the world goodbye.",
-      "link": "https://www.youtube.com/shorts/DNcNz5M2iew",
-      "published": "2026-09-08T05:00:11+00:00",
-      "feed": "FutureWatch"
-    },
-    {
-      "title": "What started out as human, transcended to divine.",
-      "link": "https://www.youtube.com/shorts/ignOaAqspHE",
-      "published": "2026-09-07T05:00:19+00:00",
-      "feed": "FutureWatch"
-    },
-    {
-      "title": "A brand new body, about to be yours 🎶",
-      "link": "https://www.youtube.com/shorts/mnXXAsUxwAw",
-      "published": "2026-09-04T05:00:27+00:00",
-      "feed": "FutureWatch"
     }
   ],
   "sourceHealth": [
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 481,
+      "fetchMs": 1744,
       "indicatorCount": 1
     },
     {
       "source": "epoch",
       "ok": true,
-      "fetchMs": 1,
+      "fetchMs": 2,
       "indicatorCount": 2
     },
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 419,
+      "fetchMs": 619,
       "indicatorCount": 1
     },
     {
@@ -281,8 +245,8 @@
     },
     {
       "source": "rss",
-      "ok": true,
-      "fetchMs": 1057,
+      "ok": false,
+      "fetchMs": 836,
       "indicatorCount": 0
     }
   ],
@@ -299,7 +263,7 @@
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 68,
+        "daysOverdue": 69,
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05"
       },
@@ -307,7 +271,7 @@
         "slug": "friLeapAgi",
         "scored": false,
         "status": "stale",
-        "daysOverdue": 62,
+        "daysOverdue": 63,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
       },
@@ -315,7 +279,7 @@
         "slug": "anthropicEconIndex",
         "scored": true,
         "status": "due",
-        "daysOverdue": 16,
+        "daysOverdue": 17,
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26"
       }
@@ -428,7 +392,7 @@
         "status": "stale",
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05",
-        "daysOverdue": 68
+        "daysOverdue": 69
       }
     },
     "eciCapability": {
@@ -448,15 +412,15 @@
         "status": "fresh",
         "asOf": "2026-09-29",
         "reviewBy": "2026-11-13",
-        "daysOverdue": -32
+        "daysOverdue": -31
       }
     },
     "epochBenchmarks": {
-      "value": 81.93137173167078,
+      "value": 82.08920001449907,
       "raw": {
         "basket": "B-2026.1",
         "fractions": [
-          0.9577020202020202,
+          0.9640151515151515,
           0.8347107438016529,
           0.9368421052631579,
           0.5479999999999999
@@ -465,10 +429,10 @@
           {
             "key": "gpqa",
             "label": "GPQA Diamond",
-            "score": 0.9577020202020202,
-            "model": "GPT-6 Astra (max)",
-            "date": "2026-09-03",
-            "rows": 319,
+            "score": 0.9640151515151515,
+            "model": "Gemini 4 Argon (high)",
+            "date": "2026-09-30",
+            "rows": 321,
             "saturated": true
           },
           {
@@ -504,14 +468,14 @@
           "FrontierMath Tiers 1–3 (v2)"
         ]
       },
-      "asOf": "2026-09-03",
+      "asOf": "2026-09-30",
       "source": "Epoch AI — Capabilities & benchmarking (epoch.ai/benchmarks, CC-BY 4.0) — frontier basket B-2026.1",
       "confidence": "verified",
       "freshness": {
         "status": "fresh",
-        "asOf": "2026-09-03",
-        "reviewBy": "2026-12-02",
-        "daysOverdue": -51
+        "asOf": "2026-09-30",
+        "reviewBy": "2026-12-29",
+        "daysOverdue": -77
       }
     },
     "arcGap": {
@@ -542,14 +506,14 @@
           }
         ]
       },
-      "asOf": "2026-10-05",
+      "asOf": "2026-10-13",
       "source": "ARC Prize leaderboard (arcprize.org/leaderboard) — ARC-AGI-2 Semi-Private, ARC-AGI-3 Standard harness",
       "confidence": "verified",
       "freshness": {
         "status": "fresh",
-        "asOf": "2026-10-05",
-        "reviewBy": "2026-11-19",
-        "daysOverdue": -38
+        "asOf": "2026-10-13",
+        "reviewBy": "2026-11-27",
+        "daysOverdue": -45
       }
     },
     "selfLearning": {
@@ -564,7 +528,7 @@
         "status": "fresh",
         "asOf": "2026-06-05",
         "reviewBy": "2026-12-01",
-        "daysOverdue": -50
+        "daysOverdue": -49
       }
     },
     "realTimeEngagement": {
@@ -585,7 +549,7 @@
         "status": "fresh",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": -8
+        "daysOverdue": -7
       }
     },
     "agenticAutonomyLevel": {
@@ -601,7 +565,7 @@
         "status": "fresh",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": -8
+        "daysOverdue": -7
       }
     },
     "anthropicEconIndex": {
@@ -617,7 +581,7 @@
         "status": "due",
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26",
-        "daysOverdue": 16
+        "daysOverdue": 17
       }
     },
     "aiIndexEconomy": {
@@ -633,7 +597,7 @@
         "status": "fresh",
         "asOf": "2026-04-15",
         "reviewBy": "2027-04-15",
-        "daysOverdue": -185
+        "daysOverdue": -184
       }
     },
     "friLeapAgi": {
@@ -649,7 +613,7 @@
         "status": "stale",
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11",
-        "daysOverdue": 62
+        "daysOverdue": 63
       }
     },
     "fliSafetyIndex": {
@@ -667,11 +631,13 @@
         "status": "fresh",
         "asOf": "2026-07-15",
         "reviewBy": "2027-01-15",
-        "daysOverdue": -95
+        "daysOverdue": -94
       }
     }
   },
-  "errors": [],
+  "errors": [
+    "rss FutureWatch: Request failed with status code 404"
+  ],
   "escalation": {
     "flagged": false
   },
