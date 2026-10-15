@@ -1,21 +1,21 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T20:23:12.762Z",
+  "generatedAt": "2026-10-15T20:08:56.546Z",
   "composite": {
-    "value": 57.1,
+    "value": 57,
     "coverage": 1
   },
   "pillars": {
     "capability": {
       "name": "capability",
       "weight": 0.45,
-      "score": 53.1,
+      "score": 52.9,
       "coverage": 1,
       "indicators": [
         {
           "slug": "eciCapability",
           "weight": 0.2,
-          "score": 78.56366652841146
+          "score": 77.92907507258398
         },
         {
           "slug": "epochBenchmarks",
@@ -184,20 +184,38 @@
     {
       "title": "Artificiality's First Exam: An LLM-Referenced C-test for Supraintelligence",
       "link": "https://arxiv.org/abs/2610.14005",
-      "published": "Wed, 14 Oct 2026 00:00:00 -0400",
+      "published": "Thu, 15 Oct 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "The Silent Failures in Agentic Data Science",
       "link": "https://arxiv.org/abs/2610.14115",
-      "published": "Wed, 14 Oct 2026 00:00:00 -0400",
+      "published": "Thu, 15 Oct 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "ClawLoop: Self-Improving Agents via Harness-Native Training Loop",
       "link": "https://arxiv.org/abs/2610.14118",
-      "published": "Wed, 14 Oct 2026 00:00:00 -0400",
+      "published": "Thu, 15 Oct 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Our approach to working with AI companies",
+      "link": "https://metr.org/blog/2026-10-14-our-approach-to-risk-assessment/",
+      "published": "Wed, 14 Oct 2026 00:00:00 -0700",
+      "feed": "metr.org"
+    },
+    {
+      "title": "How an assessor could investigate control and monitoring of internal AI agents",
+      "link": "https://metr.org/blog/2026-10-14-control-assessment-proposal/",
+      "published": "Wed, 14 Oct 2026 00:00:00 -0700",
+      "feed": "metr.org"
+    },
+    {
+      "title": "A proposal for better informing the public about loss-of-control risks from frontier AI development",
+      "link": "https://metr.org/blog/2026-10-14-better-informing-the-public-about-loss-of-control-risks/",
+      "published": "Wed, 14 Oct 2026 00:00:00 -0700",
+      "feed": "metr.org"
     },
     {
       "title": "Import AI 476: Creativity and RSI; worse-than-China open weight models; AI goes to space",
@@ -206,34 +224,16 @@
       "feed": "Import AI"
     },
     {
-      "title": "AI systems could cover up misbehavior",
-      "link": "https://metr.org/blog/2026-10-06-ai-systems-could-cover-up-misbehavior/",
-      "published": "Tue, 06 Oct 2026 00:00:00 -0700",
-      "feed": "metr.org"
-    },
-    {
       "title": "Import AI 475: Swarm scaling; Google DeepMind watermarks biology; and the AI science economy",
       "link": "https://jack-clark.net/2026/10/05/import-ai-475-swarm-scaling-google-deepmind-watermarks-biology-and-the-ai-science-economy/",
       "published": "Mon, 05 Oct 2026 12:32:30 +0000",
       "feed": "Import AI"
     },
     {
-      "title": "Chris Painter's testimony to the U.S. Senate on AI agent incidents",
-      "link": "https://metr.org/blog/2026-09-30-chris-painter-senate-testimony/",
-      "published": "Wed, 30 Sep 2026 00:00:00 -0700",
-      "feed": "metr.org"
-    },
-    {
       "title": "Import AI 474: Platonic mindspace; TPUs in space; Zhipu starts an outer RSI loop",
       "link": "https://jack-clark.net/2026/09/28/import-ai-474-platonic-mindspace-tpus-in-space-zhipu-starts-an-outer-rsi-loop/",
       "published": "Mon, 28 Sep 2026 12:32:03 +0000",
       "feed": "Import AI"
-    },
-    {
-      "title": "Implementing and Evaluating a Basic Per-Action Monitor for Safer Evals",
-      "link": "https://metr.org/notes/2026-09-27-implementing-a-basic-blocking-action-monitor/",
-      "published": "Sun, 27 Sep 2026 00:00:00 -0700",
-      "feed": "metr.org"
     },
     {
       "title": "Nothing left to love here. Tell the world goodbye.",
@@ -258,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 391,
+      "fetchMs": 1073,
       "indicatorCount": 1
     },
     {
       "source": "epoch",
       "ok": true,
-      "fetchMs": 1,
+      "fetchMs": 2,
       "indicatorCount": 2
     },
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 676,
+      "fetchMs": 495,
       "indicatorCount": 1
     },
     {
@@ -282,7 +282,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1390,
+      "fetchMs": 846,
       "indicatorCount": 0
     }
   ],
@@ -299,7 +299,7 @@
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 70,
+        "daysOverdue": 71,
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05"
       },
@@ -307,7 +307,7 @@
         "slug": "friLeapAgi",
         "scored": false,
         "status": "stale",
-        "daysOverdue": 64,
+        "daysOverdue": 65,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
       },
@@ -315,7 +315,7 @@
         "slug": "anthropicEconIndex",
         "scored": true,
         "status": "due",
-        "daysOverdue": 18,
+        "daysOverdue": 19,
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26"
       }
@@ -428,27 +428,27 @@
         "status": "stale",
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05",
-        "daysOverdue": 70
+        "daysOverdue": 71
       }
     },
     "eciCapability": {
-      "value": 78.56366652841146,
+      "value": 77.92907507258398,
       "raw": {
-        "eci": 167.33,
+        "eci": 166.82,
         "model": "Claude Opus 5.5",
         "modelDate": "2026-09-22",
-        "ciLow": 164.06,
-        "ciHigh": 171.68,
-        "modelCount": 274
+        "ciLow": 163.54,
+        "ciHigh": 170.99,
+        "modelCount": 277
       },
-      "asOf": "2026-09-29",
+      "asOf": "2026-10-07",
       "source": "Epoch AI — Capabilities & benchmarking (epoch.ai/benchmarks, CC-BY 4.0) — Epoch Capabilities Index",
       "confidence": "verified",
       "freshness": {
         "status": "fresh",
-        "asOf": "2026-09-29",
-        "reviewBy": "2026-11-13",
-        "daysOverdue": -30
+        "asOf": "2026-10-07",
+        "reviewBy": "2026-11-21",
+        "daysOverdue": -37
       }
     },
     "epochBenchmarks": {
@@ -486,7 +486,7 @@
             "score": 0.9368421052631579,
             "model": "GPT-6 Astra (max)",
             "date": "2026-09-03",
-            "rows": 116,
+            "rows": 117,
             "saturated": true
           },
           {
@@ -511,7 +511,7 @@
         "status": "fresh",
         "asOf": "2026-09-30",
         "reviewBy": "2026-12-29",
-        "daysOverdue": -76
+        "daysOverdue": -75
       }
     },
     "arcGap": {
@@ -542,14 +542,14 @@
           }
         ]
       },
-      "asOf": "2026-10-13",
+      "asOf": "2026-10-15",
       "source": "ARC Prize leaderboard (arcprize.org/leaderboard) — ARC-AGI-2 Semi-Private, ARC-AGI-3 Standard harness",
       "confidence": "verified",
       "freshness": {
         "status": "fresh",
-        "asOf": "2026-10-13",
-        "reviewBy": "2026-11-27",
-        "daysOverdue": -44
+        "asOf": "2026-10-15",
+        "reviewBy": "2026-11-29",
+        "daysOverdue": -45
       }
     },
     "selfLearning": {
@@ -564,7 +564,7 @@
         "status": "fresh",
         "asOf": "2026-06-05",
         "reviewBy": "2026-12-01",
-        "daysOverdue": -48
+        "daysOverdue": -47
       }
     },
     "realTimeEngagement": {
@@ -585,7 +585,7 @@
         "status": "fresh",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": -6
+        "daysOverdue": -5
       }
     },
     "agenticAutonomyLevel": {
@@ -601,7 +601,7 @@
         "status": "fresh",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": -6
+        "daysOverdue": -5
       }
     },
     "anthropicEconIndex": {
@@ -617,7 +617,7 @@
         "status": "due",
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26",
-        "daysOverdue": 18
+        "daysOverdue": 19
       }
     },
     "aiIndexEconomy": {
@@ -633,7 +633,7 @@
         "status": "fresh",
         "asOf": "2026-04-15",
         "reviewBy": "2027-04-15",
-        "daysOverdue": -183
+        "daysOverdue": -182
       }
     },
     "friLeapAgi": {
@@ -649,7 +649,7 @@
         "status": "stale",
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11",
-        "daysOverdue": 64
+        "daysOverdue": 65
       }
     },
     "fliSafetyIndex": {
@@ -667,7 +667,7 @@
         "status": "fresh",
         "asOf": "2026-07-15",
         "reviewBy": "2027-01-15",
-        "daysOverdue": -93
+        "daysOverdue": -92
       }
     }
   },
