@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-17T18:58:31.792Z",
+  "generatedAt": "2026-10-18T19:09:40.048Z",
   "composite": {
     "value": 57,
     "coverage": 1
@@ -182,24 +182,6 @@
   },
   "stories": [
     {
-      "title": "The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock",
-      "link": "https://arxiv.org/abs/2610.20665",
-      "published": "Sat, 17 Oct 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Evaluating Model Capabilities After Benchmark Saturation",
-      "link": "https://arxiv.org/abs/2610.20667",
-      "published": "Sat, 17 Oct 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Value-Informed Schedule Trimming for Accelerated Sequential Monte Carlo Guidance in Discrete Diffusion",
-      "link": "https://arxiv.org/abs/2610.20669",
-      "published": "Sat, 17 Oct 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
       "title": "Our approach to working with AI companies",
       "link": "https://metr.org/blog/2026-10-14-our-approach-to-risk-assessment/",
       "published": "Wed, 14 Oct 2026 00:00:00 -0700",
@@ -258,31 +240,31 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 344,
+      "fetchMs": 377,
       "indicatorCount": 1
     },
     {
       "source": "epoch",
       "ok": true,
-      "fetchMs": 1,
+      "fetchMs": 2,
       "indicatorCount": 2
     },
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 339,
+      "fetchMs": 300,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 0,
+      "fetchMs": 1,
       "indicatorCount": 7
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 917,
+      "fetchMs": 575,
       "indicatorCount": 0
     }
   ],
@@ -299,7 +281,7 @@
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 73,
+        "daysOverdue": 74,
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05"
       },
@@ -307,7 +289,7 @@
         "slug": "friLeapAgi",
         "scored": false,
         "status": "stale",
-        "daysOverdue": 67,
+        "daysOverdue": 68,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
       },
@@ -315,7 +297,7 @@
         "slug": "anthropicEconIndex",
         "scored": true,
         "status": "due",
-        "daysOverdue": 21,
+        "daysOverdue": 22,
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26"
       }
@@ -428,7 +410,7 @@
         "status": "stale",
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05",
-        "daysOverdue": 73
+        "daysOverdue": 74
       }
     },
     "eciCapability": {
@@ -448,7 +430,7 @@
         "status": "fresh",
         "asOf": "2026-10-07",
         "reviewBy": "2026-11-21",
-        "daysOverdue": -35
+        "daysOverdue": -34
       }
     },
     "epochBenchmarks": {
@@ -511,7 +493,7 @@
         "status": "fresh",
         "asOf": "2026-09-30",
         "reviewBy": "2026-12-29",
-        "daysOverdue": -73
+        "daysOverdue": -72
       }
     },
     "arcGap": {
@@ -549,7 +531,7 @@
         "status": "fresh",
         "asOf": "2026-10-15",
         "reviewBy": "2026-11-29",
-        "daysOverdue": -43
+        "daysOverdue": -42
       }
     },
     "selfLearning": {
@@ -564,7 +546,7 @@
         "status": "fresh",
         "asOf": "2026-06-05",
         "reviewBy": "2026-12-01",
-        "daysOverdue": -45
+        "daysOverdue": -44
       }
     },
     "realTimeEngagement": {
@@ -585,7 +567,7 @@
         "status": "fresh",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": -3
+        "daysOverdue": -2
       }
     },
     "agenticAutonomyLevel": {
@@ -601,7 +583,7 @@
         "status": "fresh",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": -3
+        "daysOverdue": -2
       }
     },
     "anthropicEconIndex": {
@@ -617,7 +599,7 @@
         "status": "due",
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26",
-        "daysOverdue": 21
+        "daysOverdue": 22
       }
     },
     "aiIndexEconomy": {
@@ -633,7 +615,7 @@
         "status": "fresh",
         "asOf": "2026-04-15",
         "reviewBy": "2027-04-15",
-        "daysOverdue": -180
+        "daysOverdue": -179
       }
     },
     "friLeapAgi": {
@@ -649,7 +631,7 @@
         "status": "stale",
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11",
-        "daysOverdue": 67
+        "daysOverdue": 68
       }
     },
     "fliSafetyIndex": {
@@ -667,7 +649,7 @@
         "status": "fresh",
         "asOf": "2026-07-15",
         "reviewBy": "2027-01-15",
-        "daysOverdue": -90
+        "daysOverdue": -89
       }
     }
   },
