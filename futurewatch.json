@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-22T20:21:59.453Z",
+  "generatedAt": "2026-10-23T20:10:16.189Z",
   "composite": {
     "value": 57.2,
     "coverage": 1
@@ -182,28 +182,28 @@
   },
   "stories": [
     {
+      "title": "The Cost of Saying Hello: An Empirical Study of Handshake Overhead in AI Agent Communication Protocols",
+      "link": "https://arxiv.org/abs/2610.30151",
+      "published": "Fri, 23 Oct 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "MCP vs CLI for AI Agents: A Comparative Analysis of Tool Integration Strategies for Autonomous Systems",
+      "link": "https://arxiv.org/abs/2610.30157",
+      "published": "Fri, 23 Oct 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Accelerating Wildfire Hazard Mapping Across Canada with an AI Surrogate Modelling Framework",
+      "link": "https://arxiv.org/abs/2610.30170",
+      "published": "Fri, 23 Oct 2026 00:00:00 -0400",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "Red-Teaming OpenAI's Internal Agent Monitoring Systems",
       "link": "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/",
       "published": "Thu, 22 Oct 2026 00:00:00 -0700",
       "feed": "metr.org"
-    },
-    {
-      "title": "A Small Model Asks Better: Fine-Tuning Query Clarification for Retrieval-Augmented Generation",
-      "link": "https://arxiv.org/abs/2610.28686",
-      "published": "Thu, 22 Oct 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Scaling in Games: Continued Pre-Training For Embodied Agents In Diverse Virtual Worlds",
-      "link": "https://arxiv.org/abs/2610.28698",
-      "published": "Thu, 22 Oct 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "SpecEvo: Speculative Evolution with Large Language Models for Cost-Efficient Scientific Discovery",
-      "link": "https://arxiv.org/abs/2610.28706",
-      "published": "Thu, 22 Oct 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
     },
     {
       "title": "Review of the \"Misalignment in high-stakes settings\" section in Anthropic's Risk Report (August 2026)",
@@ -258,19 +258,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 424,
+      "fetchMs": 311,
       "indicatorCount": 1
     },
     {
       "source": "epoch",
       "ok": true,
-      "fetchMs": 2,
+      "fetchMs": 1,
       "indicatorCount": 2
     },
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 521,
+      "fetchMs": 406,
       "indicatorCount": 1
     },
     {
@@ -282,7 +282,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1318,
+      "fetchMs": 944,
       "indicatorCount": 0
     }
   ],
@@ -299,7 +299,7 @@
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 78,
+        "daysOverdue": 79,
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05"
       },
@@ -307,7 +307,7 @@
         "slug": "friLeapAgi",
         "scored": false,
         "status": "stale",
-        "daysOverdue": 72,
+        "daysOverdue": 73,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
       },
@@ -315,7 +315,7 @@
         "slug": "anthropicEconIndex",
         "scored": true,
         "status": "due",
-        "daysOverdue": 26,
+        "daysOverdue": 27,
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26"
       },
@@ -323,7 +323,7 @@
         "slug": "realTimeEngagement",
         "scored": true,
         "status": "due",
-        "daysOverdue": 2,
+        "daysOverdue": 3,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       },
@@ -331,7 +331,7 @@
         "slug": "agenticAutonomyLevel",
         "scored": true,
         "status": "due",
-        "daysOverdue": 2,
+        "daysOverdue": 3,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       }
@@ -444,7 +444,7 @@
         "status": "stale",
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05",
-        "daysOverdue": 78
+        "daysOverdue": 79
       }
     },
     "eciCapability": {
@@ -464,7 +464,7 @@
         "status": "fresh",
         "asOf": "2026-10-15",
         "reviewBy": "2026-11-29",
-        "daysOverdue": -38
+        "daysOverdue": -37
       }
     },
     "epochBenchmarks": {
@@ -527,7 +527,7 @@
         "status": "fresh",
         "asOf": "2026-09-30",
         "reviewBy": "2026-12-29",
-        "daysOverdue": -68
+        "daysOverdue": -67
       }
     },
     "arcGap": {
@@ -565,7 +565,7 @@
         "status": "fresh",
         "asOf": "2026-10-21",
         "reviewBy": "2026-12-05",
-        "daysOverdue": -44
+        "daysOverdue": -43
       }
     },
     "selfLearning": {
@@ -580,7 +580,7 @@
         "status": "fresh",
         "asOf": "2026-06-05",
         "reviewBy": "2026-12-01",
-        "daysOverdue": -40
+        "daysOverdue": -39
       }
     },
     "realTimeEngagement": {
@@ -601,7 +601,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 2
+        "daysOverdue": 3
       }
     },
     "agenticAutonomyLevel": {
@@ -617,7 +617,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 2
+        "daysOverdue": 3
       }
     },
     "anthropicEconIndex": {
@@ -633,7 +633,7 @@
         "status": "due",
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26",
-        "daysOverdue": 26
+        "daysOverdue": 27
       }
     },
     "aiIndexEconomy": {
@@ -649,7 +649,7 @@
         "status": "fresh",
         "asOf": "2026-04-15",
         "reviewBy": "2027-04-15",
-        "daysOverdue": -175
+        "daysOverdue": -174
       }
     },
     "friLeapAgi": {
@@ -665,7 +665,7 @@
         "status": "stale",
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11",
-        "daysOverdue": 72
+        "daysOverdue": 73
       }
     },
     "fliSafetyIndex": {
@@ -683,7 +683,7 @@
         "status": "fresh",
         "asOf": "2026-07-15",
         "reviewBy": "2027-01-15",
-        "daysOverdue": -85
+        "daysOverdue": -84
       }
     }
   },
