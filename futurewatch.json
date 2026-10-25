@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T19:11:14.283Z",
+  "generatedAt": "2026-10-25T19:24:41.190Z",
   "composite": {
     "value": 57.2,
     "coverage": 1
@@ -240,7 +240,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 394,
+      "fetchMs": 349,
       "indicatorCount": 1
     },
     {
@@ -252,7 +252,7 @@
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 217,
+      "fetchMs": 372,
       "indicatorCount": 1
     },
     {
@@ -264,7 +264,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 686,
+      "fetchMs": 919,
       "indicatorCount": 0
     }
   ],
@@ -281,7 +281,7 @@
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 80,
+        "daysOverdue": 81,
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05"
       },
@@ -289,7 +289,7 @@
         "slug": "friLeapAgi",
         "scored": false,
         "status": "stale",
-        "daysOverdue": 74,
+        "daysOverdue": 75,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
       },
@@ -297,7 +297,7 @@
         "slug": "anthropicEconIndex",
         "scored": true,
         "status": "due",
-        "daysOverdue": 28,
+        "daysOverdue": 29,
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26"
       },
@@ -305,7 +305,7 @@
         "slug": "realTimeEngagement",
         "scored": true,
         "status": "due",
-        "daysOverdue": 4,
+        "daysOverdue": 5,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       },
@@ -313,7 +313,7 @@
         "slug": "agenticAutonomyLevel",
         "scored": true,
         "status": "due",
-        "daysOverdue": 4,
+        "daysOverdue": 5,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       }
@@ -426,7 +426,7 @@
         "status": "stale",
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05",
-        "daysOverdue": 80
+        "daysOverdue": 81
       }
     },
     "eciCapability": {
@@ -446,7 +446,7 @@
         "status": "fresh",
         "asOf": "2026-10-15",
         "reviewBy": "2026-11-29",
-        "daysOverdue": -36
+        "daysOverdue": -35
       }
     },
     "epochBenchmarks": {
@@ -509,7 +509,7 @@
         "status": "fresh",
         "asOf": "2026-09-30",
         "reviewBy": "2026-12-29",
-        "daysOverdue": -66
+        "daysOverdue": -65
       }
     },
     "arcGap": {
@@ -547,7 +547,7 @@
         "status": "fresh",
         "asOf": "2026-10-21",
         "reviewBy": "2026-12-05",
-        "daysOverdue": -42
+        "daysOverdue": -41
       }
     },
     "selfLearning": {
@@ -562,7 +562,7 @@
         "status": "fresh",
         "asOf": "2026-06-05",
         "reviewBy": "2026-12-01",
-        "daysOverdue": -38
+        "daysOverdue": -37
       }
     },
     "realTimeEngagement": {
@@ -583,7 +583,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 4
+        "daysOverdue": 5
       }
     },
     "agenticAutonomyLevel": {
@@ -599,7 +599,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 4
+        "daysOverdue": 5
       }
     },
     "anthropicEconIndex": {
@@ -615,7 +615,7 @@
         "status": "due",
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26",
-        "daysOverdue": 28
+        "daysOverdue": 29
       }
     },
     "aiIndexEconomy": {
@@ -631,7 +631,7 @@
         "status": "fresh",
         "asOf": "2026-04-15",
         "reviewBy": "2027-04-15",
-        "daysOverdue": -173
+        "daysOverdue": -172
       }
     },
     "friLeapAgi": {
@@ -647,7 +647,7 @@
         "status": "stale",
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11",
-        "daysOverdue": 74
+        "daysOverdue": 75
       }
     },
     "fliSafetyIndex": {
@@ -665,7 +665,7 @@
         "status": "fresh",
         "asOf": "2026-07-15",
         "reviewBy": "2027-01-15",
-        "daysOverdue": -83
+        "daysOverdue": -82
       }
     }
   },
