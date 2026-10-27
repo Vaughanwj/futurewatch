@@ -1,15 +1,26 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-26T21:16:52.312Z",
+  "generatedAt": "2026-10-27T05:25:23.235Z",
   "composite": {
-    "value": 57.2,
-    "coverage": 1
+    "value": 56.1,
+    "coverage": 1,
+    "weightByConfidence": {
+      "verified": 0.27,
+      "provisional": 0.345,
+      "judgment": 0.385
+    },
+    "range": {
+      "low": 53.6,
+      "high": 59.2,
+      "judgmentHalfWidth": 10,
+      "method": "Published intervals (ECI, METR) plus ±10 points on judgment-scored inputs, each weighted by its share of the composite and combined in quadrature. A sensitivity range, not a statistical confidence interval."
+    }
   },
   "pillars": {
     "capability": {
       "name": "capability",
       "weight": 0.45,
-      "score": 53.4,
+      "score": 50.9,
       "coverage": 1,
       "indicators": [
         {
@@ -20,7 +31,7 @@
         {
           "slug": "epochBenchmarks",
           "weight": 0.2,
-          "score": 82.08920001449907
+          "score": 69.13553719008264
         },
         {
           "slug": "arcGap",
@@ -182,34 +193,28 @@
   },
   "stories": [
     {
-      "title": "Import AI 478: Math for alignment; ProgramBench; and Mirendil shows what RSI means",
-      "link": "https://jack-clark.net/2026/10/26/import-ai-478-math-for-alignment-programbench-and-mirendil-shows-what-rsi-means/",
-      "published": "Mon, 26 Oct 2026 12:31:52 +0000",
-      "feed": "Import AI"
-    },
-    {
       "title": "Tradeoff-Aware Territory Design: A Multi-Objective Decision System for Enterprise Customer-to-Seller Allocation",
       "link": "https://arxiv.org/abs/2610.31701",
-      "published": "Mon, 26 Oct 2026 00:00:00 -0400",
+      "published": "Tue, 27 Oct 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "Phronix: The Capability-Centric Learning Paradigm for Agents",
       "link": "https://arxiv.org/abs/2610.31789",
-      "published": "Mon, 26 Oct 2026 00:00:00 -0400",
+      "published": "Tue, 27 Oct 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "Patronizing and Condescending Language Detection in English and Mandarin",
       "link": "https://arxiv.org/abs/2610.31808",
-      "published": "Mon, 26 Oct 2026 00:00:00 -0400",
+      "published": "Tue, 27 Oct 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "PHP2Shell  Deconstructing the Threat   The Automation Noise",
-      "link": "https://www.youtube.com/watch?v=a1BAKcJ5PcA",
-      "published": "2026-10-25T21:57:28+00:00",
-      "feed": "FutureWatch"
+      "title": "Import AI 478: Math for alignment; ProgramBench; and Mirendil shows what RSI means",
+      "link": "https://jack-clark.net/2026/10/26/import-ai-478-math-for-alignment-programbench-and-mirendil-shows-what-rsi-means/",
+      "published": "Mon, 26 Oct 2026 12:31:52 +0000",
+      "feed": "Import AI"
     },
     {
       "title": "Red-Teaming OpenAI's Internal Agent Monitoring Systems",
@@ -240,25 +245,13 @@
       "link": "https://jack-clark.net/2026/10/12/import-ai-476-creativity-and-rsi-worse-than-china-open-weight-models-ai-goes-to-space/",
       "published": "Mon, 12 Oct 2026 12:30:39 +0000",
       "feed": "Import AI"
-    },
-    {
-      "title": "Nothing left to love here. Tell the world goodbye.",
-      "link": "https://www.youtube.com/shorts/DNcNz5M2iew",
-      "published": "2026-09-08T05:00:11+00:00",
-      "feed": "FutureWatch"
-    },
-    {
-      "title": "What started out as human, transcended to divine.",
-      "link": "https://www.youtube.com/shorts/ignOaAqspHE",
-      "published": "2026-09-07T05:00:19+00:00",
-      "feed": "FutureWatch"
     }
   ],
   "sourceHealth": [
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 410,
+      "fetchMs": 412,
       "indicatorCount": 1
     },
     {
@@ -270,7 +263,7 @@
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 301,
+      "fetchMs": 126,
       "indicatorCount": 1
     },
     {
@@ -281,8 +274,8 @@
     },
     {
       "source": "rss",
-      "ok": true,
-      "fetchMs": 994,
+      "ok": false,
+      "fetchMs": 758,
       "indicatorCount": 0
     }
   ],
@@ -290,8 +283,8 @@
     "scored": {
       "total": 9,
       "fresh": 5,
-      "due": 3,
-      "stale": 1,
+      "due": 2,
+      "stale": 2,
       "unknown": 0
     },
     "overdue": [
@@ -299,7 +292,7 @@
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 82,
+        "daysOverdue": 83,
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05"
       },
@@ -307,15 +300,15 @@
         "slug": "friLeapAgi",
         "scored": false,
         "status": "stale",
-        "daysOverdue": 76,
+        "daysOverdue": 77,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
       },
       {
         "slug": "anthropicEconIndex",
         "scored": true,
-        "status": "due",
-        "daysOverdue": 30,
+        "status": "stale",
+        "daysOverdue": 31,
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26"
       },
@@ -323,7 +316,7 @@
         "slug": "realTimeEngagement",
         "scored": true,
         "status": "due",
-        "daysOverdue": 6,
+        "daysOverdue": 7,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       },
@@ -331,7 +324,7 @@
         "slug": "agenticAutonomyLevel",
         "scored": true,
         "status": "due",
-        "daysOverdue": 6,
+        "daysOverdue": 7,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       }
@@ -439,12 +432,12 @@
       },
       "asOf": "2026-04-07",
       "source": "METR time horizons (metr.org; github.com/METR/eval-analysis-public), mirrored by Epoch AI (CC-BY 4.0)",
-      "confidence": "verified",
+      "confidence": "provisional",
       "freshness": {
         "status": "stale",
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05",
-        "daysOverdue": 82
+        "daysOverdue": 83
       }
     },
     "eciCapability": {
@@ -464,17 +457,15 @@
         "status": "fresh",
         "asOf": "2026-10-15",
         "reviewBy": "2026-11-29",
-        "daysOverdue": -34
+        "daysOverdue": -33
       }
     },
     "epochBenchmarks": {
-      "value": 82.08920001449907,
+      "value": 69.13553719008264,
       "raw": {
         "basket": "B-2026.1",
         "fractions": [
-          0.9640151515151515,
           0.8347107438016529,
-          0.9368421052631579,
           0.5479999999999999
         ],
         "members": [
@@ -485,7 +476,7 @@
             "model": "Gemini 4 Argon (high)",
             "date": "2026-09-30",
             "rows": 323,
-            "saturated": true
+            "retired": true
           },
           {
             "key": "swe",
@@ -494,7 +485,7 @@
             "model": "Claude Opus 4.7 (max)",
             "date": "2026-04-16",
             "rows": 35,
-            "saturated": false
+            "retired": false
           },
           {
             "key": "fm",
@@ -503,7 +494,7 @@
             "model": "GPT-6 Astra (max)",
             "date": "2026-09-03",
             "rows": 121,
-            "saturated": true
+            "retired": true
           },
           {
             "key": "hle",
@@ -512,10 +503,10 @@
             "model": "GPT 6 Astra",
             "date": "2026-09-03",
             "rows": 56,
-            "saturated": false
+            "retired": false
           }
         ],
-        "saturated": [
+        "retired": [
           "GPQA Diamond",
           "FrontierMath Tiers 1–3 (v2)"
         ]
@@ -527,7 +518,7 @@
         "status": "fresh",
         "asOf": "2026-09-30",
         "reviewBy": "2026-12-29",
-        "daysOverdue": -64
+        "daysOverdue": -63
       }
     },
     "arcGap": {
@@ -565,7 +556,7 @@
         "status": "fresh",
         "asOf": "2026-10-21",
         "reviewBy": "2026-12-05",
-        "daysOverdue": -40
+        "daysOverdue": -39
       }
     },
     "selfLearning": {
@@ -580,7 +571,7 @@
         "status": "fresh",
         "asOf": "2026-06-05",
         "reviewBy": "2026-12-01",
-        "daysOverdue": -36
+        "daysOverdue": -35
       }
     },
     "realTimeEngagement": {
@@ -601,7 +592,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 6
+        "daysOverdue": 7
       }
     },
     "agenticAutonomyLevel": {
@@ -617,7 +608,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 6
+        "daysOverdue": 7
       }
     },
     "anthropicEconIndex": {
@@ -630,10 +621,10 @@
       "source": "Anthropic Economic Index (anthropic.com/economic-index), June 2026 report",
       "confidence": "provisional",
       "freshness": {
-        "status": "due",
+        "status": "stale",
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26",
-        "daysOverdue": 30
+        "daysOverdue": 31
       }
     },
     "aiIndexEconomy": {
@@ -649,7 +640,7 @@
         "status": "fresh",
         "asOf": "2026-04-15",
         "reviewBy": "2027-04-15",
-        "daysOverdue": -171
+        "daysOverdue": -170
       }
     },
     "friLeapAgi": {
@@ -665,7 +656,7 @@
         "status": "stale",
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11",
-        "daysOverdue": 76
+        "daysOverdue": 77
       }
     },
     "fliSafetyIndex": {
@@ -683,11 +674,13 @@
         "status": "fresh",
         "asOf": "2026-07-15",
         "reviewBy": "2027-01-15",
-        "daysOverdue": -81
+        "daysOverdue": -80
       }
     }
   },
-  "errors": [],
+  "errors": [
+    "rss FutureWatch: Request failed with status code 404"
+  ],
   "escalation": {
     "flagged": false
   },
