@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T05:25:23.235Z",
+  "generatedAt": "2026-10-27T21:04:09.410Z",
   "composite": {
     "value": 56.1,
     "coverage": 1,
@@ -217,6 +217,12 @@
       "feed": "Import AI"
     },
     {
+      "title": "PHP2Shell  Deconstructing the Threat   The Automation Noise",
+      "link": "https://www.youtube.com/watch?v=a1BAKcJ5PcA",
+      "published": "2026-10-25T21:57:28+00:00",
+      "feed": "FutureWatch"
+    },
+    {
       "title": "Red-Teaming OpenAI's Internal Agent Monitoring Systems",
       "link": "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/",
       "published": "Thu, 22 Oct 2026 00:00:00 -0700",
@@ -245,13 +251,25 @@
       "link": "https://jack-clark.net/2026/10/12/import-ai-476-creativity-and-rsi-worse-than-china-open-weight-models-ai-goes-to-space/",
       "published": "Mon, 12 Oct 2026 12:30:39 +0000",
       "feed": "Import AI"
+    },
+    {
+      "title": "Nothing left to love here. Tell the world goodbye.",
+      "link": "https://www.youtube.com/shorts/DNcNz5M2iew",
+      "published": "2026-09-08T05:00:11+00:00",
+      "feed": "FutureWatch"
+    },
+    {
+      "title": "What started out as human, transcended to divine.",
+      "link": "https://www.youtube.com/shorts/ignOaAqspHE",
+      "published": "2026-09-07T05:00:19+00:00",
+      "feed": "FutureWatch"
     }
   ],
   "sourceHealth": [
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 412,
+      "fetchMs": 1040,
       "indicatorCount": 1
     },
     {
@@ -263,7 +281,7 @@
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 126,
+      "fetchMs": 288,
       "indicatorCount": 1
     },
     {
@@ -274,8 +292,8 @@
     },
     {
       "source": "rss",
-      "ok": false,
-      "fetchMs": 758,
+      "ok": true,
+      "fetchMs": 618,
       "indicatorCount": 0
     }
   ],
@@ -475,7 +493,7 @@
             "score": 0.9640151515151515,
             "model": "Gemini 4 Argon (high)",
             "date": "2026-09-30",
-            "rows": 323,
+            "rows": 324,
             "retired": true
           },
           {
@@ -493,7 +511,7 @@
             "score": 0.9368421052631579,
             "model": "GPT-6 Astra (max)",
             "date": "2026-09-03",
-            "rows": 121,
+            "rows": 122,
             "retired": true
           },
           {
@@ -678,9 +696,7 @@
       }
     }
   },
-  "errors": [
-    "rss FutureWatch: Request failed with status code 404"
-  ],
+  "errors": [],
   "escalation": {
     "flagged": false
   },
