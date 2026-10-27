@@ -94,6 +94,9 @@ test('applyBackfill keeps the published values, is idempotent, and never touches
   assert.equal(once.points[0].published, undefined);
   assert.equal(once.points[2].composite, 57, 'live point on/after the cut is untouched');
 
+  const marked = applyBackfill({ points: [{ date: '2026-07-29', composite: 1, pillars: {}, rebaseline: 'r1' }] }, bf, '2026-10-02');
+  assert.equal(marked.points.find((p) => p.date === '2026-07-29').rebaseline, 'r1', 'marker survives reconstruction');
+
   const twice = applyBackfill(once, bf, '2026-10-02');
   assert.deepEqual(twice, once);
 });

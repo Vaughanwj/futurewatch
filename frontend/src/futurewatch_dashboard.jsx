@@ -77,6 +77,8 @@ const TIPS = {
     'The meter reading (capability) beside how seriously frontier labs take existential safety — the best grade any lab earned in the Future of Life Institute’s independent Safety Index, converted to 0–100. The gap is the point.',
   sourceHealth:
     'How many of the meter’s data sources responded in the latest run. This only measures whether fetches succeeded — not whether the data is current. Input freshness is tracked separately, just below.',
+  range:
+    'A sensitivity range, not a statistical confidence interval. It uses the published uncertainty where the source gives one (Epoch’s interval for the Capabilities Index, METR’s interval on the time horizon) and allows the hand-scored inputs to be off by ±10 points, weights each by its share of the headline, and combines them as independent errors. It does not include the risk that a method choice (which benchmarks, where the 100 anchor sits) is itself wrong — those are documented in the repo.',
   judgmentShare:
     'Some inputs have no instrument behind them yet — they are scored by hand against a written rubric (self-learning, real-time engagement, agentic autonomy, and the economy-wide adoption measure) and labelled “judgment” below. This is how much of the headline’s weight sits on them. Their rubrics and sign-off history are public in the repo; the measured inputs are the ones labelled “verified”.',
   freshness:
@@ -90,7 +92,7 @@ const TIPS = {
   eciCapability:
     'Epoch AI’s Capabilities Index for the strongest model today — one number combining its results across dozens of benchmarks. We map it onto a 0–100 scale with a straight line through two points: GPT-4 (2023) ≈ 27 and GPT-5 (2025) ≈ 57, the AGI scores Hendrycks et al. (“A Definition of AGI”) published for those models. Beyond GPT-5 the line is extrapolated, and the index shares some benchmarks with the Epoch Benchmarks measure below, so the two partly overlap. 100 would mean fully matching a well-educated adult across the board. Updates automatically.',
   epochBenchmarks:
-    'The best published score on each of four hard benchmarks — graduate-level science (GPQA Diamond), real software fixes (SWE-bench Verified), research-level math (FrontierMath Tiers 1–3) and Humanity’s Last Exam — averaged, where 100 is a perfect score. Data: Epoch AI. Updates automatically; two of the four (GPQA Diamond and FrontierMath) are already above 90%, so this measure is close to saturated; the plan is to rotate saturated benchmarks out, but that is not built yet.',
+    'The best published score on each of four hard benchmarks — graduate-level science (GPQA Diamond), real software fixes (SWE-bench Verified), research-level math (FrontierMath Tiers 1–3) and Humanity’s Last Exam — averaged, where 100 is a perfect score. A benchmark drops out of the average once the best model passes 90% on it, since it can no longer tell models apart; Data: Epoch AI. Updates automatically.',
   arcGap:
     'How close AI comes to ordinary humans on ARC-AGI puzzles: tasks built to be unlike anything in training data. A version counts until AI reaches 85% of human performance on it (ARC-AGI-2 now has), then it drops out; ARC-AGI-3, the interactive version, is scored on the standard setup every model gets — results from labs’ own tuned harnesses run far higher and are shown beside it, not scored. Updates automatically.',
   selfLearning:
@@ -269,6 +271,7 @@ function Hero({ snapshot }) {
   const v = snapshot.composite?.value;
   const coverage = snapshot.composite?.coverage;
   const judgmentShare = snapshot.composite?.weightByConfidence?.judgment ?? 0;
+  const range = snapshot.composite?.range;
   const fr = snapshot.freshness?.scored ?? { total: 0, due: 0, stale: 0 };
   const overdueScored = (fr.due ?? 0) + (fr.stale ?? 0);
   // The visual track runs 0..120: AGI line at 100, ASI zone beyond.
@@ -286,6 +289,12 @@ function Hero({ snapshot }) {
         <span style={{ fontFamily: mono, fontSize: '0.72rem', color: C.textLow, marginLeft: 'auto' }}>
           scored on {Math.round((coverage ?? 0) * 100)}% of indicators · v0.1 provisional
         </span>
+        {range && Number.isFinite(range.low) && Number.isFinite(range.high) && (
+          <span style={{ flexBasis: '100%', fontFamily: mono, fontSize: '0.78rem', color: C.textDim, lineHeight: 1.5 }}>
+            plausible range {Math.round(range.low)}–{Math.round(range.high)}
+            <Info tip={TIPS.range} />
+          </span>
+        )}
         {judgmentShare > 0 && (
           <span style={{ flexBasis: '100%', fontFamily: mono, fontSize: '0.7rem', color: C.yellow, lineHeight: 1.5 }}>
             {Math.round(judgmentShare * 100)}% of this score rests on analyst-judgment inputs
@@ -600,6 +609,22 @@ function Divergence({ snapshot }) {
 
 // ARC-AGI-3 is scored on the Standard harness; the lab-tuned Provider-Adapter
 // result is far higher, so it is shown next to it rather than hidden (D6).
+// Which benchmarks the basket average currently rests on, and which have
+// saturated (>= 90%) and dropped out of it.
+function BasketNote({ raw }) {
+  const members = raw?.members ?? [];
+  const active = members.filter((m) => !m.retired);
+  const retired = members.filter((m) => m.retired);
+  if (!members.length) return null;
+  const pct = (m) => `${(m.score * 100).toFixed(0)}%`;
+  return (
+    <span style={{ display: 'block', fontFamily: mono, fontSize: '0.6rem', marginTop: 1, color: C.textLow }}>
+      averaging: {active.map((m) => `${m.label} ${pct(m)}`).join(' · ')}
+      {retired.length > 0 && <> · dropped out (≥90%): {retired.map((m) => `${m.label} ${pct(m)}`).join(', ')}</>}
+    </span>
+  );
+}
+
 function ArcAdapterNote({ raw }) {
   const gen = (raw?.generations ?? []).find((g) => g.providerAdapter);
   if (!gen) return null;
@@ -644,6 +669,7 @@ function PillarCard({ name, pillar, indicators }) {
                 </span>
               )}
               {row.slug === 'arcGap' && <ArcAdapterNote raw={meta?.raw} />}
+              {row.slug === 'epochBenchmarks' && <BasketNote raw={meta?.raw} />}
             </span>
             {meta?.confidence && meta.confidence !== 'verified' && (
               <span

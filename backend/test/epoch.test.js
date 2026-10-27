@@ -80,15 +80,36 @@ test('extractEci refuses a collapsed table', () => {
 
 // ── basket ───────────────────────────────────────────────────────────────
 
-test('extractBasket returns one frontier fraction per member, in basket order', () => {
+test('extractBasket averages the members that have not saturated, and flags the ones that retired', () => {
   const b = extractBasket(tablesFrom(buildArchiveFiles()));
   assert.deepEqual(b.errors, []);
   assert.equal(b.members.length, BASKET_MEMBERS.length);
   assert.deepEqual(b.members.map((m) => m.key), ['gpqa', 'swe', 'fm', 'hle']);
-  assert.ok(Math.abs(b.fractions[0] - 0.95) < 1e-9);
-  assert.ok(Math.abs(b.fractions[3] - 0.55) < 1e-9);
-  assert.equal(b.members[0].saturated, true);  // 0.95 ≥ 0.9
-  assert.equal(b.members[1].saturated, false);
+  assert.equal(b.members[0].retired, true);  // GPQA fixture tops out at 0.95 ≥ 0.9
+  assert.deepEqual(b.members.slice(1).map((m) => m.retired), [false, false, false]);
+  assert.equal(b.fractions.length, 3, 'the retired member no longer counts');
+  assert.ok(Math.abs(b.fractions[0] - 0.83) < 1e-9, 'first active member is SWE-bench');
+});
+
+test('RATCHET: a member that reaches 90% drops out of the mean; the others are untouched', () => {
+  const near = toCsv(['Model version', 'mean_score', 'Release date'], scoreRows(30, 0.89));
+  const over = toCsv(['Model version', 'mean_score', 'Release date'], scoreRows(30, 0.91));
+  const before = extractBasket(tablesFrom(buildArchiveFiles({ 'swe_bench_verified.csv': near })));
+  const after = extractBasket(tablesFrom(buildArchiveFiles({ 'swe_bench_verified.csv': over })));
+  assert.equal(before.members.find((m) => m.key === 'swe').retired, false);
+  assert.equal(after.members.find((m) => m.key === 'swe').retired, true);
+  assert.equal(before.fractions.length, 3);
+  assert.equal(after.fractions.length, 2);
+});
+
+test('a basket with fewer than two active members is withheld, not averaged over one', () => {
+  const sat = (c) => toCsv(['Model version', c, 'Release date'], scoreRows(30, 0.95, { scoreCol: c }));
+  const t = tablesFrom(buildArchiveFiles({
+    'swe_bench_verified.csv': sat('mean_score'), 'frontiermath_tiers_1_3_v2.csv': sat('mean_score'),
+  }));
+  const b = extractBasket(t); // gpqa, swe, fm retired; only hle active
+  assert.equal(b.fractions, null);
+  assert.ok(b.errors.some((e) => e.includes('needs new members')));
 });
 
 test('a partial basket is refused, never averaged over fewer members', () => {
@@ -176,8 +197,8 @@ test('epoch adapter produces eciCapability and epochBenchmarks with data-through
   assert.equal(res.indicators.eciCapability.raw.eci, 167.35);
   assert.equal(res.indicators.eciCapability.asOf, '2026-09-22');
   assert.equal(res.indicators.epochBenchmarks.raw.basket, 'B-2026.1');
-  assert.equal(res.indicators.epochBenchmarks.raw.fractions.length, 4);
-  assert.deepEqual(res.indicators.epochBenchmarks.raw.saturated, ['GPQA Diamond']);
+  assert.equal(res.indicators.epochBenchmarks.raw.fractions.length, 3);
+  assert.deepEqual(res.indicators.epochBenchmarks.raw.retired, ['GPQA Diamond']);
 });
 
 test('a download failure yields no indicators and an error (the pipeline then carries forward)', async () => {

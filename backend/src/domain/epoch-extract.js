@@ -33,9 +33,16 @@ export const BASKET_MEMBERS = [
   { key: 'fm', label: 'FrontierMath Tiers 1–3 (v2)', file: 'frontiermath_tiers_1_3_v2.csv', scoreCols: ['mean_score', 'Best score (across scorers)'], minRows: 20 },
   { key: 'hle', label: "Humanity's Last Exam", file: 'hle_external.csv', scoreCols: ['Accuracy'], minRows: 20 },
 ];
-// A basket member at or above this has saturated (ratchet rule: rotate it
-// out, don't let the basket silently become uninformative).
+// Ratchet rule (anchor-tables.md): a member whose frontier reaches this score
+// has saturated — it can no longer tell models apart — and RETIRES from the
+// mean, exactly as ARC generations retire at 85%. Retired members stay in
+// `members` (flagged) so the page can show what dropped out and why. No
+// replacement is added automatically: choosing a new member is a methodology
+// decision, not something a feed should do.
 export const BASKET_SATURATION = 0.9;
+// Fewer active members than this and the mean is too thin to call a basket;
+// the indicator is withheld (and the previous reading carried forward).
+export const BASKET_MIN_ACTIVE = 2;
 
 const num = (v) => {
   if (v === undefined || v === null || String(v).trim() === '') return null;
@@ -159,9 +166,10 @@ export function extractEci(eciRows) {
 }
 
 /**
- * Frontier basket B-2026.1: the best score on each member benchmark. All
- * members must resolve — a partial basket is a different indicator, so it is
- * refused (the pipeline then carries the previous reading forward).
+ * Frontier basket B-2026.1: the best score on each member benchmark, averaged
+ * over the members that have not saturated (BASKET_SATURATION). All members
+ * must resolve — a partial basket is a different indicator, so it is refused
+ * (the pipeline then carries the previous reading forward).
  * @param {Object<string, Array<Object>>} tables parsed CSV rows keyed by file name
  * @returns {{fractions:number[]|null, members:object[], errors:string[]}}
  */
@@ -190,11 +198,18 @@ export function extractBasket(tables, { displayNames = new Map() } = {}) {
       model: modelLabel(front.row, displayNames),
       date: front.date,
       rows: front.n,
-      saturated: front.score >= BASKET_SATURATION,
+      retired: front.score >= BASKET_SATURATION,
     });
   }
   if (members.length !== BASKET_MEMBERS.length) return { fractions: null, members, errors };
-  return { fractions: members.map((m) => m.score), members, errors };
+  const active = members.filter((m) => !m.retired);
+  if (active.length < BASKET_MIN_ACTIVE) {
+    errors.push(
+      `epoch: only ${active.length} of ${members.length} basket members are below ${BASKET_SATURATION * 100}% — the basket needs new members (methodology decision)`
+    );
+    return { fractions: null, members, errors };
+  }
+  return { fractions: active.map((m) => m.score), members, errors };
 }
 
 /**

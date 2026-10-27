@@ -22,6 +22,7 @@ export function upsertPoint(history, point) {
  *   - no existing point        → add the backfilled point
  *   - existing live point      → replace it, preserving its numbers as `published`
  *   - existing backfilled point→ replace it (idempotent re-run), keeping any `published` it carried
+ *   - a `rebaseline` marker on the existing point is preserved either way
  * Points on or after `before` (the re-baseline date) are never touched: from
  * then on history is live data.
  * @param {{points: Array}} history
@@ -38,7 +39,12 @@ export function applyBackfill(history, backfillPoints, before) {
       : old
         ? { composite: old.composite, pillars: old.pillars }
         : undefined;
-    existing.set(bp.date, { ...bp, ...(published ? { published } : {}) });
+    existing.set(bp.date, {
+      ...bp,
+      ...(published ? { published } : {}),
+      // the re-baseline day keeps its marker when its point is reconstructed
+      ...(old?.rebaseline ? { rebaseline: old.rebaseline } : {}),
+    });
   }
   return { ...history, schemaVersion: history?.schemaVersion ?? 1, points: [...existing.values()].sort(byDate) };
 }

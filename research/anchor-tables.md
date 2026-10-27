@@ -36,7 +36,7 @@ Challenge points: (1) the line is extrapolated beyond its two anchor points — 
 ### `epochBenchmarks` — frontier benchmark basket (automated, weekly)
 
 Source: Epoch AI Benchmarking Hub (CC-BY, CSV/API).
-Recipe (implemented 2026-10-02): versioned basket **B-2026.1** = mean of the best published score on {GPQA Diamond, SWE-bench Verified, FrontierMath Tiers 1–3 (v2), Humanity's Last Exam}, each as a raw 0–1 fraction. **Correction to the original recipe:** these are raw benchmark scores, *not* normalized to expert-human performance — Epoch publishes no human baseline for them. A member scoring ≥ 90% is flagged `saturated` in the data (ratchet rule: rotate it out under a new basket version). All four members must resolve or the indicator is withheld — a partial basket is a different indicator.
+Recipe (implemented 2026-10-02): versioned basket **B-2026.1** = mean of the best published score on {GPQA Diamond, SWE-bench Verified, FrontierMath Tiers 1–3 (v2), Humanity's Last Exam}, each as a raw 0–1 fraction. **Correction to the original recipe:** these are raw benchmark scores, *not* normalized to expert-human performance — Epoch publishes no human baseline for them. Ratchet rule (implemented 2026-10-26, D10): a member whose frontier reaches ≥ 90% **retires** from the mean automatically — like ARC generations at 85% — and stays in the published `members` list flagged `retired`. No replacement is added by the feed; choosing new members is a methodology decision. With fewer than 2 active members the indicator is withheld (previous reading carried forward). All four members must resolve or the indicator is withheld — a partial basket is a different indicator.
 
 | Anchor | Score |
 | --- | --- |
@@ -44,7 +44,7 @@ Recipe (implemented 2026-10-02): versioned basket **B-2026.1** = mean of the bes
 | Frontier averages 50% of expert-human across basket | 50 |
 | Frontier matches expert-human across entire unsaturated basket | 100 |
 
-Current: **81.9** (GPQA 95.8%, SWE-bench Verified 83.5%, FrontierMath T1–3 93.7%, HLE 54.8%; 2026-10-02). GPQA and FrontierMath already sit near the ceiling, so this indicator is close to saturated and the next real movement will come from rotating the basket.
+Current: **69.1** (2026-10-26): active members SWE-bench Verified 83.5% and HLE 54.8%; GPQA Diamond (96.4%) and FrontierMath T1–3 (93.7%) have retired. Was 81.9 with all four counted. Two active members is thin and SWE-bench Verified is itself nearing the line, so adding members (candidates: unsaturated Epoch benchmarks such as the agentic and professional-task sets) is the open methodology question.
 Challenge point: basket choice is the whole indicator. Rotation per ratchet rule when any member saturates >90%.
 
 ### `arcGap` — novel-reasoning gap (automated/scrape, per release)
@@ -200,3 +200,4 @@ Note this lands *lower* than the mockup's illustrative 61 and lower than Hendryc
 4. arcGap retirement threshold (85%).
 5. P2 internal split (timeHorizon 70% / autonomyLevel 30%) `[J]`.
 | D9 | 2026-10-02 | Tier 1 adapters built. METR horizons now come from Epoch's mirror of METR's published numbers (p50/p80/CI), with METR's GitHub runs as fallback; automated inputs that return nothing are **carried forward** from the previous snapshot with their original `asOf` (never silently dropped — that would renormalize the composite) plus an error line. Local dry run against live data: composite 48.0 → 57.0 (capability 53.0, autonomy 74.6, deployment 35.3). Exceeds the 5-pt escalation gate, so publishing needs the labeled re-baseline (D7) | Claude; published as the declared re-baseline (D7) |
+| D10 | 2026-10-26 | Outside review (Many Minds) acted on. (a) Basket ratchet implemented as above: composite 57.2 → 56.1, capability 53.4 → 50.9; history recomputed on the same basis (`config/history-backfill.json` now runs to 2026-10-25; originally published values kept as `published`). (b) The composite now publishes `weightByConfidence` (38.5% of weight on judgment-scored inputs) and a **plausible range** (53.6–59.2 at launch of this change): published intervals for ECI and METR, ±10 points on judgment inputs, combined in quadrature — a sensitivity range, explicitly not a statistical CI (`domain/uncertainty.js`). (c) METR reading above its own 16 h ceiling is labelled provisional. (d) Declined: splitting the re-baseline note into steps; a verified-only view | Vaughan (decisions on 1, 2, 3, 4) |

@@ -67,7 +67,7 @@ export function createEpochAdapter({ fetchArchive = getEpochArchive, now = () =>
               basket: BASKET_ID,
               fractions: basket.fractions,
               members: basket.members,
-              saturated: basket.members.filter((m) => m.saturated).map((m) => m.label),
+              retired: basket.members.filter((m) => m.retired).map((m) => m.label),
             },
             asOf,
             source: `${SOURCE} — frontier basket ${BASKET_ID}`,

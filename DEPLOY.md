@@ -121,6 +121,10 @@ The pipeline exits code 2 if the composite moves \>5 pts between runs (methodolo
 - The Daily Fetch workflow's **Report stale inputs** step keeps one GitHub issue (label `stale-inputs`) open and edited in place while anything is overdue, and closes it when nothing is. The step is non-blocking and needs the workflow's `issues: write` permission (declared at the top of `daily-fetch.yml`).
 - **Clearing an item** means re-checking the source named in the entry's `_instructions`, updating the value and `asOf`, and only then moving `reviewBy` forward. Moving `reviewBy` without re-checking defeats the point.
 
+### What the headline publishes alongside the number (added 2026-10-26)
+
+`futurewatch.json` → `composite.weightByConfidence` (share of the composite resting on verified / provisional / judgment inputs) and `composite.range` (plausible low–high). The site shows both under the headline. The range is a sensitivity range, not a statistical confidence interval — see `backend/src/domain/uncertainty.js` for the exact rule (published ECI and METR intervals, ±10 points on judgment-scored inputs, combined in quadrature). Changing `JUDGMENT_HALF_WIDTH` there changes the displayed range.
+
 ### Automated inputs (Tier 1, added 2026-10-02)
 
 | Indicator | Source | Adapter |
