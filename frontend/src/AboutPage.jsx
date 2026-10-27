@@ -33,7 +33,7 @@ export default function AboutPage() {
         <Panel>
           <H2>About FutureWatch</H2>
           <P>
-            FutureWatch is a public reading of progress toward AGI, built from peer-reviewed frameworks and
+            FutureWatch is a public reading of progress toward AGI, built from published frameworks and
             live public data. One scale: 0 marks the 2019 frontier (GPT-2 era), 100 marks the AGI line
             (cognitive versatility and proficiency of a well-educated adult), with the ASI zone marked beyond.
           </P>
@@ -58,7 +58,8 @@ export default function AboutPage() {
           <P>
             Benchmark data is from Epoch AI's{' '}
             <a href="https://epoch.ai/benchmarks" style={{ color: C.blue }}>Capabilities &amp; benchmarking</a>{' '}
-            hub (CC-BY 4.0), which also mirrors METR's time-horizon results; ARC-AGI results are from the{' '}
+            hub (CC-BY 4.0), which also mirrors METR's time-horizon results; the 0–100 calibration of its Capabilities Index follows the AGI scores in Hendrycks et al., <em>A Definition of AGI</em> ({' '}
+            <a href="https://arxiv.org/abs/2510.18212" style={{ color: C.blue }}>arXiv:2510.18212</a>); ARC-AGI results are from the{' '}
             <a href="https://arcprize.org/leaderboard" style={{ color: C.blue }}>ARC Prize leaderboard</a>.
           </P>
           <P>

@@ -17,6 +17,7 @@ import {
 } from './anchors.js';
 import { scorePillar, scoreComposite, doublingTimeDays, PILLAR_DEFS } from './scorer.js';
 import { assessFreshness, summarizeFreshness } from './freshness.js';
+import { weightByConfidence } from './weight-shares.js';
 
 // Inputs that feed the composite — what the headline number rests on.
 const SCORED_SLUGS = new Set(Object.values(PILLAR_DEFS).flatMap((def) => Object.keys(def)));
@@ -77,6 +78,8 @@ export function buildSnapshot({ results, carried = null, now = new Date() }) {
     pillars[name] = scorePillar(name, merged);
   }
   const composite = scoreComposite(pillars);
+  // How much of the headline rests on verified / provisional / judgment inputs.
+  composite.weightByConfidence = weightByConfidence(pillars, merged);
 
   // Trajectory metadata (D3: displayed, not blended)
   const series = merged.metrTimeHorizon?.raw?.frontierSeries ?? [];

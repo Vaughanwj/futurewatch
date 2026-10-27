@@ -103,3 +103,23 @@ test('findUndatedModels lists only models without a date', () => {
     ['b']
   );
 });
+
+// ── confidence label (outside review, 2026-10) ────────────────────────────
+
+import { createMetrAdapter } from '../src/adapters/metr-adapter.js';
+
+const sourceWith = (p50) => async () => ({
+  models: [{ alias: 'm', p50Minutes: p50, releaseDate: '2026-04-07' }],
+  series: [{ date: '2026-04-07', value: p50, alias: 'm' }],
+  suite: 'stub',
+  errors: [],
+});
+
+test('a reading above METR\'s own 16-hour reliability ceiling is flagged and labelled provisional, not verified', async () => {
+  const above = (await createMetrAdapter({ fetchSource: sourceWith(1045) }).fetch()).indicators.metrTimeHorizon;
+  assert.equal(above.raw.aboveSuiteCeiling, true);
+  assert.equal(above.confidence, 'provisional');
+  const below = (await createMetrAdapter({ fetchSource: sourceWith(719) }).fetch()).indicators.metrTimeHorizon;
+  assert.equal(below.raw.aboveSuiteCeiling, false);
+  assert.equal(below.confidence, 'verified');
+});

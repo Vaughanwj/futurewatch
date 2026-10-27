@@ -77,6 +77,8 @@ const TIPS = {
     'The meter reading (capability) beside how seriously frontier labs take existential safety — the best grade any lab earned in the Future of Life Institute’s independent Safety Index, converted to 0–100. The gap is the point.',
   sourceHealth:
     'How many of the meter’s data sources responded in the latest run. This only measures whether fetches succeeded — not whether the data is current. Input freshness is tracked separately, just below.',
+  judgmentShare:
+    'Some inputs have no instrument behind them yet — they are scored by hand against a written rubric (self-learning, real-time engagement, agentic autonomy, and the economy-wide adoption measure) and labelled “judgment” below. This is how much of the headline’s weight sits on them. Their rubrics and sign-off history are public in the repo; the measured inputs are the ones labelled “verified”.',
   freshness:
     'Every input has a review date set from its own update cadence. “Due” means up to 30 days past it; “stale” means more than 30. Overdue inputs are still counted in the score, but the value may no longer reflect the field — treat the reading as lower-confidence until they are refreshed. A meter that hides its own staleness isn’t worth trusting.',
   capability:
@@ -86,9 +88,9 @@ const TIPS = {
   deployment:
     'Whether AI is doing real economic work in the wild, not just passing tests. Deliberately the smallest weight — it confirms progress rather than predicts it. 20% of the composite.',
   eciCapability:
-    'Epoch AI’s Capabilities Index for the strongest model today — one number combining its results across dozens of benchmarks. We map it onto a 0–100 scale using two points: GPT-4 (2023) ≈ 27 and GPT-5 (2025) ≈ 57, the AGI-definition scores published for those models. 100 would mean fully matching a well-educated adult across the board. Updates automatically.',
+    'Epoch AI’s Capabilities Index for the strongest model today — one number combining its results across dozens of benchmarks. We map it onto a 0–100 scale with a straight line through two points: GPT-4 (2023) ≈ 27 and GPT-5 (2025) ≈ 57, the AGI scores Hendrycks et al. (“A Definition of AGI”) published for those models. Beyond GPT-5 the line is extrapolated, and the index shares some benchmarks with the Epoch Benchmarks measure below, so the two partly overlap. 100 would mean fully matching a well-educated adult across the board. Updates automatically.',
   epochBenchmarks:
-    'The best published score on each of four hard benchmarks — graduate-level science (GPQA Diamond), real software fixes (SWE-bench Verified), research-level math (FrontierMath Tiers 1–3) and Humanity’s Last Exam — averaged, where 100 is a perfect score. Data: Epoch AI. Updates automatically; a benchmark that tops out is swapped out rather than left to flatten the reading.',
+    'The best published score on each of four hard benchmarks — graduate-level science (GPQA Diamond), real software fixes (SWE-bench Verified), research-level math (FrontierMath Tiers 1–3) and Humanity’s Last Exam — averaged, where 100 is a perfect score. Data: Epoch AI. Updates automatically; two of the four (GPQA Diamond and FrontierMath) are already above 90%, so this measure is close to saturated; the plan is to rotate saturated benchmarks out, but that is not built yet.',
   arcGap:
     'How close AI comes to ordinary humans on ARC-AGI puzzles: tasks built to be unlike anything in training data. A version counts until AI reaches 85% of human performance on it (ARC-AGI-2 now has), then it drops out; ARC-AGI-3, the interactive version, is scored on the standard setup every model gets — results from labs’ own tuned harnesses run far higher and are shown beside it, not scored. Updates automatically.',
   selfLearning:
@@ -96,7 +98,7 @@ const TIPS = {
   realTimeEngagement:
     'Our own five-milestone rubric for live, multi-person interaction: real-time voice, group conversation, unprompted contributions, remembering people across sessions, and holding a valued role in a human group for weeks. Criteria published in the repo.',
   metrTimeHorizon:
-    'The longest task — in human working time — the best AI completes unsupervised with 50% reliability (METR). Log scale from ~4 seconds (GPT-2, 2019) to one working month, the point we treat as the autonomy Rubicon. METR says its task set is thin beyond about 16 hours, so readings past that are low-confidence.',
+    'The longest task — in human working time — the best AI completes unsupervised with 50% reliability (METR). Log scale from ~4 seconds (GPT-2, 2019) to one working month, the point we treat as the autonomy Rubicon. METR itself says measurements above 16 hours are unreliable with its current task suite, so the current reading is marked provisional.',
   agenticAutonomyLevel:
     'How independently AI routinely operates in real deployments, on DeepMind’s published ladder: tool → consultant → collaborator → expert → autonomous agent.',
   anthropicEconIndex:
@@ -177,73 +179,6 @@ export function Info({ tip }) {
     </span>
   );
 }
-
-// Fallback for standalone previews (artifact runners, storybooks) that render
-// the component without props. Production always passes the fetched snapshot.
-// Values mirror the first real pipeline run, 2026-07-20.
-const SAMPLE_SNAPSHOT = {
-  schemaVersion: 1,
-  generatedAt: '2026-07-20T12:00:00Z',
-  composite: { value: 46.3, coverage: 1 },
-  pillars: {
-    capability: {
-      name: 'capability', weight: 0.45, score: 34.6, coverage: 1,
-      indicators: [
-        { slug: 'eciCapability', score: 78.6, weight: 0.2 },
-        { slug: 'epochBenchmarks', score: 81.9, weight: 0.2 },
-        { slug: 'arcGap', score: 62.7, weight: 0.2 },
-        { slug: 'selfLearning', score: 12, weight: 0.2 },
-        { slug: 'realTimeEngagement', score: 30, weight: 0.2 },
-      ],
-    },
-    autonomy: {
-      name: 'autonomy', weight: 0.35, score: 67.7, coverage: 1,
-      indicators: [
-        { slug: 'metrTimeHorizon', score: 71, weight: 0.7 },
-        { slug: 'agenticAutonomyLevel', score: 60, weight: 0.3 },
-      ],
-    },
-    deployment: {
-      name: 'deployment', weight: 0.2, score: 35.3, coverage: 1,
-      indicators: [
-        { slug: 'anthropicEconIndex', score: 28.1, weight: 0.5 },
-        { slug: 'aiIndexEconomy', score: 42.5, weight: 0.5 },
-      ],
-    },
-  },
-  expectation: { superforecasterAgi: 2047, expertAgi: 2050 },
-  safety: { score: 32.5, existentialGrade: 'D+', overallBestGpa: 2.66, bestLab: 'Anthropic (tied with OpenAI)' },
-  trajectory: {
-    metrDoublingDaysSince2023: 131,
-    frontierSeries: [
-      { date: '2019-02-14', value: 0.067, alias: 'GPT-2' },
-      { date: '2020-05-28', value: 0.7, alias: 'GPT-3' },
-      { date: '2023-03-14', value: 3.5, alias: 'GPT-4' },
-      { date: '2024-12-05', value: 50, alias: 'o1' },
-      { date: '2025-08-07', value: 214, alias: 'GPT-5' },
-      { date: '2025-11-24', value: 320, alias: 'Claude Opus 4.5' },
-    ],
-  },
-  indicators: {
-    eciCapability: { confidence: 'verified' },
-    epochBenchmarks: { confidence: 'verified' },
-    arcGap: { confidence: 'verified' },
-    selfLearning: { confidence: 'judgment' },
-    realTimeEngagement: { confidence: 'judgment' },
-    metrTimeHorizon: { confidence: 'verified', raw: { p50Minutes: 320, suite: 'TH1.1' } },
-    agenticAutonomyLevel: { confidence: 'judgment' },
-    anthropicEconIndex: { confidence: 'provisional' },
-    aiIndexEconomy: { confidence: 'judgment' },
-  },
-  stories: [
-    { title: 'Time Horizon 1.1', link: 'https://metr.org/blog/2026-1-29-time-horizon-1-1/', feed: 'metr.org' },
-    { title: 'ARC-AGI-3 remains unbeaten by frontier agents', link: 'https://arcprize.org', feed: 'arcprize.org' },
-  ],
-  sourceHealth: [
-    { source: 'metr', ok: true }, { source: 'manual', ok: true }, { source: 'rss', ok: true },
-  ],
-  errors: [],
-};
 
 export function scoreColor(v) {
   if (v === null || v === undefined) return C.textLow;
@@ -333,6 +268,7 @@ export function Bar({ value, color, height = 8 }) {
 function Hero({ snapshot }) {
   const v = snapshot.composite?.value;
   const coverage = snapshot.composite?.coverage;
+  const judgmentShare = snapshot.composite?.weightByConfidence?.judgment ?? 0;
   const fr = snapshot.freshness?.scored ?? { total: 0, due: 0, stale: 0 };
   const overdueScored = (fr.due ?? 0) + (fr.stale ?? 0);
   // The visual track runs 0..120: AGI line at 100, ASI zone beyond.
@@ -350,6 +286,12 @@ function Hero({ snapshot }) {
         <span style={{ fontFamily: mono, fontSize: '0.72rem', color: C.textLow, marginLeft: 'auto' }}>
           scored on {Math.round((coverage ?? 0) * 100)}% of indicators · v0.1 provisional
         </span>
+        {judgmentShare > 0 && (
+          <span style={{ flexBasis: '100%', fontFamily: mono, fontSize: '0.7rem', color: C.yellow, lineHeight: 1.5 }}>
+            {Math.round(judgmentShare * 100)}% of this score rests on analyst-judgment inputs
+            <Info tip={TIPS.judgmentShare} />
+          </span>
+        )}
       </div>
       <div style={{ position: 'relative', marginTop: 18, height: 14 }}>
         <div style={{ position: 'absolute', inset: 0, background: C.track, borderRadius: 7 }} />
@@ -656,6 +598,18 @@ function Divergence({ snapshot }) {
 
 // ── Pillar detail cards ──────────────────────────────────────────────────────
 
+// ARC-AGI-3 is scored on the Standard harness; the lab-tuned Provider-Adapter
+// result is far higher, so it is shown next to it rather than hidden (D6).
+function ArcAdapterNote({ raw }) {
+  const gen = (raw?.generations ?? []).find((g) => g.providerAdapter);
+  if (!gen) return null;
+  return (
+    <span style={{ display: 'block', fontFamily: mono, fontSize: '0.6rem', marginTop: 1, color: C.textLow }}>
+      scored: {gen.name} standard harness {(gen.frontierScore * 100).toFixed(1)}% · lab-tuned adapter harness {(gen.providerAdapter.score * 100).toFixed(1)}% (not scored)
+    </span>
+  );
+}
+
 function PillarCard({ name, pillar, indicators }) {
   return (
     <Panel>
@@ -689,6 +643,7 @@ function PillarCard({ name, pillar, indicators }) {
                   as of {asOf}{fresh?.status === 'stale' ? ' · stale' : fresh?.status === 'due' ? ' · review due' : ''}
                 </span>
               )}
+              {row.slug === 'arcGap' && <ArcAdapterNote raw={meta?.raw} />}
             </span>
             {meta?.confidence && meta.confidence !== 'verified' && (
               <span
@@ -816,8 +771,8 @@ export function Footer() {
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 
-export default function FuturewatchDashboard({ snapshot = SAMPLE_SNAPSHOT, history = null, children }) {
-  if (!snapshot) snapshot = SAMPLE_SNAPSHOT;
+export default function FuturewatchDashboard({ snapshot, history = null, children }) {
+  if (!snapshot) return null;
   const grid3 = { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 14 };
   return (
     <div style={{ background: C.bg, minHeight: '100vh', color: C.text }}>

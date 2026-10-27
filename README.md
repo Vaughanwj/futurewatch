@@ -2,7 +2,7 @@
 
 How far along are we? How far do we have to go? How long did it take to get here?
 
-A public reading of progress toward AGI, built from peer-reviewed frameworks and live public data. One scale: 0 = the 2019 frontier (GPT-2 era), 100 = the AGI line (cognitive versatility and proficiency of a well-educated adult), with the ASI zone marked beyond.
+A public reading of progress toward AGI, built from published frameworks and live public data. One scale: 0 = the 2019 frontier (GPT-2 era), 100 = the AGI line (cognitive versatility and proficiency of a well-educated adult), with the ASI zone marked beyond.
 
 > **Not a prediction. A reading.** Scores derive from public data and written anchor tables. Forecast content is displayed separately and never enters the composite.
 

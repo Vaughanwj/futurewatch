@@ -133,7 +133,7 @@ The pipeline exits code 2 if the composite moves \>5 pts between runs (methodolo
 
 Epoch's archive (`epoch.ai/data/benchmark_data.zip`, ~2 MB, CC-BY 4.0, no key) is downloaded once per process by `adapters/epoch-source.js`. Safeguards worth knowing when a run reports an error: the ECI is **refused** if Epoch re-anchors GPT-5 = 150 / GPT-4 = 125.89 (the 0–100 mapping depends on them); the basket is refused if any member is missing or has collapsed to few rows; ARC is refused unless both ARC-AGI-2 and ARC-AGI-3 resolve; a dataset whose newest model is over 120 days old is treated as a dead feed. In every refusal case the **previous reading is carried forward** (original `asOf`, flagged `carriedForward`, error line in `errors`) so the composite is never renormalized by a one-day outage — and the freshness model ages it honestly if the outage lasts. No API keys are involved.
 
-Automated inputs clear themselves when upstream publishes newer data — but upstream can lag. METR's public data last gained a model on 2026-04-07 and its task suite saturates above ~16 h, so `metrTimeHorizon` is expected to show stale until METR publishes again.
+Automated inputs clear themselves when upstream publishes newer data — but upstream can lag. METR's public data last gained a model on 2026-04-07 and METR itself calls measurements above 16 h unreliable with its current task suite (metr.org/time-horizons), so `metrTimeHorizon` is expected to show stale until METR publishes again.
 
 ## Maintenance cadence
 

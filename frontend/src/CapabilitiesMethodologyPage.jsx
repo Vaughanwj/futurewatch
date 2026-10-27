@@ -99,7 +99,7 @@ export default function CapabilitiesMethodologyPage() {
           <H2>Sources</H2>
           <P>
             <strong>Live, automated:</strong> METR's published task horizons (50% and 80% success, mirrored by Epoch AI;
-            METR's own task set is thin above about 16 hours, so very long horizons are low-confidence), and
+            METR itself says measurements above 16 hours are unreliable with its current task suite), and
             Epoch AI's CC-BY benchmark archive for the other cards: PostTrainBench (AI Improvement),
             Vending-Bench 2 (Resource Acquisition), and OSWorld and Terminal-Bench (Operational Autonomy). Each
             card shows the record-setting results, labelled as simulation or controlled-lab, never as real-world

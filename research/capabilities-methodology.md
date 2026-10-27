@@ -67,7 +67,7 @@ real-world, and vice versa.
   `metr-adapter.js`. Preferred source is METR's published horizons as mirrored in Epoch's archive (p50, p80 and
   confidence interval as METR reports them); if that is unreachable it falls back to refitting METR's public
   `eval-analysis-public` runs, and says so in `errors`. METR's own caveat applies: its task set is thin above
-  ~16 hours, so very long horizons are low-confidence.
+  a reading above 16 hours is, in METR's own words (metr.org/time-horizons), "unreliable with our current task suite" — the indicator is flagged `aboveSuiteCeiling` and labelled provisional.
 - **Epoch AI** (`epoch-capabilities-adapter.js`, shared download in `adapters/epoch-source.js`) — the CC-BY 4.0
   `epoch.ai/data/benchmark_data.zip` archive (refreshed daily, no key). The last three record-setting results per
   metric become observations: **PostTrainBench** → AI Improvement (controlled lab; explicitly *not* recursive

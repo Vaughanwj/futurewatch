@@ -16,9 +16,10 @@ import { fitP50Horizon, frontierSeries, mergeModels } from '../domain/metr-fit.j
 import { getEpochArchive } from './epoch-source.js';
 import { extractMetrHorizons, buildDisplayNames } from '../domain/epoch-extract.js';
 
-// METR's own caveat: the task suite is thin above ~16 hours, so estimates
-// past it are low-confidence (both CI and the choice of scoring treatment
-// move them a lot). Surfaced on the indicator, not used to clip it.
+// METR's own caveat, verbatim from metr.org/time-horizons: "Measurements above
+// 16 hrs are unreliable with our current task suite." Surfaced on the indicator
+// (aboveSuiteCeiling) and its confidence label is downgraded to 'provisional';
+// the value itself is not clipped.
 export const METR_SUITE_CEILING_MINUTES = 16 * 60;
 
 const BASE = 'https://raw.githubusercontent.com/METR/eval-analysis-public/main';
@@ -194,40 +195,45 @@ export async function fetchMetrSource({ getText = defaultGetText, getHorizons = 
   return { models, series, suite, errors };
 }
 
-export const metrAdapter = {
-  async fetch() {
-    const t0 = Date.now();
-    const { series, models, suite, errors } = await fetchMetrSource();
-    const frontier = series.length > 0 ? series[series.length - 1] : null;
-    const frontierModelRow = frontier ? models.find((m) => m.alias === frontier.alias) : null;
+export function createMetrAdapter({ fetchSource = fetchMetrSource } = {}) {
+  return {
+    async fetch() {
+      const t0 = Date.now();
+      const { series, models, suite, errors } = await fetchSource();
+      const frontier = series.length > 0 ? series[series.length - 1] : null;
+      const frontierModelRow = frontier ? models.find((m) => m.alias === frontier.alias) : null;
 
-    if (!frontier) {
-      if (models.length === 0 && errors.length === 0) errors.push('metr: no frontier model produced a valid p50 fit');
-      return { indicators: {}, fetchMs: Date.now() - t0, errors };
-    }
+      if (!frontier) {
+        if (models.length === 0 && errors.length === 0) errors.push('metr: no frontier model produced a valid p50 fit');
+        return { indicators: {}, fetchMs: Date.now() - t0, errors };
+      }
 
-    return {
-      indicators: {
-        metrTimeHorizon: {
-          value: null, // normalized by domain
-          raw: {
-            p50Minutes: frontier.value,
-            frontierModel: frontier.alias,
-            p80Minutes: frontierModelRow?.p80Minutes ?? null,
-            ciLowMinutes: frontierModelRow?.ciLow ?? null,
-            ciHighMinutes: frontierModelRow?.ciHigh ?? null,
-            aboveSuiteCeiling: frontier.value > METR_SUITE_CEILING_MINUTES,
-            suite,
-            modelCount: models.length,
-            frontierSeries: series,
+      return {
+        indicators: {
+          metrTimeHorizon: {
+            value: null, // normalized by domain
+            raw: {
+              p50Minutes: frontier.value,
+              frontierModel: frontier.alias,
+              p80Minutes: frontierModelRow?.p80Minutes ?? null,
+              ciLowMinutes: frontierModelRow?.ciLow ?? null,
+              ciHighMinutes: frontierModelRow?.ciHigh ?? null,
+              aboveSuiteCeiling: frontier.value > METR_SUITE_CEILING_MINUTES,
+              suite,
+              modelCount: models.length,
+              frontierSeries: series,
+            },
+            asOf: frontier.date,
+            source: 'METR time horizons (metr.org; github.com/METR/eval-analysis-public), mirrored by Epoch AI (CC-BY 4.0)',
+            // METR itself calls readings past ~16 h unreliable, so "verified" would overstate it.
+            confidence: frontier.value > METR_SUITE_CEILING_MINUTES ? 'provisional' : 'verified',
           },
-          asOf: frontier.date,
-          source: 'METR time horizons (metr.org; github.com/METR/eval-analysis-public), mirrored by Epoch AI (CC-BY 4.0)',
-          confidence: 'verified',
         },
-      },
-      fetchMs: Date.now() - t0,
-      errors,
-    };
-  },
-};
+        fetchMs: Date.now() - t0,
+        errors,
+      };
+    },
+  };
+}
+
+export const metrAdapter = createMetrAdapter();
