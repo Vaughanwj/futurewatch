@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T21:04:09.410Z",
+  "generatedAt": "2026-10-28T21:28:26.539Z",
   "composite": {
     "value": 56.1,
     "coverage": 1,
@@ -193,21 +193,21 @@
   },
   "stories": [
     {
-      "title": "Tradeoff-Aware Territory Design: A Multi-Objective Decision System for Enterprise Customer-to-Seller Allocation",
-      "link": "https://arxiv.org/abs/2610.31701",
-      "published": "Tue, 27 Oct 2026 00:00:00 -0400",
+      "title": "Counting the Bandages: On measuring the time that AI saves",
+      "link": "https://arxiv.org/abs/2610.35942",
+      "published": "Wed, 28 Oct 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Phronix: The Capability-Centric Learning Paradigm for Agents",
-      "link": "https://arxiv.org/abs/2610.31789",
-      "published": "Tue, 27 Oct 2026 00:00:00 -0400",
+      "title": "Enhancing Deep Learning Model Performance through Data Generation Strategies: Classification of Olive Tree Diseases",
+      "link": "https://arxiv.org/abs/2610.35984",
+      "published": "Wed, 28 Oct 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Patronizing and Condescending Language Detection in English and Mandarin",
-      "link": "https://arxiv.org/abs/2610.31808",
-      "published": "Tue, 27 Oct 2026 00:00:00 -0400",
+      "title": "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents",
+      "link": "https://arxiv.org/abs/2610.36077",
+      "published": "Wed, 28 Oct 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
@@ -269,19 +269,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 1040,
+      "fetchMs": 722,
       "indicatorCount": 1
     },
     {
       "source": "epoch",
       "ok": true,
-      "fetchMs": 2,
+      "fetchMs": 1,
       "indicatorCount": 2
     },
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 288,
+      "fetchMs": 363,
       "indicatorCount": 1
     },
     {
@@ -293,7 +293,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 618,
+      "fetchMs": 1025,
       "indicatorCount": 0
     }
   ],
@@ -310,7 +310,7 @@
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 83,
+        "daysOverdue": 84,
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05"
       },
@@ -318,7 +318,7 @@
         "slug": "friLeapAgi",
         "scored": false,
         "status": "stale",
-        "daysOverdue": 77,
+        "daysOverdue": 78,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
       },
@@ -326,7 +326,7 @@
         "slug": "anthropicEconIndex",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 31,
+        "daysOverdue": 32,
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26"
       },
@@ -334,7 +334,7 @@
         "slug": "realTimeEngagement",
         "scored": true,
         "status": "due",
-        "daysOverdue": 7,
+        "daysOverdue": 8,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       },
@@ -342,7 +342,7 @@
         "slug": "agenticAutonomyLevel",
         "scored": true,
         "status": "due",
-        "daysOverdue": 7,
+        "daysOverdue": 8,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       }
@@ -455,7 +455,7 @@
         "status": "stale",
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05",
-        "daysOverdue": 83
+        "daysOverdue": 84
       }
     },
     "eciCapability": {
@@ -475,7 +475,7 @@
         "status": "fresh",
         "asOf": "2026-10-15",
         "reviewBy": "2026-11-29",
-        "daysOverdue": -33
+        "daysOverdue": -32
       }
     },
     "epochBenchmarks": {
@@ -536,7 +536,7 @@
         "status": "fresh",
         "asOf": "2026-09-30",
         "reviewBy": "2026-12-29",
-        "daysOverdue": -63
+        "daysOverdue": -62
       }
     },
     "arcGap": {
@@ -567,14 +567,14 @@
           }
         ]
       },
-      "asOf": "2026-10-21",
+      "asOf": "2026-10-28",
       "source": "ARC Prize leaderboard (arcprize.org/leaderboard) — ARC-AGI-2 Semi-Private, ARC-AGI-3 Standard harness",
       "confidence": "verified",
       "freshness": {
         "status": "fresh",
-        "asOf": "2026-10-21",
-        "reviewBy": "2026-12-05",
-        "daysOverdue": -39
+        "asOf": "2026-10-28",
+        "reviewBy": "2026-12-12",
+        "daysOverdue": -45
       }
     },
     "selfLearning": {
@@ -589,7 +589,7 @@
         "status": "fresh",
         "asOf": "2026-06-05",
         "reviewBy": "2026-12-01",
-        "daysOverdue": -35
+        "daysOverdue": -34
       }
     },
     "realTimeEngagement": {
@@ -610,7 +610,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 7
+        "daysOverdue": 8
       }
     },
     "agenticAutonomyLevel": {
@@ -626,7 +626,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 7
+        "daysOverdue": 8
       }
     },
     "anthropicEconIndex": {
@@ -642,7 +642,7 @@
         "status": "stale",
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26",
-        "daysOverdue": 31
+        "daysOverdue": 32
       }
     },
     "aiIndexEconomy": {
@@ -658,7 +658,7 @@
         "status": "fresh",
         "asOf": "2026-04-15",
         "reviewBy": "2027-04-15",
-        "daysOverdue": -170
+        "daysOverdue": -169
       }
     },
     "friLeapAgi": {
@@ -674,7 +674,7 @@
         "status": "stale",
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11",
-        "daysOverdue": 77
+        "daysOverdue": 78
       }
     },
     "fliSafetyIndex": {
@@ -692,7 +692,7 @@
         "status": "fresh",
         "asOf": "2026-07-15",
         "reviewBy": "2027-01-15",
-        "daysOverdue": -80
+        "daysOverdue": -79
       }
     }
   },

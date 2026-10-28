@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T21:04:10.804Z",
+  "generatedAt": "2026-10-28T21:28:27.528Z",
   "status": {
     "headline": "No integrated autonomous self-expansion observed. Component capabilities are advancing independently.",
     "lastReviewed": "2026-07-29"
@@ -36,8 +36,8 @@
       "pendingCount": 0
     },
     "resourceAcquisition": {
-      "bestSimulatedResult": 15514.7017,
-      "bestSimulatedResultModel": "GPT-6 Astra",
+      "bestSimulatedResult": 16484.2067,
+      "bestSimulatedResultModel": "Gemini 4 Carbon",
       "computeOrAccountAcquisition": null,
       "persistenceOrReplicationEvidence": null,
       "realWorldResourceAcquisitionObserved": false,
@@ -579,13 +579,73 @@
       "notes": "Best agent+model result on Terminal-Bench 2.0 terminal tasks. Agent scaffolds differ across entries.",
       "rawPayloadReference": null,
       "extra": {}
+    },
+    {
+      "id": "37415354-7cb8-4573-941c-c08a7df46325",
+      "capability": "resource_acquisition",
+      "metric": "vending_bench_2_balance",
+      "model": "Gemini 4 Carbon",
+      "modelProvider": "Google DeepMind",
+      "value": 16484.2067,
+      "unit": "USD_simulated",
+      "environment": "simulation",
+      "goalOrigin": "externally_assigned",
+      "scaffold": null,
+      "observedAt": "2026-10-28",
+      "publishedAt": null,
+      "sourceKind": "benchmark",
+      "sourceName": "Vending-Bench 2 (Andon Labs, via Epoch AI)",
+      "sourceUrl": "https://andonlabs.com/evals/vending-bench-2",
+      "sourceDocumentId": null,
+      "sourceHash": "e5000edb3e01cb1ec07c2a72dbcb7ff869ba9279757427c6ec4d033660fc2507",
+      "confidence": "high",
+      "evidenceLevel": 2,
+      "humanReviewRequired": false,
+      "reviewStatus": "not_required",
+      "notes": "Simulated bank balance in a ~1-year (365-day) simulated vending business starting from $500 — not real income. The agent never left the simulation.",
+      "rawPayloadReference": null,
+      "extra": {
+        "subcapability": "economic_accumulation",
+        "startingBalance": 500,
+        "simulationDurationDays": 365
+      }
+    },
+    {
+      "id": "ff87f74c-e54e-4028-a05b-2031bdff719d",
+      "capability": "ai_improvement",
+      "metric": "posttrainbench_average",
+      "model": "Opus 4.7 (xHigh)",
+      "modelProvider": "Anthropic",
+      "value": 28.56,
+      "unit": "percent",
+      "environment": "controlled_lab",
+      "goalOrigin": "externally_assigned",
+      "scaffold": "Claude Code",
+      "observedAt": "2026-04-16",
+      "publishedAt": null,
+      "sourceKind": "benchmark",
+      "sourceName": "PostTrainBench (via Epoch AI)",
+      "sourceUrl": "https://epoch.ai/benchmarks/post-train-bench",
+      "sourceDocumentId": null,
+      "sourceHash": "0f5e3a966e0521c9e05c9c6efa23c8d7b282291e348efbeb21717f20b2ba0007",
+      "confidence": "high",
+      "evidenceLevel": 2,
+      "humanReviewRequired": false,
+      "reviewStatus": "not_required",
+      "notes": "Agents (e.g. Claude Code, Codex CLI) autonomously post-train a small open base model within 10 hours on one H100; the score is the average benchmark performance of the model they produce (the best agents still trail official instruction-tuned models). One controlled improvement cycle on a small model — the result is not deployed and no further cycle is run on it, so this is not recursive self-improvement.",
+      "rawPayloadReference": null,
+      "extra": {
+        "improvedAnotherModel": true,
+        "wasDeployed": false,
+        "improvementCycleFollowed": false
+      }
     }
   ],
   "sourceHealth": [
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 1082,
+      "fetchMs": 802,
       "candidateCount": 2,
       "pending": false,
       "pendingReason": null
@@ -601,7 +661,7 @@
     {
       "source": "epoch",
       "ok": true,
-      "fetchMs": 11,
+      "fetchMs": 6,
       "candidateCount": 12,
       "pending": false,
       "pendingReason": null
@@ -635,8 +695,8 @@
   "ingestion": {
     "recordsSeen": 15,
     "recordsNormalized": 15,
-    "recordsSaved": 0,
-    "recordsDeduplicated": 15,
+    "recordsSaved": 2,
+    "recordsDeduplicated": 13,
     "recordsQuarantined": 0,
     "pendingReviewCount": 0
   }
