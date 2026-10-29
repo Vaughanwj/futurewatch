@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-28T21:28:26.539Z",
+  "generatedAt": "2026-10-29T21:29:53.245Z",
   "composite": {
     "value": 56.1,
     "coverage": 1,
@@ -26,7 +26,7 @@
         {
           "slug": "eciCapability",
           "weight": 0.2,
-          "score": 80.43011198672752
+          "score": 80.54209871422646
         },
         {
           "slug": "epochBenchmarks",
@@ -195,19 +195,19 @@
     {
       "title": "Counting the Bandages: On measuring the time that AI saves",
       "link": "https://arxiv.org/abs/2610.35942",
-      "published": "Wed, 28 Oct 2026 00:00:00 -0400",
+      "published": "Thu, 29 Oct 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "Enhancing Deep Learning Model Performance through Data Generation Strategies: Classification of Olive Tree Diseases",
       "link": "https://arxiv.org/abs/2610.35984",
-      "published": "Wed, 28 Oct 2026 00:00:00 -0400",
+      "published": "Thu, 29 Oct 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
       "title": "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents",
       "link": "https://arxiv.org/abs/2610.36077",
-      "published": "Wed, 28 Oct 2026 00:00:00 -0400",
+      "published": "Thu, 29 Oct 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
@@ -269,19 +269,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 722,
+      "fetchMs": 396,
       "indicatorCount": 1
     },
     {
       "source": "epoch",
       "ok": true,
-      "fetchMs": 1,
+      "fetchMs": 2,
       "indicatorCount": 2
     },
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 363,
+      "fetchMs": 469,
       "indicatorCount": 1
     },
     {
@@ -293,7 +293,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1025,
+      "fetchMs": 1006,
       "indicatorCount": 0
     }
   ],
@@ -310,7 +310,7 @@
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 84,
+        "daysOverdue": 85,
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05"
       },
@@ -318,7 +318,7 @@
         "slug": "friLeapAgi",
         "scored": false,
         "status": "stale",
-        "daysOverdue": 78,
+        "daysOverdue": 79,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
       },
@@ -326,7 +326,7 @@
         "slug": "anthropicEconIndex",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 32,
+        "daysOverdue": 33,
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26"
       },
@@ -334,7 +334,7 @@
         "slug": "realTimeEngagement",
         "scored": true,
         "status": "due",
-        "daysOverdue": 8,
+        "daysOverdue": 9,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       },
@@ -342,7 +342,7 @@
         "slug": "agenticAutonomyLevel",
         "scored": true,
         "status": "due",
-        "daysOverdue": 8,
+        "daysOverdue": 9,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       }
@@ -455,27 +455,27 @@
         "status": "stale",
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05",
-        "daysOverdue": 84
+        "daysOverdue": 85
       }
     },
     "eciCapability": {
-      "value": 80.43011198672752,
+      "value": 80.54209871422646,
       "raw": {
-        "eci": 168.83,
-        "model": "Claude Opus 5.5",
-        "modelDate": "2026-09-22",
-        "ciLow": 165.25,
-        "ciHigh": 173.95,
-        "modelCount": 270
+        "eci": 168.92,
+        "model": "GPT-6 Astra",
+        "modelDate": "2026-09-03",
+        "ciLow": 165.27,
+        "ciHigh": 173.93,
+        "modelCount": 273
       },
-      "asOf": "2026-10-15",
+      "asOf": "2026-10-26",
       "source": "Epoch AI — Capabilities & benchmarking (epoch.ai/benchmarks, CC-BY 4.0) — Epoch Capabilities Index",
       "confidence": "verified",
       "freshness": {
         "status": "fresh",
-        "asOf": "2026-10-15",
-        "reviewBy": "2026-11-29",
-        "daysOverdue": -32
+        "asOf": "2026-10-26",
+        "reviewBy": "2026-12-10",
+        "daysOverdue": -42
       }
     },
     "epochBenchmarks": {
@@ -536,7 +536,7 @@
         "status": "fresh",
         "asOf": "2026-09-30",
         "reviewBy": "2026-12-29",
-        "daysOverdue": -62
+        "daysOverdue": -61
       }
     },
     "arcGap": {
@@ -574,7 +574,7 @@
         "status": "fresh",
         "asOf": "2026-10-28",
         "reviewBy": "2026-12-12",
-        "daysOverdue": -45
+        "daysOverdue": -44
       }
     },
     "selfLearning": {
@@ -589,7 +589,7 @@
         "status": "fresh",
         "asOf": "2026-06-05",
         "reviewBy": "2026-12-01",
-        "daysOverdue": -34
+        "daysOverdue": -33
       }
     },
     "realTimeEngagement": {
@@ -610,7 +610,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 8
+        "daysOverdue": 9
       }
     },
     "agenticAutonomyLevel": {
@@ -626,7 +626,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 8
+        "daysOverdue": 9
       }
     },
     "anthropicEconIndex": {
@@ -642,7 +642,7 @@
         "status": "stale",
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26",
-        "daysOverdue": 32
+        "daysOverdue": 33
       }
     },
     "aiIndexEconomy": {
@@ -658,7 +658,7 @@
         "status": "fresh",
         "asOf": "2026-04-15",
         "reviewBy": "2027-04-15",
-        "daysOverdue": -169
+        "daysOverdue": -168
       }
     },
     "friLeapAgi": {
@@ -674,7 +674,7 @@
         "status": "stale",
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11",
-        "daysOverdue": 78
+        "daysOverdue": 79
       }
     },
     "fliSafetyIndex": {
@@ -692,7 +692,7 @@
         "status": "fresh",
         "asOf": "2026-07-15",
         "reviewBy": "2027-01-15",
-        "daysOverdue": -79
+        "daysOverdue": -78
       }
     }
   },
