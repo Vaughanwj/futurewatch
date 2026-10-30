@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-29T21:29:53.245Z",
+  "generatedAt": "2026-10-30T21:17:21.936Z",
   "composite": {
     "value": 56.1,
     "coverage": 1,
@@ -26,7 +26,7 @@
         {
           "slug": "eciCapability",
           "weight": 0.2,
-          "score": 80.54209871422646
+          "score": 80.71630029033597
         },
         {
           "slug": "epochBenchmarks",
@@ -193,21 +193,21 @@
   },
   "stories": [
     {
-      "title": "Counting the Bandages: On measuring the time that AI saves",
-      "link": "https://arxiv.org/abs/2610.35942",
-      "published": "Thu, 29 Oct 2026 00:00:00 -0400",
+      "title": "LRMoE: Demand-Side Load Re-Calibration for Efficient MoE Training on Memory-Constrained Nodes",
+      "link": "https://arxiv.org/abs/2610.37720",
+      "published": "Fri, 30 Oct 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Enhancing Deep Learning Model Performance through Data Generation Strategies: Classification of Olive Tree Diseases",
-      "link": "https://arxiv.org/abs/2610.35984",
-      "published": "Thu, 29 Oct 2026 00:00:00 -0400",
+      "title": "Amortized Localized Posterior Inference for Model Calibration with Application to an Ocean Turbulence Closure",
+      "link": "https://arxiv.org/abs/2610.37731",
+      "published": "Fri, 30 Oct 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "The Trinity:Capability-Driven Recursive Self-Improvement for Multimodal Agents",
-      "link": "https://arxiv.org/abs/2610.36077",
-      "published": "Thu, 29 Oct 2026 00:00:00 -0400",
+      "title": "ThinkJev: One Thought, Every Budget for Calibrated Typed Decisions",
+      "link": "https://arxiv.org/abs/2610.37732",
+      "published": "Fri, 30 Oct 2026 00:00:00 -0400",
       "feed": "arXiv cs.AI"
     },
     {
@@ -269,7 +269,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 396,
+      "fetchMs": 339,
       "indicatorCount": 1
     },
     {
@@ -281,7 +281,7 @@
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 469,
+      "fetchMs": 280,
       "indicatorCount": 1
     },
     {
@@ -293,7 +293,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1006,
+      "fetchMs": 470,
       "indicatorCount": 0
     }
   ],
@@ -310,7 +310,7 @@
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 85,
+        "daysOverdue": 86,
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05"
       },
@@ -318,7 +318,7 @@
         "slug": "friLeapAgi",
         "scored": false,
         "status": "stale",
-        "daysOverdue": 79,
+        "daysOverdue": 80,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
       },
@@ -326,7 +326,7 @@
         "slug": "anthropicEconIndex",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 33,
+        "daysOverdue": 34,
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26"
       },
@@ -334,7 +334,7 @@
         "slug": "realTimeEngagement",
         "scored": true,
         "status": "due",
-        "daysOverdue": 9,
+        "daysOverdue": 10,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       },
@@ -342,7 +342,7 @@
         "slug": "agenticAutonomyLevel",
         "scored": true,
         "status": "due",
-        "daysOverdue": 9,
+        "daysOverdue": 10,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       }
@@ -455,18 +455,18 @@
         "status": "stale",
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05",
-        "daysOverdue": 85
+        "daysOverdue": 86
       }
     },
     "eciCapability": {
-      "value": 80.54209871422646,
+      "value": 80.71630029033597,
       "raw": {
-        "eci": 168.92,
+        "eci": 169.06,
         "model": "GPT-6 Astra",
         "modelDate": "2026-09-03",
-        "ciLow": 165.27,
-        "ciHigh": 173.93,
-        "modelCount": 273
+        "ciLow": 165.88,
+        "ciHigh": 174.29,
+        "modelCount": 271
       },
       "asOf": "2026-10-26",
       "source": "Epoch AI — Capabilities & benchmarking (epoch.ai/benchmarks, CC-BY 4.0) — Epoch Capabilities Index",
@@ -475,7 +475,7 @@
         "status": "fresh",
         "asOf": "2026-10-26",
         "reviewBy": "2026-12-10",
-        "daysOverdue": -42
+        "daysOverdue": -41
       }
     },
     "epochBenchmarks": {
@@ -536,7 +536,7 @@
         "status": "fresh",
         "asOf": "2026-09-30",
         "reviewBy": "2026-12-29",
-        "daysOverdue": -61
+        "daysOverdue": -60
       }
     },
     "arcGap": {
@@ -574,7 +574,7 @@
         "status": "fresh",
         "asOf": "2026-10-28",
         "reviewBy": "2026-12-12",
-        "daysOverdue": -44
+        "daysOverdue": -43
       }
     },
     "selfLearning": {
@@ -589,7 +589,7 @@
         "status": "fresh",
         "asOf": "2026-06-05",
         "reviewBy": "2026-12-01",
-        "daysOverdue": -33
+        "daysOverdue": -32
       }
     },
     "realTimeEngagement": {
@@ -610,7 +610,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 9
+        "daysOverdue": 10
       }
     },
     "agenticAutonomyLevel": {
@@ -626,7 +626,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 9
+        "daysOverdue": 10
       }
     },
     "anthropicEconIndex": {
@@ -642,7 +642,7 @@
         "status": "stale",
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26",
-        "daysOverdue": 33
+        "daysOverdue": 34
       }
     },
     "aiIndexEconomy": {
@@ -658,7 +658,7 @@
         "status": "fresh",
         "asOf": "2026-04-15",
         "reviewBy": "2027-04-15",
-        "daysOverdue": -168
+        "daysOverdue": -167
       }
     },
     "friLeapAgi": {
@@ -674,7 +674,7 @@
         "status": "stale",
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11",
-        "daysOverdue": 79
+        "daysOverdue": 80
       }
     },
     "fliSafetyIndex": {
@@ -692,7 +692,7 @@
         "status": "fresh",
         "asOf": "2026-07-15",
         "reviewBy": "2027-01-15",
-        "daysOverdue": -78
+        "daysOverdue": -77
       }
     }
   },
