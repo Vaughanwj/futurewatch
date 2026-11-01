@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-31T20:22:23.986Z",
+  "generatedAt": "2026-11-01T20:55:03.371Z",
   "composite": {
     "value": 56.1,
     "coverage": 1,
@@ -193,24 +193,6 @@
   },
   "stories": [
     {
-      "title": "LRMoE: Demand-Side Load Re-Calibration for Efficient MoE Training on Memory-Constrained Nodes",
-      "link": "https://arxiv.org/abs/2610.37720",
-      "published": "Sat, 31 Oct 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Amortized Localized Posterior Inference for Model Calibration with Application to an Ocean Turbulence Closure",
-      "link": "https://arxiv.org/abs/2610.37731",
-      "published": "Sat, 31 Oct 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "ThinkJev: One Thought, Every Budget for Calibrated Typed Decisions",
-      "link": "https://arxiv.org/abs/2610.37732",
-      "published": "Sat, 31 Oct 2026 00:00:00 -0400",
-      "feed": "arXiv cs.AI"
-    },
-    {
       "title": "Import AI 478: Math for alignment; ProgramBench; and Mirendil shows what RSI means",
       "link": "https://jack-clark.net/2026/10/26/import-ai-478-math-for-alignment-programbench-and-mirendil-shows-what-rsi-means/",
       "published": "Mon, 26 Oct 2026 12:31:52 +0000",
@@ -269,7 +251,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 353,
+      "fetchMs": 327,
       "indicatorCount": 1
     },
     {
@@ -281,7 +263,7 @@
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 269,
+      "fetchMs": 504,
       "indicatorCount": 1
     },
     {
@@ -293,7 +275,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 715,
+      "fetchMs": 1027,
       "indicatorCount": 0
     }
   ],
@@ -310,7 +292,7 @@
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 87,
+        "daysOverdue": 88,
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05"
       },
@@ -318,7 +300,7 @@
         "slug": "friLeapAgi",
         "scored": false,
         "status": "stale",
-        "daysOverdue": 81,
+        "daysOverdue": 82,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
       },
@@ -326,7 +308,7 @@
         "slug": "anthropicEconIndex",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 35,
+        "daysOverdue": 36,
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26"
       },
@@ -334,7 +316,7 @@
         "slug": "realTimeEngagement",
         "scored": true,
         "status": "due",
-        "daysOverdue": 11,
+        "daysOverdue": 12,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       },
@@ -342,7 +324,7 @@
         "slug": "agenticAutonomyLevel",
         "scored": true,
         "status": "due",
-        "daysOverdue": 11,
+        "daysOverdue": 12,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       }
@@ -455,7 +437,7 @@
         "status": "stale",
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05",
-        "daysOverdue": 87
+        "daysOverdue": 88
       }
     },
     "eciCapability": {
@@ -475,7 +457,7 @@
         "status": "fresh",
         "asOf": "2026-10-26",
         "reviewBy": "2026-12-10",
-        "daysOverdue": -40
+        "daysOverdue": -39
       }
     },
     "epochBenchmarks": {
@@ -536,7 +518,7 @@
         "status": "fresh",
         "asOf": "2026-09-30",
         "reviewBy": "2026-12-29",
-        "daysOverdue": -59
+        "daysOverdue": -58
       }
     },
     "arcGap": {
@@ -574,7 +556,7 @@
         "status": "fresh",
         "asOf": "2026-10-28",
         "reviewBy": "2026-12-12",
-        "daysOverdue": -42
+        "daysOverdue": -41
       }
     },
     "selfLearning": {
@@ -589,7 +571,7 @@
         "status": "fresh",
         "asOf": "2026-06-05",
         "reviewBy": "2026-12-01",
-        "daysOverdue": -31
+        "daysOverdue": -30
       }
     },
     "realTimeEngagement": {
@@ -610,7 +592,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 11
+        "daysOverdue": 12
       }
     },
     "agenticAutonomyLevel": {
@@ -626,7 +608,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 11
+        "daysOverdue": 12
       }
     },
     "anthropicEconIndex": {
@@ -642,7 +624,7 @@
         "status": "stale",
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26",
-        "daysOverdue": 35
+        "daysOverdue": 36
       }
     },
     "aiIndexEconomy": {
@@ -658,7 +640,7 @@
         "status": "fresh",
         "asOf": "2026-04-15",
         "reviewBy": "2027-04-15",
-        "daysOverdue": -166
+        "daysOverdue": -165
       }
     },
     "friLeapAgi": {
@@ -674,7 +656,7 @@
         "status": "stale",
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11",
-        "daysOverdue": 81
+        "daysOverdue": 82
       }
     },
     "fliSafetyIndex": {
@@ -692,7 +674,7 @@
         "status": "fresh",
         "asOf": "2026-07-15",
         "reviewBy": "2027-01-15",
-        "daysOverdue": -76
+        "daysOverdue": -75
       }
     }
   },
