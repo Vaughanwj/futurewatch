@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-03T22:09:59.630Z",
+  "generatedAt": "2026-11-04T22:19:04.475Z",
   "composite": {
     "value": 56.1,
     "coverage": 1,
@@ -193,21 +193,21 @@
   },
   "stories": [
     {
-      "title": "A Generalized Sparse Fuzzy Clustering Framework with Automated Cluster Cardinality Estimation Ability",
-      "link": "https://arxiv.org/abs/2611.00159",
-      "published": "Tue, 03 Nov 2026 00:00:00 -0500",
+      "title": "Alignment Faking Depends on the Value, Not Just the Model",
+      "link": "https://arxiv.org/abs/2611.03650",
+      "published": "Wed, 04 Nov 2026 00:00:00 -0500",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Learning to bid and bundle: a posterior-sampling agent for online retail",
-      "link": "https://arxiv.org/abs/2611.00165",
-      "published": "Tue, 03 Nov 2026 00:00:00 -0500",
+      "title": "CARD: A Proof-Carrying Certificate-to-Action Interface for Relative-Measurement Graphs",
+      "link": "https://arxiv.org/abs/2611.03651",
+      "published": "Wed, 04 Nov 2026 00:00:00 -0500",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Early Stopping in Large Reasoning Models: A Survey and Empirical Audit of Efficiency and Reliability",
-      "link": "https://arxiv.org/abs/2611.00166",
-      "published": "Tue, 03 Nov 2026 00:00:00 -0500",
+      "title": "MCPGuard: Finding Conformance Gaps in MCP SDKs via Dual-Track Analysis and Dynamic Adjudication",
+      "link": "https://arxiv.org/abs/2611.03662",
+      "published": "Wed, 04 Nov 2026 00:00:00 -0500",
       "feed": "arXiv cs.AI"
     },
     {
@@ -269,31 +269,31 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 515,
+      "fetchMs": 496,
       "indicatorCount": 1
     },
     {
       "source": "epoch",
-      "ok": true,
+      "ok": false,
       "fetchMs": 2,
-      "indicatorCount": 2
+      "indicatorCount": 1
     },
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 368,
+      "fetchMs": 547,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 1,
+      "fetchMs": 0,
       "indicatorCount": 7
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1238,
+      "fetchMs": 1061,
       "indicatorCount": 0
     }
   ],
@@ -310,7 +310,7 @@
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 90,
+        "daysOverdue": 91,
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05"
       },
@@ -318,7 +318,7 @@
         "slug": "friLeapAgi",
         "scored": false,
         "status": "stale",
-        "daysOverdue": 84,
+        "daysOverdue": 85,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
       },
@@ -326,7 +326,7 @@
         "slug": "anthropicEconIndex",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 38,
+        "daysOverdue": 39,
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26"
       },
@@ -334,7 +334,7 @@
         "slug": "realTimeEngagement",
         "scored": true,
         "status": "due",
-        "daysOverdue": 14,
+        "daysOverdue": 15,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       },
@@ -342,7 +342,7 @@
         "slug": "agenticAutonomyLevel",
         "scored": true,
         "status": "due",
-        "daysOverdue": 14,
+        "daysOverdue": 15,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       }
@@ -455,27 +455,7 @@
         "status": "stale",
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05",
-        "daysOverdue": 90
-      }
-    },
-    "eciCapability": {
-      "value": 80.71630029033597,
-      "raw": {
-        "eci": 169.06,
-        "model": "GPT-6 Astra",
-        "modelDate": "2026-09-03",
-        "ciLow": 165.88,
-        "ciHigh": 174.29,
-        "modelCount": 271
-      },
-      "asOf": "2026-10-26",
-      "source": "Epoch AI — Capabilities & benchmarking (epoch.ai/benchmarks, CC-BY 4.0) — Epoch Capabilities Index",
-      "confidence": "verified",
-      "freshness": {
-        "status": "fresh",
-        "asOf": "2026-10-26",
-        "reviewBy": "2026-12-10",
-        "daysOverdue": -37
+        "daysOverdue": 91
       }
     },
     "epochBenchmarks": {
@@ -493,7 +473,7 @@
             "score": 0.9640151515151515,
             "model": "Gemini 4 Argon (high)",
             "date": "2026-09-30",
-            "rows": 325,
+            "rows": 331,
             "retired": true
           },
           {
@@ -536,7 +516,7 @@
         "status": "fresh",
         "asOf": "2026-09-30",
         "reviewBy": "2026-12-29",
-        "daysOverdue": -56
+        "daysOverdue": -55
       }
     },
     "arcGap": {
@@ -574,7 +554,7 @@
         "status": "fresh",
         "asOf": "2026-11-02",
         "reviewBy": "2026-12-17",
-        "daysOverdue": -44
+        "daysOverdue": -43
       }
     },
     "selfLearning": {
@@ -589,7 +569,7 @@
         "status": "fresh",
         "asOf": "2026-06-05",
         "reviewBy": "2026-12-01",
-        "daysOverdue": -28
+        "daysOverdue": -27
       }
     },
     "realTimeEngagement": {
@@ -610,7 +590,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 14
+        "daysOverdue": 15
       }
     },
     "agenticAutonomyLevel": {
@@ -626,7 +606,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 14
+        "daysOverdue": 15
       }
     },
     "anthropicEconIndex": {
@@ -642,7 +622,7 @@
         "status": "stale",
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26",
-        "daysOverdue": 38
+        "daysOverdue": 39
       }
     },
     "aiIndexEconomy": {
@@ -658,7 +638,7 @@
         "status": "fresh",
         "asOf": "2026-04-15",
         "reviewBy": "2027-04-15",
-        "daysOverdue": -163
+        "daysOverdue": -162
       }
     },
     "friLeapAgi": {
@@ -674,7 +654,7 @@
         "status": "stale",
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11",
-        "daysOverdue": 84
+        "daysOverdue": 85
       }
     },
     "fliSafetyIndex": {
@@ -692,11 +672,35 @@
         "status": "fresh",
         "asOf": "2026-07-15",
         "reviewBy": "2027-01-15",
-        "daysOverdue": -73
+        "daysOverdue": -72
       }
+    },
+    "eciCapability": {
+      "value": 80.71630029033597,
+      "raw": {
+        "eci": 169.06,
+        "model": "GPT-6 Astra",
+        "modelDate": "2026-09-03",
+        "ciLow": 165.88,
+        "ciHigh": 174.29,
+        "modelCount": 271
+      },
+      "asOf": "2026-10-26",
+      "source": "Epoch AI — Capabilities & benchmarking (epoch.ai/benchmarks, CC-BY 4.0) — Epoch Capabilities Index",
+      "confidence": "verified",
+      "freshness": {
+        "status": "fresh",
+        "asOf": "2026-10-26",
+        "reviewBy": "2026-12-10",
+        "daysOverdue": -36
+      },
+      "carriedForward": true
     }
   },
-  "errors": [],
+  "errors": [
+    "epoch: ECI re-anchored? \"GPT-4 (Mar 2023)\" is 121.87, expected 125.89 — calibration invalid",
+    "eciCapability: no reading this run — carried forward the previous one (as of 2026-10-26)"
+  ],
   "escalation": {
     "flagged": false
   },
