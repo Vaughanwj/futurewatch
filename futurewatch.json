@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-10T00:30:48.221Z",
+  "generatedAt": "2026-11-10T22:06:11.546Z",
   "composite": {
     "value": 57.7,
     "coverage": 1,
@@ -193,28 +193,28 @@
   },
   "stories": [
     {
+      "title": "Don't Blame The Preferences: Examining The Emergence of Sycophancy in LLM Training",
+      "link": "https://arxiv.org/abs/2611.10045",
+      "published": "Tue, 10 Nov 2026 00:00:00 -0500",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Veterans' Mental Health Crisis Severity Annotation: Do LLMs Agree More Than Human Experts?",
+      "link": "https://arxiv.org/abs/2611.10048",
+      "published": "Tue, 10 Nov 2026 00:00:00 -0500",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "LoRazor: Trimming Adapter Execution for Efficient Multi-LoRA Serving",
+      "link": "https://arxiv.org/abs/2611.10049",
+      "published": "Tue, 10 Nov 2026 00:00:00 -0500",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "Import AI 480: Self-sustaining space economies; AI for science progress, and Meta builds perfect hands for a superintelligence",
       "link": "https://jack-clark.net/2026/11/09/import-ai-480-self-sustaining-space-economies-ai-for-science-progress-and-meta-builds-perfect-hands-for-a-superintelligence/",
       "published": "Mon, 09 Nov 2026 13:31:34 +0000",
       "feed": "Import AI"
-    },
-    {
-      "title": "Enhancing Academic Advisement with Case-Based Reasoning",
-      "link": "https://arxiv.org/abs/2611.08572",
-      "published": "Mon, 09 Nov 2026 00:00:00 -0500",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "NormGym: Evaluating Normative Competence through Social Interaction",
-      "link": "https://arxiv.org/abs/2611.08613",
-      "published": "Mon, 09 Nov 2026 00:00:00 -0500",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "LLM-Based Feature Extraction for Multi-Criteria Inventory Classification",
-      "link": "https://arxiv.org/abs/2611.08626",
-      "published": "Mon, 09 Nov 2026 00:00:00 -0500",
-      "feed": "arXiv cs.AI"
     },
     {
       "title": "Review of the \"Risks from automated R&D\" section in Anthropic's Risk Report (August 2026)",
@@ -241,17 +241,35 @@
       "feed": "Import AI"
     },
     {
+      "title": "PHP2Shell  Deconstructing the Threat   The Automation Noise",
+      "link": "https://www.youtube.com/watch?v=a1BAKcJ5PcA",
+      "published": "2026-10-25T21:57:28+00:00",
+      "feed": "FutureWatch"
+    },
+    {
       "title": "Red-Teaming OpenAI's Internal Agent Monitoring Systems",
       "link": "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/",
       "published": "Thu, 22 Oct 2026 00:00:00 -0700",
       "feed": "metr.org"
+    },
+    {
+      "title": "Nothing left to love here. Tell the world goodbye.",
+      "link": "https://www.youtube.com/shorts/DNcNz5M2iew",
+      "published": "2026-09-08T05:00:11+00:00",
+      "feed": "FutureWatch"
+    },
+    {
+      "title": "What started out as human, transcended to divine.",
+      "link": "https://www.youtube.com/shorts/ignOaAqspHE",
+      "published": "2026-09-07T05:00:19+00:00",
+      "feed": "FutureWatch"
     }
   ],
   "sourceHealth": [
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 223,
+      "fetchMs": 263,
       "indicatorCount": 1
     },
     {
@@ -263,7 +281,7 @@
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 244,
+      "fetchMs": 247,
       "indicatorCount": 1
     },
     {
@@ -274,8 +292,8 @@
     },
     {
       "source": "rss",
-      "ok": false,
-      "fetchMs": 914,
+      "ok": true,
+      "fetchMs": 608,
       "indicatorCount": 0
     }
   ],
@@ -529,14 +547,14 @@
           }
         ]
       },
-      "asOf": "2026-11-09",
+      "asOf": "2026-11-10",
       "source": "ARC Prize leaderboard (arcprize.org/leaderboard) — ARC-AGI-2 Semi-Private, ARC-AGI-3 Standard harness",
       "confidence": "verified",
       "freshness": {
         "status": "fresh",
-        "asOf": "2026-11-09",
-        "reviewBy": "2026-12-24",
-        "daysOverdue": -44
+        "asOf": "2026-11-10",
+        "reviewBy": "2026-12-25",
+        "daysOverdue": -45
       }
     },
     "selfLearning": {
@@ -681,7 +699,6 @@
   },
   "errors": [
     "epoch: ECI re-anchored? \"GPT-4 (Mar 2023)\" is 121.87, expected 125.89 — calibration invalid",
-    "rss FutureWatch: Request failed with status code 404",
     "eciCapability: no reading this run — carried forward the previous one (as of 2026-10-26)"
   ],
   "escalation": {
