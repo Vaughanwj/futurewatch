@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-10T22:06:11.546Z",
+  "generatedAt": "2026-11-11T23:14:52.145Z",
   "composite": {
     "value": 57.7,
     "coverage": 1,
@@ -193,21 +193,21 @@
   },
   "stories": [
     {
-      "title": "Don't Blame The Preferences: Examining The Emergence of Sycophancy in LLM Training",
-      "link": "https://arxiv.org/abs/2611.10045",
-      "published": "Tue, 10 Nov 2026 00:00:00 -0500",
+      "title": "Auditable Human-Agent Teams for Autonomous X-ray Experimentation",
+      "link": "https://arxiv.org/abs/2611.12933",
+      "published": "Wed, 11 Nov 2026 00:00:00 -0500",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Veterans' Mental Health Crisis Severity Annotation: Do LLMs Agree More Than Human Experts?",
-      "link": "https://arxiv.org/abs/2611.10048",
-      "published": "Tue, 10 Nov 2026 00:00:00 -0500",
+      "title": "EarthRecord: From Pixels to Land Change with Multimodal Agents over Four Decades of Satellite Imagery",
+      "link": "https://arxiv.org/abs/2611.12934",
+      "published": "Wed, 11 Nov 2026 00:00:00 -0500",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "LoRazor: Trimming Adapter Execution for Efficient Multi-LoRA Serving",
-      "link": "https://arxiv.org/abs/2611.10049",
-      "published": "Tue, 10 Nov 2026 00:00:00 -0500",
+      "title": "Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring",
+      "link": "https://arxiv.org/abs/2611.12935",
+      "published": "Wed, 11 Nov 2026 00:00:00 -0500",
       "feed": "arXiv cs.AI"
     },
     {
@@ -269,7 +269,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 263,
+      "fetchMs": 240,
       "indicatorCount": 1
     },
     {
@@ -281,7 +281,7 @@
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 247,
+      "fetchMs": 408,
       "indicatorCount": 1
     },
     {
@@ -293,7 +293,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 608,
+      "fetchMs": 887,
       "indicatorCount": 0
     }
   ],
@@ -310,7 +310,7 @@
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 97,
+        "daysOverdue": 98,
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05"
       },
@@ -318,7 +318,7 @@
         "slug": "friLeapAgi",
         "scored": false,
         "status": "stale",
-        "daysOverdue": 91,
+        "daysOverdue": 92,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
       },
@@ -326,7 +326,7 @@
         "slug": "anthropicEconIndex",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 45,
+        "daysOverdue": 46,
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26"
       },
@@ -334,7 +334,7 @@
         "slug": "realTimeEngagement",
         "scored": true,
         "status": "due",
-        "daysOverdue": 21,
+        "daysOverdue": 22,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       },
@@ -342,7 +342,7 @@
         "slug": "agenticAutonomyLevel",
         "scored": true,
         "status": "due",
-        "daysOverdue": 21,
+        "daysOverdue": 22,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       }
@@ -455,7 +455,7 @@
         "status": "stale",
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05",
-        "daysOverdue": 97
+        "daysOverdue": 98
       }
     },
     "epochBenchmarks": {
@@ -470,10 +470,10 @@
           {
             "key": "gpqa",
             "label": "GPQA Diamond",
-            "score": 0.9640151515151515,
-            "model": "Gemini 4 Argon (high)",
-            "date": "2026-09-30",
-            "rows": 333,
+            "score": 0.9652777777777778,
+            "model": "Gemini 4 Carbon (high)",
+            "date": "2026-10-28",
+            "rows": 334,
             "retired": true
           },
           {
@@ -491,7 +491,7 @@
             "score": 0.9508771929824561,
             "model": "Claude Fable 5.2 (max)",
             "date": "2026-11-09",
-            "rows": 124,
+            "rows": 125,
             "retired": true
           },
           {
@@ -516,7 +516,7 @@
         "status": "fresh",
         "asOf": "2026-11-09",
         "reviewBy": "2027-02-07",
-        "daysOverdue": -89
+        "daysOverdue": -88
       }
     },
     "arcGap": {
@@ -554,7 +554,7 @@
         "status": "fresh",
         "asOf": "2026-11-10",
         "reviewBy": "2026-12-25",
-        "daysOverdue": -45
+        "daysOverdue": -44
       }
     },
     "selfLearning": {
@@ -569,7 +569,7 @@
         "status": "fresh",
         "asOf": "2026-06-05",
         "reviewBy": "2026-12-01",
-        "daysOverdue": -21
+        "daysOverdue": -20
       }
     },
     "realTimeEngagement": {
@@ -590,7 +590,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 21
+        "daysOverdue": 22
       }
     },
     "agenticAutonomyLevel": {
@@ -606,7 +606,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 21
+        "daysOverdue": 22
       }
     },
     "anthropicEconIndex": {
@@ -622,7 +622,7 @@
         "status": "stale",
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26",
-        "daysOverdue": 45
+        "daysOverdue": 46
       }
     },
     "aiIndexEconomy": {
@@ -638,7 +638,7 @@
         "status": "fresh",
         "asOf": "2026-04-15",
         "reviewBy": "2027-04-15",
-        "daysOverdue": -156
+        "daysOverdue": -155
       }
     },
     "friLeapAgi": {
@@ -654,7 +654,7 @@
         "status": "stale",
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11",
-        "daysOverdue": 91
+        "daysOverdue": 92
       }
     },
     "fliSafetyIndex": {
@@ -672,7 +672,7 @@
         "status": "fresh",
         "asOf": "2026-07-15",
         "reviewBy": "2027-01-15",
-        "daysOverdue": -66
+        "daysOverdue": -65
       }
     },
     "eciCapability": {
@@ -692,13 +692,13 @@
         "status": "fresh",
         "asOf": "2026-10-26",
         "reviewBy": "2026-12-10",
-        "daysOverdue": -30
+        "daysOverdue": -29
       },
       "carriedForward": true
     }
   },
   "errors": [
-    "epoch: ECI re-anchored? \"GPT-4 (Mar 2023)\" is 121.87, expected 125.89 — calibration invalid",
+    "epoch: ECI re-anchored? \"GPT-4 (Mar 2023)\" is 121.77, expected 125.89 — calibration invalid",
     "eciCapability: no reading this run — carried forward the previous one (as of 2026-10-26)"
   ],
   "escalation": {

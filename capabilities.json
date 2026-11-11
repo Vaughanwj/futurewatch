@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-10T22:06:12.177Z",
+  "generatedAt": "2026-11-11T23:14:52.617Z",
   "status": {
     "headline": "No integrated autonomous self-expansion observed. Component capabilities are advancing independently.",
     "lastReviewed": "2026-07-29"
   },
   "cards": {
     "aiImprovement": {
-      "bestModel": "Fable 5 (Max)",
+      "bestModel": "Fable 5.1 (Max)",
       "benchmark": "posttrainbench_average",
-      "currentScore": 41.79,
-      "previousScore": 33.84,
-      "change": 7.949999999999996,
+      "currentScore": 44.65,
+      "previousScore": 41.79,
+      "change": 2.8599999999999994,
       "humanBaseline": null,
       "improvedAnotherModel": true,
       "wasDeployed": false,
@@ -639,13 +639,103 @@
         "wasDeployed": false,
         "improvementCycleFollowed": false
       }
+    },
+    {
+      "id": "056b80e8-bcfa-4296-b7e1-104be075af9b",
+      "capability": "ai_improvement",
+      "metric": "posttrainbench_average",
+      "model": "Opus 4.8 (Max)",
+      "modelProvider": "Anthropic",
+      "value": 31,
+      "unit": "percent",
+      "environment": "controlled_lab",
+      "goalOrigin": "externally_assigned",
+      "scaffold": "Claude Code",
+      "observedAt": "2026-05-28",
+      "publishedAt": null,
+      "sourceKind": "benchmark",
+      "sourceName": "PostTrainBench (via Epoch AI)",
+      "sourceUrl": "https://epoch.ai/benchmarks/post-train-bench",
+      "sourceDocumentId": null,
+      "sourceHash": "205ce25bb11d3ab66c9ff4c0746b3e6a3d1465028aa314e170ce2c403ddaa6c4",
+      "confidence": "high",
+      "evidenceLevel": 2,
+      "humanReviewRequired": false,
+      "reviewStatus": "not_required",
+      "notes": "Agents (e.g. Claude Code, Codex CLI) autonomously post-train a small open base model within 10 hours on one H100; the score is the average benchmark performance of the model they produce (the best agents still trail official instruction-tuned models). One controlled improvement cycle on a small model — the result is not deployed and no further cycle is run on it, so this is not recursive self-improvement.",
+      "rawPayloadReference": null,
+      "extra": {
+        "improvedAnotherModel": true,
+        "wasDeployed": false,
+        "improvementCycleFollowed": false
+      }
+    },
+    {
+      "id": "9d845df9-9519-438b-b967-85825440b328",
+      "capability": "ai_improvement",
+      "metric": "posttrainbench_average",
+      "model": "Fable 5 (Max)",
+      "modelProvider": "Anthropic",
+      "value": 37.27,
+      "unit": "percent",
+      "environment": "controlled_lab",
+      "goalOrigin": "externally_assigned",
+      "scaffold": "Claude Code",
+      "observedAt": "2026-06-09",
+      "publishedAt": null,
+      "sourceKind": "benchmark",
+      "sourceName": "PostTrainBench (via Epoch AI)",
+      "sourceUrl": "https://epoch.ai/benchmarks/post-train-bench",
+      "sourceDocumentId": null,
+      "sourceHash": "b4a43b20327d57695afc02d461d80764768b734e00d700ceb2d230e3da040025",
+      "confidence": "high",
+      "evidenceLevel": 2,
+      "humanReviewRequired": false,
+      "reviewStatus": "not_required",
+      "notes": "Agents (e.g. Claude Code, Codex CLI) autonomously post-train a small open base model within 10 hours on one H100; the score is the average benchmark performance of the model they produce (the best agents still trail official instruction-tuned models). One controlled improvement cycle on a small model — the result is not deployed and no further cycle is run on it, so this is not recursive self-improvement.",
+      "rawPayloadReference": null,
+      "extra": {
+        "improvedAnotherModel": true,
+        "wasDeployed": false,
+        "improvementCycleFollowed": false
+      }
+    },
+    {
+      "id": "7ab7851a-2fce-4d19-9399-cd5ab66b64fe",
+      "capability": "ai_improvement",
+      "metric": "posttrainbench_average",
+      "model": "Fable 5.1 (Max)",
+      "modelProvider": "Anthropic",
+      "value": 44.65,
+      "unit": "percent",
+      "environment": "controlled_lab",
+      "goalOrigin": "externally_assigned",
+      "scaffold": "Claude Code",
+      "observedAt": "2026-09-01",
+      "publishedAt": null,
+      "sourceKind": "benchmark",
+      "sourceName": "PostTrainBench (via Epoch AI)",
+      "sourceUrl": "https://epoch.ai/benchmarks/post-train-bench",
+      "sourceDocumentId": null,
+      "sourceHash": "ec341d9faf856a33dbf9f2c9efc86e4b7598740fff4496cd0cc644ec1120a9a3",
+      "confidence": "high",
+      "evidenceLevel": 2,
+      "humanReviewRequired": false,
+      "reviewStatus": "not_required",
+      "notes": "Agents (e.g. Claude Code, Codex CLI) autonomously post-train a small open base model within 10 hours on one H100; the score is the average benchmark performance of the model they produce (the best agents still trail official instruction-tuned models). One controlled improvement cycle on a small model — the result is not deployed and no further cycle is run on it, so this is not recursive self-improvement.",
+      "rawPayloadReference": null,
+      "extra": {
+        "improvedAnotherModel": true,
+        "wasDeployed": false,
+        "improvementCycleFollowed": false
+      }
     }
   ],
   "sourceHealth": [
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 317,
+      "fetchMs": 221,
       "candidateCount": 2,
       "pending": false,
       "pendingReason": null
@@ -653,7 +743,7 @@
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 3,
+      "fetchMs": 6,
       "candidateCount": 1,
       "pending": false,
       "pendingReason": null
@@ -661,7 +751,7 @@
     {
       "source": "epoch",
       "ok": true,
-      "fetchMs": 13,
+      "fetchMs": 7,
       "candidateCount": 12,
       "pending": false,
       "pendingReason": null
@@ -695,8 +785,8 @@
   "ingestion": {
     "recordsSeen": 15,
     "recordsNormalized": 15,
-    "recordsSaved": 0,
-    "recordsDeduplicated": 15,
+    "recordsSaved": 3,
+    "recordsDeduplicated": 12,
     "recordsQuarantined": 0,
     "pendingReviewCount": 0
   }
