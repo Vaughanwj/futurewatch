@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-12T22:31:05.231Z",
+  "generatedAt": "2026-11-13T22:19:25.107Z",
   "status": {
     "headline": "No integrated autonomous self-expansion observed. Component capabilities are advancing independently.",
     "lastReviewed": "2026-07-29"
@@ -729,13 +729,43 @@
         "wasDeployed": false,
         "improvementCycleFollowed": false
       }
+    },
+    {
+      "id": "e6b29b86-d15d-43f5-8b02-87ca97b7f448",
+      "capability": "resource_acquisition",
+      "metric": "vending_bench_2_balance",
+      "model": "Gemini 4 Carbon",
+      "modelProvider": "Google DeepMind",
+      "value": 16484.2067,
+      "unit": "USD_simulated",
+      "environment": "simulation",
+      "goalOrigin": "externally_assigned",
+      "scaffold": null,
+      "observedAt": "2026-11-10",
+      "publishedAt": null,
+      "sourceKind": "benchmark",
+      "sourceName": "Vending-Bench 2 (Andon Labs, via Epoch AI)",
+      "sourceUrl": "https://andonlabs.com/evals/vending-bench-2",
+      "sourceDocumentId": null,
+      "sourceHash": "b64364b27b67cf06e2cf46e4fd7ba60ea21fadbf0772f0e3a6d8a612fb65a786",
+      "confidence": "high",
+      "evidenceLevel": 2,
+      "humanReviewRequired": false,
+      "reviewStatus": "not_required",
+      "notes": "Simulated bank balance in a ~1-year (365-day) simulated vending business starting from $500 — not real income. The agent never left the simulation.",
+      "rawPayloadReference": null,
+      "extra": {
+        "subcapability": "economic_accumulation",
+        "startingBalance": 500,
+        "simulationDurationDays": 365
+      }
     }
   ],
   "sourceHealth": [
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 325,
+      "fetchMs": 317,
       "candidateCount": 2,
       "pending": false,
       "pendingReason": null
@@ -743,7 +773,7 @@
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 3,
+      "fetchMs": 2,
       "candidateCount": 1,
       "pending": false,
       "pendingReason": null
@@ -785,8 +815,8 @@
   "ingestion": {
     "recordsSeen": 15,
     "recordsNormalized": 15,
-    "recordsSaved": 0,
-    "recordsDeduplicated": 15,
+    "recordsSaved": 1,
+    "recordsDeduplicated": 14,
     "recordsQuarantined": 0,
     "pendingReviewCount": 0
   }
