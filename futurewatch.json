@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T21:25:38.428Z",
+  "generatedAt": "2026-11-17T00:36:06.789Z",
   "composite": {
     "value": 57.7,
     "coverage": 1,
@@ -193,6 +193,36 @@
   },
   "stories": [
     {
+      "title": "Import AI 481: AI sub-contractors; a wet lab for AI; and subterfuge during development",
+      "link": "https://jack-clark.net/2026/11/16/import-ai-481-ai-sub-contractors-a-wet-lab-for-ai-and-subterfuge-during-development/",
+      "published": "Mon, 16 Nov 2026 14:01:15 +0000",
+      "feed": "Import AI"
+    },
+    {
+      "title": "Measuring alignment eval tells",
+      "link": "https://metr.org/notes/2026-11-16-measuring-alignment-eval-tells/",
+      "published": "Mon, 16 Nov 2026 00:00:00 -0800",
+      "feed": "metr.org"
+    },
+    {
+      "title": "When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors",
+      "link": "https://arxiv.org/abs/2611.17338",
+      "published": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
+      "link": "https://arxiv.org/abs/2611.17339",
+      "published": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "LoRAWeaver: Directional Adapter Routing in LoRA Representation Space",
+      "link": "https://arxiv.org/abs/2611.17340",
+      "published": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "Import AI 480: Self-sustaining space economies; AI for science progress, and Meta builds perfect hands for a superintelligence",
       "link": "https://jack-clark.net/2026/11/09/import-ai-480-self-sustaining-space-economies-ai-for-science-progress-and-meta-builds-perfect-hands-for-a-superintelligence/",
       "published": "Mon, 09 Nov 2026 13:31:34 +0000",
@@ -217,22 +247,10 @@
       "feed": "Import AI"
     },
     {
-      "title": "Import AI 478: Math for alignment; ProgramBench; and Mirendil shows what RSI means",
-      "link": "https://jack-clark.net/2026/10/26/import-ai-478-math-for-alignment-programbench-and-mirendil-shows-what-rsi-means/",
-      "published": "Mon, 26 Oct 2026 12:31:52 +0000",
-      "feed": "Import AI"
-    },
-    {
       "title": "PHP2Shell  Deconstructing the Threat   The Automation Noise",
       "link": "https://www.youtube.com/watch?v=a1BAKcJ5PcA",
       "published": "2026-10-25T21:57:28+00:00",
       "feed": "FutureWatch"
-    },
-    {
-      "title": "Red-Teaming OpenAI's Internal Agent Monitoring Systems",
-      "link": "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring/",
-      "published": "Thu, 22 Oct 2026 00:00:00 -0700",
-      "feed": "metr.org"
     },
     {
       "title": "Nothing left to love here. Tell the world goodbye.",
@@ -251,19 +269,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 256,
+      "fetchMs": 302,
       "indicatorCount": 1
     },
     {
       "source": "epoch",
       "ok": false,
-      "fetchMs": 1,
+      "fetchMs": 2,
       "indicatorCount": 1
     },
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 408,
+      "fetchMs": 183,
       "indicatorCount": 1
     },
     {
@@ -275,7 +293,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 870,
+      "fetchMs": 1385,
       "indicatorCount": 0
     }
   ],
@@ -292,7 +310,7 @@
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 102,
+        "daysOverdue": 104,
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05"
       },
@@ -300,7 +318,7 @@
         "slug": "friLeapAgi",
         "scored": false,
         "status": "stale",
-        "daysOverdue": 96,
+        "daysOverdue": 98,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
       },
@@ -308,7 +326,7 @@
         "slug": "anthropicEconIndex",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 50,
+        "daysOverdue": 52,
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26"
       },
@@ -316,7 +334,7 @@
         "slug": "realTimeEngagement",
         "scored": true,
         "status": "due",
-        "daysOverdue": 26,
+        "daysOverdue": 28,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       },
@@ -324,7 +342,7 @@
         "slug": "agenticAutonomyLevel",
         "scored": true,
         "status": "due",
-        "daysOverdue": 26,
+        "daysOverdue": 28,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       }
@@ -437,7 +455,7 @@
         "status": "stale",
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05",
-        "daysOverdue": 102
+        "daysOverdue": 104
       }
     },
     "epochBenchmarks": {
@@ -498,7 +516,7 @@
         "status": "fresh",
         "asOf": "2026-11-10",
         "reviewBy": "2027-02-08",
-        "daysOverdue": -85
+        "daysOverdue": -83
       }
     },
     "arcGap": {
@@ -529,14 +547,14 @@
           }
         ]
       },
-      "asOf": "2026-11-10",
+      "asOf": "2026-11-16",
       "source": "ARC Prize leaderboard (arcprize.org/leaderboard) — ARC-AGI-2 Semi-Private, ARC-AGI-3 Standard harness",
       "confidence": "verified",
       "freshness": {
         "status": "fresh",
-        "asOf": "2026-11-10",
-        "reviewBy": "2026-12-25",
-        "daysOverdue": -40
+        "asOf": "2026-11-16",
+        "reviewBy": "2026-12-31",
+        "daysOverdue": -44
       }
     },
     "selfLearning": {
@@ -551,7 +569,7 @@
         "status": "fresh",
         "asOf": "2026-06-05",
         "reviewBy": "2026-12-01",
-        "daysOverdue": -16
+        "daysOverdue": -14
       }
     },
     "realTimeEngagement": {
@@ -572,7 +590,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 26
+        "daysOverdue": 28
       }
     },
     "agenticAutonomyLevel": {
@@ -588,7 +606,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 26
+        "daysOverdue": 28
       }
     },
     "anthropicEconIndex": {
@@ -604,7 +622,7 @@
         "status": "stale",
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26",
-        "daysOverdue": 50
+        "daysOverdue": 52
       }
     },
     "aiIndexEconomy": {
@@ -620,7 +638,7 @@
         "status": "fresh",
         "asOf": "2026-04-15",
         "reviewBy": "2027-04-15",
-        "daysOverdue": -151
+        "daysOverdue": -149
       }
     },
     "friLeapAgi": {
@@ -636,7 +654,7 @@
         "status": "stale",
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11",
-        "daysOverdue": 96
+        "daysOverdue": 98
       }
     },
     "fliSafetyIndex": {
@@ -654,7 +672,7 @@
         "status": "fresh",
         "asOf": "2026-07-15",
         "reviewBy": "2027-01-15",
-        "daysOverdue": -61
+        "daysOverdue": -59
       }
     },
     "eciCapability": {
@@ -674,7 +692,7 @@
         "status": "fresh",
         "asOf": "2026-10-26",
         "reviewBy": "2026-12-10",
-        "daysOverdue": -25
+        "daysOverdue": -23
       },
       "carriedForward": true
     }
