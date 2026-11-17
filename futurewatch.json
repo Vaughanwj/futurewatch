@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T00:36:06.789Z",
+  "generatedAt": "2026-11-17T23:42:24.996Z",
   "composite": {
     "value": 57.7,
     "coverage": 1,
@@ -193,6 +193,24 @@
   },
   "stories": [
     {
+      "title": "Agents Cannot Hand Over What They Have Not Yet Understood",
+      "link": "https://arxiv.org/abs/2611.18642",
+      "published": "Tue, 17 Nov 2026 00:00:00 -0500",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "How to make a moral agent: sentimentalism and rationalism as lenses on AI",
+      "link": "https://arxiv.org/abs/2611.18714",
+      "published": "Tue, 17 Nov 2026 00:00:00 -0500",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Video-as-Experience: Learning Computer Use via Audio-Visual Understanding",
+      "link": "https://arxiv.org/abs/2611.18747",
+      "published": "Tue, 17 Nov 2026 00:00:00 -0500",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "Import AI 481: AI sub-contractors; a wet lab for AI; and subterfuge during development",
       "link": "https://jack-clark.net/2026/11/16/import-ai-481-ai-sub-contractors-a-wet-lab-for-ai-and-subterfuge-during-development/",
       "published": "Mon, 16 Nov 2026 14:01:15 +0000",
@@ -203,24 +221,6 @@
       "link": "https://metr.org/notes/2026-11-16-measuring-alignment-eval-tells/",
       "published": "Mon, 16 Nov 2026 00:00:00 -0800",
       "feed": "metr.org"
-    },
-    {
-      "title": "When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors",
-      "link": "https://arxiv.org/abs/2611.17338",
-      "published": "Mon, 16 Nov 2026 00:00:00 -0500",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
-      "link": "https://arxiv.org/abs/2611.17339",
-      "published": "Mon, 16 Nov 2026 00:00:00 -0500",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "LoRAWeaver: Directional Adapter Routing in LoRA Representation Space",
-      "link": "https://arxiv.org/abs/2611.17340",
-      "published": "Mon, 16 Nov 2026 00:00:00 -0500",
-      "feed": "arXiv cs.AI"
     },
     {
       "title": "Import AI 480: Self-sustaining space economies; AI for science progress, and Meta builds perfect hands for a superintelligence",
@@ -269,19 +269,19 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 302,
+      "fetchMs": 368,
       "indicatorCount": 1
     },
     {
       "source": "epoch",
       "ok": false,
-      "fetchMs": 2,
+      "fetchMs": 1,
       "indicatorCount": 1
     },
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 183,
+      "fetchMs": 340,
       "indicatorCount": 1
     },
     {
@@ -293,7 +293,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1385,
+      "fetchMs": 984,
       "indicatorCount": 0
     }
   ],
@@ -470,10 +470,10 @@
           {
             "key": "gpqa",
             "label": "GPQA Diamond",
-            "score": 0.9652777777777778,
-            "model": "Gemini 4 Carbon (high)",
-            "date": "2026-11-10",
-            "rows": 337,
+            "score": 0.9684343434343434,
+            "model": "GPT-6.2 Astra (max)",
+            "date": "2026-11-17",
+            "rows": 338,
             "retired": true
           },
           {
@@ -491,7 +491,7 @@
             "score": 0.9508771929824561,
             "model": "Claude Fable 5.2 (max)",
             "date": "2026-11-09",
-            "rows": 125,
+            "rows": 126,
             "retired": true
           },
           {
@@ -509,14 +509,14 @@
           "FrontierMath Tiers 1–3 (v2)"
         ]
       },
-      "asOf": "2026-11-10",
+      "asOf": "2026-11-17",
       "source": "Epoch AI — Capabilities & benchmarking (epoch.ai/benchmarks, CC-BY 4.0) — frontier basket B-2026.1",
       "confidence": "verified",
       "freshness": {
         "status": "fresh",
-        "asOf": "2026-11-10",
-        "reviewBy": "2027-02-08",
-        "daysOverdue": -83
+        "asOf": "2026-11-17",
+        "reviewBy": "2027-02-15",
+        "daysOverdue": -90
       }
     },
     "arcGap": {
@@ -526,10 +526,10 @@
           {
             "name": "ARC-AGI-2",
             "dataset": "Semi-Private",
-            "frontierScore": 0.95,
+            "frontierScore": 0.9583333333333334,
             "humanScore": 1,
-            "frontierOverHuman": 0.95,
-            "model": "openai-gpt-6-astra-max",
+            "frontierOverHuman": 0.9583333333333334,
+            "model": "openai-gpt-6-2-astra-max",
             "harness": "standard"
           },
           {
@@ -541,20 +541,20 @@
             "model": "Claude Fable 5.2 (XHigh)",
             "harness": "standard",
             "providerAdapter": {
-              "score": 0.99945712321257,
-              "model": "GPT-6 Astra - Provider Adapter (High)"
+              "score": 1,
+              "model": "GPT-6.2 Astra - Provider Adapter (XHigh)"
             }
           }
         ]
       },
-      "asOf": "2026-11-16",
+      "asOf": "2026-11-17",
       "source": "ARC Prize leaderboard (arcprize.org/leaderboard) — ARC-AGI-2 Semi-Private, ARC-AGI-3 Standard harness",
       "confidence": "verified",
       "freshness": {
         "status": "fresh",
-        "asOf": "2026-11-16",
-        "reviewBy": "2026-12-31",
-        "daysOverdue": -44
+        "asOf": "2026-11-17",
+        "reviewBy": "2027-01-01",
+        "daysOverdue": -45
       }
     },
     "selfLearning": {
@@ -698,7 +698,7 @@
     }
   },
   "errors": [
-    "epoch: ECI re-anchored? \"GPT-4 (Mar 2023)\" is 121.77, expected 125.89 — calibration invalid",
+    "epoch: ECI re-anchored? \"GPT-4 (Mar 2023)\" is 121.58, expected 125.89 — calibration invalid",
     "eciCapability: no reading this run — carried forward the previous one (as of 2026-10-26)"
   ],
   "escalation": {
