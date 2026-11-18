@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-17T23:42:24.996Z",
+  "generatedAt": "2026-11-18T23:14:11.013Z",
   "composite": {
     "value": 57.7,
     "coverage": 1,
@@ -193,21 +193,21 @@
   },
   "stories": [
     {
-      "title": "Agents Cannot Hand Over What They Have Not Yet Understood",
-      "link": "https://arxiv.org/abs/2611.18642",
-      "published": "Tue, 17 Nov 2026 00:00:00 -0500",
+      "title": "NEBench R1: a Reasoning Benchmark for Evaluating Nuclear Domain Competence in Large Language Models",
+      "link": "https://arxiv.org/abs/2611.21682",
+      "published": "Wed, 18 Nov 2026 00:00:00 -0500",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "How to make a moral agent: sentimentalism and rationalism as lenses on AI",
-      "link": "https://arxiv.org/abs/2611.18714",
-      "published": "Tue, 17 Nov 2026 00:00:00 -0500",
+      "title": "Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
+      "link": "https://arxiv.org/abs/2611.21799",
+      "published": "Wed, 18 Nov 2026 00:00:00 -0500",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Video-as-Experience: Learning Computer Use via Audio-Visual Understanding",
-      "link": "https://arxiv.org/abs/2611.18747",
-      "published": "Tue, 17 Nov 2026 00:00:00 -0500",
+      "title": "How Much of SAR Vehicle Recognition Is the Vehicle? Background Shortcuts, Angle Gaps and Partial Libraries on MSTAR and ATRNet-STAR",
+      "link": "https://arxiv.org/abs/2611.21827",
+      "published": "Wed, 18 Nov 2026 00:00:00 -0500",
       "feed": "arXiv cs.AI"
     },
     {
@@ -269,7 +269,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 368,
+      "fetchMs": 212,
       "indicatorCount": 1
     },
     {
@@ -281,19 +281,19 @@
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 340,
+      "fetchMs": 441,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 1,
+      "fetchMs": 0,
       "indicatorCount": 7
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 984,
+      "fetchMs": 725,
       "indicatorCount": 0
     }
   ],
@@ -310,7 +310,7 @@
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 104,
+        "daysOverdue": 105,
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05"
       },
@@ -318,7 +318,7 @@
         "slug": "friLeapAgi",
         "scored": false,
         "status": "stale",
-        "daysOverdue": 98,
+        "daysOverdue": 99,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
       },
@@ -326,7 +326,7 @@
         "slug": "anthropicEconIndex",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 52,
+        "daysOverdue": 53,
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26"
       },
@@ -334,7 +334,7 @@
         "slug": "realTimeEngagement",
         "scored": true,
         "status": "due",
-        "daysOverdue": 28,
+        "daysOverdue": 29,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       },
@@ -342,7 +342,7 @@
         "slug": "agenticAutonomyLevel",
         "scored": true,
         "status": "due",
-        "daysOverdue": 28,
+        "daysOverdue": 29,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       }
@@ -455,7 +455,7 @@
         "status": "stale",
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05",
-        "daysOverdue": 104
+        "daysOverdue": 105
       }
     },
     "epochBenchmarks": {
@@ -473,7 +473,7 @@
             "score": 0.9684343434343434,
             "model": "GPT-6.2 Astra (max)",
             "date": "2026-11-17",
-            "rows": 338,
+            "rows": 339,
             "retired": true
           },
           {
@@ -491,7 +491,7 @@
             "score": 0.9508771929824561,
             "model": "Claude Fable 5.2 (max)",
             "date": "2026-11-09",
-            "rows": 126,
+            "rows": 127,
             "retired": true
           },
           {
@@ -516,7 +516,7 @@
         "status": "fresh",
         "asOf": "2026-11-17",
         "reviewBy": "2027-02-15",
-        "daysOverdue": -90
+        "daysOverdue": -89
       }
     },
     "arcGap": {
@@ -554,7 +554,7 @@
         "status": "fresh",
         "asOf": "2026-11-17",
         "reviewBy": "2027-01-01",
-        "daysOverdue": -45
+        "daysOverdue": -44
       }
     },
     "selfLearning": {
@@ -569,7 +569,7 @@
         "status": "fresh",
         "asOf": "2026-06-05",
         "reviewBy": "2026-12-01",
-        "daysOverdue": -14
+        "daysOverdue": -13
       }
     },
     "realTimeEngagement": {
@@ -590,7 +590,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 28
+        "daysOverdue": 29
       }
     },
     "agenticAutonomyLevel": {
@@ -606,7 +606,7 @@
         "status": "due",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 28
+        "daysOverdue": 29
       }
     },
     "anthropicEconIndex": {
@@ -622,7 +622,7 @@
         "status": "stale",
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26",
-        "daysOverdue": 52
+        "daysOverdue": 53
       }
     },
     "aiIndexEconomy": {
@@ -638,7 +638,7 @@
         "status": "fresh",
         "asOf": "2026-04-15",
         "reviewBy": "2027-04-15",
-        "daysOverdue": -149
+        "daysOverdue": -148
       }
     },
     "friLeapAgi": {
@@ -654,7 +654,7 @@
         "status": "stale",
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11",
-        "daysOverdue": 98
+        "daysOverdue": 99
       }
     },
     "fliSafetyIndex": {
@@ -672,7 +672,7 @@
         "status": "fresh",
         "asOf": "2026-07-15",
         "reviewBy": "2027-01-15",
-        "daysOverdue": -59
+        "daysOverdue": -58
       }
     },
     "eciCapability": {
@@ -692,7 +692,7 @@
         "status": "fresh",
         "asOf": "2026-10-26",
         "reviewBy": "2026-12-10",
-        "daysOverdue": -23
+        "daysOverdue": -22
       },
       "carriedForward": true
     }
