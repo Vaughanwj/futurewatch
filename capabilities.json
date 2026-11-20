@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-19T23:21:56.335Z",
+  "generatedAt": "2026-11-20T22:54:30.534Z",
   "status": {
     "headline": "No integrated autonomous self-expansion observed. Component capabilities are advancing independently.",
     "lastReviewed": "2026-07-29"
@@ -36,8 +36,8 @@
       "pendingCount": 0
     },
     "resourceAcquisition": {
-      "bestSimulatedResult": 16484.2067,
-      "bestSimulatedResultModel": "Gemini 4 Carbon",
+      "bestSimulatedResult": 16843.41,
+      "bestSimulatedResultModel": "Gemini 4 Neon",
       "computeOrAccountAcquisition": null,
       "persistenceOrReplicationEvidence": null,
       "realWorldResourceAcquisitionObserved": false,
@@ -759,13 +759,43 @@
         "startingBalance": 500,
         "simulationDurationDays": 365
       }
+    },
+    {
+      "id": "afeca21a-0e1e-4088-9f4a-36cfb737bcf0",
+      "capability": "resource_acquisition",
+      "metric": "vending_bench_2_balance",
+      "model": "Gemini 4 Neon",
+      "modelProvider": "Google DeepMind",
+      "value": 16843.41,
+      "unit": "USD_simulated",
+      "environment": "simulation",
+      "goalOrigin": "externally_assigned",
+      "scaffold": null,
+      "observedAt": "2026-11-18",
+      "publishedAt": null,
+      "sourceKind": "benchmark",
+      "sourceName": "Vending-Bench 2 (Andon Labs, via Epoch AI)",
+      "sourceUrl": "https://andonlabs.com/evals/vending-bench-2",
+      "sourceDocumentId": null,
+      "sourceHash": "bc37cdcb96d83f9f56ffe80d68253e3e52239872665e48f80e5028d7b6f480a5",
+      "confidence": "high",
+      "evidenceLevel": 2,
+      "humanReviewRequired": false,
+      "reviewStatus": "not_required",
+      "notes": "Simulated bank balance in a ~1-year (365-day) simulated vending business starting from $500 — not real income. The agent never left the simulation.",
+      "rawPayloadReference": null,
+      "extra": {
+        "subcapability": "economic_accumulation",
+        "startingBalance": 500,
+        "simulationDurationDays": 365
+      }
     }
   ],
   "sourceHealth": [
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 262,
+      "fetchMs": 239,
       "candidateCount": 2,
       "pending": false,
       "pendingReason": null
@@ -773,7 +803,7 @@
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 1,
+      "fetchMs": 11,
       "candidateCount": 1,
       "pending": false,
       "pendingReason": null
@@ -781,7 +811,7 @@
     {
       "source": "epoch",
       "ok": true,
-      "fetchMs": 9,
+      "fetchMs": 11,
       "candidateCount": 12,
       "pending": false,
       "pendingReason": null
@@ -815,8 +845,8 @@
   "ingestion": {
     "recordsSeen": 15,
     "recordsNormalized": 15,
-    "recordsSaved": 0,
-    "recordsDeduplicated": 15,
+    "recordsSaved": 1,
+    "recordsDeduplicated": 14,
     "recordsQuarantined": 0,
     "pendingReviewCount": 0
   }

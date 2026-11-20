@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-19T23:21:55.866Z",
+  "generatedAt": "2026-11-20T22:54:30.038Z",
   "composite": {
     "value": 57.7,
     "coverage": 1,
@@ -193,21 +193,27 @@
   },
   "stories": [
     {
-      "title": "Human-AI Mutualism Is Unstable under Capability Asymmetry",
-      "link": "https://arxiv.org/abs/2611.23322",
-      "published": "Thu, 19 Nov 2026 00:00:00 -0500",
+      "title": "AI R&D-relevant model capabilities are improving rapidly and are getting harder to measure",
+      "link": "https://metr.org/blog/2026-11-20-q4-2026-capability-update/",
+      "published": "Fri, 20 Nov 2026 00:00:00 -0800",
+      "feed": "metr.org"
+    },
+    {
+      "title": "Closing the Analyze-to-Design Gap: An Authorization-Bounded Agent for Self-Driving Laboratories",
+      "link": "https://arxiv.org/abs/2611.25043",
+      "published": "Fri, 20 Nov 2026 00:00:00 -0500",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Training Language Models for Introspective Oversight",
-      "link": "https://arxiv.org/abs/2611.23365",
-      "published": "Thu, 19 Nov 2026 00:00:00 -0500",
+      "title": "An LLM-Agentic Framework for Intelligent Work Order Management in Industrial Maintenance",
+      "link": "https://arxiv.org/abs/2611.25070",
+      "published": "Fri, 20 Nov 2026 00:00:00 -0500",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Where the Tokens Go: Heat, Entropy and Error in Agentic Coding",
-      "link": "https://arxiv.org/abs/2611.23375",
-      "published": "Thu, 19 Nov 2026 00:00:00 -0500",
+      "title": "SailSearch: Agent-Assisted Discovery in Combinatorial Optimization",
+      "link": "https://arxiv.org/abs/2611.25087",
+      "published": "Fri, 20 Nov 2026 00:00:00 -0500",
       "feed": "arXiv cs.AI"
     },
     {
@@ -231,12 +237,6 @@
     {
       "title": "Review of the \"Risks from automated R&D\" section in Anthropic's Risk Report (August 2026)",
       "link": "https://metr.org/blog/2026-11-05-rd-section-anthropic-risk-report-august-2026-review/",
-      "published": "Thu, 05 Nov 2026 00:00:00 -0800",
-      "feed": "metr.org"
-    },
-    {
-      "title": "Independent Assessment of AI R&D Acceleration at Anthropic in October 2026",
-      "link": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/",
       "published": "Thu, 05 Nov 2026 00:00:00 -0800",
       "feed": "metr.org"
     },
@@ -269,7 +269,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 299,
+      "fetchMs": 211,
       "indicatorCount": 1
     },
     {
@@ -281,19 +281,19 @@
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 323,
+      "fetchMs": 168,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 0,
+      "fetchMs": 1,
       "indicatorCount": 7
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1093,
+      "fetchMs": 1132,
       "indicatorCount": 0
     }
   ],
@@ -301,8 +301,8 @@
     "scored": {
       "total": 9,
       "fresh": 5,
-      "due": 2,
-      "stale": 2,
+      "due": 0,
+      "stale": 4,
       "unknown": 0
     },
     "overdue": [
@@ -310,7 +310,7 @@
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 106,
+        "daysOverdue": 107,
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05"
       },
@@ -318,7 +318,7 @@
         "slug": "friLeapAgi",
         "scored": false,
         "status": "stale",
-        "daysOverdue": 100,
+        "daysOverdue": 101,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
       },
@@ -326,23 +326,23 @@
         "slug": "anthropicEconIndex",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 54,
+        "daysOverdue": 55,
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26"
       },
       {
         "slug": "realTimeEngagement",
         "scored": true,
-        "status": "due",
-        "daysOverdue": 30,
+        "status": "stale",
+        "daysOverdue": 31,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       },
       {
         "slug": "agenticAutonomyLevel",
         "scored": true,
-        "status": "due",
-        "daysOverdue": 30,
+        "status": "stale",
+        "daysOverdue": 31,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       }
@@ -455,7 +455,7 @@
         "status": "stale",
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05",
-        "daysOverdue": 106
+        "daysOverdue": 107
       }
     },
     "epochBenchmarks": {
@@ -473,7 +473,7 @@
             "score": 0.9684343434343434,
             "model": "GPT-6.2 Astra (max)",
             "date": "2026-11-17",
-            "rows": 339,
+            "rows": 340,
             "retired": true
           },
           {
@@ -491,7 +491,7 @@
             "score": 0.9508771929824561,
             "model": "Claude Fable 5.2 (max)",
             "date": "2026-11-09",
-            "rows": 127,
+            "rows": 128,
             "retired": true
           },
           {
@@ -516,7 +516,7 @@
         "status": "fresh",
         "asOf": "2026-11-17",
         "reviewBy": "2027-02-15",
-        "daysOverdue": -88
+        "daysOverdue": -87
       }
     },
     "arcGap": {
@@ -547,14 +547,14 @@
           }
         ]
       },
-      "asOf": "2026-11-17",
+      "asOf": "2026-11-19",
       "source": "ARC Prize leaderboard (arcprize.org/leaderboard) — ARC-AGI-2 Semi-Private, ARC-AGI-3 Standard harness",
       "confidence": "verified",
       "freshness": {
         "status": "fresh",
-        "asOf": "2026-11-17",
-        "reviewBy": "2027-01-01",
-        "daysOverdue": -43
+        "asOf": "2026-11-19",
+        "reviewBy": "2027-01-03",
+        "daysOverdue": -44
       }
     },
     "selfLearning": {
@@ -569,7 +569,7 @@
         "status": "fresh",
         "asOf": "2026-06-05",
         "reviewBy": "2026-12-01",
-        "daysOverdue": -12
+        "daysOverdue": -11
       }
     },
     "realTimeEngagement": {
@@ -587,10 +587,10 @@
       "source": "FutureWatch rubric D2 (research/anchor-tables.md); evidence: public voice-mode deployments (M1), group-chat demos (M2 partial)",
       "confidence": "judgment",
       "freshness": {
-        "status": "due",
+        "status": "stale",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 30
+        "daysOverdue": 31
       }
     },
     "agenticAutonomyLevel": {
@@ -603,10 +603,10 @@
       "source": "Morris et al. autonomy rubric (arXiv:2311.02462), scored on routine deployment",
       "confidence": "judgment",
       "freshness": {
-        "status": "due",
+        "status": "stale",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 30
+        "daysOverdue": 31
       }
     },
     "anthropicEconIndex": {
@@ -622,7 +622,7 @@
         "status": "stale",
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26",
-        "daysOverdue": 54
+        "daysOverdue": 55
       }
     },
     "aiIndexEconomy": {
@@ -638,7 +638,7 @@
         "status": "fresh",
         "asOf": "2026-04-15",
         "reviewBy": "2027-04-15",
-        "daysOverdue": -147
+        "daysOverdue": -146
       }
     },
     "friLeapAgi": {
@@ -654,7 +654,7 @@
         "status": "stale",
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11",
-        "daysOverdue": 100
+        "daysOverdue": 101
       }
     },
     "fliSafetyIndex": {
@@ -672,7 +672,7 @@
         "status": "fresh",
         "asOf": "2026-07-15",
         "reviewBy": "2027-01-15",
-        "daysOverdue": -57
+        "daysOverdue": -56
       }
     },
     "eciCapability": {
@@ -692,13 +692,13 @@
         "status": "fresh",
         "asOf": "2026-10-26",
         "reviewBy": "2026-12-10",
-        "daysOverdue": -21
+        "daysOverdue": -20
       },
       "carriedForward": true
     }
   },
   "errors": [
-    "epoch: ECI re-anchored? \"GPT-4 (Mar 2023)\" is 121.58, expected 125.89 — calibration invalid",
+    "epoch: ECI re-anchored? \"GPT-4 (Mar 2023)\" is 121.61, expected 125.89 — calibration invalid",
     "eciCapability: no reading this run — carried forward the previous one (as of 2026-10-26)"
   ],
   "escalation": {
