@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-20T22:54:30.038Z",
+  "generatedAt": "2026-11-21T21:58:15.548Z",
   "composite": {
     "value": 57.7,
     "coverage": 1,
@@ -199,24 +199,6 @@
       "feed": "metr.org"
     },
     {
-      "title": "Closing the Analyze-to-Design Gap: An Authorization-Bounded Agent for Self-Driving Laboratories",
-      "link": "https://arxiv.org/abs/2611.25043",
-      "published": "Fri, 20 Nov 2026 00:00:00 -0500",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "An LLM-Agentic Framework for Intelligent Work Order Management in Industrial Maintenance",
-      "link": "https://arxiv.org/abs/2611.25070",
-      "published": "Fri, 20 Nov 2026 00:00:00 -0500",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "SailSearch: Agent-Assisted Discovery in Combinatorial Optimization",
-      "link": "https://arxiv.org/abs/2611.25087",
-      "published": "Fri, 20 Nov 2026 00:00:00 -0500",
-      "feed": "arXiv cs.AI"
-    },
-    {
       "title": "Import AI 481: AI sub-contractors; a wet lab for AI; and subterfuge during development",
       "link": "https://jack-clark.net/2026/11/16/import-ai-481-ai-sub-contractors-a-wet-lab-for-ai-and-subterfuge-during-development/",
       "published": "Mon, 16 Nov 2026 14:01:15 +0000",
@@ -269,7 +251,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 211,
+      "fetchMs": 247,
       "indicatorCount": 1
     },
     {
@@ -281,19 +263,19 @@
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 168,
+      "fetchMs": 414,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 1,
+      "fetchMs": 0,
       "indicatorCount": 7
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1132,
+      "fetchMs": 1042,
       "indicatorCount": 0
     }
   ],
@@ -310,7 +292,7 @@
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 107,
+        "daysOverdue": 108,
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05"
       },
@@ -318,7 +300,7 @@
         "slug": "friLeapAgi",
         "scored": false,
         "status": "stale",
-        "daysOverdue": 101,
+        "daysOverdue": 102,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
       },
@@ -326,7 +308,7 @@
         "slug": "anthropicEconIndex",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 55,
+        "daysOverdue": 56,
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26"
       },
@@ -334,7 +316,7 @@
         "slug": "realTimeEngagement",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 31,
+        "daysOverdue": 32,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       },
@@ -342,7 +324,7 @@
         "slug": "agenticAutonomyLevel",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 31,
+        "daysOverdue": 32,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       }
@@ -455,7 +437,7 @@
         "status": "stale",
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05",
-        "daysOverdue": 107
+        "daysOverdue": 108
       }
     },
     "epochBenchmarks": {
@@ -516,7 +498,7 @@
         "status": "fresh",
         "asOf": "2026-11-17",
         "reviewBy": "2027-02-15",
-        "daysOverdue": -87
+        "daysOverdue": -86
       }
     },
     "arcGap": {
@@ -554,7 +536,7 @@
         "status": "fresh",
         "asOf": "2026-11-19",
         "reviewBy": "2027-01-03",
-        "daysOverdue": -44
+        "daysOverdue": -43
       }
     },
     "selfLearning": {
@@ -569,7 +551,7 @@
         "status": "fresh",
         "asOf": "2026-06-05",
         "reviewBy": "2026-12-01",
-        "daysOverdue": -11
+        "daysOverdue": -10
       }
     },
     "realTimeEngagement": {
@@ -590,7 +572,7 @@
         "status": "stale",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 31
+        "daysOverdue": 32
       }
     },
     "agenticAutonomyLevel": {
@@ -606,7 +588,7 @@
         "status": "stale",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 31
+        "daysOverdue": 32
       }
     },
     "anthropicEconIndex": {
@@ -622,7 +604,7 @@
         "status": "stale",
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26",
-        "daysOverdue": 55
+        "daysOverdue": 56
       }
     },
     "aiIndexEconomy": {
@@ -638,7 +620,7 @@
         "status": "fresh",
         "asOf": "2026-04-15",
         "reviewBy": "2027-04-15",
-        "daysOverdue": -146
+        "daysOverdue": -145
       }
     },
     "friLeapAgi": {
@@ -654,7 +636,7 @@
         "status": "stale",
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11",
-        "daysOverdue": 101
+        "daysOverdue": 102
       }
     },
     "fliSafetyIndex": {
@@ -672,7 +654,7 @@
         "status": "fresh",
         "asOf": "2026-07-15",
         "reviewBy": "2027-01-15",
-        "daysOverdue": -56
+        "daysOverdue": -55
       }
     },
     "eciCapability": {
@@ -692,7 +674,7 @@
         "status": "fresh",
         "asOf": "2026-10-26",
         "reviewBy": "2026-12-10",
-        "daysOverdue": -20
+        "daysOverdue": -19
       },
       "carriedForward": true
     }
