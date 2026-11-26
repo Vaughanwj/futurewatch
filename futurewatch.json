@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-25T01:13:21.326Z",
+  "generatedAt": "2026-11-26T00:48:17.091Z",
   "composite": {
     "value": 57.7,
     "coverage": 1,
@@ -193,28 +193,28 @@
   },
   "stories": [
     {
+      "title": "Irreducible Governance Structure for Autonomous Agent Systems: Fair Allocation, Strategy-Proofness, and Multi-Scale Composition",
+      "link": "https://arxiv.org/abs/2611.31284",
+      "published": "Wed, 25 Nov 2026 00:00:00 -0500",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake",
+      "link": "https://arxiv.org/abs/2611.31301",
+      "published": "Wed, 25 Nov 2026 00:00:00 -0500",
+      "feed": "arXiv cs.AI"
+    },
+    {
+      "title": "Conservative Overlap Fuzzy Rough Sets for Incomplete Data",
+      "link": "https://arxiv.org/abs/2611.31329",
+      "published": "Wed, 25 Nov 2026 00:00:00 -0500",
+      "feed": "arXiv cs.AI"
+    },
+    {
       "title": "Interpreting a recent acceleration in pretraining loss",
       "link": "https://metr.org/blog/2026-11-24-interpreting-a-recent-acceleration-in-pretraining-loss/",
       "published": "Tue, 24 Nov 2026 00:00:00 -0800",
       "feed": "metr.org"
-    },
-    {
-      "title": "SAMA: Training-Free Consensus Ridge Tracking for Camera-Based Heart Rate on Five Public Datasets",
-      "link": "https://arxiv.org/abs/2611.28185",
-      "published": "Tue, 24 Nov 2026 00:00:00 -0500",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "torchtsetlin: Fast, Interpretable Tsetlin Machines for PyTorch",
-      "link": "https://arxiv.org/abs/2611.28195",
-      "published": "Tue, 24 Nov 2026 00:00:00 -0500",
-      "feed": "arXiv cs.AI"
-    },
-    {
-      "title": "From Point Clouds to Engineering Models: Benchmarking Agentic 3D Reconstruction in the Built Environment",
-      "link": "https://arxiv.org/abs/2611.28197",
-      "published": "Tue, 24 Nov 2026 00:00:00 -0500",
-      "feed": "arXiv cs.AI"
     },
     {
       "title": "Import AI 482: Huawei kernel benchmarks; airborne drone detection; and a national lab&#8217;s AI science benchmark",
@@ -269,7 +269,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 315,
+      "fetchMs": 298,
       "indicatorCount": 1
     },
     {
@@ -281,7 +281,7 @@
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 342,
+      "fetchMs": 546,
       "indicatorCount": 1
     },
     {
@@ -293,7 +293,7 @@
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 1183,
+      "fetchMs": 940,
       "indicatorCount": 0
     }
   ],
@@ -310,7 +310,7 @@
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 112,
+        "daysOverdue": 113,
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05"
       },
@@ -318,7 +318,7 @@
         "slug": "friLeapAgi",
         "scored": false,
         "status": "stale",
-        "daysOverdue": 106,
+        "daysOverdue": 107,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
       },
@@ -326,7 +326,7 @@
         "slug": "anthropicEconIndex",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 60,
+        "daysOverdue": 61,
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26"
       },
@@ -334,7 +334,7 @@
         "slug": "realTimeEngagement",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 36,
+        "daysOverdue": 37,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       },
@@ -342,7 +342,7 @@
         "slug": "agenticAutonomyLevel",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 36,
+        "daysOverdue": 37,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       }
@@ -455,7 +455,7 @@
         "status": "stale",
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05",
-        "daysOverdue": 112
+        "daysOverdue": 113
       }
     },
     "epochBenchmarks": {
@@ -516,7 +516,7 @@
         "status": "fresh",
         "asOf": "2026-11-17",
         "reviewBy": "2027-02-15",
-        "daysOverdue": -82
+        "daysOverdue": -81
       }
     },
     "arcGap": {
@@ -554,7 +554,7 @@
         "status": "fresh",
         "asOf": "2026-11-19",
         "reviewBy": "2027-01-03",
-        "daysOverdue": -39
+        "daysOverdue": -38
       }
     },
     "selfLearning": {
@@ -569,7 +569,7 @@
         "status": "fresh",
         "asOf": "2026-06-05",
         "reviewBy": "2026-12-01",
-        "daysOverdue": -6
+        "daysOverdue": -5
       }
     },
     "realTimeEngagement": {
@@ -590,7 +590,7 @@
         "status": "stale",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 36
+        "daysOverdue": 37
       }
     },
     "agenticAutonomyLevel": {
@@ -606,7 +606,7 @@
         "status": "stale",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 36
+        "daysOverdue": 37
       }
     },
     "anthropicEconIndex": {
@@ -622,7 +622,7 @@
         "status": "stale",
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26",
-        "daysOverdue": 60
+        "daysOverdue": 61
       }
     },
     "aiIndexEconomy": {
@@ -638,7 +638,7 @@
         "status": "fresh",
         "asOf": "2026-04-15",
         "reviewBy": "2027-04-15",
-        "daysOverdue": -141
+        "daysOverdue": -140
       }
     },
     "friLeapAgi": {
@@ -654,7 +654,7 @@
         "status": "stale",
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11",
-        "daysOverdue": 106
+        "daysOverdue": 107
       }
     },
     "fliSafetyIndex": {
@@ -672,7 +672,7 @@
         "status": "fresh",
         "asOf": "2026-07-15",
         "reviewBy": "2027-01-15",
-        "daysOverdue": -51
+        "daysOverdue": -50
       }
     },
     "eciCapability": {
@@ -692,7 +692,7 @@
         "status": "fresh",
         "asOf": "2026-10-26",
         "reviewBy": "2026-12-10",
-        "daysOverdue": -15
+        "daysOverdue": -14
       },
       "carriedForward": true
     }
