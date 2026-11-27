@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-26T00:48:17.091Z",
+  "generatedAt": "2026-11-27T00:54:14.629Z",
   "composite": {
     "value": 57.7,
     "coverage": 1,
@@ -193,21 +193,21 @@
   },
   "stories": [
     {
-      "title": "Irreducible Governance Structure for Autonomous Agent Systems: Fair Allocation, Strategy-Proofness, and Multi-Scale Composition",
-      "link": "https://arxiv.org/abs/2611.31284",
-      "published": "Wed, 25 Nov 2026 00:00:00 -0500",
+      "title": "Context Scaling: A New Frontier of AI Scaling",
+      "link": "https://arxiv.org/abs/2611.33160",
+      "published": "Thu, 26 Nov 2026 00:00:00 -0500",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake",
-      "link": "https://arxiv.org/abs/2611.31301",
-      "published": "Wed, 25 Nov 2026 00:00:00 -0500",
+      "title": "Constraint-Aware Test-Time Scoring for LLM and VLM Candidate Selection",
+      "link": "https://arxiv.org/abs/2611.33161",
+      "published": "Thu, 26 Nov 2026 00:00:00 -0500",
       "feed": "arXiv cs.AI"
     },
     {
-      "title": "Conservative Overlap Fuzzy Rough Sets for Incomplete Data",
-      "link": "https://arxiv.org/abs/2611.31329",
-      "published": "Wed, 25 Nov 2026 00:00:00 -0500",
+      "title": "AutoformBench: A Lean Formalization Benchmark for Advanced Mathematics",
+      "link": "https://arxiv.org/abs/2611.33165",
+      "published": "Thu, 26 Nov 2026 00:00:00 -0500",
       "feed": "arXiv cs.AI"
     },
     {
@@ -269,7 +269,7 @@
     {
       "source": "metr",
       "ok": true,
-      "fetchMs": 298,
+      "fetchMs": 376,
       "indicatorCount": 1
     },
     {
@@ -281,19 +281,19 @@
     {
       "source": "arc",
       "ok": true,
-      "fetchMs": 546,
+      "fetchMs": 236,
       "indicatorCount": 1
     },
     {
       "source": "manual",
       "ok": true,
-      "fetchMs": 0,
+      "fetchMs": 1,
       "indicatorCount": 7
     },
     {
       "source": "rss",
       "ok": true,
-      "fetchMs": 940,
+      "fetchMs": 1649,
       "indicatorCount": 0
     }
   ],
@@ -310,7 +310,7 @@
         "slug": "metrTimeHorizon",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 113,
+        "daysOverdue": 114,
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05"
       },
@@ -318,7 +318,7 @@
         "slug": "friLeapAgi",
         "scored": false,
         "status": "stale",
-        "daysOverdue": 107,
+        "daysOverdue": 108,
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11"
       },
@@ -326,7 +326,7 @@
         "slug": "anthropicEconIndex",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 61,
+        "daysOverdue": 62,
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26"
       },
@@ -334,7 +334,7 @@
         "slug": "realTimeEngagement",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 37,
+        "daysOverdue": 38,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       },
@@ -342,7 +342,7 @@
         "slug": "agenticAutonomyLevel",
         "scored": true,
         "status": "stale",
-        "daysOverdue": 37,
+        "daysOverdue": 38,
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20"
       }
@@ -455,7 +455,7 @@
         "status": "stale",
         "asOf": "2026-04-07",
         "reviewBy": "2026-08-05",
-        "daysOverdue": 113
+        "daysOverdue": 114
       }
     },
     "epochBenchmarks": {
@@ -473,7 +473,7 @@
             "score": 0.9684343434343434,
             "model": "GPT-6.2 Astra (max)",
             "date": "2026-11-17",
-            "rows": 341,
+            "rows": 342,
             "retired": true
           },
           {
@@ -516,7 +516,7 @@
         "status": "fresh",
         "asOf": "2026-11-17",
         "reviewBy": "2027-02-15",
-        "daysOverdue": -81
+        "daysOverdue": -80
       }
     },
     "arcGap": {
@@ -554,7 +554,7 @@
         "status": "fresh",
         "asOf": "2026-11-19",
         "reviewBy": "2027-01-03",
-        "daysOverdue": -38
+        "daysOverdue": -37
       }
     },
     "selfLearning": {
@@ -569,7 +569,7 @@
         "status": "fresh",
         "asOf": "2026-06-05",
         "reviewBy": "2026-12-01",
-        "daysOverdue": -5
+        "daysOverdue": -4
       }
     },
     "realTimeEngagement": {
@@ -590,7 +590,7 @@
         "status": "stale",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 37
+        "daysOverdue": 38
       }
     },
     "agenticAutonomyLevel": {
@@ -606,7 +606,7 @@
         "status": "stale",
         "asOf": "2026-07-20",
         "reviewBy": "2026-10-20",
-        "daysOverdue": 37
+        "daysOverdue": 38
       }
     },
     "anthropicEconIndex": {
@@ -622,7 +622,7 @@
         "status": "stale",
         "asOf": "2026-06-26",
         "reviewBy": "2026-09-26",
-        "daysOverdue": 61
+        "daysOverdue": 62
       }
     },
     "aiIndexEconomy": {
@@ -638,7 +638,7 @@
         "status": "fresh",
         "asOf": "2026-04-15",
         "reviewBy": "2027-04-15",
-        "daysOverdue": -140
+        "daysOverdue": -139
       }
     },
     "friLeapAgi": {
@@ -654,7 +654,7 @@
         "status": "stale",
         "asOf": "2026-05-11",
         "reviewBy": "2026-08-11",
-        "daysOverdue": 107
+        "daysOverdue": 108
       }
     },
     "fliSafetyIndex": {
@@ -672,7 +672,7 @@
         "status": "fresh",
         "asOf": "2026-07-15",
         "reviewBy": "2027-01-15",
-        "daysOverdue": -50
+        "daysOverdue": -49
       }
     },
     "eciCapability": {
@@ -692,7 +692,7 @@
         "status": "fresh",
         "asOf": "2026-10-26",
         "reviewBy": "2026-12-10",
-        "daysOverdue": -14
+        "daysOverdue": -13
       },
       "carriedForward": true
     }
